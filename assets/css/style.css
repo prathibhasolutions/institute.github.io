@@ -19,8 +19,9 @@ body {
 }
 
 a {
-  color: #4154f1;
+  color: #012970;
   text-decoration: none;
+
 }
 
 a:hover {
@@ -188,8 +189,8 @@ section {
 }
 
 .header .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+  max-height: 80px;
+  margin-right: 10px;
 }
 
 .header .logo span {
@@ -326,7 +327,7 @@ section {
 
 .navbar .megamenu ul li a,
 .navbar .megamenu ul li:hover>a {
-  color: #013289;
+  color: #9fa9ba;
 }
 
 .navbar .megamenu ul li a:hover,
@@ -481,7 +482,7 @@ section {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
-  color: #012970;
+  color: #4154f1;
 }
 
 .hero h2 {
