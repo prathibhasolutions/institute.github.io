@@ -27,6 +27,49 @@
       font-size: 24px;
       margin-bottom: 20px;
     }
+    .header {
+      font-family: sans-serif;
+      background-color: rgb(23, 41, 84);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px; /* Default height */
+      position: fixed; /* Ensures the header stays at the top */
+      top: 0;
+      left: 0;
+      width: 100%; /* Full width */
+      z-index: 1000; /* Keeps it above other content */
+  }
+  .logo {
+      width: 100px; /* Default width */
+      height: 100px; /* Default height */
+      border-radius: 60%; /* Creates a circular logo */
+  }
+  body {
+      margin: 0;
+      padding-top: 150px; /* Prevents content from being hidden behind the header */
+  }
+
+  /* Responsive adjustments for small screens */
+  @media (max-width: 768px) {
+    .header {
+          height: 120px; /* Further adjust header height */
+      }
+      .logo {
+          width: 90px; /* Smaller logo size for very small screens */
+          height: 90px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .header {
+          height: 120px; /* Further adjust header height */
+      }
+      .logo {
+          width: 90px; /* Smaller logo size for very small screens */
+          height: 90px;
+      }
+  }
     
     /* Result Summary Boxes */
     .result-summary {
@@ -51,39 +94,66 @@
     .incorrect { background-color: #e74c3c; color: white; }
     .not-answered { background-color: #f39c12; color: white; }
 
-    /* Charts */
-    .chart-container {
+     /* Charts */
+  .chart-container {
       display: flex;
       justify-content: center;
       gap: 30px;
       margin-top: 30px;
-    }
-    .chart-box {
+  }
+  .chart-box {
       width: 100%;
       max-width: 400px;
-    }
+  }
 
-    /* Table */
-    table {
+  /* Responsive adjustments for small screens */
+  @media (max-width: 768px) {
+      .chart-container {
+          flex-direction: column; /* Stack charts vertically */
+          align-items: center; /* Center the charts */
+          gap: 20px; /* Adjust gap between charts */
+      }
+  }
+
+     /* Table */
+  table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 25px;
-    }
-    table th, table td {
+  }
+  table th, table td {
       padding: 10px;
       text-align: center;
       border: 1px solid #ddd;
-    }
-    table th {
+  }
+  table th {
       background-color: #3498db;
       color: white;
-    }
-    table tr:nth-child(even) {
+  }
+  table tr:nth-child(even) {
       background-color: #f9f9f9;
-    }
-    table tr:hover {
+  }
+  table tr:hover {
       background-color: #f1f1f1;
-    }
+  }
+
+  /* Responsive Table Container */
+  .table-container {
+      width: 100%;
+      overflow-x: auto; /* Enables horizontal scrolling if table is too wide */
+  }
+  .table-container table {
+      min-width: 600px; /* Ensures the table has a minimum width */
+  }
+
+  /* Adjust table font size for smaller screens */
+  @media (max-width: 768px) {
+      table th, table td {
+          font-size: 12px; /* Smaller font size for small screens */
+          padding: 8px; /* Adjust padding for better fit */
+      }
+      
+  }
 
     /* Button */
     .btn {
@@ -129,10 +199,20 @@
     .view-image-btn:hover {
       background-color: #2980b9;
     }
+    .footer-container {
+        background-color: rgb(23, 41, 84);
+        color: white;
+        text-align: center;
+    }
   </style>
 </head>
 <body>
-
+ 
+  <section class="header">
+    <nav>
+        <img src="logo.png" alt="Logo" class="logo">
+    </nav>
+</section>
   <div class="container-fluid">
     <h1>Exam Results</h1>
 
@@ -183,7 +263,12 @@
     <!-- Back Button -->
     <button class="btn" onclick="window.location.href = 'upload.html';">Back to Exams Page</button>
   </div>
-
+  <footer id="footer" class="footer">
+    <hr>
+    <div class="footer-container">
+      <h5> Designed by Prathibha Solutions</h5>
+  </div>
+</footer>
   <script>
     // Fetching score and user answers from localStorage
     const studentName = localStorage.getItem("studentName");
