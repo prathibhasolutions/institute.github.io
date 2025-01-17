@@ -1,262 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>DCA</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: FlexStart
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <title>CSS</title>    
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script><!--js file-->
 </head>
-
 <body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <h4><b> PRATHIBHA INSTITUTE</b></h4>
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          
-          
-          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
+  <section class="header" style="font-family: sans-serif;">
+    <nav>
+        <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+        <div class="search">
+            <input type="text" id="mySearch" onclick="showSearchMenu()" placeholder="Search Courses..." title="Type in a category">
+            <ul id="myMenu">
+              <li><a href="eapcet.html">Eapcet</a></li>
+              <li><a href="jeemains.html">Jee Mains</a></li>
+              <li><a href="c.html">C Language</a></li>
+              <li><a href="python.html">Python</a></li>
+              <li><a href="java.html">Java</a></li>
+              <li><a href="html.html">HTML</a></li>
+              <li><a href="css.html">CSS</a></li>
+              <li><a href="javascript.html">JavaScript</a></li>
+              <li><a href="ds.html">Data Structures and Algorithms</a></li>
               
-              <li><a href="fullstack.html">Full Stack Web Development</a></li>
-                
-              </li>
-              <li class="dropdown"><a href="#"><span>Software Courses</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="c.html">C Language</a></li>
-                  <li><a href="python.html">Python</a></li>
-                  <li><a href="java.html">Java</a></li>
-                  <li><a href="sql.html">SQL</a></li>
-                  <li><a href="dsa.html">Data Structures and Algorithms</a></li>
-                  <li><a href="html.html">HTML</a></li>
-                  <li><a href="css.html">CSS</a></li>
-                  <li><a href="js.html">JavaScript</a></li>
-                  <li><a href="bootstrap.html">Bootstrap</a></li>
-                  <li><a href="aws.html">AWS</a></li>
-                  <li><a href="selenium.html">Selenium</a></li>
-                  <li><a href="dca.html">DCA</a></li>
-
-                </ul>
-                
-              <li><a href="eamcet.html">EAMCET</a></li>
-              <li><a href="mains.html">JEE-MAINS</a></li>            
-              <li><a href="qa.html">Quantitative Aptitude</a></li>
-              <li><a href="lr.html">Logical Reasoning</a></li>
+              <li><a href="sql.html">SQL</a></li>
+              <li><a href="selenium.html">Selenium</a></li>
+              <li><a href="aws.html">AWS</a></li>
+              <li><a href="fullstack.html">Full Stack Development with Python and Django</a></li>
+              <li><a href="aptitude.html">Quantitative Aptitude</a></li>
+              <li><a href="reasoning.html">Logical Reasoning</a></li>
+              <li><a href="dca.html">DCA</a></li>
             </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="aboutus.html">About</a></li>
-          <li><a class="nav-link scrollto" href="image.html">Gallery</a></li>
-        
-          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
-          <li><a class="getstarted scrollto" href="tel:9030941099">Call Now</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
-      <div class="container mt-3">
-
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>DCA</li>
-        </ol>
-        <h2>DCA</h2>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/dca1.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/dca2.png" alt="">
-                </div>
-                        
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Course information</h3>
-              <ul>
-                <li><strong>Course Name</strong>: DCA</li>
-                <li><strong>Course Duration</strong>: 60 days</li>
-                <li><strong>Teaching Style</strong>: Offline & Online</li>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideNavMenu()"></i>
+            <ul><b>
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" aria-expanded="false">
+                        Courses
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                        <li><a class="dropdown-item" href="eapcet.html">EAPCET</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Software</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="c.html">C</a></li>
+                                <li><a class="dropdown-item" href="python.html">Python</a></li>
+                                <li><a class="dropdown-item" href="java.html">Java</a></li>
+                                <li><a class="dropdown-item" href="html.html">HTML</a></li>
+                                <li><a class="dropdown-item" href="css.html">CSS</a></li>
+                                <li><a class="dropdown-item" href="javascript.html">Java Script</a></li>
+                                <li><a class="dropdown-item" href="ds.html">Data Structures and Algorithms</a></li>
+                                <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+                                <li><a class="dropdown-item" href="selenium.html">Selenium</a></li>
+                                <li><a class="dropdown-item" href="aws.html">AWS</a></li>
+                                <li><a class="dropdown-item" href="fullstack.html">Full Stack Development with Python and Django</a></li>
+                               
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="aptitude.html">Aptitude</a></li>
+                    </ul>
+                </li>
                 
+                
+                <li><a href="exams.html">Exams</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="tel:+1234567890" class="call-now-btn">Call Now</a></li>
+            </b></ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showNavMenu()"></i>
+    </nav>
+</section>
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+          <div class="container mt-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">DCA</li>
+                </ol>
+              </nav>
+            <h3>DCA</h3>
+          </div>
+        </section><!-- End Breadcrumbs -->
+
+       
+      
+        <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+  
+                  <div class="swiper-slide">
+                    <img src="images/dca1.png" alt="">
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <img src="images/dca2.png" alt="">
+                  </div>
+                          
+                </div>
+                <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>Course information</h3>
+                <ul>
+                  <li><strong>Course Name</strong>: DCA</li>
+                  <li><strong>Course Duration</strong>: 60 days</li>
+                  <li><strong>Teaching Style</strong>: Offline & Online</li>
+                  
+                  
+                </ul>
+              </div>
+              <div class="portfolio-description">
+                <h2>Course Description</h2>
+                <p>
+                  Develop essential computing skills with our Diploma in Computer Application (DCA) with MS Office course. This comprehensive program covers fundamental IT concepts, from computer basics to internet essentials, and dives deep into practical applications, including Microsoft Office tools like Word, Excel, PowerPoint, and Outlook. Ideal for beginners and those looking to build a solid foundation, this course equips you with the knowledge and hands-on experience needed for success in a digital workspace
+                </p>
+              </div>
+              <h5>This course includes</h5>
+              <ul>
+                <li>Introduction to DCA</li>
+                <li>Computer Fundamentals </li
+                <li>OS Microsoft Windows 10</li>
+                <li>MS Office Word</li>
+                <li>MS Office Excel</li>
+                <li>MS Office PowerPoint</li>
+                <li>Regular Assignment</li>
                 
               </ul>
             </div>
-            <div class="portfolio-description">
-              <h2>Course Description</h2>
-              <p>
-                Develop essential computing skills with our Diploma in Computer Application (DCA) with MS Office course. This comprehensive program covers fundamental IT concepts, from computer basics to internet essentials, and dives deep into practical applications, including Microsoft Office tools like Word, Excel, PowerPoint, and Outlook. Ideal for beginners and those looking to build a solid foundation, this course equips you with the knowledge and hands-on experience needed for success in a digital workspace
-              </p>
-            </div>
-            <h5>This course includes</h5>
-            <ul>
-              <li>Introduction to DCA</li>
-              <li>Computer Fundamentals </li
-              <li>OS Microsoft Windows 10</li>
-              <li>MS Office Word</li>
-              <li>MS Office Excel</li>
-              <li>MS Office PowerPoint</li>
-              <li>Regular Assignment</li>
-              
-            </ul>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/logo.png" alt="">
-              <span>Prathibha Institute</span>
-            </a>
-            <p>Empowering excellence in a diverse and innovative learning community.</p>
-
-            <div class="social-links mt-3">            
-              <a href="https://www.instagram.com/prathibha_institute/" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href=https://www.youtube.com/@PrathibhaInstitute class="instagram"><i class="bi bi-youtube"></i></a>
-            </div>
-            
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="aboutus.html">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="terms.html">Terms Of Service</a></li>
-            
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Courses</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="fullstack.html">Software</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="eamcet.html">EAMCET/JEE-MAINS</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="qa.html">Quantitative Aptitude</a></li>
-              
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>
-              Ground Floor, D.S. Bingi Arcade <br>
-              Near ABS Venture, Vinayak Nagar<br>
-              Nizamabad-503001 <br><br>
-              <strong>Phone:</strong> +91 9030941099<br>
-              <strong>Email:</strong> prathibhainstitutions@gmail.com<br>
-            </p>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-        Designed by <a href="https://prathibhasolutions.com/">Prathibha Solutions</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
   
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!--Whatsapp-->
-  <a href="https://api.whatsapp.com/send?phone=9030941099&text=Hello " class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
+          </div>
+  
+        </div>
+      </section><!-- End Portfolio Details Section -->
+      
+  
+    </main><!-- End #main -->
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Info Section -->
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+                        <p>Empowering excellence in a diverse and innovative learning community.</p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.instagram.com/prathibha_institute/" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.youtube.com/@PrathibhaInstitute" class="youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <!-- Useful Links Section -->
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="aboutus.html">About us</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="terms.html">Terms Of Service</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Courses Section -->
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Courses</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="fullstack.html">Software</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="eapcet.html">EAPCET/JEE-MAINS</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="aptitude.html">Quantitative Aptitude</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us Section -->
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Ground Floor, D.S. Bingi Arcade <br>
+                            Near ABS Venture, Vinayak Nagar<br>
+                            Nizamabad-503001 <br><br>
+                            <a href="tel:9030941099"><strong>Phone:</strong> +91 9030941099</a><br>
+                            <strong>Email:</strong> prathibhainstitutions@gmail.com<br>
+                        </p>
+                    
+                    </div>
+                </div>
+                <hr>
+                   
+            </div>
+        </div>
+        <div class="container text-center">
+            <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div> 
+    </footer>
+    
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>    
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+<!--Whatsapp-->
+ <a href="https://api.whatsapp.com/send?phone=9030941099&text=Hello " class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
     <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">
   </a>
-
 </body>
-
 </html>

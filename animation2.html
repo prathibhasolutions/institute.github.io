@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Rotation Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff;
+}
+
+.container {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+}
+
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.center-logo img {
+    width: 15vw;
+    height: 15vw;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    animation: rotate 12s infinite linear;
+}
+
+.orbit-item {
+    position: absolute;
+    width: 10vw; /* Responsive size */
+    height: 10vw;
+    max-width: 80px;
+    max-height: 80px;
+    /* Reverse rotation to keep logos upright */
+    animation: counter-rotate 12s infinite linear;
+}
+
+/* Calculating positions in a perfect circle */
+.python {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c {
+    top: 15%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.java {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.html {
+    top: 85%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.css {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.aws {
+    top: 85%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.js {
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.sql {
+    top: 15%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.selenium {
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.djangoproject {
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+/* Smooth rotation around the circle */
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Counter-rotate the logos to keep them upright */
+@keyframes counter-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .center-logo img {
+        width: 18vw;
+        height: 18vw;
+    }
+
+    .orbit-item {
+        width: 12vw;
+        height: 12vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .center-logo img {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .orbit-item {
+        width: 16vw;
+        height: 16vw;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center-logo">
+            <img src="computer.png" alt="Computer Logo">
+        </div>
+        <div class="orbit">
+            <img src="Python.png" alt="Python Logo" class="orbit-item python">
+            <img src="C.png" alt="C Logo" class="orbit-item c">
+            <img src="Java.png" alt="Java Logo" class="orbit-item java">
+            <img src="html.png" alt="HTML Logo" class="orbit-item html">
+            <img src="css.png" alt="CSS Logo" class="orbit-item css">
+            <img src="aws.png" alt="AWS Logo" class="orbit-item aws">
+            <img src="js.png" alt="JS Logo" class="orbit-item js">
+            <img src="sql.png" alt="SQL Logo" class="orbit-item sql">
+            <img src="selenium.png" alt="Selenium Logo" class="orbit-item selenium">
+            <img src="django.png" alt="Django Logo" class="orbit-item django"> 
+        </div>
+    </div>
+</body>
+</html>

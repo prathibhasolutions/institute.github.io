@@ -1,639 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8"\>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"\>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <title>Prathibha Institute</title>    
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
-  <title>Prathibha Institute </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"\>
-  <meta id="myViewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"\>
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: FlexStart
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script><!--js file-->
 </head>
-
 <body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-       <h4><b> PRATHIBHA INSTITUTE</b></h4>
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          
-          
-          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              
-              <li><a href="fullstack.html">Full Stack Web Development</a></li>
-                
-              </li>
-              <li class="dropdown"><a href="#"><span>Software Courses</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
+  
+    <section class="header" style="font-family: sans-serif;">
+        <nav>
+            <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+            <div class="search">
+                <input type="text" id="mySearch" onclick="showSearchMenu()" placeholder="Search Courses..." title="Type in a category">
+                <ul id="myMenu">
+                  <li><a href="eapcet.html">Eapcet</a></li>
+                  <li><a href="jeemains.html">Jee Mains</a></li>
                   <li><a href="c.html">C Language</a></li>
                   <li><a href="python.html">Python</a></li>
                   <li><a href="java.html">Java</a></li>
-                  <li><a href="sql.html">SQL</a></li>
-                  <li><a href="dsa.html">Data Structures and Algorithms</a></li>
                   <li><a href="html.html">HTML</a></li>
                   <li><a href="css.html">CSS</a></li>
-                  <li><a href="js.html">JavaScript</a></li>
-                  <li><a href="bootstrap.html">Bootstrap</a></li>
-                  <li><a href="aws.html">AWS</a></li>
+                  <li><a href="javascript.html">JavaScript</a></li>
+                  <li><a href="ds.html">Data Structures and Algorithms</a></li>
+                  
+                  <li><a href="sql.html">SQL</a></li>
                   <li><a href="selenium.html">Selenium</a></li>
+                  <li><a href="aws.html">AWS</a></li>
+                  <li><a href="fullstack.html">Full Stack Development with Python and Django</a></li>
+                  <li><a href="aptitude.html">Quantitative Aptitude</a></li>
+                  <li><a href="reasoning.html">Logical Reasoning</a></li>
                   <li><a href="dca.html">DCA</a></li>
                 </ul>
-              </li>
-              
-              <li><a href="eamcet.html">EAMCET</a></li>
-              <li><a href="mains.html">JEE-MAINS</a></li>              
-              <li><a href="qa.html">Quantitative Aptitude</a></li>
-              <li><a href="lr.html">Logical Reasoning</a></li>              
-              
-            </ul>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideNavMenu()"></i>
+                <ul><b>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                            <li><a class="dropdown-item" href="eapcet.html">EAPCET</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Software</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="c.html">C</a></li>
+                                    <li><a class="dropdown-item" href="python.html">Python</a></li>
+                                    <li><a class="dropdown-item" href="java.html">Java</a></li>
+                                    <li><a class="dropdown-item" href="html.html">HTML</a></li>
+                                    <li><a class="dropdown-item" href="css.html">CSS</a></li>
+                                    <li><a class="dropdown-item" href="javascript.html">Java Script</a></li>
+                                    <li><a class="dropdown-item" href="ds.html">Data Structures and Algorithms</a></li>
+                                    <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+                                    <li><a class="dropdown-item" href="selenium.html">Selenium</a></li>
+                                    <li><a class="dropdown-item" href="aws.html">AWS</a></li>
+                                    <li><a class="dropdown-item" href="fullstack.html">Full Stack Development with Python and Django</a></li>
+                                   
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="aptitude.html">Aptitude</a></li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li><a href="exams.html">Exams</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="tel:+1234567890" class="call-now-btn">Call Now</a></li>
+                </b></ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showNavMenu()"></i>
+        </nav>
+    </section>
+    <div class="main-container1" style="padding-top: 150px;">
+        <div class="main1">
             
-          </li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Gallery</a></li>
-         
-
-          
-
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="tel:9030941099">Call Now</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-           <h1 data-aos="fade-up"> 
-            Our Institute advances professional expertise.
-            </h1>
-          <h2 data-aos="fade-up" data-aos-delay="400"> Our Institute cultivates expertise through targeted training, empowering individuals for career excellence.</h2>
-          <div data-aos="fade-up" data-aos-delay="600">
-            <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Get Started</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
+            <div class="main2-container1">
+                <h1><b>Welcome to Prathibha Institute</b></h1><br>
+                <h5>We offer comprehensive training in software courses, JEE Mains, and general aptitude and logical reasoning.</h5>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/software logo.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3>Who We Are</h3>
-              <h2>At Prathibha Institute, we are dedicated to shaping the future of aspiring students and empower them with the knowledge and skills needed to excel in their chosen fields.</h2>
-              <p>
-                
-              </p>
-              <div class="text-center text-lg-start">
-                <a href="aboutus.html" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Read More</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+            <div class="image-container">
+                <img src="software logo.png" alt="Image">
             </div>
-          </div>
-
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/whoweare.jpg" class="img-fluid" alt="">
-          </div>
-
         </div>
-      </div>
+        
 
-    </section><!-- End About Section -->
-
+       
+    </div>
+    <br>
+    <br><br>
     <!-- ======= Values Section ======= -->
     <section id="values" class="values">
 
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2></h2>
-          <p>Our Values</p>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="box">
-              <img src="assets/img/values-1.png" class="img-fluid" alt="">
-              <h3>Excellence</h3>
-              <p>We are dedicated to maintaining the highest standards of academic excellence in all our programs.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-            <div class="box">
-              <img src="assets/img/values-2.png" class="img-fluid" alt="">
-              <h3>Integrity</h3>
-              <p>Integrity is the cornerstone of our Institute. We uphold the highest ethical standards in all our interactions with students, parents, faculty, and the community.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
-            <div class="box">
-              <img src="assets/img/values-3.png" class="img-fluid" alt="">
-              <h3>Student-Centric Approach</h3>
-              <p>Students are at the heart of everything we do. We are committed to providing a student-centric learning environment that caters to individual needs and aspirations.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    
-
- 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          
-          <p>Our Courses</p>
-          
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box blue">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Full Stack Web Development </h3>
-              <p>Master Full Stack Development with our comprehensive course, covering Python, Django, front-end technologies,
-                 and hands-on projects for real-world proficiency.</p>
-              <a href="fullstack.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-box orange">
-              <i class="ri-discuss-line icon"></i>
-              <h3>C Language</h3><br>
-          
-              <p>Dive into C Language – foundational, efficient, and versatile. Learn programming basics, algorithms, and memory management for robust software development.</p>
-              <a href="c.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-box green">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Python</h3><br>
-              <p>Explore Python, a dynamic and readable language. From web development to data science, unlock versatility for efficient and elegant coding solutions.</p>
-              <a href="python.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-box blue">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Java</h3><br>
-              <p>Learn the fundamentals of object-oriented programming with Java. Build essential skills to create scalable applications and unlock opportunities in software development</p>
-              <a href="java.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-box red">
-              <i class="ri-discuss-line icon"></i>
-              <h3>SQL</h3><br>
-              <p>With SQL, the language of databases, learn data manipulation, querying, and management to harness the power of structured information seamlessly.</p>
-              <a href="sql.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-box purple">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Data Structures and Algorithms.</h3>
-              <p>Discover Data Structures and Algorithms (DSA) – essential foundations for effective problem-solving and optimizing code, shaping resilient software solutions.</p>
-              <a href="dsa.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="service-box pink">
-              <i class="ri-discuss-line icon"></i>
-              <h3>HTML</h3><br>
-              <p>Embrace HTML, the backbone of the web. Learn to structure content, create engaging websites, and build the foundation of digital experiences.</p>
-              <a href="html.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box blue">
-              <i class="ri-discuss-line icon"></i>
-              <h3>CSS </h3>
-              <p>Explore CSS, the style architect for the web. Transform HTML into visually appealing experiences, mastering layouts and design aesthetics effortlessly.</p>
-              <a href="css.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box orange">
-              <i class="ri-discuss-line icon"></i>
-              <h3>JavaScript </h3>
-              <p>Empower web development with JavaScript, a dynamic scripting language. Add interactivity,
-                 create engaging user experiences, and build modern, responsive websites effortlessly.</p>
-              <a href="js.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box green">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Bootstrap </h3>
-              <p>Unlock the power of Bootstrap – a front-end framework.
-                 Rapidly build responsive, visually appealing websites with pre-designed components and enhanced design flexibility.</p>
-              <a href="bootstrap.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-box red">
-              <i class="ri-discuss-line icon"></i>
-              <h3>AWS</h3>
-          
-              <p>Learn the essentials of cloud computing with our AWS Fundamentals course. Explore core AWS services, best practices, and tools for designing and managing scalable applications—building a strong foundation for a career in cloud computing.</p>
-              <a href="aws.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-box purple">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Selenium</h3>
-              <p>Unlock automation testing skills with our Selenium course. Master Selenium WebDriver, frameworks, and best practices to create efficient test scripts—boosting your career in QA and software development.</p>
-              <a href="selenium.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-box pink">
-              <i class="ri-discuss-line icon"></i>
-              <h3>DCA</h3><br>
-              <p>Gain essential computing skills, covering IT fundamentals and Microsoft Office applications(Word,Excel,PowerPoint and Outlook) for success in a digital workspace.</p>
-              <a href="dca.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-box blue">
-              <i class="ri-discuss-line icon"></i>
-              <h3>EAMCET/JEE-MAINS</h3>
-          
-              <p>Ace EAMCET/JEE-Mains with our easy-to-follow courses. Understand concepts, practice, and excel in engineering entrance exams for a bright future.</p>
-              <a href="eamcet.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-box orange">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Quantitative Aptitude</h3>
-              <p>Sharpen quantitative skills with our Aptitude course. Boost problem-solving, numerical abilities, and excel in government exams and various competitive assessments.</p>
-              <a href="qa.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-box green">
-              <i class="ri-discuss-line icon"></i>
-              <h3>Logical Reasoning</h3><br>
-              <p>Enhance logical reasoning with our course. Develop critical thinking, problem-solving skills, and succeed in competitive exams and decision-making challenges effortlessly.</p>
-              <a href="lr.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          
-
-          
-
-        </div>
-
-      </div>
-
-    </section><!-- End Services Section -->
-
-    <!-- ======= Pricing Section ======= -->
-    <!-- End Pricing Section -->
-
-    
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          
-          <p>Gallery</p>
-        </header>
-
-        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-              
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title=""><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title=""><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title=""><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title=""><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title=""><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title=""><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>         
-
-        </div>
-
-      </div>
-
-    </section><!-- End Portfolio Section -->
-
-   
-    <!-- ======= Recent Blog Posts Section ======= -->
-    <!-- End Recent Blog Posts Section -->
-
+        <div class="container" data-aos="fade-up">
   
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
-        </header>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>Ground Floor, D.S. Bingi Arcade, near ABS Venture, Vinayak Nagar, Nizamabad-503001</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p><a href="tel:9030941099">+91 9030941099</a></p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>prathibhainstitutions@gmail.com</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-clock"></i>
-                  <h3>Open Hours</h3>
-                  <p>Monday - Saturday<br>11:00AM - 09:00PM</p>
-                </div>
+          <header class="section-header">
+            <h2><b>Our Values</b></h2>
+            
+          </header>
+         <br>
+          <div class="row">
+  
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="box">
+                <img src="images/values-1.png" class="img-fluid" alt="">
+                <h3>Excellence</h3>
+                <p>We are dedicated to maintaining the highest standards of academic excellence in all our programs.</p>
               </div>
             </div>
-
-          </div>
-
-          <div class="col-lg-6">
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15119.498184137488!2d78.1148164!3d18.6696248!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcdc58191627e85%3A0x4f5beb7dd5af1b2f!2sPrathibha%20Institution!5e0!3m2!1sen!2sin!4v1706450193315!5m2!1sen!2sin" width="600" height="450" style="border:0;"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/logo.png" alt="">
-              <span>Prathibha Institute</span>
-            </a>
-            <p>Empowering excellence in a diverse and innovative learning community.</p>
-
-            <div class="social-links mt-3">            
-              <a href="https://www.instagram.com/prathibha_institute/" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href=https://www.youtube.com/@PrathibhaInstitute class="instagram"><i class="bi bi-youtube"></i></a>
+  
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+              <div class="box">
+                <img src="images/values-2.png" class="img-fluid" alt="">
+                <h3>Integrity</h3>
+                <p>Integrity is the cornerstone of our Institute. We uphold the highest ethical standards in all our interactions with students, parents, faculty, and the community.</p>
+              </div>
             </div>
-           
+  
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+              <div class="box">
+                <img src="images/values-3.png" class="img-fluid" alt="">
+                <h3>Student-Centric Approach</h3>
+                <p>Students are at the heart of everything we do. We are committed to providing a student-centric learning environment that caters to individual needs and aspirations.</p>
+              </div>
+            </div>
+  
           </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="aboutus.html">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="terms.html">Terms Of Service</a></li>
-            
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Courses</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="fullstack.html">Software</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="eamcet.html">EAMCET/JEE-MAINS</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="qa.html">Quantitative Aptitude</a></li>
-              
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>
-              Ground Floor, D.S. Bingi Arcade <br>
-              Near ABS Venture, Vinayak Nagar<br>
-              Nizamabad-503001 <br><br>
-              <a href="tel:9030941099"><strong>Phone:</strong> +91 9030941099</a><br>
-              <strong>Email:</strong> prathibhainstitutions@gmail.com<br>
-            </p>
-
-          </div>
-
+  
         </div>
-      </div>
-    </div>
-
-    <div class="container">
+  
       
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-        Designed by <a href="https://prathibhasolutions.com/">Prathibha Solutions</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
   
+   
+      <!-- ======= Services Section ======= -->
+       <br><br>
+      <section id="services" class="services">
+  
+        <div class="container" data-aos="fade-up">
+  
+          <header class="section-header">
+            <h2><b>Our Courses</b></h2>
+            
+            
+          </header>
+         <br>
+          <div class="row gy-4">
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-box blue">
+                <i class="ri-discuss-line icon"></i>
+                <h3>EAMCET</h3>
+            
+                <p>Ace EAPCET with ease!
+                  Master key concepts, practice extensively, and achieve your dream engineering seat with our student-friendly EAPCET courses designed for your success.</p>
+                <a href="eapcet.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-box pink">
+                <i class="ri-discuss-line icon"></i>
+                <h3>JEE-MAINS</h3>
+            
+                <p>Crack JEE Mains confidently!
+                  Dive into detailed explanations, expert strategies, and rigorous practice to excel in JEE Mains and secure admission to top engineering colleges.</p>
+                <a href="jeemains.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-box orange">
+                <i class="ri-discuss-line icon"></i>
+                <h3>C Language</h3><br>
+            
+                <p>Dive into C Language – foundational, efficient, and versatile. Learn programming basics, algorithms, and memory management for robust software development.</p>
+                <a href="c.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-box green">
+                <i class="ri-discuss-line icon"></i>
+                <h3>Python</h3><br>
+                <p>Explore Python, a dynamic and readable language. From web development to data science, unlock versatility for efficient and elegant coding solutions.</p>
+                <a href="python.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-box blue">
+                <i class="ri-discuss-line icon"></i>
+                <h3>Java</h3><br>
+                <p>Learn the fundamentals of object-oriented programming with Java. Build essential skills to create scalable applications and unlock opportunities in software development</p>
+                <a href="java.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-box red">
+                <i class="ri-discuss-line icon"></i>
+                <h3>SQL</h3><br>
+                <p>With SQL, the language of databases, learn data manipulation, querying, and management to harness the power of structured information seamlessly.</p>
+                <a href="sql.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="service-box purple">
+                <i class="ri-discuss-line icon"></i>
+                <h3>Data Structures and Algorithms.</h3>
+                <p>Discover Data Structures and Algorithms (DSA) – essential foundations for effective problem-solving and optimizing code, shaping resilient software solutions.</p>
+                <a href="ds.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+              <div class="service-box pink">
+                <i class="ri-discuss-line icon"></i>
+                <h3>HTML</h3><br>
+                <p>Embrace HTML, the backbone of the web. Learn to structure content, create engaging websites, and build the foundation of digital experiences.</p>
+                <a href="html.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-box blue">
+                <i class="ri-discuss-line icon"></i>
+                <h3>CSS </h3>
+                <p>Explore CSS, the style architect for the web. Transform HTML into visually appealing experiences, mastering layouts and design aesthetics effortlessly.</p>
+                <a href="css.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-box orange">
+                <i class="ri-discuss-line icon"></i>
+                <h3>JavaScript </h3>
+                <p>Empower web development with JavaScript, a dynamic scripting language. Add interactivity,
+                   create engaging user experiences, and build modern, responsive websites effortlessly.</p>
+                <a href="javascript.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-box red">
+                <i class="ri-discuss-line icon"></i>
+                <h3>AWS</h3>
+            
+                <p>Learn the essentials of cloud computing with our AWS Fundamentals course. Explore core AWS services, best practices, and tools for designing and managing scalable applications—building a strong foundation for a career in cloud computing.</p>
+                <a href="aws.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-box purple">
+                <i class="ri-discuss-line icon"></i>
+                <h3>Selenium</h3>
+                <p>Unlock automation testing skills with our Selenium course. Master Selenium WebDriver, frameworks, and best practices to create efficient test scripts—boosting your career in QA and software development.</p>
+                <a href="selenium.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-box pink">
+                <i class="ri-discuss-line icon"></i>
+                <h3>DCA</h3><br>
+                <p>Gain essential computing skills, covering IT fundamentals and Microsoft Office applications(Word,Excel,PowerPoint and Outlook) for success in a digital workspace.</p>
+                <a href="dca.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-box blue">
+                <i class="ri-discuss-line icon"></i>
+                <h3>Full Stack Web Development </h3>
+                <p>Master Full Stack Development with our comprehensive course, covering Python, Django, front-end technologies,
+                   and hands-on projects for real-world proficiency.</p>
+                <a href="fullstack.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-box orange">
+                <i class="ri-discuss-line icon"></i>
+                <h3>Quantitative Aptitude</h3>
+                <p>Sharpen quantitative skills with our Aptitude course. Boost problem-solving, numerical abilities, and excel in government exams and various competitive assessments.</p>
+                <a href="aptitude.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-box green">
+                <i class="ri-discuss-line icon"></i>
+                <h3>Logical Reasoning</h3><br>
+                <p>Enhance logical reasoning with our course. Develop critical thinking, problem-solving skills, and succeed in competitive exams and decision-making challenges effortlessly.</p>
+                <a href="reasoning.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            
+  
+            
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- End Services Section -->
+      <br><br>
+      <!-- ======= Values Section ======= -->
+    <section id="values" class="values">
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+        <div class="container" data-aos="fade-up">
+  
+          <header class="section-header">
+            <h2><b>Key Features</b></h2>
+            
+          </header>
+         <br>
+          <div class="row">
+  
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="box">
+              
+                <h3>Real Time Trainers</h3>
+                
+              </div>
+            </div>
+  
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+              <div class="box">
+               
+                <h3>Online/Offline Training</h3>
+                
+              </div>
+            </div>
+  
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+              <div class="box">
+                
+                <h3>Personalized Attention</h3>
+                
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="box">
+                
+                  <h3>Live Projects</h3>
+                  
+                </div>
+              </div>
+    
+              <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+                <div class="box">
+                 
+                  <h3>Certifications</h3>
+                  
+                </div>
+              </div>
+    
+              <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+                <div class="box">
+                  
+                  <h3>Placement Assistance</h3>
+                  
+                </div>
+              </div>
+  
+          </div>
+  
+        </div>
+  
+    </section>  
+  
+   
+      <br>
+      <br>
+     
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!--Whatsapp-->
-  <a href="https://api.whatsapp.com/send?phone=9030941099&text=Hello " class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
+        <div class="container" data-aos="fade-up">
+  
+          <header class="section-header">
+            <h2><b>Certification</b></h2>
+            
+          </header>
+        </div>
+      <div class="main-container1" >
+        <div class="main1">
+            
+            <div class="main2-container1">
+                
+                <h5>Our certifications are respected in the software industry and open career opportunities. They validate your skills, prepare you for the workforce, and showcase your expertise to employers, helping you advance professionally.</h5>
+            </div>
+            <div class="image-container">
+                <img src="images/0. CERTIFICATE.jpg" alt="">
+            </div>
+        </div>
+       </div> 
+    <br> 
+    <br> 
+    <div class="container" data-aos="fade-up">
+  
+        <header class="section-header">
+          <h2><b>Why Choose Us ?</b></h2>
+          
+        </header>
+        <br>         
+       <h4>We are committed to providing high-quality education that sets our students apart in the industry. Our programs are designed to equip you with the knowledge and skills to succeed in your chosen field.</h4>       
+    </div>
+      <br>
+      <br>
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Info Section -->
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+                        <p>Empowering excellence in a diverse and innovative learning community.</p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.instagram.com/prathibha_institute/" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.youtube.com/@PrathibhaInstitute" class="youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <!-- Useful Links Section -->
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="aboutus.html">About us</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="terms.html">Terms Of Service</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Courses Section -->
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Courses</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="fullstack.html">Software</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="eapcet.html">EAPCET/JEE-MAINS</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="aptitude.html">Quantitative Aptitude</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us Section -->
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Ground Floor, D.S. Bingi Arcade <br>
+                            Near ABS Venture, Vinayak Nagar<br>
+                            Nizamabad-503001 <br><br>
+                            <a href="tel:9030941099"><strong>Phone:</strong> +91 9030941099</a><br>
+                            <strong>Email:</strong> prathibhainstitutions@gmail.com<br>
+                        </p>
+                    
+                    </div>
+                </div>
+                <hr>
+                   
+            </div>
+        </div>
+        <div class="container text-center">
+            <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div> 
+    </footer>
+    
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>    
+ <!--Whatsapp-->
+ <a href="https://api.whatsapp.com/send?phone=9030941099&text=Hello " class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
     <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">
   </a>
-
 </body>
-
 </html>

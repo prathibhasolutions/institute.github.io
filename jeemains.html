@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <title>JEE-MAINS</title>    
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script><!--js file-->
+</head>
+<body>
+  <section class="header" style="font-family: sans-serif;">
+    <nav>
+        <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+        <div class="search">
+            <input type="text" id="mySearch" onclick="showSearchMenu()" placeholder="Search Courses..." title="Type in a category">
+            <ul id="myMenu">
+              <li><a href="eapcet.html">Eapcet</a></li>
+              <li><a href="jeemains.html">Jee Mains</a></li>
+              <li><a href="c.html">C Language</a></li>
+              <li><a href="python.html">Python</a></li>
+              <li><a href="java.html">Java</a></li>
+              <li><a href="html.html">HTML</a></li>
+              <li><a href="css.html">CSS</a></li>
+              <li><a href="javascript.html">JavaScript</a></li>
+              <li><a href="ds.html">Data Structures and Algorithms</a></li>
+              
+              <li><a href="sql.html">SQL</a></li>
+              <li><a href="selenium.html">Selenium</a></li>
+              <li><a href="aws.html">AWS</a></li>
+              <li><a href="fullstack.html">Full Stack Development with Python and Django</a></li>
+              <li><a href="aptitude.html">Quantitative Aptitude</a></li>
+              <li><a href="reasoning.html">Logical Reasoning</a></li>
+              <li><a href="dca.html">DCA</a></li>
+            </ul>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideNavMenu()"></i>
+            <ul><b>
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" aria-expanded="false">
+                        Courses
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                        <li><a class="dropdown-item" href="eapcet.html">EAPCET</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Software</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="c.html">C</a></li>
+                                <li><a class="dropdown-item" href="python.html">Python</a></li>
+                                <li><a class="dropdown-item" href="java.html">Java</a></li>
+                                <li><a class="dropdown-item" href="html.html">HTML</a></li>
+                                <li><a class="dropdown-item" href="css.html">CSS</a></li>
+                                <li><a class="dropdown-item" href="javascript.html">Java Script</a></li>
+                                <li><a class="dropdown-item" href="ds.html">Data Structures and Algorithms</a></li>
+                                <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+                                <li><a class="dropdown-item" href="selenium.html">Selenium</a></li>
+                                <li><a class="dropdown-item" href="aws.html">AWS</a></li>
+                                <li><a class="dropdown-item" href="fullstack.html">Full Stack Development with Python and Django</a></li>
+                               
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="aptitude.html">Aptitude</a></li>
+                    </ul>
+                </li>
+                
+                
+                <li><a href="exams.html">Exams</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="tel:+1234567890" class="call-now-btn">Call Now</a></li>
+            </b></ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showNavMenu()"></i>
+    </nav>
+</section>
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container mt-3">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">JEE-Mains</Script></li>
+                  </ol>
+                </nav>
+              <h3>JEE-Mains</h3>
+            </div>
+          </section><!-- End Breadcrumbs -->
+  
+    
+       <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+  
+                  <div class="swiper-slide">
+                    <img src="images/mains.png" alt="">
+                  </div>
+  
+                  
+  
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>Course information</h3>
+                <ul>
+                  <li><strong>Course Name</strong>: JEE-MAINS</li>
+                  <li><strong>Course Duration</strong>: till JEE-MAINS-2025</li>
+                  <li><strong>Teaching Style</strong>: Offline</li>
+                  
+                  
+                </ul>
+              </div>
+              <div class="portfolio-description">
+                <h2>Course Description</h2>
+                <p>
+                  Prepare for JEE MAINS with our comprehensive course, covering the full syllabus of Mathematics, Physics, and Chemistry.
+                   Master core concepts, problem-solving, and exam strategies for success.
+                </p>
+              </div>
+              <h5>This course includes</h5>
+              <ul>
+                <li>Mathematics</li>
+                <li>Physics</li>
+                <li>Chemistry</li>
+                <li>Regular Mock Tests</li> 
+                
+              </ul>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Portfolio Details Section -->
+    
+      </main><!-- End #main -->
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Info Section -->
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+                        <p>Empowering excellence in a diverse and innovative learning community.</p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.instagram.com/prathibha_institute/" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.youtube.com/@PrathibhaInstitute" class="youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <!-- Useful Links Section -->
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="aboutus.html">About us</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="terms.html">Terms Of Service</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Courses Section -->
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Courses</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="fullstack.html">Software</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="eapcet.html">EAPCET/JEE-MAINS</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="aptitude.html">Quantitative Aptitude</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us Section -->
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Ground Floor, D.S. Bingi Arcade <br>
+                            Near ABS Venture, Vinayak Nagar<br>
+                            Nizamabad-503001 <br><br>
+                            <a href="tel:9030941099"><strong>Phone:</strong> +91 9030941099</a><br>
+                            <strong>Email:</strong> prathibhainstitutions@gmail.com<br>
+                        </p>
+                    
+                    </div>
+                </div>
+                <hr>
+                   
+            </div>
+        </div>
+        <div class="container text-center">
+            <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div> 
+    </footer>
+    
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>    
+ <!--Whatsapp-->
+ <a href="https://api.whatsapp.com/send?phone=9030941099&text=Hello " class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
+    <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">
+  </a>
+</body>
+</html>

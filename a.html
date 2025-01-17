@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <title>Prathibha Institute</title>    
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script><!--js file-->
+</head>
+<body>
+    <section class="header" style="font-family: sans-serif;">
+        <nav>
+            <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+            <div class="search">
+                <input type="text" id="mySearch" onclick="showSearchMenu()" placeholder="Search.." title="Type in a category">
+                <ul id="myMenu">
+                  <li><a href="eapcet.html">Eapcet</a></li>
+                  <li><a href="jeemains.html">Jee Mains</a></li>
+                  <li><a href="c.html">C Language</a></li>
+                  <li><a href="python.html">Python</a></li>
+                  <li><a href="java.html">Java</a></li>
+                  <li><a href="html.html">HTML</a></li>
+                  <li><a href="css.html">CSS</a></li>
+                  <li><a href="javascript.html">JavaScript</a></li>
+                  <li><a href="ds.html">Data Structures</a></li>
+                  <li><a href="a.html">Algorithms</a></li>
+                  <li><a href="sql.html">SQL</a></li>
+                  <li><a href="selenium.html">Selenium</a></li>
+                  <li><a href="aws.html">AWS</a></li>
+                  <li><a href="fullstack.html">Full Stack Development with Python and Django</a></li>
+                  <li><a href="aptitude.html">Quantitative Aptitude</a></li>
+                  <li><a href="reasoning.html">Logical Reasoning</a></li>
+                </ul>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideNavMenu()"></i>
+                <ul><b>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="tel:+1234567890" class="call-now-btn">Call Now</a></li>
+                </b></ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showNavMenu()"></i>
+        </nav>
+    </section>
+    
+</body>
+</html>
