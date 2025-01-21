@@ -159,14 +159,14 @@ window.addEventListener("DOMContentLoaded", () => {
       userAnswers[index] = textBox.value;
     });
 
-    textBoxLabel.textContent = "E: ";
+    textBoxLabel.textContent = "" ;
     textBoxLabel.appendChild(textBox);
     numericalDiv.appendChild(textBoxLabel);
 
     questionDiv.appendChild(questionNumber);
     questionDiv.appendChild(questionImage);
     questionDiv.appendChild(optionsDiv);
-    // questionDiv.appendChild(numericalDiv);
+     questionDiv.appendChild(numericalDiv);
 
 
     // Navigation Buttons (Back, Next)
