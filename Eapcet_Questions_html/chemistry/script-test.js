@@ -166,7 +166,7 @@ window.addEventListener("DOMContentLoaded", () => {
     questionDiv.appendChild(questionNumber);
     questionDiv.appendChild(questionImage);
     questionDiv.appendChild(optionsDiv);
-     questionDiv.appendChild(numericalDiv);
+     //questionDiv.appendChild(numericalDiv);
 
 
     // Navigation Buttons (Back, Next)
