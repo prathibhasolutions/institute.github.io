@@ -122,20 +122,24 @@
     document.addEventListener("DOMContentLoaded", () => {
     const examName = "Eapcet";
     const examTimer = 60;
-    const examfolder = "EAPCET_images/Maths/Permutations and Combinations";
-    const numberofquestions = 50;
+    const examfolder = "question_images/Circle and System of Circles";
+    const numberofquestions = 105;
     const positivemark = 1;
     const negativemark = 0;
 
     // Example hardcoded answers (you can replace this with actual answer keys)
     const correctAnswers = [
-      "A", "A", "B", "B", "C", "D", "A", "A", "A","C",
-      "B", "B", "D", "D", "C", "C", "C", "B", "C","D",
-      "B", "D", "C", "D", "B", "B", "C", "A", "C","C",
-      "D", "A", "D", "B", "A", "B", "B", "C", "B","D",
-      "B", "D", "B", "C", "A", "C", "C", "B","A","A"
-
-       ];
+      "C", "D", "C", "D", "A", "A", "B", "A", "A", "C",
+      "D", "B", "D", "A", "D", "D", "C", "A", "C", "B",
+      "C", "D", "C", "C", "B","A","A","B","B","D",
+      "B","A","D","D","D","A","D","C","C","D",
+      "A","B","B","B","A","D","B","D","A","A",
+      "D","C","A","C","A","A","D","C","B","B",
+      "C","A","D","C","A","D","B","B","C","A",
+      "A","D","B","C","B","B","D","B","C","D",
+      "C","B","D","B","A","C","B","A","B","B",
+      "A","D","B","D","A","D","B","A","C","D",
+      "A","B","B","D","B" ];
     // Answer options for each question
 
      // Inject exam timer into the HTML dynamically
