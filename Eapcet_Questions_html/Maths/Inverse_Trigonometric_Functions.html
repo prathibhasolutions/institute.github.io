@@ -133,29 +133,23 @@
       "D", "B", "A", "A", "D"
       
        ];
-    // Answer options for each question
+     // Dynamically inject exam details into the HTML
+  document.getElementById("examTimerItem").innerHTML = `1. The exam duration is <strong>${examTimer} minutes</strong>.`;
+  document.getElementById("examquestionnumItem").innerHTML = `2. The exam consists of <strong>${numberofquestions} multiple-choice questions</strong>.`;
+  document.getElementById("exammarksItem").innerHTML = `3. Each question carries <strong>${positivemark} marks</strong>, and there is a <strong>${negativemark} mark penalty</strong> for incorrect answers.`;
 
-     // Inject exam timer into the HTML dynamically
-     document.getElementById("examTimerItem").innerHTML = `1. The exam duration is <strong>${examTimer} minutes</strong>.`;
+  const generateBtn = document.getElementById("generateBtn");
+  const agreeCheckbox = document.getElementById("agreeCheckbox");
 
-     // Inject exam timer into the HTML dynamically
-     document.getElementById("examquestionnumItem").innerHTML = `2. The exam consists of <strong>${numberofquestions} multiple-choice questions</strong>.`;
+  // Event listener for the checkbox change
+  agreeCheckbox.addEventListener("change", () => {
+    // Enable the Start button only if the checkbox is checked
+    generateBtn.disabled = !agreeCheckbox.checked;
+  });
 
-     // Inject exam timer into the HTML dynamically
-     document.getElementById("exammarksItem").innerHTML = `3. Each question carries <strong>${positivemark} marks</strong>, and there is a <strong>${negativemark} mark penalty</strong> for incorrect answers.`;
-
-      const generateBtn = document.getElementById("generateBtn");
-      const agreeCheckbox = document.getElementById("agreeCheckbox");
-
-      // Event listener for the checkbox change
-      agreeCheckbox.addEventListener("change", () => {
-        // Enable the Start button only if the checkbox is checked
-        generateBtn.disabled = !agreeCheckbox.checked;
-      });
-
-      generateBtn.addEventListener("click", () => {
+  // Click event for "Start Mock Test" button
+  generateBtn.addEventListener("click", async () => {
     const studentName = document.getElementById("userName").value.trim();
-    
 
     if (!studentName) {
       alert("Please enter your name.");
@@ -167,14 +161,34 @@
     localStorage.setItem("examName", examName);
     localStorage.setItem("examTimer", examTimer);
     localStorage.setItem("examfolder", examfolder);
-    localStorage.setItem("correctAnswers", JSON.stringify(correctAnswers));
 
-    alert("Are you sure to start the mock test!");
+    // Send data to Google Sheets via Apps Script (without correctAnswers)
+    const url = 'https://script.google.com/macros/s/AKfycbyIUISxPlsaAe_GKDMiV-3dzy_fBWvPapti1LH_W0GPoRxJH30X98pu5pXV00sh58la/exec'; // Replace with your Google Apps Script URL
+    const formData = new FormData();
+    formData.append('name', studentName);
+    formData.append('examName', examName);
+    formData.append('examTimer', examTimer);
+    formData.append('examfolder', examfolder);
 
-    // Redirect to exam page
-    window.location.href = "exam.html";
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.text();
+      console.log(result); // You can log the response to see if it's successful
+
+      // Prompt to confirm before starting the exam
+      if (confirm("Are you sure to start the mock test!")) {
+        // Redirect to exam page
+        window.location.href = "exam.html";
+      }
+    } catch (error) {
+      alert("There was an error saving your data.");
+      console.error(error);
+    }
   });
-    });
+});
   </script>
 
 </body>
