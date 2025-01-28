@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+  <title>Prathibha Institute</title>    
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script><!--js file-->
+  <style>
+    body {
+    background-color: #f8f9fa;
+  }
+  
+  h1 {
+    color: #343a40;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  </style>
+</head>
+<body>
+  <section class="header" style="font-family: sans-serif;">
+    <nav>
+        <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+        <div class="search">
+            <input type="text" id="mySearch" onclick="showSearchMenu()" placeholder="Search ..." title="Type in a category">
+            <ul id="myMenu">
+              <li><a href="eapcet.html">Eapcet</a></li>
+              <li><a href="jeemains.html">Jee Mains</a></li>
+              <li><a href="c.html">C Language</a></li>
+              <li><a href="python.html">Python</a></li>
+              <li><a href="java.html">Java</a></li>
+              <li><a href="html.html">HTML</a></li>
+              <li><a href="css.html">CSS</a></li>
+              <li><a href="javascript.html">JavaScript</a></li>
+              <li><a href="ds.html">Data Structures and Algorithms</a></li> 
+              <li><a href="sql.html">SQL</a></li>
+              <li><a href="selenium.html">Selenium</a></li>
+              <li><a href="aws.html">AWS</a></li>
+              <li><a href="fullstack.html">Full Stack Development with Python and Django</a></li>
+              <li><a href="aptitude.html">Quantitative Aptitude</a></li>
+              <li><a href="reasoning.html">Logical Reasoning</a></li>
+              <li><a href="dca.html">DCA</a></li>
+              <li><a href="certificate.html">Certificate</a></li>
+              <li><a href="exams.html">Exams</a></li>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideNavMenu()"></i>
+            <ul><b>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" aria-expanded="false">
+                        Courses
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                        <li><a class="dropdown-item" href="eapcet.html">EAPCET</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Software</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="c.html">C</a></li>
+                                <li><a class="dropdown-item" href="python.html">Python</a></li>
+                                <li><a class="dropdown-item" href="java.html">Java</a></li>
+                                <li><a class="dropdown-item" href="html.html">HTML</a></li>
+                                <li><a class="dropdown-item" href="css.html">CSS</a></li>
+                                <li><a class="dropdown-item" href="javascript.html">Java Script</a></li>
+                                <li><a class="dropdown-item" href="ds.html">Data Structures and Algorithms</a></li>
+                                <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+                                <li><a class="dropdown-item" href="selenium.html">Selenium</a></li>
+                                <li><a class="dropdown-item" href="aws.html">AWS</a></li>
+                                <li><a class="dropdown-item" href="fullstack.html">Full Stack Development with Python and Django</a></li>
+                               
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="aptitude.html">Aptitude</a></li>
+                    </ul>
+                </li>
+                
+                
+                <li><a href="exams.html">Exams</a></li>
+               
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" aria-expanded="false">
+                      Quick Links 
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                      <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                      <li><a class="dropdown-item" href="certificate.html">Certificate</a></li>
+                  </ul>
+              </li>
+                
+                <li><a href="tel:9030941099" class="call-now-btn">Call Now</a></li>
+            </b></ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showNavMenu()"></i>
+    </nav>
+</section>
+<br><br><br><br><br>
+  <div class="container mt-5">
+    <h1 class="text-center">Search for Your Certificate</h1>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input id="certificateId" type="text" class="form-control" placeholder="Enter Certificate ID" aria-label="Certificate ID">
+          <button id="searchBtn" class="btn btn-primary">Search</button>
+        </div>
+      </div>
+    </div>
+    <div id="result" class="mt-5 text-center"></div>
+  </div>
+  <div class="main-container1" >
+    <div class="main1">
+        
+        <div class="main2-container1">
+            
+            <p>Our certifications are respected in the software industry and open career opportunities. They validate your skills, prepare you for the workforce, and showcase your expertise to employers, helping you advance professionally.</p>
+        </div>
+        <div class="image-container">
+            <img src="images/0. CERTIFICATE.jpg" alt="">
+        </div>
+    </div>
+   </div> 
+  <br>
+  <br>
+<footer id="footer" class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Info Section -->
+                <div class="col-lg-3 col-md-6 footer-info">
+                    <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+                    <p>Empowering excellence in a diverse and innovative learning community.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/prathibha_institute/" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/@PrathibhaInstitute" class="youtube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Useful Links Section -->
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="aboutus.html">About us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="terms.html">Terms Of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Our Courses Section -->
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Courses</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="fullstack.html">Software</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="eapcet.html">EAPCET/JEE-MAINS</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="aptitude.html">Quantitative Aptitude</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Us Section -->
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        Ground Floor, D.S. Bingi Arcade <br>
+                        Near ABS Venture, Vinayak Nagar<br>
+                        Nizamabad-503001 <br><br>
+                        <a href="tel:9030941099"><strong>Phone:</strong> +91 9030941099</a><br>
+                        <strong>Email:</strong> prathibhainstitutions@gmail.com<br>
+                    </p>
+                
+                </div>
+            </div>
+            <hr>
+               
+        </div>
+    </div>
+    <div class="container text-center">
+        <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+    </div> 
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>    
+ <!--Whatsapp-->
+ <a href="https://api.whatsapp.com/send?phone=9030941099&text=Hello " class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
+    <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">
+  </a>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const searchBtn = document.getElementById("searchBtn");
+    const resultDiv = document.getElementById("result");
+  
+    searchBtn.addEventListener("click", async () => {
+      const certificateId = document.getElementById("certificateId").value.trim();
+  
+      // Clear previous result
+      resultDiv.innerHTML = "";
+  
+      if (!certificateId) {
+        resultDiv.innerHTML = `<div class="alert alert-warning">Please enter a Certificate ID.</div>`;
+        return;
+      }
+  
+      // Construct the URL for the certificate
+      const certificateURL = `certificates/${certificateId}.pdf`;
+  
+      try {
+        // Check if the certificate file exists
+        const response = await fetch(certificateURL);
+  
+        if (response.ok) {
+          // If the certificate exists, display it with an embedded viewer and download button
+          resultDiv.innerHTML = `
+            <div class="card mx-auto" style="max-width: 600px;">
+              <div class="card-body">
+                <h5 class="card-title">Certificate Found</h5>
+                <p class="card-text">Your certificate is displayed below. You can also download it:</p>
+                <iframe src="${certificateURL}" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+                <a href="${certificateURL}" download class="btn btn-success mt-3">Download Certificate</a>
+              </div>
+            </div>
+          `;
+        } else {
+          // If the certificate does not exist, show an error message
+          resultDiv.innerHTML = `<div class="alert alert-danger">Invalid Certificate ID. Please try again.</div>`;
+        }
+      } catch (error) {
+        console.error("Error checking certificate:", error);
+        resultDiv.innerHTML = `<div class="alert alert-danger">An error occurred. Please try again later.</div>`;
+      }
+    });
+  });
+  
+  </script>
+</body>
+</html>
