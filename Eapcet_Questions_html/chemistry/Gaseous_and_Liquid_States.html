@@ -162,6 +162,7 @@
     localStorage.setItem("examName", examName);
     localStorage.setItem("examTimer", examTimer);
     localStorage.setItem("examfolder", examfolder);
+    localStorage.setItem("correctAnswers", JSON.stringify(correctAnswers));
 
     // Send data to Google Sheets via Apps Script (without correctAnswers)
     const url = 'https://script.google.com/macros/s/AKfycbyIUISxPlsaAe_GKDMiV-3dzy_fBWvPapti1LH_W0GPoRxJH30X98pu5pXV00sh58la/exec'; // Replace with your Google Apps Script URL
