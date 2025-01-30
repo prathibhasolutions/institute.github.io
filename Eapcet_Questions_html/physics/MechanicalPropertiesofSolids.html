@@ -121,20 +121,17 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
     const examName = "Eapcet";
-    const examTimer = 60;
-    const examfolder = "question_images/Rotational Motion";
-    const numberofquestions = 50;
+    const examTimer = 25;
+    const examfolder = "question_images/Mechanical Properties of Solids";
+    const numberofquestions = 23;
     const positivemark = 1;
     const negativemark = 0;
 
     // Example hardcoded answers (you can replace this with actual answer keys)
     const correctAnswers = [
-      "B", "A", "A", "B", "A", "A", "A", "C", "D", "B",
-      "A", "C", "D", "C", "A", "B", "C", "C", "A", "C",
-      "C", "B", "A", "A", "C", "A", "D", "C", "D", "B",
-      "C", "B", "B", "A", "C", "C", "D", "C", "D", "A",
-      "D", "D","B", "A", "C", "D", "C", "A", "B", "B"
-       
+       "C", "D", "B", "C", "C", "C", "A", "D", "B", "C",
+      "A", "B", "C", "D", "A", "B", "B", "B", "C", "A",
+       "A", "C", "D", 
     ];
      // Dynamically inject exam details into the HTML
   document.getElementById("examTimerItem").innerHTML = `1. The exam duration is <strong>${examTimer} minutes</strong>.`;
