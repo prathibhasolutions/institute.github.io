@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mock Test</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -40,7 +40,7 @@
 <body>
   <section class="header" style="font-family: sans-serif;color: rgb(23, 41, 84);">
     <nav>
-        <img src="logo.png" alt="" class="logo">    
+        <img src="../logo.png" alt="" class="logo">    
     </nav>   
   </section>
   <br><br><br><br><br><br>
@@ -122,7 +122,7 @@
     document.addEventListener("DOMContentLoaded", () => {
     const examName = "JEE-MAINS";
     const examTimer = 180;
-    const examfolder = "Set-1";
+    const examfolder = "Jee-Mains mock test/Set-1";
     const numberofquestions = 75;
     const positivemark = 4;
     const negativemark = -1;
@@ -169,6 +169,7 @@
     localStorage.setItem("examName", examName);
     localStorage.setItem("examTimer", examTimer);
     localStorage.setItem("examfolder", examfolder);
+    localStorage.setItem("correctAnswers", JSON.stringify(correctAnswers));
 
     // Send data to Google Sheets via Apps Script (without correctAnswers)
     const url = 'https://script.google.com/macros/s/AKfycbyIUISxPlsaAe_GKDMiV-3dzy_fBWvPapti1LH_W0GPoRxJH30X98pu5pXV00sh58la/exec'; // Replace with your Google Apps Script URL
@@ -189,7 +190,7 @@
       // Prompt to confirm before starting the exam
       if (confirm("Are you sure to start the mock test!")) {
         // Redirect to exam page
-        window.location.href = "exam.html";
+        window.location.href = "../exam.html";
       }
     } catch (error) {
       alert("There was an error saving your data.");

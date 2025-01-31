@@ -166,8 +166,12 @@ window.addEventListener("DOMContentLoaded", () => {
     questionDiv.appendChild(questionNumber);
     questionDiv.appendChild(questionImage);
     questionDiv.appendChild(optionsDiv);
-     questionDiv.appendChild(numericalDiv);
 
+    if(examName === "JEE-MAINS") {
+      questionDiv.appendChild(numericalDiv);
+    }
+     
+   
 
     // Navigation Buttons (Back, Next)
     const navButtonsDiv = document.createElement("div");
