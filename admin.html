@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 10px;
+            flex-direction: column;
+        }
+        .header {
+            background-color: rgb(23, 41, 84);
+            padding: 20px 0; /* Add padding to create space around logo */
+            text-align: center; /* Center align the content */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 60%;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+            margin-top: 120px; /* Adjust margin to prevent overlap with fixed header */
+        }
+        input {
+            padding: 12px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            display: none;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 0; /* Adjust padding for small screens */
+            }
+            .logo {
+                width: 120px; 
+                height: 120px;
+            }
+            .login-container {
+                width: 90%;
+                padding: 15px;
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+        </nav>
+    </section>    
+
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <input type="password" id="password" placeholder="Enter Password">
+        <p class="error" id="error-message">Incorrect password. Try again.</p>
+        <button onclick="checkPassword()">Login</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const correctPassword = "Data123"; // Change this to your secure password
+            const enteredPassword = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            if (enteredPassword === correctPassword) {
+                window.location.href = "dataentry.html"; // Redirect to the admin page
+            } else {
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

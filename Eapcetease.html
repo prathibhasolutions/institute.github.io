@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects and Topics</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+        .container-fluid {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        .card {
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%; /* Ensures the card takes up full height */
+        }
+
+        .card-body {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 120px; /* Fixed height for all cards */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Topic title color */
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333; /* Dark color for title */
+        }
+
+        /* Card description text color */
+        .card-text {
+            font-size: 0.9rem;
+            color: #666; /* Lighter gray for text */
+            margin-bottom: 10px;
+        }
+
+        .card-footer {
+            font-size: 0.9rem;
+            font-weight: bold;
+            background-color: transparent;
+            border-top: none;
+            color: #333; /* Dark color for footer */
+        }
+
+        /* Remove default link styling */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Hover Effect */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover .card-body {
+            transform: scale(1.05);
+        }
+
+        /* Gradient Card Background */
+        .math-card {
+            background: linear-gradient(135deg, #28a745, #4caf50); /* Green gradient */
+        }
+
+        .physics-card {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        .chemistry-card {
+            background: linear-gradient(135deg, #ff4b2b, #ff416c);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+        }
+
+        /* Subject heading colors */
+        .math-heading {
+            color: #28a745; /* Green color for Mathematics */
+        }
+
+        .physics-heading {
+            color: #5fcb11; /* Purple color for Physics */
+        }
+
+        .chemistry-heading {
+            color: #ff4b2b; /* Red color for Chemistry */
+        }
+        .button-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically (if needed) */
+    width: 100%; /* Ensures it spans the full width */
+    margin-top: 30px; /* Adjust spacing as needed */
+}
+
+/* Custom Button Styling */
+.btn-custom-primary {
+    background-color: #05786f; /* Change this to your desired button color */
+    border-color: #f3eeee; /* Change this to your desired button border color */
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px; /* Adjust padding for better appearance */
+    text-align: center;
+    display: inline-block;
+    border-radius: 25px; /* Optional: Adds rounded corners */
+}
+
+.btn-custom-primary:hover {
+    background-color: #efd37f7a; /* Change this to your desired hover color */
+    border-color: #f4b289f2; /* Change this to your desired hover border color */
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <h1 class="text-center mb-4">Subjects and Easy Topics Questions</h1>
+
+        <!-- Mathematics Section -->
+        <h2 class="mt-5 mb-4 chemistry-heading">Mathematics</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-6">
+    <div class="col mb-3 mb-sm-0">
+                <a href="Eapcet_Questions_html/Maths/Matriceseasy.html" class="card-link">
+                    <div class="card math-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Matrices and Determinants</h5>
+                            <p class="card-text">Understanding basic operations, matrices, equations, etc.</p>
+                        </div>
+                        <div class="card-footer">Weightage:<br>EAPCET - 1 mark<br>JEE MAINS - 4 marks</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-3 mb-sm-0">
+                <a href="Eapcet_Questions_html/Maths/Limitseasy.html" class="card-link">
+                    <div class="card math-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Limits and Continuity</h5>
+                            <p class="card-text">Differentiation, integration, limits, and applications.</p>
+                        </div>
+                        <div class="card-footer">Weightage:<br>EAPCET - 2 marks<br>JEE MAINS - 5 marks</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-3 mb-sm-0">
+                <a href="Eapcet_Questions_html/Maths/inverseeasy.html" class="card-link">
+                    <div class="card math-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Inverse Trigonometric</h5>
+                            <p class="card-text">Matrices, vectors, eigenvalues, and transformations.</p>
+                        </div>
+                        <div class="card-footer">Weightage:<br>EAPCET - 1 mark<br>JEE MAINS - 3 marks</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-3 mb-sm-0">
+                <a href="Eapcet_Questions_html/Maths/Permutationseasy.html" class="card-link">
+                    <div class="card math-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Permutations and Combinations</h5>
+                            <p class="card-text">Angles, identities, and solving trigonometric equations.</p>
+                        </div>
+                        <div class="card-footer">Weightage:<br>EAPCET - 2 marks<br>JEE MAINS - 4 marks</div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+        <div class="button-container">
+            <a href="Eapcet_Questions_html/Maths/Maths_Easy_Eapcet.html" class="btn btn-custom-primary">View More Chapters</a>
+        </div>
+        
+        <!-- Physics Section -->
+        <h2 class="mt-5 mb-4 chemistry-heading">Physics</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-6">
+        <div class="col mb-3 mb-sm-0">
+                <a href="mechanics.html" class="card-link">
+                    <div class="card physics-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Mechanics</h5>
+                            <p class="card-text">Kinematics, forces, and dynamics.</p>
+                        </div>
+                        <div class="card-footer">Weightage:<br>EAPCET - 3 marks<br>JEE MAINS - 8 marks</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-3 mb-sm-0">
+                <a href="thermodynamics.html" class="card-link">
+                    <div class="card physics-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Thermodynamics</h5>
+                            <p class="card-text">Laws of thermodynamics, heat engines, and entropy.</p>
+                        </div>
+                        <div class="card-footer">Weightage:<br>EAPCET - 2 marks<br>JEE MAINS - 5 marks</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-3 mb-sm-0">
+                <a href="electromagnetism.html" class="card-link">
+                    <div class="card physics-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Electromagnetism</h5>
+                            <p class="card-text">Electricity, magnetism, and electromagnetism.</p>
+                        </div>
+                        <div class="card-footer">Weightage:<br>EAPCET - 2 marks<br>JEE MAINS - 6 marks</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-3 mb-sm-0">
+                <a href="optics.html" class="card-link">
+                    <div class="card physics-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Optics</h5>
+                            <p class="card-text">Reflection, refraction, lenses, and mirrors.</p>
+                        </div>
+                        <div class="card-footer">Weightage:<br>EAPCET - 1 mark<br>JEE MAINS - 4 marks</div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+        <div class="button-container">
+            <a href=".html" class="btn btn-custom-primary">View More Chapters</a>
+        </div>
+        
+        <!-- Chemistry Section -->
+        <h2 class="mt-5 mb-4 chemistry-heading">Chemistry</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-6">
+    <div class="col mb-3 mb-sm-0">
+        <a href="organic_chemistry.html" class="card-link">
+            <div class="card chemistry-card">
+                <div class="card-body">
+                    <h5 class="card-title">Organic Chemistry</h5>
+                    <p class="card-text">Structure, bonding, and reactions of organic compounds.</p>
+                </div>
+                <div class="card-footer">Weightage:<br>EAPCET - 3 marks<br>JEE MAINS - 7 marks</div>
+            </div>
+        </a>
+    </div>
+    <div class="col mb-3 mb-sm-0">
+        <a href="inorganic_chemistry.html" class="card-link">
+            <div class="card chemistry-card">
+                <div class="card-body">
+                    <h5 class="card-title">Inorganic Chemistry</h5>
+                    <p class="card-text">Periodic table, bonding, and chemical reactions.</p>
+                </div>
+                <div class="card-footer">Weightage:<br>EAPCET - 2 marks<br>JEE MAINS - 6 marks</div>
+            </div>
+        </a>
+    </div>
+    <div class="col mb-3 mb-sm-0">
+        <a href="inorganic_chemistry.html" class="card-link">
+            <div class="card chemistry-card">
+                <div class="card-body">
+                    <h5 class="card-title">Inorganic Chemistry</h5>
+                    <p class="card-text">Periodic table, bonding, and chemical reactions.</p>
+                </div>
+                <div class="card-footer">Weightage:<br>EAPCET - 2 marks<br>JEE MAINS - 6 marks</div>
+            </div>
+        </a>
+    </div>
+    <div class="col mb-3 mb-sm-0">
+        <a href="inorganic_chemistry.html" class="card-link">
+            <div class="card chemistry-card">
+                <div class="card-body">
+                    <h5 class="card-title">Inorganic Chemistry</h5>
+                    <p class="card-text">Periodic table, bonding, and chemical reactions.</p>
+                </div>
+                <div class="card-footer">Weightage:<br>EAPCET - 2 marks<br>JEE MAINS - 6 marks</div>
+            </div>
+        </a>
+    </div>
+</div>
+
+        <div class="button-container">
+            <a href=".html" class="btn btn-custom-primary">View More Chapters</a>
+        </div>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Prathibha Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

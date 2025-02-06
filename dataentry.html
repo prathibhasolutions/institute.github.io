@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Entry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+        }
+        .header {
+            background-color: rgb(23, 41, 84);
+            padding: 20px 0; /* Add padding to create space around logo */
+            text-align: center; /* Center align the content */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            width: 120px; 
+            height: 120px; 
+            border-radius: 60%;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #555;
+        }
+        select, input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #response {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+            color: green;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ccc;
+            white-space: nowrap;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        @media (max-width: 480px) {
+            .header {
+                padding: 15px 0; /* Adjust padding for small screens */
+            }
+            .logo {
+                width: 100px; 
+                height: 100px;
+            }
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            input, select, textarea, button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+        </nav>
+    </section>
+    <br><br> <br> <br> <br> <br> <br> <br> <br> 
+    <div class="container">
+        <h2>Transaction Entry</h2>
+        <form id="transactionForm">
+            <label for="transactionType">Transaction Type:</label>
+            <select id="transactionType" required>
+                <option value="Credit">Credit</option>
+                <option value="Debit">Debit</option>
+            </select>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required>
+
+            <label for="reason">Reason:</label>
+            <textarea id="reason" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="response"></p>
+
+        <h3>Transactions</h3>
+
+        <label for="filterMonth">Filter by Month:</label>
+        <select id="filterMonth" onchange="filterTransactions()">
+            <option value="All">All</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+
+        <div class="table-container">
+            <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Transaction Type</th>
+                        <th>Amount</th>
+                        <th>Reason</th>
+                        <th>Month</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Table rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadTransactions();
+        });
+
+        document.getElementById("transactionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let formData = {
+                transactionType: document.getElementById("transactionType").value,
+                amount: document.getElementById("amount").value,
+                reason: document.getElementById("reason").value,
+                month: new Date().toLocaleString('default', { month: 'long' })
+            };
+
+            addTransactionToTable(formData);
+            saveTransaction(formData);
+
+            fetch("https://script.google.com/macros/s/AKfycbw4pRKxyCbyBqKJ1KqA7YKtq5BBxiLBxVoxY8B2-I6MzNvJqRIhYasEyJ8GosOBx28j/exec", {
+                method: "POST",
+                body: new URLSearchParams(formData),
+                headers: { "Content-Type": "application/x-www-form-urlencoded" }
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("response").innerText = "Transaction submitted successfully!";
+                document.getElementById("transactionForm").reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById("response").innerText = "Error submitting transaction.";
+            });
+        });
+
+        function addTransactionToTable(transaction) {
+            let tableBody = document.getElementById("tableBody");
+            let row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${transaction.transactionType}</td>
+                <td>${transaction.amount}</td>
+                <td>${transaction.reason}</td>
+                <td>${transaction.month}</td>
+            `;
+
+            tableBody.appendChild(row);
+        }
+
+        function saveTransaction(transaction) {
+            let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+            transactions.push(transaction);
+            localStorage.setItem("transactions", JSON.stringify(transactions));
+        }
+
+        function loadTransactions() {
+            let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+            let tableBody = document.getElementById("tableBody");
+            tableBody.innerHTML = "";
+
+            transactions.forEach(transaction => addTransactionToTable(transaction));
+        }
+
+        function filterTransactions() {
+            let selectedMonth = document.getElementById("filterMonth").value;
+            let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+            let tableBody = document.getElementById("tableBody");
+
+            tableBody.innerHTML = "";
+
+            transactions.forEach(transaction => {
+                if (selectedMonth === "All" || transaction.month === selectedMonth) {
+                    addTransactionToTable(transaction);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+

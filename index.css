@@ -246,7 +246,6 @@ nav .fa-solid.fa-xmark {
       max-height: 200px; /* Limit the height of the sub-dropdown */
       overflow-y: auto; /* Enable vertical scrolling */
       width: 180px; /* Adjust the width to fit the content */
-     
       padding: 5px 10px; /* Padding for better spacing */
       word-wrap: break-word; /* Break long words to prevent overflow */
   }
