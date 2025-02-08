@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <title>Exams</title>    
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script><!--js file-->
+</head>
+<body>
+    <section class="header" style="font-family: sans-serif;">
+        <nav>
+            <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+            <div class="search">
+                <input type="text" id="mySearch" onclick="showSearchMenu()" placeholder="Search ..." title="Type in a category">
+                <ul id="myMenu">
+                  <li><a href="eapcet.html">Eapcet</a></li>
+                  <li><a href="jeemains.html">Jee Mains</a></li>
+                  <li><a href="c.html">C Language</a></li>
+                  <li><a href="python.html">Python</a></li>
+                  <li><a href="java.html">Java</a></li>
+                  <li><a href="html.html">HTML</a></li>
+                  <li><a href="css.html">CSS</a></li>
+                  <li><a href="javascript.html">JavaScript</a></li>
+                  <li><a href="ds.html">Data Structures and Algorithms</a></li> 
+                  <li><a href="sql.html">SQL</a></li>
+                  <li><a href="selenium.html">Selenium</a></li>
+                  <li><a href="aws.html">AWS</a></li>
+                  <li><a href="fullstack.html">Full Stack Development with Python and Django</a></li>
+                  <li><a href="aptitude.html">Quantitative Aptitude</a></li>
+                  <li><a href="reasoning.html">Logical Reasoning</a></li>
+                  <li><a href="dca.html">DCA</a></li>
+                  <li><a href="certificate.html">Certificate</a></li>
+                  <li><a href="exams.html">Exams</a></li>
+                  <li><a href="aboutus.html">About</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideNavMenu()"></i>
+                <ul><b>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                            <li><a class="dropdown-item" href="eapcet.html">EAPCET</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Software</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="c.html">C</a></li>
+                                    <li><a class="dropdown-item" href="python.html">Python</a></li>
+                                    <li><a class="dropdown-item" href="java.html">Java</a></li>
+                                    <li><a class="dropdown-item" href="html.html">HTML</a></li>
+                                    <li><a class="dropdown-item" href="css.html">CSS</a></li>
+                                    <li><a class="dropdown-item" href="javascript.html">Java Script</a></li>
+                                    <li><a class="dropdown-item" href="ds.html">Data Structures and Algorithms</a></li>
+                                    <li><a class="dropdown-item" href="sql.html">SQL</a></li>
+                                    <li><a class="dropdown-item" href="selenium.html">Selenium</a></li>
+                                    <li><a class="dropdown-item" href="aws.html">AWS</a></li>
+                                    <li><a class="dropdown-item" href="fullstack.html">Full Stack Development with Python and Django</a></li>
+                                   
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="aptitude.html">Aptitude</a></li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li><a href="exams.html">Exams</a></li>
+                   
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" aria-expanded="false">
+                          Quick Links 
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                          <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                          <li><a class="dropdown-item" href="certificate.html">Certificate</a></li>
+                      </ul>
+                  </li>
+                    
+                    <li><a href="tel:9030941099" class="call-now-btn">Call Now</a></li>
+                </b></ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showNavMenu()"></i>
+        </nav>
+    </section>
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+          <div class="container mt-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Exams</li>
+                </ol>
+              </nav>
+            <h3>EXAMS</h3>
+          </div>
+        </section><!-- End Breadcrumbs -->
+
+       
+        <body class="bg-light">
+            <div class="container mt-5">
+                <h1 class="text-center mb-4">Select Your Exam</h1>
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100 mb-2" onclick="toggleSubcategories('eapcet')">EAPCET</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100 mb-2" onclick="toggleSubcategories('jee')">JEE Mains</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100 mb-2" onclick="toggleSubcategories('programming')">Programming</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100 mb-2" onclick="toggleSubcategories('aptitude')">Aptitude</button>
+                    </div>
+                </div>
+                
+                <div id="eapcet" class="subcategories mt-3 d-none">
+                    <div class="card p-3">
+                        <button class="btn btn-secondary w-100 mb-2" onclick="toggleNested('maths_chapters')">Maths Chapters-Wise Questions </button>
+                        <div id="maths_chapters" class="nested-subcategories d-none">
+                            <a href="Eapcet_Questions_html/Maths/Complex_Numbers.html" class="btn btn-success mb-2">Complex Numbers</a>
+                            <a href="Eapcet_Questions_html/Maths/Quadratic_Expressions.html" class="btn btn-success mb-2">Quadratic Expressions</a>
+                            <a href="Eapcet_Questions_html/Maths/Theory _of_Equations.html" class="btn btn-success mb-2">Theory of Equations</a>
+                            <a href="Eapcet_Questions_html/Maths/Functions.html" class="btn btn-success mb-2">Functions</a>
+                            <a href="Eapcet_Questions_html/Maths/Mathematical_Induction.html" class="btn btn-success mb-2">Mathematical Induction</a>
+                            <a href="Eapcet_Questions_html/Maths/Partial_Fractions.html" class="btn btn-success mb-2">Partial Fractions</a>
+                            <a href="Eapcet_Questions_html/Maths/Binomial_Theorem.html" class="btn btn-success mb-2">Binomial Theorem</a>
+                            <a href="Eapcet_Questions_html/Maths/Permutations_and_Combinations.html" class="btn btn-success mb-2">Permutations and Combinations</a>
+                            <a href="Eapcet_Questions_html/Maths/Matrices_and_Determinants.html" class="btn btn-success mb-2">Matrices and Determinants</a>
+                            <a href="Eapcet_Questions_html/Maths/Measures_of_Dispersion.html" class="btn btn-success mb-2">Measures of Dispersion</a>
+                            <a href="Eapcet_Questions_html/Maths/Probability.html" class="btn btn-success mb-2">Probability</a>
+                            <a href="Eapcet_Questions_html/Maths/Trigonometric_Functions_and_Identities.html" class="btn btn-success mb-2">Trigonometric Functions and Identities</a>
+                            <a href="Eapcet_Questions_html/Maths/Trigonometric_Equations.html" class="btn btn-success mb-2">Trigonometric Equations</a>
+                            <a href="Eapcet_Questions_html/Maths/Properties_of_Triangles.html" class="btn btn-success mb-2">Properties of Triangles</a>
+                            <a href="Eapcet_Questions_html/Maths/Inverse_Trigonometric_Functions.html" class="btn btn-success mb-2">Inverse Trigonometric Functions</a>
+                            <a href="Eapcet_Questions_html/Maths/Hyperbolic_Functions.html" class="btn btn-success mb-2">Hyperbolic Functions</a>
+                            <a href="Eapcet_Questions_html/Maths/Rectangular_Cartesian_Coordinates.html" class="btn btn-success mb-2">Rectangular Cartesian Coordinates</a>
+                            <a href="Eapcet_Questions_html/Maths/Straight_Line_and_Pair_of_Straight_Lines.html" class="btn btn-success mb-2">Straight Line and Pair of Straight Lines</a>
+                            <a href="Eapcet_Questions_html/Maths/Circle_and_System_of_Circles.html" class="btn btn-success mb-2">Circle and System of Circles</a>
+                            <a href="Eapcet_Questions_html/Maths/Conic_Sections.html" class="btn btn-success mb-2">Conic Sections</a>
+                            <a href="Eapcet_Questions_html/Maths/Vector_Algebra.html" class="btn btn-success mb-2">Vector Algebra</a>
+                            <a href="Eapcet_Questions_html/Maths/Three_Dimensional_Geometry.html" class="btn btn-success mb-2">Three Dimensional Geometry</a>
+                            <a href="Eapcet_Questions_html/Maths/Limits_and_Continuity.html" class="btn btn-success mb-2">Limits and Continuity</a>
+                            <a href="Eapcet_Questions_html/Maths/Differentiation.html" class="btn btn-success mb-2">Differentiation</a>
+                            <a href="Eapcet_Questions_html/Maths/Applications_of_Derivatives.html" class="btn btn-success mb-2">Applications of Derivatives</a>
+                            <a href="Eapcet_Questions_html/Maths/Indefinite_Integrals.html" class="btn btn-success mb-2">Indefinite Integrals</a>
+                            <a href="Eapcet_Questions_html/Maths/Definite_Integrals_and_Its_Applications.html" class="btn btn-success mb-2">Definite Integrals and Its Applications</a>
+                            <a href="Eapcet_Questions_html/Maths/Differential_Equations.html" class="btn btn-success mb-2">Differential Equations</a>
+                            <a href="Eapcet_Questions_html/Maths/Miscellaneous.html" class="btn btn-success mb-2">Miscellaneous</a>
+                            
+                        </div>
+                        
+                        <button class="btn btn-secondary w-100 mb-2" onclick="toggleNested('chemistry_chapters')">Chemistry Chapters-Wise Questions </button>
+                        <div id="chemistry_chapters" class="nested-subcategories d-none">
+                            <a href="Eapcet_Questions_html/chemistry/Some_Basic_Concepts_and_Stoichiometry.html" class="btn btn-success mb-2">Some Basic Concepts and Stoichiometry</a>
+                            <a href="Eapcet_Questions_html/chemistry/Atomic_Structure.html" class="btn btn-success mb-2">Atomic Structure</a>
+                            <a href="Eapcet_Questions_html/chemistry/Chemical_Bonding.html" class="btn btn-success mb-2">Chemical Bonding and Molecular Structure</a>
+                            <a href="Eapcet_Questions_html/chemistry/Gaseous_and_Liquid_States.html" class="btn btn-success mb-2">Gaseous and Liquid States</a>
+                            <a href="Eapcet_Questions_html/chemistry/Solid_State.html" class="btn btn-success mb-2">Solid State</a>
+                            <a href="Eapcet_Questions_html/chemistry/Solutions.html" class="btn btn-success mb-2">Solutions</a>
+                            <a href="Eapcet_Questions_html/chemistry/Thermodynamics.html" class="btn btn-success mb-2">Thermodynamics</a>
+                            <a href="Eapcet_Questions_html/chemistry/Chemical_Equilibrium.html" class="btn btn-success mb-2">Chemical Equilibrium</a>
+                            <a href="Eapcet_Questions_html/chemistry/Chemical_Kinetics.html" class="btn btn-success mb-2">Chemical Kinetics</a>
+                            <a href="Eapcet_Questions_html/chemistry/Electrochemistry.html" class="btn btn-success mb-2">Electrochemistry</a>
+                            <a href="Eapcet_Questions_html/chemistry/Surface_Chemistry.html" class="btn btn-success mb-2">Surface Chemistry</a>
+                            <a href="Eapcet_Questions_html/chemistry/General_principles_of_Metallurgy.html" class="btn btn-success mb-2">General principles of Metallurgy</a>
+                            <a href="Eapcet_Questions_html/chemistry/Periodic_Properties.html" class="btn btn-success mb-2">Classification of Elements and Periodic Properties</a>
+                            <a href="Eapcet_Questions_html/chemistry/Hydrogen.html" class="btn btn-success mb-2">Hydrogen and its Compounds</a>
+                            <a href="Eapcet_Questions_html/chemistry/s_p_block.html" class="btn btn-success mb-2">S and P-Block Elements</a>
+                            <a href="Eapcet_Questions_html/chemistry/d_f_block.html" class="btn btn-success mb-2">Transition Elements(d & f-Block Elements)</a>
+                            <a href="Eapcet_Questions_html/chemistry/coordination_compunds.html" class="btn btn-success mb-2">Coordination Compounds</a>
+                            <a href="Eapcet_Questions_html/chemistry/Organic_chemistry.html" class="btn btn-success mb-2">General Organic Chemistry and Hydrocarbons</a>
+                            <a href="Eapcet_Questions_html/chemistry/Haloalkanes.html" class="btn btn-success mb-2">Haloalkanes and Haloarenes</a>
+                            <a href="Eapcet_Questions_html/chemistry/Alcohols.html" class="btn btn-success mb-2">Alcohols,Phenols and Ethers</a>
+                            <a href="Eapcet_Questions_html/chemistry/Aldehydes.html" class="btn btn-success mb-2">Aldehydes,Ketones and Carboxylic Acids</a>
+                            <a href="Eapcet_Questions_html/chemistry/Organic_compounds.html" class="btn btn-success mb-2">Organic Compounds Containing Nitrogen</a>   
+                            <a href="Eapcet_Questions_html/chemistry/Polymers.html" class="btn btn-success mb-2">Polymers</a>
+                            <a href="Eapcet_Questions_html/chemistry/Biomolecules.html" class="btn btn-success mb-2">Biomolecules and Chemistry in Everyday Life</a>
+                            <a href="Eapcet_Questions_html/chemistry/Environmental.html" class="btn btn-success mb-2">Environmental Chemistry</a>
+                           
+                        </div>
+                        <button class="btn btn-secondary w-100 mb-2" onclick="toggleNested('eapcet_topics')">Topics</button>
+                        <div id="eapcet_topics" class="nested-subcategories d-none">
+                            <a href="eapcet_topicwise.html" class="btn btn-success mb-2">Topic-wise</a>
+                            <a href="eapcet_mock_tests.html" class="btn btn-success mb-2">Mock Tests</a>
+                            <a href="eapcet_previous_papers.html" class="btn btn-success mb-2">Previous Papers</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="jee" class="subcategories mt-3 d-none">
+                    <div class="card p-3">
+                        <button class="btn btn-secondary w-100 mb-2" onclick="toggleNested('jee_chapters')">Chapters</button>
+                        <div id="jee_chapters" class="nested-subcategories d-none">
+                            <a href="jee_physics.html" class="btn btn-success mb-2">Physics</a>
+                            <a href="jee_chemistry.html" class="btn btn-success mb-2">Chemistry</a>
+                            <a href="jee_math.html" class="btn btn-success mb-2">Mathematics</a>
+                        </div>
+                        <button class="btn btn-secondary w-100 mb-2" onclick="toggleNested('jee_topics')">Subjectwise Full tests</button>
+                        <div id="jee_topics" class="nested-subcategories d-none">
+                            <a href="fulltest1.html" class="btn btn-success mb-2">Full Test-1</a>
+                            <a href="Jee-Mains mock test/Mock_Test_1.html" class="btn btn-success mb-2">Mock Test 1</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                function toggleSubcategories(id) {
+                    document.querySelectorAll('.subcategories').forEach(div => {
+                        div.classList.add('d-none');
+                    });
+                    document.getElementById(id).classList.toggle('d-none');
+                }
+                
+                function toggleNested(id) {
+                    document.getElementById(id).classList.toggle('d-none');
+                }
+            </script>
+        
+      
+  
+    </main>
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Info Section -->
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <a href="index.html"><img src="logo.png" alt="" class="logo"></a>
+                        <p>Empowering excellence in a diverse and innovative learning community.</p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.instagram.com/prathibha_institute/" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.youtube.com/@PrathibhaInstitute" class="youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <!-- Useful Links Section -->
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="aboutus.html">About us</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="terms.html">Terms Of Service</a></li>
+                        </ul>
+                    </div>
+                    <!-- Our Courses Section -->
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Courses</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="fullstack.html">Software</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="eapcet.html">EAPCET/JEE-MAINS</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="aptitude.html">Quantitative Aptitude</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Us Section -->
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Ground Floor, D.S. Bingi Arcade <br>
+                            Near ABS Venture, Vinayak Nagar<br>
+                            Nizamabad-503001 <br><br>
+                            <a href="tel:9030941099"><strong>Phone:</strong> +91 9030941099</a><br>
+                            <strong>Email:</strong> prathibhainstitutions@gmail.com<br>
+                        </p>
+                    
+                    </div>
+                </div>
+                <hr>
+                   
+            </div>
+        </div>
+        <div class="container text-center">
+            <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div> 
+    </footer>
+    
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>    
+ <!--Whatsapp-->
+ <a href="https://api.whatsapp.com/send?phone=9030941099&text=Hello " class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
+    <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">
+  </a>
+</body>
+</html>

@@ -2324,5 +2324,28 @@ nav .fa-solid.fa-xmark {
 .dropdown-submenu:hover > .dropdown-menu {
   display: block; /* Show submenu on hover */
 }
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically (if needed) */
+  width: 100%; /* Ensures it spans the full width */
+  margin-top: 30px; /* Adjust spacing as needed */
+}
 
+/* Custom Button Styling */
+.btn-custom-primary {
+  background-color: #05786f; /* Change this to your desired button color */
+  border-color: #f3eeee; /* Change this to your desired button border color */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px; /* Adjust padding for better appearance */
+  text-align: center;
+  display: inline-block;
+  border-radius: 25px; /* Optional: Adds rounded corners */
+}
+
+.btn-custom-primary:hover {
+  background-color: #efd37f7a; /* Change this to your desired hover color */
+  border-color: #f4b289f2; /* Change this to your desired hover border color */
+}
 
