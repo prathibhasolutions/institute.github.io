@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .question-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-direction: column; /* Adjusted to stack elements vertically */
+        }
+
+        .question-card {
+            width: 100%;
+            max-width: 900px; /* Larger card width */
+            height: auto; /* Make it flexible */
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px; /* Adjusted to reduce gap */
+            padding: 20px; /* Padding for spacing */
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-height: 380px; /* Increase card height */
+        }
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 100vw;
+            height: 400px;
+            max-height: 300px;
+            object-fit:contain;
+        }
+
+        /* Positioning the star button */
+        .star-btn-container {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%); /* Centers the button horizontally */
+        }
+
+        .star-btn-container .star-btn,
+        .star-btn-container .double-star-btn {
+            font-size: 18px; /* Smaller button size */
+            padding: 3px 6px; /* Adjusted padding */
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #063e7a;
+            border: 1px solid #3990ed;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #000000;
+            border: 1px solid #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #66696a;
+            border-color: #5a6368;
+        }
+
+        .text-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .mt-4 {
+            margin-top: 40px;
+        }
+
+        .star-question-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .star-question-item {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .question-card {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .star-btn-container {
+                top: 10rem;
+                left: 50%;
+                transform: translateX(-50%); /* Centers the button horizontally */
+            }
+
+            .card img {
+                max-height: 200px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .question-card {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .star-btn-container {
+                /* position:relative; */
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%); /* Centers the button horizontally */
+            }
+
+            .btn {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Chemistry Questions</h2>
+        
+        <!-- Centering the Question Card -->
+        <div id="question-container" class="row justify-content-center">
+            <div class="col-md-8 col-sm-12 question-card-container">
+                <div class="question-card">
+                    <div id="card-content"></div>
+                    <div class="star-btn-container" id="star-buttons"></div> <!-- Star button inside card -->
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <button class="btn btn-secondary" id="prev-btn" disabled>Previous</button>
+            <button class="btn btn-primary" id="next-btn">Next</button>
+        </div>
+
+        <!-- Star Questions List -->
+        <div class="mt-4">
+            <h4>Questions with Easy:</h4>
+            <div class="star-question-list" id="double-star-list"></div>
+            <h4>Questions with Medium:</h4>
+            <div class="star-question-list" id="single-star-list"></div>
+        </div>
+        <br><br><br><br>
+    </div>
+
+    <script>
+        const imageFolderPath = "Chemical Kinetics";  // Folder for images
+const totalQuestions = 19;  // Total number of questions
+const imageExtension = ".png";  // Image extension
+const starQuestions = [5,8,15];  // Questions with a single star
+const doubleStarQuestions = [1,2,3,4,6,7,9,10,11,12,13,14,16,17,18,19];  // Questions with a double star
+
+let currentQuestion = 1;  // Start with the first question
+const container = document.getElementById("card-content");
+const starButtonsContainer = document.getElementById("star-buttons");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+const singleStarList = document.getElementById("single-star-list");
+const doubleStarList = document.getElementById("double-star-list");
+
+const answers = {
+    1: "Answer is D for Question 1",
+    2: "Answer is A for Question 2",
+    3: "Answer is A for Question 3",
+    4: "Answer is C for Question 4",
+    5: "Answer is C for Question 5",
+    6: "Answer is D for Question 6",
+    7: "Answer is A for Question 7",
+    8: "Answer is C for Question 8",
+    9: "Answer is D for Question 9",
+    10: "Answer is C for Question 10",
+    11: "Answer is D for Question 11",
+    12: "Answer is A for Question 12",
+    13: "Answer is D for Question 13",
+    14: "Answer is C for Question 14",
+    15: "Answer is C for Question 15",
+    16: "Answer is B for Question 16",
+    17: "Answer is A for Question 17",
+    18: "Answer is B for Question 18",
+    19: "Answer is A for Question 19",
+};
+
+function loadQuestion(questionNumber) {
+    container.innerHTML = '';  // Clear current question
+    const card = document.createElement("div");
+    card.className = "card";
+    const imagePath = `${imageFolderPath}/${questionNumber}${imageExtension}`;
+
+    let starButton = '';
+    if (starQuestions.includes(questionNumber)) {
+        starButton = '<button class="btn btn-warning star-btn"> Medium</button>';
+    }
+    if (doubleStarQuestions.includes(questionNumber)) {
+        starButton = '<button class="btn btn-warning double-star-btn"> Easy</button>';
+    }
+
+    card.innerHTML = `
+        <div class="card-body text-center">
+            <h5 class="card-title">Question ${questionNumber}</h5>
+            <img src="${imagePath}" class="img-fluid" alt="Question ${questionNumber}">
+            <div class="mt-2">
+                <button class="btn btn-primary answer-btn">Show Answer</button>
+            </div>
+            <p class="answer text-success" id="answer${questionNumber}" style="display: none;">${answers[questionNumber]}</p>
+        </div>
+    `;
+
+    // Star buttons container for the current question
+    const starContainer = document.createElement("div");
+    starContainer.className = "star-btn-container";
+    starContainer.innerHTML = starButton;
+    starButtonsContainer.innerHTML = '';  // Clear previous star buttons
+    starButtonsContainer.appendChild(starContainer);
+
+    container.appendChild(card);
+
+    prevBtn.disabled = questionNumber === 1;
+    nextBtn.disabled = questionNumber === totalQuestions;
+}
+
+function updateStarLists() {
+    singleStarList.innerHTML = '';
+    doubleStarList.innerHTML = '';
+
+    starQuestions.forEach(question => {
+        const item = document.createElement("div");
+        item.className = "star-question-item";
+        item.textContent = `Q${question}`;
+        item.addEventListener("click", () => {
+            currentQuestion = question;  // Set to clicked question
+            loadQuestion(currentQuestion);  // Load the selected question
+        });
+        singleStarList.appendChild(item);
+    });
+
+    doubleStarQuestions.forEach(question => {
+        const item = document.createElement("div");
+        item.className = "star-question-item";
+        item.textContent = `Q${question}`;
+        item.addEventListener("click", () => {
+            currentQuestion = question;  // Set to clicked question
+            loadQuestion(currentQuestion);  // Load the selected question
+        });
+        doubleStarList.appendChild(item);
+    });
+}
+
+document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("answer-btn")) {
+        const answerElement = document.getElementById(`answer${currentQuestion}`);
+        answerElement.style.display = answerElement.style.display === "none" ? "block" : "none";
+    }
+});
+
+prevBtn.addEventListener("click", function() {
+    if (currentQuestion > 1) {
+        currentQuestion--;
+        loadQuestion(currentQuestion);
+    }
+});
+
+nextBtn.addEventListener("click", function() {
+    if (currentQuestion < totalQuestions) {
+        currentQuestion++;
+        loadQuestion(currentQuestion);
+    }
+});
+
+// Load the first question initially
+loadQuestion(currentQuestion);
+updateStarLists();  // Update the lists for star questions
+
+    </script>
+</body>
+</html>
+
+
+
+
