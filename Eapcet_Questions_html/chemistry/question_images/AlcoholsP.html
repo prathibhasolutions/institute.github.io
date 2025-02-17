@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alcohols,Phenols and Ethers</title>
+  <link rel="icon" type="image/png" href="../../../logo.png">
   <link rel="stylesheet" href="styles.css">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,6 +40,7 @@
         justify-content: center; /* Ensure the logo stays centered on small devices */
     }
 }
+
         .question-card-container {
             display: flex;
             justify-content: center;
@@ -83,19 +85,55 @@
             object-fit:contain;
         }
 
-        /* Positioning the star button */
-        .star-btn-container {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%); /* Centers the button horizontally */
-        }
+        /* Adjusted Star Button Position */
+.star-btn-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px; /* Add spacing between buttons */
+}
 
-        .star-btn-container .star-btn,
-        .star-btn-container .double-star-btn {
-            font-size: 18px; /* Smaller button size */
-            padding: 3px 6px; /* Adjusted padding */
-        }
+  
+/* Adjust Button Styles */
+.star-btn-container .easy-btn,
+.star-btn-container .medium-btn,
+.star-btn-container .difficult-btn {
+    font-size: 16px; /* Smaller button size */
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Easy Button */
+.star-btn-container .easy-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+/* Medium Button */
+.star-btn-container .medium-btn {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+}
+
+/* Difficult Button */
+.star-btn-container .difficult-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+/* Hover Effects */
+.star-btn-container .easy-btn:hover { background-color: #218838; }
+.star-btn-container .medium-btn:hover { background-color: #e0a800; }
+.star-btn-container .difficult-btn:hover { background-color: #c82333; }
+
 
         /* Button Styles */
         .btn {
@@ -151,7 +189,7 @@
             font-size: 16px;
             border-radius: 5px;
         }
-         /* Footer Styles */
+        /* Footer Styles */
 #footer {
     background-color: rgb(23, 41, 84); /* White background */
     color: #ffffff; /* Dark blue text color */
@@ -166,10 +204,18 @@
             }
 
             .star-btn-container {
-                top: 10rem;
-                left: 50%;
-                transform: translateX(-50%); /* Centers the button horizontally */
-            }
+        top: 15px;
+        flex-direction: row; /* Keep buttons in a row */
+        gap: 3px;
+    }
+
+    .star-btn-container .easy-btn,
+    .star-btn-container .medium-btn,
+    .star-btn-container .difficult-btn {
+        font-size: 14px;
+        padding: 3px 6px;
+    }
+}
 
             .card img {
                 max-height: 200px;
@@ -179,7 +225,7 @@
                 font-size: 14px;
                 padding: 8px 15px;
             }
-        }
+        
 
         @media (max-width: 480px) {
             .question-card {
@@ -188,11 +234,18 @@
             }
 
             .star-btn-container {
-                /* position:relative; */
-                top: 10px;
-                left: 50%;
-                transform: translateX(-50%); /* Centers the button horizontally */
-            }
+        top: 20px;
+        flex-wrap: wrap; /* Allows buttons to move to the next line if needed */
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .star-btn-container .easy-btn,
+    .star-btn-container .medium-btn,
+    .star-btn-container .difficult-btn {
+        font-size: 12px;
+        padding: 2px 4px;
+    }
 
             .btn {
                 font-size: 12px;
@@ -208,34 +261,38 @@
         </nav>   
       </section>
       <br><br><br><br><br>
-    <div class="container mt-4">
+      <div class="container mt-4">
         <h2 class="text-center">Alcohols,Phenols and Ethers</h2>
-        
+    
         <!-- Centering the Question Card -->
         <div id="question-container" class="row justify-content-center">
             <div class="col-md-8 col-sm-12 question-card-container">
                 <div class="question-card">
                     <div id="card-content"></div>
-                    <div class="star-btn-container" id="star-buttons"></div> <!-- Star button inside card -->
-                    
+                    <!-- Star Buttons inside the card -->
+                    <div class="star-btn-container" id="star-buttons"></div>
                 </div>
             </div>
         </div>
-
+    
         <div class="text-center mt-3">
             <button class="btn btn-secondary" id="prev-btn" disabled>Previous</button>
             <button class="btn btn-primary" id="next-btn">Next</button>
         </div>
-
-        <!-- Star Questions List -->
+    
+        <!-- Starred Questions List -->
         <div class="mt-4">
             <h4>Level Easy:</h4>
-            <div class="star-question-list" id="double-star-list"></div><br>
-            <h4>Level  Medium:</h4>
-            <div class="star-question-list" id="single-star-list"></div>
+            <div class="star-question-list" id="easy-list"></div><br>
+    
+            <h4>Level Medium:</h4>
+            <div class="star-question-list" id="medium-list"></div><br>
+    
+            <h4>Level Difficult:</h4>
+            <div class="star-question-list" id="difficult-list"></div>
         </div>
-        <br><br><br><br>
     </div>
+    <br><br>
     <footer id="footer" class="footer">
         
         <div class="container text-center">
@@ -246,16 +303,21 @@
         const imageFolderPath = "Alcohols,Phenols and Ethers";  // Folder for images
 const totalQuestions = 21;  // Total number of questions
 const imageExtension = ".png";  // Image extension
-const starQuestions = [1,6,8,12,13,14,18,];  // Questions with a single star
-const doubleStarQuestions = [2, 3, 4,5,7,9,10,11,15,16,17,19,20,21];  // Questions with a double star
 
-let currentQuestion = 1;  // Start with the first question
+
+const easyQuestions = [2, 3, 4,5,7,9,10,11,15,16,17,19,20,21];  // Easy questions
+const mediumQuestions = [1,6,8,12,13,14,18,];  // Medium difficulty questions
+const difficultQuestions = [];  // Newly added difficult questions
+
+let currentQuestion = 1;
 const container = document.getElementById("card-content");
 const starButtonsContainer = document.getElementById("star-buttons");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
-const singleStarList = document.getElementById("single-star-list");
-const doubleStarList = document.getElementById("double-star-list");
+
+const easyList = document.getElementById("easy-list");  // Updated ID for Easy
+const mediumList = document.getElementById("medium-list");  // Updated ID for Medium
+const difficultList = document.getElementById("difficult-list");  // New ID for Difficult
 
 const answers = {
     1: "Answer is C",
@@ -282,17 +344,20 @@ const answers = {
 };
 
 function loadQuestion(questionNumber) {
-    container.innerHTML = '';  // Clear current question
+    container.innerHTML = '';  
     const card = document.createElement("div");
     card.className = "card";
     const imagePath = `${imageFolderPath}/${questionNumber}${imageExtension}`;
 
-    let starButton = '';
-    if (starQuestions.includes(questionNumber)) {
-        starButton = '<button class="btn btn-warning star-btn"> Medium</button>';
+    let difficultyButton = '';
+    if (easyQuestions.includes(questionNumber)) {
+        difficultyButton += '<button class="btn btn-success difficulty-btn">Easy</button> ';
     }
-    if (doubleStarQuestions.includes(questionNumber)) {
-        starButton = '<button class="btn btn-warning double-star-btn"> Easy</button>';
+    if (mediumQuestions.includes(questionNumber)) {
+        difficultyButton += '<button class="btn btn-warning difficulty-btn">Medium</button> ';
+    }
+    if (difficultQuestions.includes(questionNumber)) {
+        difficultyButton += '<button class="btn btn-danger difficulty-btn">Difficult</button>';
     }
 
     card.innerHTML = `
@@ -306,13 +371,7 @@ function loadQuestion(questionNumber) {
         </div>
     `;
 
-    // Star buttons container for the current question
-    const starContainer = document.createElement("div");
-    starContainer.className = "star-btn-container";
-    starContainer.innerHTML = starButton;
-    starButtonsContainer.innerHTML = '';  // Clear previous star buttons
-    starButtonsContainer.appendChild(starContainer);
-
+    starButtonsContainer.innerHTML = difficultyButton;
     container.appendChild(card);
 
     prevBtn.disabled = questionNumber === 1;
@@ -320,29 +379,41 @@ function loadQuestion(questionNumber) {
 }
 
 function updateStarLists() {
-    singleStarList.innerHTML = '';
-    doubleStarList.innerHTML = '';
+    easyList.innerHTML = '';
+    mediumList.innerHTML = '';
+    difficultList.innerHTML = '';
 
-    starQuestions.forEach(question => {
+    easyQuestions.forEach(question => {
         const item = document.createElement("div");
-        item.className = "star-question-item";
+        item.className = "star-question-item easy";
         item.textContent = `Q${question}`;
         item.addEventListener("click", () => {
-            currentQuestion = question;  // Set to clicked question
-            loadQuestion(currentQuestion);  // Load the selected question
+            currentQuestion = question;
+            loadQuestion(currentQuestion);
         });
-        singleStarList.appendChild(item);
+        easyList.appendChild(item);
     });
 
-    doubleStarQuestions.forEach(question => {
+    mediumQuestions.forEach(question => {
         const item = document.createElement("div");
-        item.className = "star-question-item";
+        item.className = "star-question-item medium";
         item.textContent = `Q${question}`;
         item.addEventListener("click", () => {
-            currentQuestion = question;  // Set to clicked question
-            loadQuestion(currentQuestion);  // Load the selected question
+            currentQuestion = question;
+            loadQuestion(currentQuestion);
         });
-        doubleStarList.appendChild(item);
+        mediumList.appendChild(item);
+    });
+
+    difficultQuestions.forEach(question => {
+        const item = document.createElement("div");
+        item.className = "star-question-item difficult";
+        item.textContent = `Q${question}`;
+        item.addEventListener("click", () => {
+            currentQuestion = question;
+            loadQuestion(currentQuestion);
+        });
+        difficultList.appendChild(item);
     });
 }
 
@@ -369,11 +440,16 @@ nextBtn.addEventListener("click", function() {
 
 // Load the first question initially
 loadQuestion(currentQuestion);
-updateStarLists();  // Update the lists for star questions
+updateStarLists();
+
 
     </script>
 </body>
 </html>
+
+
+
+
 
 
 
