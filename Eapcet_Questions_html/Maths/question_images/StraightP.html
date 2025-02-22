@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Straight Line and Pair of Straight Lines</title>
+  <link rel="icon" type="image/png" href="../../../logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">     
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+       .header {
+    background-color: rgb(23, 41, 84);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar appears above other content while scrolling down */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 10px 0;
+}
+
+.logo {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Maintains aspect ratio */
+    border-radius: 50%;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .header {
+        justify-content: center; /* Ensure the logo stays centered on small devices */
+    }
+}
+
+        .question-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-direction: column; /* Adjusted to stack elements vertically */
+        }
+
+        .question-card {
+            width: 100%;
+            max-width: 900px; /* Larger card width */
+            height: auto; /* Make it flexible */
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px; /* Adjusted to reduce gap */
+            padding: 20px; /* Padding for spacing */
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-height: 380px; /* Increase card height */
+        }
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 100vw;
+            height: 400px;
+            max-height: 300px;
+            object-fit:contain;
+        }
+
+        /* Adjusted Star Button Position */
+.star-btn-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px; /* Add spacing between buttons */
+}
+
+  
+/* Adjust Button Styles */
+.star-btn-container .easy-btn,
+.star-btn-container .medium-btn,
+.star-btn-container .difficult-btn {
+    font-size: 16px; /* Smaller button size */
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Easy Button */
+.star-btn-container .easy-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+/* Medium Button */
+.star-btn-container .medium-btn {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+}
+
+/* Difficult Button */
+.star-btn-container .difficult-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+/* Hover Effects */
+.star-btn-container .easy-btn:hover { background-color: #218838; }
+.star-btn-container .medium-btn:hover { background-color: #e0a800; }
+.star-btn-container .difficult-btn:hover { background-color: #c82333; }
+
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #063e7a;
+            border: 1px solid #3990ed;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #000000;
+            border: 1px solid #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #66696a;
+            border-color: #5a6368;
+        }
+
+        .text-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .mt-4 {
+            margin-top: 40px;
+        }
+
+        .star-question-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .star-question-item {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        /* Footer Styles */
+        #footer {
+    background-color: rgb(23, 41, 84); /* White background */
+    color: #ffffff; /* Dark blue text color */
+    padding: 10px 0;
+}
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .question-card {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .star-btn-container {
+        top: 15px;
+        flex-direction: row; /* Keep buttons in a row */
+        gap: 3px;
+    }
+
+    .star-btn-container .easy-btn,
+    .star-btn-container .medium-btn,
+    .star-btn-container .difficult-btn {
+        font-size: 14px;
+        padding: 3px 6px;
+    }
+}
+
+            .card img {
+                max-height: 200px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        
+
+        @media (max-width: 480px) {
+            .question-card {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .star-btn-container {
+        top: 20px;
+        flex-wrap: wrap; /* Allows buttons to move to the next line if needed */
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .star-btn-container .easy-btn,
+    .star-btn-container .medium-btn,
+    .star-btn-container .difficult-btn {
+        font-size: 12px;
+        padding: 2px 4px;
+    }
+
+            .btn {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="header" style="font-family: sans-serif;color: rgb(23, 41, 84);">
+        <nav>
+            <img src="../../../logo.png" alt="" class="logo">    
+        </nav>   
+      </section>
+      <br><br><br><br><br>
+      <div class="container mt-4">
+        <h2 class="text-center">Straight Line and Pair of Straight Lines</h2>
+    
+        <!-- Centering the Question Card -->
+        <div id="question-container" class="row justify-content-center">
+            <div class="col-md-8 col-sm-12 question-card-container">
+                <div class="question-card">
+                    <div id="card-content"></div>
+                    <!-- Star Buttons inside the card -->
+                    <div class="star-btn-container" id="star-buttons"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="text-center mt-3">
+            <button class="btn btn-secondary" id="prev-btn" disabled>Previous</button>
+            <button class="btn btn-primary" id="next-btn">Next</button>
+        </div>
+    
+        <!-- Starred Questions List -->
+        <div class="mt-4">
+            <h4>Level Easy:</h4>
+            <div class="star-question-list" id="easy-list"></div><br>
+    
+            <h4>Level Medium:</h4>
+            <div class="star-question-list" id="medium-list"></div><br>
+    
+            <h4>Level Difficult:</h4>
+            <div class="star-question-list" id="difficult-list"></div>
+        </div>
+    </div>
+    <br><br>
+    <footer id="footer" class="footer">
+        
+        <div class="container text-center">
+            <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div> 
+    </footer>
+    <script>
+        const imageFolderPath = "Straight Line and Pair of Straight Lines";  // Folder for images
+const totalQuestions = 114;  // Total number of questions
+const imageExtension = ".png";  // Image extension
+
+
+const easyQuestions = [];  // Easy questions
+const mediumQuestions = [];  // Medium difficulty questions
+const difficultQuestions = [];  // Newly added difficult questions
+
+let currentQuestion = 1;
+const container = document.getElementById("card-content");
+const starButtonsContainer = document.getElementById("star-buttons");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+const easyList = document.getElementById("easy-list");  // Updated ID for Easy
+const mediumList = document.getElementById("medium-list");  // Updated ID for Medium
+const difficultList = document.getElementById("difficult-list");  // New ID for Difficult
+
+const answers = {
+    1: "Answer is C",  
+2: "Answer is C",  
+3: "Answer is B",  
+4: "Answer is C",  
+5: "Answer is D",  
+6: "Answer is C",  
+7: "Answer is D",  
+8: "Answer is B",  
+9: "Answer is D",  
+10: "Answer is B",  
+11: "Answer is A",  
+12: "Answer is B",  
+13: "Answer is B",  
+14: "Answer is B",  
+15: "Answer is B",  
+16: "Answer is A",  
+17: "Answer is A",  
+18: "Answer is C",  
+19: "Answer is C",  
+20: "Answer is B",  
+21: "Answer is B",  
+22: "Answer is C",  
+23: "Answer is C",  
+24: "Answer is C",  
+25: "Answer is C",  
+26: "Answer is D",  
+27: "Answer is C",  
+28: "Answer is B",  
+29: "Answer is A",  
+30: "Answer is A",  
+31: "Answer is A",  
+32: "Answer is D",  
+33: "Answer is B",  
+34: "Answer is B",  
+35: "Answer is B",  
+36: "Answer is C",  
+37: "Answer is B",  
+38: "Answer is A",  
+39: "Answer is D",  
+40: "Answer is B",  
+41: "Answer is D",  
+42: "Answer is C",  
+43: "Answer is D",  
+44: "Answer is D",  
+45: "Answer is C",  
+46: "Answer is C",  
+47: "Answer is B",  
+48: "Answer is A",  
+49: "Answer is C",  
+50: "Answer is A",  
+51: "Answer is D",  
+52: "Answer is A",  
+53: "Answer is D",  
+54: "Answer is A",  
+55: "Answer is A",  
+56: "Answer is B",  
+57: "Answer is A",  
+58: "Answer is C",  
+59: "Answer is C",  
+60: "Answer is C",  
+61: "Answer is A",  
+62: "Answer is A",  
+63: "Answer is B",  
+64: "Answer is A",  
+65: "Answer is B",  
+66: "Answer is A",  
+67: "Answer is C",  
+68: "Answer is D",  
+69: "Answer is A",  
+70: "Answer is A",  
+71: "Answer is A",  
+72: "Answer is C",  
+73: "Answer is D",  
+74: "Answer is A",  
+75: "Answer is B",  
+76: "Answer is B",  
+77: "Answer is C",  
+78: "Answer is A",  
+79: "Answer is A",  
+80: "Answer is C",  
+81: "Answer is B",  
+82: "Answer is C",  
+83: "Answer is C",  
+84: "Answer is C",  
+85: "Answer is B",  
+86: "Answer is A",  
+87: "Answer is A",  
+88: "Answer is B",  
+89: "Answer is B",  
+90: "Answer is D",  
+91: "Answer is D",  
+92: "Answer is C",  
+93: "Answer is C",  
+94: "Answer is D",  
+95: "Answer is B",  
+96: "Answer is B",  
+97: "Answer is C",  
+98: "Answer is C",  
+99: "Answer is C",  
+100: "Answer is D",  
+101: "Answer is C",  
+102: "Answer is C",  
+103: "Answer is C",  
+104: "Answer is D",  
+105: "Answer is A",  
+106: "Answer is D",  
+107: "Answer is B",  
+108: "Answer is C",  
+109: "Answer is A",  
+110: "Answer is C",  
+111: "Answer is D",  
+112: "Answer is D",  
+113: "Answer is B",  
+114: "Answer is D",  
+
+ 
+  
+
+
+
+
+
+
+
+
+
+  
+
+    
+};
+
+function loadQuestion(questionNumber) {
+    container.innerHTML = '';  
+    const card = document.createElement("div");
+    card.className = "card";
+    const imagePath = `${imageFolderPath}/${questionNumber}${imageExtension}`;
+
+    let difficultyButton = '';
+    if (easyQuestions.includes(questionNumber)) {
+        difficultyButton += '<button class="btn btn-success difficulty-btn">Easy</button> ';
+    }
+    if (mediumQuestions.includes(questionNumber)) {
+        difficultyButton += '<button class="btn btn-warning difficulty-btn">Medium</button> ';
+    }
+    if (difficultQuestions.includes(questionNumber)) {
+        difficultyButton += '<button class="btn btn-danger difficulty-btn">Difficult</button>';
+    }
+
+    card.innerHTML = `
+        <div class="card-body text-center">
+            <h5 class="card-title">Question ${questionNumber}</h5>
+            <img src="${imagePath}" class="img-fluid" alt="Question ${questionNumber}">
+            <div class="mt-2">
+                <button class="btn btn-primary answer-btn">Show Answer</button>
+            </div>
+            <p class="answer text-success" id="answer${questionNumber}" style="display: none;">${answers[questionNumber]}</p>
+        </div>
+    `;
+
+    starButtonsContainer.innerHTML = difficultyButton;
+    container.appendChild(card);
+
+    prevBtn.disabled = questionNumber === 1;
+    nextBtn.disabled = questionNumber === totalQuestions;
+}
+
+function updateStarLists() {
+    easyList.innerHTML = '';
+    mediumList.innerHTML = '';
+    difficultList.innerHTML = '';
+
+    easyQuestions.forEach(question => {
+        const item = document.createElement("div");
+        item.className = "star-question-item easy";
+        item.textContent = `Q${question}`;
+        item.addEventListener("click", () => {
+            currentQuestion = question;
+            loadQuestion(currentQuestion);
+        });
+        easyList.appendChild(item);
+    });
+
+    mediumQuestions.forEach(question => {
+        const item = document.createElement("div");
+        item.className = "star-question-item medium";
+        item.textContent = `Q${question}`;
+        item.addEventListener("click", () => {
+            currentQuestion = question;
+            loadQuestion(currentQuestion);
+        });
+        mediumList.appendChild(item);
+    });
+
+    difficultQuestions.forEach(question => {
+        const item = document.createElement("div");
+        item.className = "star-question-item difficult";
+        item.textContent = `Q${question}`;
+        item.addEventListener("click", () => {
+            currentQuestion = question;
+            loadQuestion(currentQuestion);
+        });
+        difficultList.appendChild(item);
+    });
+}
+
+document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("answer-btn")) {
+        const answerElement = document.getElementById(`answer${currentQuestion}`);
+        answerElement.style.display = answerElement.style.display === "none" ? "block" : "none";
+    }
+});
+
+prevBtn.addEventListener("click", function() {
+    if (currentQuestion > 1) {
+        currentQuestion--;
+        loadQuestion(currentQuestion);
+    }
+});
+
+nextBtn.addEventListener("click", function() {
+    if (currentQuestion < totalQuestions) {
+        currentQuestion++;
+        loadQuestion(currentQuestion);
+    }
+});
+
+// Load the first question initially
+loadQuestion(currentQuestion);
+updateStarLists();
+
+
+    </script>
+</body>
+</html>
