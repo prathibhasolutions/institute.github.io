@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thermodynamics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-dark text-white">
+                <h1>Thermodynamics</h1>
+            </div>
+            <div class="card-body text-dark">
+                <p><strong>Thermodynamics</strong> is the branch of physics that deals with the study of heat, energy, and their transformations into different forms of work.</p>
+        
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Key Concepts</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>System:</strong> The part of the universe under study.</li>
+                            <li><strong>Surroundings:</strong> Everything outside the system.</li>
+                            <li><strong>Boundary:</strong> The surface separating the system from surroundings.</li>
+                            <li><strong>Energy Transfer:</strong> Occurs through heat and work interactions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-dark text-white">
+                <h5>Thermodynamic System & Its Types</h5>
+            </div>
+            <div class="card-body text-dark">
+                <p><strong>Thermodynamic System:</strong> A thermodynamic system is a specific quantity of matter or a region in space chosen for analysis. It is separated from the surroundings by a boundary.</p>
+        
+                <!-- Types of Thermodynamic Systems -->
+                <div class="row mt-3">
+                    
+                    <!-- Open System -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h6>Open System</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Both mass and energy can be exchanged with the surroundings.</p>
+                                <p><strong>Example:</strong> Boiling water in an open pot.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Closed System -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-success text-white">
+                                <h6>Closed System</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Only energy can be exchanged, but not mass.</p>
+                                <p><strong>Example:</strong> A sealed container with hot coffee.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Isolated System -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-danger text-white">
+                                <h6>Isolated System</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Neither mass nor energy is exchanged with surroundings.</p>
+                                <p><strong>Example:</strong> A thermos flask with hot water.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-dark text-white">
+                <h5>Thermodynamic Variables & Their Types</h5>
+            </div>
+            <div class="card-body text-dark">
+                <p><strong>Thermodynamic Variables:</strong> These are the physical quantities used to describe the state of a thermodynamic system.</p>
+        
+                <!-- Types of Thermodynamic Variables -->
+                <div class="row mt-3">
+                    
+                    <!-- Extensive Variables -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h6>Extensive Variables</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Depend on the size or amount of substance in the system.</p>
+                                <p><strong>Examples:</strong></p>
+                                <ul>
+                                    <li>Mass (\(m\))</li>
+                                    <li>Volume (\(V\))</li>
+                                    <li>Internal Energy (\(U\))</li>
+                                    <li>Entropy (\(S\))</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Intensive Variables -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-success text-white">
+                                <h6>Intensive Variables</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Do not depend on the size or amount of substance.</p>
+                                <p><strong>Examples:</strong></p>
+                                <ul>
+                                    <li>Pressure (\(P\))</li>
+                                    <li>Temperature (\(T\))</li>
+                                    <li>Density (\(\rho\))</li>
+                                    <li>Specific Heat (\(c\))</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-danger text-white">
+                <h5>Thermal Equilibrium & Adiabatic Wall</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Thermal Equilibrium -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Thermal Equilibrium</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>A system is in <strong>thermal equilibrium</strong> when there is no net flow of heat between its parts or with the surroundings, meaning all parts of the system have the same temperature.</p>
+                        <p><strong>Key Concept:</strong> If two bodies are in thermal equilibrium with a third body, they are also in thermal equilibrium with each other (Zeroth Law of Thermodynamics).</p>
+                    </div>
+                </div>
+        
+                <!-- Adiabatic Wall -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Adiabatic Wall</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>An <strong>adiabatic wall</strong> is a type of boundary that does not allow heat to pass through it.</p>
+                        <p><strong>Properties:</strong></p>
+                        <ul>
+                            <li>No heat transfer occurs across an adiabatic wall.</li>
+                            <li>It ensures that the system remains thermally isolated.</li>
+                            <li>Commonly used in thermodynamic systems to study energy changes without heat exchange.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-danger text-white">
+                <h5>Work Done in Thermodynamics</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Definition of Work Done -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Definition</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>In thermodynamics, <strong>work</strong> is the energy transferred by a system when it undergoes a change in volume against an external pressure.</p>
+                    </div>
+                </div>
+        
+                <!-- Basic Formula -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Basic Formula</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>
+                            \[
+                            dW = P \, dV
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li>\(dW\) = Infinitesimal work done</li>
+                            <li>\(P\) = External pressure</li>
+                            <li>\(dV\) = Change in volume</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Sign Convention -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-warning text-white">
+                        <h6>Sign Convention</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Positive Work (\( W > 0 \)):</strong> When the system <b>expands</b> (\( dV > 0 \)), work is done <b>by</b> the system.</li>
+                            <li><strong>Negative Work (\( W < 0 \)):</strong> When the system <b>contracts</b> (\( dV < 0 \)), work is done <b>on</b> the system.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-danger text-white">
+                <h5>Internal Energy</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Definition of Internal Energy -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Definition</h6>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Internal energy (U)</strong> is the total energy possessed by a system due to the kinetic and potential energies of its molecules. It is a state function and depends only on the state of the system.</p>
+                    </div>
+                </div>
+        
+                <!-- Additional Information -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Key Points</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>It is an extensive property, meaning it depends on the mass of the system.</li>
+                            <li>It increases when heat is added and decreases when work is done by the system.</li>
+                            <li>For an isolated system, internal energy remains constant.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-danger text-white">
+                <h5>Zeroth Law of Thermodynamics</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Definition -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Definition</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>The <strong>Zeroth Law of Thermodynamics</strong> states that if two systems (A and B) are each in thermal equilibrium with a third system (C), then they are also in thermal equilibrium with each other.</p>
+                    </div>
+                </div>
+        
+                <!-- Explanation -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Key Concept</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>This law establishes the concept of <strong>temperature</strong> as a fundamental and measurable property of matter.</p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-danger text-white">
+                <h5>First Law of Thermodynamics</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Definition -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Definition</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>The <strong>First Law of Thermodynamics</strong> states that the total energy of an isolated system remains constant. It is a statement of the conservation of energy, which means that energy can neither be created nor destroyed, only transformed from one form to another.</p>
+                    </div>
+                </div>
+        
+                <!-- Mathematical Form -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Mathematical Form</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>
+                            \[
+                            \Delta U = Q - W
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li>\(\Delta U\) = Change in internal energy</li>
+                            <li>\(Q\) = Heat supplied to the system</li>
+                            <li>\(W\) = Work done by the system</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Sign Convention -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-warning text-white">
+                        <h6>Sign Convention</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>\(Q\) is positive if heat is added to the system.</li>
+                            <li>\(Q\) is negative if heat is lost from the system.</li>
+                            <li>\(W\) is positive if work is done by the system.</li>
+                            <li>\(W\) is negative if work is done on the system.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-danger text-white">
+                <h5>Thermodynamic Processes</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Quasi-Static Process -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Quasi-Static Process</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>A process that occurs infinitely slowly so that the system remains in equilibrium at all times.</p>
+                    </div>
+                </div>
+        
+                <!-- Isothermal Process -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Isothermal Process (\(T = \text{constant}\))</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>In an isothermal process, the temperature remains constant, meaning \(\Delta U = 0\).</p>
+                        <p><strong>Equations:</strong></p>
+                        <ul>
+                            <li>Work Done: \( W = nRT \ln \frac{V_f}{V_i} \)</li>
+                            <li>Heat Added: \( Q = W \)</li>
+                            <li>Internal Energy Change: \( \Delta U = 0 \)</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Adiabatic Process -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-warning text-white">
+                        <h6>Adiabatic Process (\(Q = 0\))</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>In an adiabatic process, no heat is exchanged with the surroundings.</p>
+                        <p><strong>Equations:</strong></p>
+                        <ul>
+                            <li>Work Done: \( W = \frac{nR(T_i - T_f)}{\gamma - 1} \)</li>
+                            <li>Internal Energy Change: \( \Delta U = -W \)</li>
+                        </ul>
+                        <p><strong>Condition:</strong> \( PV^\gamma = \text{constant} \)</p>
+                    </div>
+                </div>
+        
+                <!-- Isobaric Process -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h6>Isobaric Process (\(P = \text{constant}\))</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>In an isobaric process, pressure remains constant.</p>
+                        <p><strong>Equations:</strong></p>
+                        <ul>
+                            <li>Work Done: \( W = P(V_f - V_i) \)</li>
+                            <li>Heat Added: \( Q = n C_p \Delta T \)</li>
+                            <li>Internal Energy Change: \( \Delta U = n C_v \Delta T \)</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Isochoric Process -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h6>Isochoric Process (\(V = \text{constant}\))</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>In an isochoric process, volume remains constant, meaning \( W = 0 \).</p>
+                        <p><strong>Equations:</strong></p>
+                        <ul>
+                            <li>Heat Added: \( Q = n C_v \Delta T \)</li>
+                            <li>Internal Energy Change: \( \Delta U = Q \)</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Cyclic Process -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-dark text-white">
+                        <h6>Cyclic Process</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>In a cyclic process, the system returns to its initial state after undergoing a series of thermodynamic changes.</p>
+                        <p><strong>Key Equation:</strong></p>
+                        <ul>
+                            <li>Net Work Done: \( W = Q_{\text{in}} - Q_{\text{out}} \)</li>
+                            <li>Change in Internal Energy: \( \Delta U = 0 \)</li>
+                        </ul>
+                        <p><strong>Graphical Representation:</strong></p>
+                        <p>The work done in a cyclic process is equal to the area enclosed by the curve on a PV diagram.</p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-danger text-white">
+                <h5>Second Law of Thermodynamics</h5>
+            </div>
+            <div class="card-body text-dark">
+                <p>The Second Law of Thermodynamics states that the entropy of an isolated system always increases over time and that energy transfers have a direction.</p>
+        
+                <!-- Kelvin-Planck Statement -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Kelvin-Planck Statement</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>"It is impossible to construct a device that operates in a cyclic process and converts all heat energy into work without any loss."</p>
+                        <p><strong>Key Implication:</strong> No heat engine can be 100% efficient.</p>
+                    </div>
+                </div>
+        
+                <!-- Clausius Statement -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Clausius Statement</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>"It is impossible for a system to transfer heat from a colder body to a hotter body without the input of external work."</p>
+                        <p><strong>Key Implication:</strong> Heat cannot flow spontaneously from a colder body to a hotter body.</p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-dark text-white">
+                <h5>Reversible and Irreversible Processes</h5>
+            </div>
+            <div class="card-body text-dark">
+                
+                <!-- Reversible Process -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Reversible Process</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>A thermodynamic process that can be reversed by an infinitesimal change in conditions without any loss of energy is called a <strong>Reversible Process</strong>.</p>
+                        <p><strong>Characteristics:</strong></p>
+                        <ul>
+                            <li>Occurs infinitely slowly.</li>
+                            <li>No loss of heat due to friction or dissipation.</li>
+                            <li>System remains in equilibrium at all times.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Irreversible Process -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>Irreversible Process</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>A process that cannot be reversed exactly to restore the system and surroundings to their initial states is called an <strong>Irreversible Process</strong>.</p>
+                        <p><strong>Characteristics:</strong></p>
+                        <ul>
+                            <li>Occurs rapidly and spontaneously.</li>
+                            <li>Involves energy dissipation (e.g., friction, heat loss).</li>
+                            <li>System passes through non-equilibrium states.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-dark text-white">
+                <h5>Entropy and Change in Entropy</h5>
+            </div>
+            <div class="card-body text-dark">
+                
+                <!-- Entropy Definition -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Entropy (\(S\))</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>Entropy is a thermodynamic property that measures the degree of disorder or randomness in a system.</p>
+                        <p><strong>Key Points:</strong></p>
+                        <ul>
+                            <li>Denoted by \(S\).</li>
+                            <li>Greater disorder → Higher entropy.</li>
+                            <li>Entropy of the universe always increases (Second Law of Thermodynamics).</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Change in Entropy Formula -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>Change in Entropy (\(\Delta S\))</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>The change in entropy for a reversible process is given by:</p>
+                        <p>
+                            \[
+                            \Delta S = \int \frac{dQ_{rev}}{T}
+                            \]
+                        </p>
+                        <p>For a finite change:</p>
+                        <p>
+                            \[
+                            \Delta S = \frac{Q_{rev}}{T}
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul class="text-left">
+                            <li>\(\Delta S\) = Change in entropy</li>
+                            <li>\(Q_{rev}\) = Heat absorbed or released in a reversible process</li>
+                            <li>\(T\) = Absolute temperature (in Kelvin)</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-dark text-white">
+                <h5>Heat Engine & Its Formulae</h5>
+            </div>
+            <div class="card-body text-dark">
+                
+                <!-- Heat Engine Definition -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>What is a Heat Engine?</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>A <strong>heat engine</strong> is a device that converts heat energy into mechanical work by undergoing a cyclic process.</p>
+                        <p><strong>Working:</strong></p>
+                        <ul>
+                            <li>Absorbs heat from a hot reservoir (\(Q_1\))</li>
+                            <li>Converts part of heat into work (\(W\))</li>
+                            <li>Rejects remaining heat to a cold reservoir (\(Q_2\))</li>
+                            <li>Operates in a cyclic manner</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Heat Engine Process Representation -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>Heat Engine Cycle</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>
+                            \[
+                            W = Q_1 - Q_2
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul class="text-left">
+                            <li>\(W\) = Work output</li>
+                            <li>\(Q_1\) = Heat absorbed from the hot source</li>
+                            <li>\(Q_2\) = Heat rejected to the cold sink</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Efficiency of Heat Engine -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Efficiency of a Heat Engine</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Efficiency (\(\eta\)) is the ratio of work done to heat absorbed:</p>
+                        <p>
+                            \[
+                            \eta = \frac{W}{Q_1} = \frac{Q_1 - Q_2}{Q_1}
+                            \]
+                        </p>
+                        <p>In terms of temperature (for a Carnot engine):</p>
+                        <p>
+                            \[
+                            \eta = 1 - \frac{T_2}{T_1}
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul class="text-left">
+                            <li>\(T_1\) = Temperature of the hot reservoir</li>
+                            <li>\(T_2\) = Temperature of the cold reservoir</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="container mt-4">
+
+            <!-- Carnot Cycle -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-dark text-white">
+                    <h5>Carnot Cycle</h5>
+                </div>
+                <div class="card-body text-dark">
+                    <p>The <strong>Carnot Cycle</strong> is an ideal reversible cycle consisting of two isothermal and two adiabatic processes.</p>
+                    <p><strong>Processes Involved:</strong></p>
+                    <ul>
+                        <li>Isothermal Expansion (\(T_1\))</li>
+                        <li>Adiabatic Expansion</li>
+                        <li>Isothermal Compression (\(T_2\))</li>
+                        <li>Adiabatic Compression</li>
+                    </ul>
+                    <p><strong>Efficiency of Carnot Engine:</strong></p>
+                    <p class="text-center">
+                        \[
+                        \eta = 1 - \frac{T_2}{T_1}
+                        \]
+                    </p>
+                    <p><strong>Where:</strong></p>
+                    <ul>
+                        <li>\(T_1\) = Temperature of hot reservoir</li>
+                        <li>\(T_2\) = Temperature of cold reservoir</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Refrigerator -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5>Refrigerator</h5>
+                </div>
+                <div class="card-body text-dark">
+                    <p>A <strong>refrigerator</strong> is a device that transfers heat from a lower temperature region (cold reservoir) to a higher temperature region (hot reservoir).</p>
+                    <p><strong>Coefficient of Performance (COP) of a Refrigerator:</strong></p>
+                    <p class="text-center">
+                        \[
+                        \text{COP}_R = \frac{Q_2}{W} = \frac{T_2}{T_1 - T_2}
+                        \]
+                    </p>
+                    <p><strong>Where:</strong></p>
+                    <ul>
+                        <li>\(Q_2\) = Heat extracted from the cold region</li>
+                        <li>\(W\) = Work input</li>
+                        <li>\(T_1\) = Hot reservoir temperature</li>
+                        <li>\(T_2\) = Cold reservoir temperature</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Heat Pump -->
+            <div class="card shadow-lg">
+                <div class="card-header bg-success text-white">
+                    <h5>Heat Pump</h5>
+                </div>
+                <div class="card-body text-dark">
+                    <p>A <strong>heat pump</strong> is a device that transfers heat from a colder area to a hotter area, primarily used for heating purposes.</p>
+                    <p><strong>Coefficient of Performance (COP) of a Heat Pump:</strong></p>
+                    <p class="text-center">
+                        \[
+                        \text{COP}_H = \frac{Q_1}{W} = \frac{T_1}{T_1 - T_2}
+                        \]
+                    </p>
+                    <p><strong>Where:</strong></p>
+                    <ul>
+                        <li>\(Q_1\) = Heat delivered to the hot region</li>
+                        <li>\(W\) = Work input</li>
+                        <li>\(T_1\) = Hot reservoir temperature</li>
+                        <li>\(T_2\) = Cold reservoir temperature</li>
+                    </ul>
+                    <p><strong>Relation between COP of Refrigerator & Heat Pump:</strong></p>
+                    <p class="text-center">
+                        \[
+                        \text{COP}_H = \text{COP}_R + 1
+                        \]
+                    </p>
+                </div>
+            </div>
+        
+        </div>
+        
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

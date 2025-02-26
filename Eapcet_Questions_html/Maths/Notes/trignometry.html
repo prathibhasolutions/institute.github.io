@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry </title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- MathJax for rendering mathematical equations -->
+    <script type="text/javascript" async
+        src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Trigonometric Functions </h1>
+
+        <!-- Card for Measurement of Angles -->
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white">
+                <h4>Measurement of Angles</h4>
+            </div>
+            <div class="card-body">
+                <p>An angle is the figure formed by two rays sharing a common endpoint, called the vertex.</p>
+                <p>Angles can be measured in different units: Degrees, Radians, and Gradians.</p>
+            </div>
+        </div>
+
+        <!-- Card for Relationship Between Degree, Radian, and Gradian -->
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-success text-white">
+                <h4>Relationship Between Degree, Radian, and Gradian</h4>
+            </div>
+            <div class="card-body">
+                <p>There are three standard units of angle measurement:</p>
+                <ul>
+                    <li><strong>Degree (°)</strong> - A full revolution is 360°.</li>
+                    <li><strong>Radian (rad)</strong> - The angle subtended at the center of a circle by an arc whose length is equal to the radius.</li>
+                    <li><strong>Gradian (grad)</strong> - A full revolution is divided into 400 gradians.</li>
+                </ul>
+
+                <p><strong>Conversion formulas:</strong></p>
+                <p>
+                    \[
+                    1 \text{ radian} = \frac{180}{\pi} \text{ degrees}
+                    \]
+                </p>
+                <p>
+                    \[
+                    1 \text{ degree} = \frac{\pi}{180} \text{ radians}
+                    \]
+                </p>
+                <p>
+                    \[
+                    1 \text{ gradian} = \frac{9}{10} \text{ degrees}
+                    \]
+                </p>
+                <p>
+                    \[
+                    1 \text{ degree} = \frac{10}{9} \text{ gradians}
+                    \]
+                </p>
+                <p>Thus, the relationship between them is:</p>
+                <p>
+                    \[
+                    180^\circ = \pi \text{ rad} = 200 \text{ gradians}
+                    \]
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Trigonometric Ratios</h4>
+            </div>
+            <div class="card-body">
+                <p>Trigonometric ratios relate the angles of a right-angled triangle to the lengths of its sides.</p>
+                
+                <p>For a right-angled triangle with:</p>
+                <ul>
+                    <li><strong>Hypotenuse (h):</strong> The longest side opposite the right angle.</li>
+                    <li><strong>Opposite side (o):</strong> The side opposite to the given angle.</li>
+                    <li><strong>Adjacent side (a):</strong> The side next to the given angle.</li>
+                </ul>
+        
+                <p><strong>Basic Trigonometric Ratios:</strong></p>
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Ratio</th>
+                            <th>Formula</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\sin \theta\)</td>
+                            <td>\(\frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{o}{h}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos \theta\)</td>
+                            <td>\(\frac{\text{Adjacent}}{\text{Hypotenuse}} = \frac{a}{h}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\tan \theta\)</td>
+                            <td>\(\frac{\text{Opposite}}{\text{Adjacent}} = \frac{o}{a}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\csc \theta\)</td>
+                            <td>\(\frac{\text{Hypotenuse}}{\text{Opposite}} = \frac{h}{o}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\sec \theta\)</td>
+                            <td>\(\frac{\text{Hypotenuse}}{\text{Adjacent}} = \frac{h}{a}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cot \theta\)</td>
+                            <td>\(\frac{\text{Adjacent}}{\text{Opposite}} = \frac{a}{o}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+                <p><strong>Important Identities:</strong></p>
+                <ul>
+                    <li>\(\tan \theta = \frac{\sin \theta}{\cos \theta}\)</li>
+                    <li>\(\cot \theta = \frac{1}{\tan \theta}\)</li>
+                    <li>\(\csc \theta = \frac{1}{\sin \theta}\)</li>
+                    <li>\(\sec \theta = \frac{1}{\cos \theta}\)</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Trigonometric Functions of Standard Angles (0° to 90°)</h4>
+            </div>
+            <div class="card-body">
+                <p>Trigonometric functions for standard angles (0°, 30°, 45°, 60°, and 90°) are widely used in mathematics and physics.</p>
+        
+                <p><strong>Trigonometric Table:</strong></p>
+                
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>\(\theta\)</th>
+                            <th>\(0^\circ\)</th>
+                            <th>\(30^\circ\)</th>
+                            <th>\(45^\circ\)</th>
+                            <th>\(60^\circ\)</th>
+                            <th>\(90^\circ\)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\sin \theta\)</td>
+                            <td>0</td>
+                            <td>\(\frac{1}{2}\)</td>
+                            <td>\(\frac{1}{\sqrt{2}}\)</td>
+                            <td>\(\frac{\sqrt{3}}{2}\)</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos \theta\)</td>
+                            <td>1</td>
+                            <td>\(\frac{\sqrt{3}}{2}\)</td>
+                            <td>\(\frac{1}{\sqrt{2}}\)</td>
+                            <td>\(\frac{1}{2}\)</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>\(\tan \theta\)</td>
+                            <td>0</td>
+                            <td>\(\frac{1}{\sqrt{3}}\)</td>
+                            <td>1</td>
+                            <td>\(\sqrt{3}\)</td>
+                            <td>\(\infty\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\csc \theta\)</td>
+                            <td>\(\infty\)</td>
+                            <td>2</td>
+                            <td>\(\sqrt{2}\)</td>
+                            <td>\(\frac{2}{\sqrt{3}}\)</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>\(\sec \theta\)</td>
+                            <td>1</td>
+                            <td>\(\frac{2}{\sqrt{3}}\)</td>
+                            <td>\(\sqrt{2}\)</td>
+                            <td>2</td>
+                            <td>\(\infty\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cot \theta\)</td>
+                            <td>\(\infty\)</td>
+                            <td>\(\sqrt{3}\)</td>
+                            <td>1</td>
+                            <td>\(\frac{1}{\sqrt{3}}\)</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+                <p><strong>Key Observations:</strong></p>
+                <ul>
+                    <li>As \(\theta\) increases from \(0^\circ\) to \(90^\circ\), \(\sin \theta\) increases, and \(\cos \theta\) decreases.</li>
+                    <li>\(\tan 90^\circ\) and \(\sec 90^\circ\) are undefined (\(\infty\)).</li>
+                    <li>\(\csc 0^\circ\) and \(\cot 0^\circ\) are also undefined (\(\infty\)).</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Pythagorean Identities</h4>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>\[
+                    \sin^2 \theta + \cos^2 \theta = 1
+                    \]</li>
+                    <li>\[
+                    1 + \tan^2 \theta = \sec^2 \theta
+                    \]</li>
+                    <li>\[
+                    1 + \cot^2 \theta = \csc^2 \theta
+                    \]</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Trigonometric Ratios of Allied Angles</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Angle Transformation</th>
+                            <th>\(\sin \theta\)</th>
+                            <th>\(\cos \theta\)</th>
+                            <th>\(\tan \theta\)</th>
+                            <th>\(\csc \theta\)</th>
+                            <th>\(\sec \theta\)</th>
+                            <th>\(\cot \theta\)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(-\theta\)</td>
+                            <td>\(-\sin \theta\)</td>
+                            <td>\(\cos \theta\)</td>
+                            <td>\(-\tan \theta\)</td>
+                            <td>\(-\csc \theta\)</td>
+                            <td>\(\sec \theta\)</td>
+                            <td>\(-\cot \theta\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(180^\circ - \theta\)</td>
+                            <td>\(\sin \theta\)</td>
+                            <td>\(\cos \theta\)</td>
+                            <td>\(-\tan \theta\)</td>
+                            <td>\(\csc \theta\)</td>
+                            <td>\(\sec \theta\)</td>
+                            <td>\(-\cot \theta\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(180^\circ + \theta\)</td>
+                            <td>\(-\sin \theta\)</td>
+                            <td>\(-\cos \theta\)</td>
+                            <td>\(\tan \theta\)</td>
+                            <td>\(-\csc \theta\)</td>
+                            <td>\(-\sec \theta\)</td>
+                            <td>\(\cot \theta\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(90^\circ - \theta\)</td>
+                            <td>\(\cos \theta\)</td>
+                            <td>\(\sin \theta\)</td>
+                            <td>\(\cot \theta\)</td>
+                            <td>\(\sec \theta\)</td>
+                            <td>\(\csc \theta\)</td>
+                            <td>\(\tan \theta\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(90^\circ + \theta\)</td>
+                            <td>\(\cos \theta\)</td>
+                            <td>\(-\sin \theta\)</td>
+                            <td>\(-\cot \theta\)</td>
+                            <td>\(\sec \theta\)</td>
+                            <td>\(-\csc \theta\)</td>
+                            <td>\(-\tan \theta\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(270^\circ - \theta\)</td>
+                            <td>\(-\cos \theta\)</td>
+                            <td>\(-\sin \theta\)</td>
+                            <td>\(\cot \theta\)</td>
+                            <td>\(-\sec \theta\)</td>
+                            <td>\(-\csc \theta\)</td>
+                            <td>\(\tan \theta\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(270^\circ + \theta\)</td>
+                            <td>\(-\cos \theta\)</td>
+                            <td>\(\sin \theta\)</td>
+                            <td>\(-\cot \theta\)</td>
+                            <td>\(-\sec \theta\)</td>
+                            <td>\(\csc \theta\)</td>
+                            <td>\(-\tan \theta\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Compound Angle Formulae</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Formula</th>
+                            <th>Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\sin(A + B)\)</td>
+                            <td>\(\sin A \cos B + \cos A \sin B\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\sin(A - B)\)</td>
+                            <td>\(\sin A \cos B - \cos A \sin B\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos(A + B)\)</td>
+                            <td>\(\cos A \cos B - \sin A \sin B\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos(A - B)\)</td>
+                            <td>\(\cos A \cos B + \sin A \sin B\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\tan(A + B)\)</td>
+                            <td>\(\frac{\tan A + \tan B}{1 - \tan A \tan B}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\tan(A - B)\)</td>
+                            <td>\(\frac{\tan A - \tan B}{1 + \tan A \tan B}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cot(A + B)\)</td>
+                            <td>\(\frac{\cot A \cot B - 1}{\cot A + \cot B}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cot(A - B)\)</td>
+                            <td>\(\frac{\cot A \cot B + 1}{\cot B - \cot A}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Transformation Formulae</h4>
+            </div>
+            <div class="card-body">
+                <h5 class="text-center text-primary">Sum to Product Identities</h5>
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Formula</th>
+                            <th>Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\sin A + \sin B\)</td>
+                            <td>\(2 \sin \frac{A+B}{2} \cos \frac{A-B}{2}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\sin A - \sin B\)</td>
+                            <td>\(2 \cos \frac{A+B}{2} \sin \frac{A-B}{2}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos A + \cos B\)</td>
+                            <td>\(2 \cos \frac{A+B}{2} \cos \frac{A-B}{2}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos A - \cos B\)</td>
+                            <td>\(-2 \sin \frac{A+B}{2} \sin \frac{A-B}{2}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+                <h5 class="text-center text-primary mt-4">Product to Sum Identities</h5>
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Formula</th>
+                            <th>Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\sin A \sin B\)</td>
+                            <td>\(\frac{1}{2} [\cos (A - B) - \cos (A + B)]\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos A \cos B\)</td>
+                            <td>\(\frac{1}{2} [\cos (A - B) + \cos (A + B)]\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\sin A \cos B\)</td>
+                            <td>\(\frac{1}{2} [\sin (A + B) + \sin (A - B)]\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos A \sin B\)</td>
+                            <td>\(\frac{1}{2} [\sin (A + B) - \sin (A - B)]\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Multiple Angle Formulae</h4>
+            </div>
+            <div class="card-body">
+                <h5 class="text-center text-primary">Double Angle Formulae</h5>
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Formula</th>
+                            <th>Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\sin 2A\)</td>
+                            <td>\(2 \sin A \cos A\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos 2A\)</td>
+                            <td>\(\cos^2 A - \sin^2 A = 2\cos^2 A - 1 = 1 - 2\sin^2 A\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\tan 2A\)</td>
+                            <td>\(\frac{2\tan A}{1 - \tan^2 A}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+                <h5 class="text-center text-primary mt-4">Triple Angle Formulae</h5>
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Formula</th>
+                            <th>Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\sin 3A\)</td>
+                            <td>\(3 \sin A - 4 \sin^3 A\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos 3A\)</td>
+                            <td>\(4 \cos^3 A - 3 \cos A\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\tan 3A\)</td>
+                            <td>\(\frac{3\tan A - \tan^3 A}{1 - 3\tan^2 A}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Sub-Multiple Angle Formulae</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Formula</th>
+                            <th>Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\sin \frac{A}{2}\)</td>
+                            <td>\(\pm \sqrt{\frac{1 - \cos A}{2}}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos \frac{A}{2}\)</td>
+                            <td>\(\pm \sqrt{\frac{1 + \cos A}{2}}\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\tan \frac{A}{2}\)</td>
+                            <td>\(\pm \sqrt{\frac{1 - \cos A}{1 + \cos A}} = \frac{\sin A}{1 + \cos A} = \frac{1 - \cos A}{\sin A}\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Important Trigonometric Formulae</h4>
+            </div>
+            <div class="card-body">
+                
+                <h5 class="text-center text-primary">Product of Sine & Cosine</h5>
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Formula</th>
+                            <th>Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>\(\sin(A + B) \sin(A - B)\)</td>
+                            <td>\(\sin^2 A - \sin^2 B\)</td>
+                        </tr>
+                        <tr>
+                            <td>\(\cos(A + B) \cos(A - B)\)</td>
+                            <td>\(\cos^2 A - \sin^2 B\)</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+               
+        
+               
+        
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

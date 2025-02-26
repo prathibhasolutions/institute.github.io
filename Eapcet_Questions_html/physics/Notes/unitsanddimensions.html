@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Units and dimensions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+  <div class="container mt-5">
+
+    <div class="card shadow-lg mt-4 ">
+      <div class="card-header bg-primary text-white">
+          <h1>Units and dimensions</h1>
+      </div>
+      <div class="card-body text-dark">
+  
+          <!-- Physical Quantities -->
+          <div class="card mb-3 mt-4 shadow-sm">
+              <div class="card-header bg-danger text-white">
+                  <h6>1. Physical Quantities</h6>
+              </div>
+              <div class="card-body">
+                  <p>Physical quantities are measurable properties of a system that can be expressed in terms of a unit.</p>
+                  <p>They are classified into:</p>
+                  <ul>
+                      <li><strong>Fundamental Quantities:</strong> Cannot be derived from other quantities.</li>
+                      <li><strong>Derived Quantities:</strong> Formed by combining fundamental quantities.</li>
+                  </ul>
+              </div>
+          </div>
+  
+          <!-- Units of Measurement -->
+          <div class="card mb-3 shadow-sm">
+              <div class="card-header bg-warning text-white">
+                  <h6>2. Units of Measurement</h6>
+              </div>
+              <div class="card-body">
+                  <p>A unit is a standard quantity used to measure physical quantities.</p>
+                  <p><strong>Types of Units:</strong></p>
+                  <ul>
+                      <li><strong>Fundamental Units:</strong> Defined for fundamental quantities.</li>
+                      <li><strong>Derived Units:</strong> Expressed using fundamental units.</li>
+                      <li><strong>SI Units:</strong> Internationally accepted system of units.</li>
+                  </ul>
+              </div>
+          </div>
+  
+          <!-- Fundamental Quantities and Their Units -->
+          <div class="card mb-3 shadow-sm">
+              <div class="card-header bg-success text-white">
+                  <h6>3. Fundamental Quantities and Their Units</h6>
+              </div>
+              <div class="card-body">
+                  <table class="table table-bordered text-center">
+                      <thead class="bg-secondary text-white">
+                          <tr>
+                              <th>Quantity</th>
+                              <th>Symbol</th>
+                              <th>SI Unit</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Length</td>
+                              <td>\( L \)</td>
+                              <td>Meter (m)</td>
+                          </tr>
+                          <tr>
+                              <td>Mass</td>
+                              <td>\( M \)</td>
+                              <td>Kilogram (kg)</td>
+                          </tr>
+                          <tr>
+                              <td>Time</td>
+                              <td>\( T \)</td>
+                              <td>Second (s)</td>
+                          </tr>
+                          <tr>
+                              <td>Electric Current</td>
+                              <td>\( I \)</td>
+                              <td>Ampere (A)</td>
+                          </tr>
+                          <tr>
+                              <td>Thermodynamic Temperature</td>
+                              <td>\( \Theta \)</td>
+                              <td>Kelvin (K)</td>
+                          </tr>
+                          <tr>
+                              <td>Amount of Substance</td>
+                              <td>\( N \)</td>
+                              <td>Mole (mol)</td>
+                          </tr>
+                          <tr>
+                              <td>Luminous Intensity</td>
+                              <td>\( J \)</td>
+                              <td>Candela (cd)</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+  
+      </div>
+  </div>
+  
+
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-primary text-white">
+        <h5>Derived Quantities and System of Units</h5>
+    </div>
+    <div class="card-body text-dark">
+
+        <!-- Derived Quantities -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-header bg-danger text-white">
+                <h6>1. Derived Quantities</h6>
+            </div>
+            <div class="card-body">
+                <p>Derived quantities are physical quantities that are expressed in terms of fundamental quantities.</p>
+                <p><strong>Examples:</strong></p>
+                <table class="table table-bordered text-center">
+                    <thead class="bg-secondary text-white">
+                        <tr>
+                            <th>Quantity</th>
+                            <th>Formula</th>
+                            <th>SI Unit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Area</td>
+                            <td>\( L \times L \)</td>
+                            <td>m²</td>
+                        </tr>
+                        <tr>
+                            <td>Volume</td>
+                            <td>\( L \times L \times L \)</td>
+                            <td>m³</td>
+                        </tr>
+                        <tr>
+                            <td>Velocity</td>
+                            <td>\( \frac{L}{T} \)</td>
+                            <td>m/s</td>
+                        </tr>
+                        <tr>
+                            <td>Acceleration</td>
+                            <td>\( \frac{L}{T^2} \)</td>
+                            <td>m/s²</td>
+                        </tr>
+                        <tr>
+                            <td>Force</td>
+                            <td>\( M \times \frac{L}{T^2} \)</td>
+                            <td>Newton (N)</td>
+                        </tr>
+                        <tr>
+                            <td>Pressure</td>
+                            <td>\( \frac{M}{L T^2} \)</td>
+                            <td>Pascals (Pa)</td>
+                        </tr>
+                        <tr>
+                            <td>Work/Energy</td>
+                            <td>\( M \times \frac{L^2}{T^2} \)</td>
+                            <td>Joule (J)</td>
+                        </tr>
+                        <tr>
+                            <td>Power</td>
+                            <td>\( M \times \frac{L^2}{T^3} \)</td>
+                            <td>Watt (W)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- System of Units -->
+        <div class="card mb-3 shadow-sm">
+            <div class="card-header bg-warning text-white">
+                <h6>2. System of Units</h6>
+            </div>
+            <div class="card-body">
+                <p>A system of units is a set of standard units used for measurement.</p>
+                <p><strong>Types of Systems:</strong></p>
+                <table class="table table-bordered text-center">
+                    <thead class="bg-secondary text-white">
+                        <tr>
+                            <th>System</th>
+                            <th>Length Unit</th>
+                            <th>Mass Unit</th>
+                            <th>Time Unit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CGS (Centimeter-Gram-Second)</strong></td>
+                            <td>Centimeter (cm)</td>
+                            <td>Gram (g)</td>
+                            <td>Second (s)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MKS (Meter-Kilogram-Second)</strong></td>
+                            <td>Meter (m)</td>
+                            <td>Kilogram (kg)</td>
+                            <td>Second (s)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>FPS (Foot-Pound-Second)</strong></td>
+                            <td>Foot (ft)</td>
+                            <td>Pound (lb)</td>
+                            <td>Second (s)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SI (International System of Units)</strong></td>
+                            <td>Meter (m)</td>
+                            <td>Kilogram (kg)</td>
+                            <td>Second (s)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="card shadow-lg mt-4">
+  <div class="card-header bg-primary text-white">
+      <h5>Practical Units of Length & Conversions</h5>
+  </div>
+  <div class="card-body">
+      <table class="table table-bordered text-center">
+          <thead class="bg-secondary text-white">
+              <tr>
+                  <th>Unit</th>
+                  <th>Symbol</th>
+                  <th>Value (in meters)</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Femtometer</td>
+                  <td>fm</td>
+                  <td>10⁻¹⁵ m</td>
+              </tr>
+              <tr>
+                  <td>Picometer</td>
+                  <td>pm</td>
+                  <td>10⁻¹² m</td>
+              </tr>
+              <tr>
+                  <td>Ångström</td>
+                  <td>Å</td>
+                  <td>10⁻¹⁰ m</td>
+              </tr>
+              <tr>
+                  <td>Nanometer</td>
+                  <td>nm</td>
+                  <td>10⁻⁹ m</td>
+              </tr>
+              <tr>
+                  <td>Micrometer</td>
+                  <td>µm</td>
+                  <td>10⁻⁶ m</td>
+              </tr>
+              <tr>
+                  <td>Millimeter</td>
+                  <td>mm</td>
+                  <td>10⁻³ m</td>
+              </tr>
+              <tr>
+                  <td>Centimeter</td>
+                  <td>cm</td>
+                  <td>10⁻² m</td>
+              </tr>
+              <tr>
+                  <td>Decimeter</td>
+                  <td>dm</td>
+                  <td>10⁻¹ m</td>
+              </tr>
+              <tr>
+                  <td>Meter</td>
+                  <td>m</td>
+                  <td>10⁰ m</td>
+              </tr>
+              <tr>
+                  <td>Kilometer</td>
+                  <td>km</td>
+                  <td>10³ m</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+
+
+
+    <h1 class="text-center mt-4 mb-4">Physical Quantities with Dimensions</h1>
+
+    <table class="table table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Physical Quantity</th>
+          <th scope="col">SI Unit</th>
+          <th scope="col">Formula</th>
+          <th scope="col">Dimensional Formula</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Area</td><td>m<sup>2</sup></td><td>Area = Length &times; Breadth</td><td>[M<sup>0</sup> L<sup>2</sup> T<sup>0</sup>]</td></tr>
+        <tr><td>Volume</td><td>m<sup>3</sup></td><td>Volume = Length &times; Breadth &times; Height</td><td>[M<sup>0</sup> L<sup>3</sup> T<sup>0</sup>]</td></tr>
+        <tr><td>Velocity</td><td>m/s</td><td>Velocity = Displacement / Time</td><td>[M<sup>0</sup> L<sup>1</sup> T<sup>-1</sup>]</td></tr>
+        <tr><td>Acceleration</td><td>m/s<sup>2</sup></td><td>Acceleration = Change in velocity / Time</td><td>[M<sup>0</sup> L<sup>1</sup> T<sup>-2</sup>]</td></tr>
+        <tr><td>Force</td><td>N</td><td>Force = Mass &times; Acceleration</td><td>[M<sup>1</sup> L<sup>1</sup> T<sup>-2</sup>]</td></tr>
+        <tr><td>Work or Energy</td><td>J</td><td>Work = Force &times; Displacement</td><td>[M<sup>1</sup> L<sup>2</sup> T<sup>-2</sup>]</td></tr>
+        <tr><td>Power</td><td>W</td><td>Power = Work / Time</td><td>[M<sup>1</sup> L<sup>2</sup> T<sup>-3</sup>]</td></tr>
+        <tr><td>Pressure or Stress</td><td>Pa</td><td>Pressure = Force / Area</td><td>[M<sup>1</sup> L<sup>-1</sup> T<sup>-2</sup>]</td></tr>
+        <tr><td>Linear Momentum or Impulse</td><td>Ns</td><td>Momentum = Mass &times; Velocity</td><td>[M<sup>1</sup> L<sup>1</sup> T<sup>-1</sup>]</td></tr>
+        <tr><td>Density</td><td>kg/m<sup>3</sup></td><td>Density = Mass / Volume</td><td>[M<sup>1</sup> L<sup>-3</sup> T<sup>0</sup>]</td></tr>
+        <tr><td>Strain</td><td>Dimensionless</td><td>Strain = Change in Length / Original Length</td><td>[M<sup>0</sup> L<sup>0</sup> T<sup>0</sup>]</td></tr>
+        <tr><td>Modulus of Elasticity</td><td>Pa</td><td>Elasticity = Stress / Strain</td><td>[M<sup>1</sup> L<sup>-1</sup> T<sup>-2</sup>]</td></tr>
+        <tr><td>Surface Tension</td><td>N/m</td><td>Surface Tension = Force / Length</td><td>[M<sup>1</sup> L<sup>0</sup> T<sup>-2</sup>]</td></tr>
+        <tr><td>Velocity Gradient</td><td>s<sup>-1</sup></td><td>Gradient = Velocity / Distance</td><td>[M<sup>0</sup> L<sup>0</sup> T<sup>-1</sup>]</td></tr>
+        <tr><td>Coefficient of Viscosity</td><td>Pa&middot;s</td><td>&eta; = Shear Stress / Velocity Gradient</td><td>[M<sup>1</sup> L<sup>-1</sup> T<sup>-1</sup>]</td></tr>
+        <tr><td>Gravitational Constant</td><td>m<sup>3</sup>kg<sup>-1</sup>s<sup>-2</sup></td><td>F = G(m<sub>1</sub>m<sub>2</sub>) / r<sup>2</sup></td><td>[M<sup>-1</sup> L<sup>3</sup> T<sup>-2</sup>]</td></tr>
+        <tr><td>Moment of Inertia</td><td>kg&middot;m<sup>2</sup></td><td>I = &Sigma;(mr<sup>2</sup>)</td><td>[M<sup>1</sup> L<sup>2</sup> T<sup>0</sup>]</td></tr>
+        <tr><td>Angular Velocity</td><td>rad/s</td><td>&omega; = &theta; / t</td><td>[M<sup>0</sup> L<sup>0</sup> T<sup>-1</sup>]</td></tr>
+        <tr><td>Angular Acceleration</td><td>rad/s<sup>2</sup></td><td>&alpha; = &Delta;&omega; / t</td><td>[M<sup>0</sup> L<sup>0</sup> T<sup>-2</sup>]</td></tr>
+        <tr><td>Angular Momentum</td><td>kg&middot;m<sup>2</sup>/s</td><td>L = I&omega;</td><td>[M<sup>1</sup> L<sup>2</sup> T<sup>-1</sup>]</td></tr>
+        <tr><td>Specific Heat</td><td>J/kg&middot;K</td><td>Q = mc&Delta;T</td><td>[M<sup>0</sup> L<sup>2</sup> T<sup>-2</sup> &Theta;<sup>-1</sup>]</td></tr>
+        <tr><td>Latent Heat</td><td>J/kg</td><td>Q = mL</td><td>[M<sup>0</sup> L<sup>2</sup> T<sup>-2</sup>]</td></tr>
+        <tr><td>Planck's Constant</td><td>J&middot;s</td><td>E = hf</td><td>[M<sup>1</sup> L<sup>2</sup> T<sup>-1</sup>]</td></tr>
+        <tr><td>Universal Gas Constant</td><td>J/mol&middot;K</td><td>PV = nRT</td><td>[M<sup>1</sup> L<sup>2</sup> T<sup>-2</sup> &Theta;<sup>-1</sup>]</td></tr>
+      </tbody>
+    </table>
+
+
+    <div class="card shadow-lg mt-4">
+        <div class="card-header bg-primary text-white">
+            <h5>Principle of Homogeneity of Dimensions</h5>
+        </div>
+        <div class="card-body">
+            <p>The <b>principle of homogeneity</b> states that in a <b>physically correct equation</b>, the dimensions of all terms on <b>both sides</b> must be the <b>same</b>.</p>
+    
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-success text-white">
+                    <h6>Mathematical Representation</h6>
+                </div>
+                <div class="card-body">
+                    <p>If an equation is of the form:</p>
+                    <p class="text-center">
+                        \( A + B = C \)
+                    </p>
+                    <p>Then, the dimensions of A, B, and C must be the same:</p>
+                    <p class="text-center">
+                        \( [A] = [B] = [C] \)
+                    </p>
+                </div>
+            </div>
+    
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-warning text-white">
+                    <h6>Applications of Homogeneity Principle</h6>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><b>Checking correctness</b> of an equation.</li>
+                        <li><b>Deriving unknown relations</b> between physical quantities.</li>
+                        <li><b>Conversion of units</b> between different systems.</li>
+                        <li>Ensuring <b>dimensional consistency</b> in derived equations.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h6>Examples</h6>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><b>Example 1: Kinematic equation</b></li>
+                        <p class="text-center">
+                            \( s = ut + \frac{1}{2} a t^2 \)
+                        </p>
+                        <p>Checking dimensions:</p>
+                        <p> \( [s] = [ut] = [\frac{1}{2} a t^2] = L \) ✅</p>
+                        
+                        <li><b>Example 2: Force equation</b></li>
+                        <p class="text-center">
+                            \( F = ma \)
+                        </p>
+                        <p> \( [F] = [m] [a] = M (LT^{-2}) = MLT^{-2} \) ✅</p>
+    
+                        <li><b>Example 3: Energy equation</b></li>
+                        <p class="text-center">
+                            \( E = \frac{1}{2} m v^2 \)
+                        </p>
+                        <p> \( [E] = [m] [v^2] = M (L^2 T^{-2}) = ML^2T^{-2} \) ✅</p>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    
+    <div class="card shadow-lg mt-4">
+        <div class="card-header bg-primary text-white">
+            <h5>Significant Figures</h5>
+        </div>
+        <div class="card-body">
+            <p><b>Significant figures</b> are the digits in a number that contribute to its accuracy. They include all known digits plus the first uncertain digit.</p>
+    
+            <!-- Rules for Counting Significant Figures -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-success text-white">
+                    <h6>Rules for Counting Significant Figures</h6>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><b>Non-zero digits</b> are always significant. (e.g., 432 has 3 significant figures)</li>
+                        <li><b>Zeros between non-zero digits</b> are significant. (e.g., 405.6 has 4 significant figures)</li>
+                        <li><b>Leading zeros</b> (before the first non-zero digit) are NOT significant. (e.g., 0.0032 has 2 significant figures)</li>
+                        <li><b>Trailing zeros</b> in a decimal number are significant. (e.g., 4.500 has 4 significant figures)</li>
+                        <li><b>Trailing zeros in a whole number</b> without a decimal point are NOT significant. (e.g., 4500 has 2 significant figures, but 4500.0 has 5)</li>
+                        <li><b>Scientific notation</b>: Only the digits in the coefficient are significant. (e.g., \( 3.45 \times 10^5 \) has 3 significant figures)</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Significant Figures in Algebraic Operations -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-warning text-white">
+                    <h6>Significant Figures in Algebraic Operations</h6>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><b>Addition & Subtraction:</b> The result should have as many decimal places as the number with the least decimal places.</li>
+                        <p class="text-center">\( 12.345 + 4.6 = 16.9 \) (since 4.6 has only 1 decimal place)</p>
+    
+                        <li><b>Multiplication & Division:</b> The result should have as many significant figures as the number with the least significant figures.</li>
+                        <p class="text-center">\( 4.56 \times 2.1 = 9.6 \) (since 2.1 has only 2 significant figures)</p>
+    
+                        <li><b>Rounding Off:</b> 
+                            <ul>
+                                <li>If the digit to be dropped is <b>less than 5</b>, keep the previous digit the same.</li>
+                                <li>If the digit to be dropped is <b>greater than 5</b>, increase the previous digit by 1.</li>
+                                <li>If the digit to be dropped is <b>exactly 5</b>, round to the nearest even number.</li>
+                            </ul>
+                        </li>
+                        <p class="text-center">Example: \( 3.745 \) rounded to 3 significant figures → \( 3.74 \)</p>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Examples -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h6>Examples</h6>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><b>How many significant figures?</b></li>
+                        <p>0.00560 → 3 significant figures</p>
+                        <p>12000 → 2 significant figures</p>
+    
+                        <li><b>Applying Rules:</b></li>
+                        <p class="text-center">\( 5.678 + 0.42 = 6.10 \) (rounded to 2 decimal places)</p>
+                        <p class="text-center">\( 7.25 \times 0.004 = 0.029 \) (rounded to 2 significant figures)</p>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    
+    <div class="card shadow-lg mt-4">
+        <div class="card-header bg-primary text-white">
+            <h5>Rounding Off and Rules</h5>
+        </div>
+        <div class="card-body">
+            <p><b>Rounding off</b> is the process of reducing the number of digits while keeping the value close to the original.</p>
+    
+            <!-- Rules for Rounding Off -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-success text-white">
+                    <h6>Rules for Rounding Off</h6>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><b>If the digit to be removed is < 5</b>, the preceding digit remains unchanged.</li>
+                        <p class="text-center">Example: 3.642 → 3.64 (rounded to 2 decimal places)</p>
+    
+                        <li><b>If the digit to be removed is > 5</b>, increase the preceding digit by 1.</li>
+                        <p class="text-center">Example: 4.678 → 4.68 (rounded to 2 decimal places)</p>
+    
+                        <li><b>If the digit to be removed is exactly 5:</b>
+                            <ul>
+                                <li><b>If the preceding digit is even:</b> It remains unchanged.</li>
+                                <p class="text-center">Example: 3.450 → 3.4 (rounded to 1 decimal place)</p>
+    
+                                <li><b>If the preceding digit is odd:</b> It is increased by 1.</li>
+                                <p class="text-center">Example: 2.750 → 2.8</p>
+    
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Examples -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-white">
+                    <h6>Examples</h6>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><b>Rounding to 2 decimal places:</b></li>
+                        <p class="text-center">5.786 → 5.79</p>
+                        <p class="text-center">4.672 → 4.67</p>
+    
+                        <li><b>Rounding to 1 decimal place:</b></li>
+                        <p class="text-center">9.45 → 9.4 (preceding digit even)</p>
+                        <p class="text-center">7.75 → 7.8 (preceding digit odd)</p>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+
+    <div class="card shadow-lg mt-4">
+        <div class="card-header bg-danger text-white">
+            <h5>Errors and Their Classification</h5>
+        </div>
+        <div class="card-body">
+    
+            <!-- Definition of Errors -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-primary text-white">
+                    <h6>Definition</h6>
+                </div>
+                <div class="card-body">
+                    <p>Error is the difference between the measured value and the true value of a quantity.</p>
+                </div>
+            </div>
+    
+            <!-- Types of Errors -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-success text-white">
+                    <h6>Types of Errors</h6>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><b>Systematic Errors:</b> Occur due to faulty instruments, calibration errors, or environmental factors.</li>
+                        <li><b>Random Errors:</b> Occur due to unpredictable variations in measurement.</li>
+                        <li><b>Gross Errors:</b> Caused by human mistakes like incorrect readings.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Absolute Error -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-warning text-white">
+                    <h6>Absolute Error</h6>
+                </div>
+                <div class="card-body">
+                    <p>Absolute error is the difference between each measured value and the true value.</p>
+                    <p class="text-center">
+                        \[
+                        \Delta X_i = |X_i - X_{\text{true}}|
+                        \]
+                    </p>
+                    <p><b>Example:</b> If true value = 50 cm, measured values = 49 cm, 51 cm, 50.5 cm, then absolute errors are 1 cm, 1 cm, and 0.5 cm.</p>
+                </div>
+            </div>
+    
+            <!-- Mean Absolute Error -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-info text-white">
+                    <h6>Mean Absolute Error</h6>
+                </div>
+                <div class="card-body">
+                    <p>Mean absolute error is the average of all absolute errors.</p>
+                    <p class="text-center">
+                        \[
+                        \Delta X_{\text{mean}} = \frac{\sum |\Delta X_i|}{n}
+                        \]
+                    </p>
+                    <p><b>Example:</b> If absolute errors are 1 cm, 1 cm, and 0.5 cm, then:</p>
+                    <p class="text-center">
+                        \[
+                        \Delta X_{\text{mean}} = \frac{1+1+0.5}{3} = 0.83 \text{ cm}
+                        \]
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Relative Error -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-secondary text-white">
+                    <h6>Relative Error</h6>
+                </div>
+                <div class="card-body">
+                    <p>Relative error is the ratio of the mean absolute error to the true value.</p>
+                    <p class="text-center">
+                        \[
+                        \text{Relative Error} = \frac{\Delta X_{\text{mean}}}{X_{\text{true}}}
+                        \]
+                    </p>
+                    <p><b>Example:</b> If \(\Delta X_{\text{mean}} = 0.83\) cm and \(X_{\text{true}} = 50\) cm, then:</p>
+                    <p class="text-center">
+                        \[
+                        \text{Relative Error} = \frac{0.83}{50} = 0.0166
+                        \]
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Percentage Error -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white">
+                    <h6>Percentage Error</h6>
+                </div>
+                <div class="card-body">
+                    <p>Percentage error is the relative error expressed in percentage.</p>
+                    <p class="text-center">
+                        \[
+                        \text{Percentage Error} = \text{Relative Error} \times 100\%
+                        \]
+                    </p>
+                    <p><b>Example:</b> If relative error = 0.0166, then:</p>
+                    <p class="text-center">
+                        \[
+                        \text{Percentage Error} = 0.0166 \times 100 = 1.66\%
+                        \]
+                    </p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    
+    <div class="card shadow-lg mt-4">
+        <div class="card-header bg-danger text-white">
+            <h5>Combination of Errors</h5>
+        </div>
+        <div class="card-body">
+    
+            <!-- Error in Addition and Subtraction -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-primary text-white">
+                    <h6>Error in Addition or Subtraction</h6>
+                </div>
+                <div class="card-body">
+                    <p>If \( Z = A \pm B \), then the absolute error in \( Z \) is given by:</p>
+                    <p class="text-center">
+                        \[
+                        \Delta Z = \Delta A + \Delta B
+                        \]
+                    </p>
+                    <p><b>Example:</b> If \( A = 20 \pm 0.5 \) and \( B = 30 \pm 0.3 \), then:</p>
+                    <p class="text-center">
+                        \[
+                        \Delta Z = 0.5 + 0.3 = 0.8
+                        \]
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Error in Multiplication and Division -->
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-success text-white">
+                    <h6>Error in Multiplication or Division</h6>
+                </div>
+                <div class="card-body">
+                    <p>If \( Z = A \times B \) or \( Z = \frac{A}{B} \), then the relative error in \( Z \) is given by:</p>
+                    <p class="text-center">
+                        \[
+                        \frac{\Delta Z}{Z} = \frac{\Delta A}{A} + \frac{\Delta B}{B}
+                        \]
+                    </p>
+                    <p><b>Example:</b> If \( A = 20 \pm 0.5 \) and \( B = 30 \pm 0.3 \), then:</p>
+                    <p class="text-center">
+                        \[
+                        \frac{\Delta Z}{Z} = \frac{0.5}{20} + \frac{0.3}{30} = 0.025 + 0.01 = 0.035
+                        \]
+                    </p>
+                    <p>So, the percentage error = 3.5%.</p>
+                </div>
+            </div>
+    
+            <!-- Error when Raised to a Power -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-white">
+                    <h6>Error when a Quantity is Raised to Power \( n \)</h6>
+                </div>
+                <div class="card-body">
+                    <p>If \( Z = A^n \), then the relative error in \( Z \) is:</p>
+                    <p class="text-center">
+                        \[
+                        \frac{\Delta Z}{Z} = n \times \frac{\Delta A}{A}
+                        \]
+                    </p>
+                    <p><b>Example:</b> If \( A = 5 \pm 0.1 \) and \( Z = A^3 \), then:</p>
+                    <p class="text-center">
+                        \[
+                        \frac{\Delta Z}{Z} = 3 \times \frac{0.1}{5} = 0.06
+                        \]
+                    </p>
+                    <p>So, the percentage error = 6%.</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

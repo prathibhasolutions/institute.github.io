@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Matrices</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MathJax for proper math rendering -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+
+    <div class="container my-5">
+        <h1 class="text-center text-primary">Matrices</h1>
+
+        <!-- Matrix Definition Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-danger text-white">1. Definition of a Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A matrix is a rectangular arrangement of numbers or expressions in rows and columns. Each element in the matrix is identified by its position in terms of rows and columns. Matrices are often represented by uppercase letters such as \(A\), \(B\), \(C\), etc.</p>
+            </div>
+        </div>
+
+        <!-- Order of Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-warning text-white">2. Order of a Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>The order (or dimensions) of a matrix is defined by the number of rows and columns it contains. It is expressed as \(m \times n\), where \(m\) is the number of rows, and \(n\) is the number of columns.</p>
+                <p>For example, the matrix:</p>
+                <div class="text-center">
+                    <p>\[
+                    A = \begin{pmatrix}
+                    1 & 2 \\
+                    3 & 4
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+                <p>This matrix has 2 rows and 2 columns, so its order is \(2 \times 2\).</p>
+            </div>
+        </div>
+
+        <!-- General Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-success text-white">3. General Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A matrix is a rectangular array of numbers or expressions arranged in rows and columns. Each element in the matrix is identified by its position in terms of rows and columns.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    A = \begin{pmatrix}
+                    1 & 2 & 3 \\
+                    4 & 5 & 6 \\
+                    7 & 8 & 9
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Square Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-primary text-white">4. Square Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A square matrix has the same number of rows and columns.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    B = \begin{pmatrix}
+                    1 & 2 \\
+                    3 & 4
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-danger text-white">5. Row Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A row matrix has only one row.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    C = \begin{pmatrix}
+                    1 & 2 & 3
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-secondary text-white">6. Column Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A column matrix has only one column.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    D = \begin{pmatrix}
+                    1 \\
+                    2 \\
+                    3
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zero Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-success text-white">7. Zero Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A zero matrix has all its elements equal to zero.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    E = \begin{pmatrix}
+                    0 & 0 \\
+                    0 & 0
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Identity Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-info text-white">8. Identity Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>An identity matrix is a square matrix in which all the elements of the principal diagonal are 1, and all other elements are 0.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    I = \begin{pmatrix}
+                    1 & 0 & 0 \\
+                    0 & 1 & 0 \\
+                    0 & 0 & 1
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diagonal Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-warning text-white">9. Diagonal Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A diagonal matrix is a square matrix in which the elements outside the principal diagonal are all zero.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    F = \begin{pmatrix}
+                    4 & 0 & 0 \\
+                    0 & 5 & 0 \\
+                    0 & 0 & 6
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scalar Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-danger text-white">10. Scalar Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A scalar matrix is a diagonal matrix in which all the elements of the principal diagonal are equal.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    G = \begin{pmatrix}
+                    2 & 0 & 0 \\
+                    0 & 2 & 0 \\
+                    0 & 0 & 2
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upper Triangular Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-info text-white">11. Upper Triangular Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>An upper triangular matrix is a square matrix in which all the elements below the principal diagonal are zero.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    H = \begin{pmatrix}
+                    1 & 2 & 3 \\
+                    0 & 4 & 5 \\
+                    0 & 0 & 6
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lower Triangular Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-secondary text-white">12. Lower Triangular Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A lower triangular matrix is a square matrix in which all the elements above the principal diagonal are zero.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    J = \begin{pmatrix}
+                    1 & 0 & 0 \\
+                    2 & 3 & 0 \\
+                    4 & 5 & 6
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transpose of a Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-primary text-white">13. Transpose of a Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>The transpose of a matrix \(A\) is denoted as \(A^T\) and is obtained by swapping its rows and columns.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    A = \begin{pmatrix}
+                    1 & 2 & 3 \\
+                    4 & 5 & 6
+                    \end{pmatrix}
+                    \]</p>
+                    <p>Then the transpose of \(A\) is:</p>
+                    <p>\[
+                    A^T = \begin{pmatrix}
+                    1 & 4 \\
+                    2 & 5 \\
+                    3 & 6
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Symmetric Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-success text-white">14. Symmetric Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A symmetric matrix is a square matrix that is equal to its transpose. That is, \(A = A^T\).</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    S = \begin{pmatrix}
+                    1 & 2 & 3 \\
+                    2 & 4 & 5 \\
+                    3 & 5 & 6
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skew-Symmetric Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-danger text-white">15. Skew-Symmetric Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>A skew-symmetric matrix is a square matrix that satisfies \(A = -A^T\). All the diagonal elements of a skew-symmetric matrix are zero.</p>
+                <p><strong>Example:</strong></p>
+                <div class="text-center">
+                    <p>\[
+                    K = \begin{pmatrix}
+                    0 & 2 & -1 \\
+                    -2 & 0 & 3 \\
+                    1 & -3 & 0
+                    \end{pmatrix}
+                    \]</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- Algebra of Matrices Card -->
+         <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-info text-white">16. Algebra of Matrices</h3>
+            </div>
+            <div class="card-body">
+                <p>Matrix algebra involves operations such as matrix addition, subtraction, multiplication, and scalar multiplication. These operations follow certain rules and properties.</p>
+
+                <!-- Matrix Addition Card -->
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Matrix Addition</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Matrix addition is possible only when two matrices have the same order. The sum is found by adding the corresponding elements of both matrices.</p>
+                        <p><strong>Example:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad
+                            B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
+                            \]</p>
+                            <p>The sum of matrices \(A\) and \(B\) is:</p>
+                            <p>\[
+                            A + B = \begin{pmatrix} 1+5 & 2+6 \\ 3+7 & 4+8 \end{pmatrix} = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix}
+                            \]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matrix Subtraction Card -->
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Matrix Subtraction</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Matrix subtraction is similar to matrix addition. It is performed element-wise, subtracting the corresponding elements of the matrices.</p>
+                        <p><strong>Example:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad
+                            B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
+                            \]</p>
+                            <p>The difference of matrices \(A\) and \(B\) is:</p>
+                            <p>\[
+                            A - B = \begin{pmatrix} 1-5 & 2-6 \\ 3-7 & 4-8 \end{pmatrix} = \begin{pmatrix} -4 & -4 \\ -4 & -4 \end{pmatrix}
+                            \]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matrix Multiplication Card -->
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Matrix Multiplication</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Matrix multiplication is defined when the number of columns of the first matrix is equal to the number of rows of the second matrix. The element in the \(i^{th}\) row and \(j^{th}\) column of the resulting matrix is the sum of the products of the elements from the \(i^{th}\) row of the first matrix and the \(j^{th}\) column of the second matrix.</p>
+                        <p><strong>Example:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad
+                            B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
+                            \]</p>
+                            <p>The product of matrices \(A\) and \(B\) is:</p>
+                            <p>\[
+                            AB = \begin{pmatrix} (1 \cdot 5 + 2 \cdot 7) & (1 \cdot 6 + 2 \cdot 8) \\ (3 \cdot 5 + 4 \cdot 7) & (3 \cdot 6 + 4 \cdot 8) \end{pmatrix} = \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix}
+                            \]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scalar Multiplication Card -->
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Scalar Multiplication</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Scalar multiplication is the multiplication of a matrix by a scalar (a constant). Each element of the matrix is multiplied by the scalar.</p>
+                        <p><strong>Example:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad k = 2
+                            \]</p>
+                            <p>The result of multiplying matrix \(A\) by scalar \(k\) is:</p>
+                            <p>\[
+                            kA = 2 \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix} 2 & 4 \\ 6 & 8 \end{pmatrix}
+                            \]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Determinant of Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-success text-white">17. Determinant of a Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>The determinant of a square matrix is a special number that can be calculated from its elements. The determinant is used in many areas of mathematics, including the calculation of the inverse of a matrix, solving systems of linear equations, and finding eigenvalues.</p>
+                
+                <!-- 2x2 Determinant Example -->
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Determinant of a \(2 \times 2\) Matrix</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>The determinant of a \(2 \times 2\) matrix is calculated using the formula:</p>
+                        <p><strong>Formula:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            \text{det}(A) = \begin{vmatrix} a & b \\ c & d \end{vmatrix} = ad - bc
+                            \]</p>
+                        </div>
+                        <p><strong>Example:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+                            \]</p>
+                            <p>We can calculate the determinant of \(A\) as:</p>
+                            <p>\[
+                            \text{det}(A) = (1 \cdot 4) - (2 \cdot 3) = 4 - 6 = -2
+                            \]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3x3 Determinant Example -->
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Determinant of a \(3 \times 3\) Matrix</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>The determinant of a \(3 \times 3\) matrix is calculated using the formula:</p>
+                        <p><strong>Formula:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            \text{det}(A) = \begin{vmatrix} a & b & c \\ d & e & f \\ g & h & i \end{vmatrix}
+                            = a(ei - fh) - b(di - fg) + c(dh - eg)
+                            \]</p>
+                        </div>
+                        <p><strong>Example:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix}
+                            \]</p>
+                            <p>We can calculate the determinant of \(A\) as:</p>
+                            <p>\[
+                            \text{det}(A) = 1 \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} - 2 \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} + 3 \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix}
+                            \]</p>
+                            <p>Now, calculate the 2x2 determinants:</p>
+                            <p>\[
+                            \text{det}(A) = 1 \cdot (5 \cdot 9 - 6 \cdot 8) - 2 \cdot (4 \cdot 9 - 6 \cdot 7) + 3 \cdot (4 \cdot 8 - 5 \cdot 7)
+                            \]</p>
+                            <p>\[
+                            \text{det}(A) = 1 \cdot (45 - 48) - 2 \cdot (36 - 42) + 3 \cdot (32 - 35)
+                            \]</p>
+                            <p>\[
+                            \text{det}(A) = 1 \cdot (-3) - 2 \cdot (-6) + 3 \cdot (-3)
+                            \]</p>
+                            <p>\[
+                            \text{det}(A) = -3 + 12 - 9 = 0
+                            \]</p>
+                            <p>The determinant of matrix \(A\) is \(0\), meaning this matrix is singular and does not have an inverse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adjoint of a Matrix Card -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="card-header bg-warning text-white">18. Adjoint of a Matrix</h3>
+    </div>
+    <div class="card-body">
+        <p>The adjoint (or adjugate) of a matrix is the transpose of its cofactor matrix. The cofactor matrix is obtained by replacing each element of the matrix by its cofactor, and the transpose is obtained by switching the rows and columns.</p>
+        
+        <p><strong>Example 1: Adjoint of a \(2 \times 2\) Matrix</strong></p>
+        <div class="text-center">
+            <p>\[
+            A = \begin{pmatrix}
+            1 & 2 \\
+            3 & 4
+            \end{pmatrix}
+            \]</p>
+            <p>First, calculate the cofactor matrix:</p>
+            <p>\[
+            \text{Cofactor of } A = \begin{pmatrix}
+            +4 & -3 \\
+            -2 & +1
+            \end{pmatrix}
+            \]</p>
+            <p>The adjoint of matrix \(A\) is the transpose of the cofactor matrix:</p>
+            <p>\[
+            \text{Adj}(A) = \begin{pmatrix}
+            4 & -2 \\
+            -3 & 1
+            \end{pmatrix}
+            \]</p>
+        </div>
+
+        <p><strong>Example 2: Adjoint of a \(3 \times 3\) Matrix</strong></p>
+        <div class="text-center">
+            <p>\[
+            B = \begin{pmatrix}
+            1 & 0 & 2 \\
+            3 & 1 & 1 \\
+            4 & 2 & 0
+            \end{pmatrix}
+            \]</p>
+            <p>Calculate the cofactor matrix:</p>
+            <p>\[
+            \text{Cofactor of } B = \begin{pmatrix}
+            -2 & -1 & +1 \\
+            +2 & -4 & -3 \\
+            -1 & +3 & -1
+            \end{pmatrix}
+            \]</p>
+            <p>The adjoint of matrix \(B\) is the transpose of the cofactor matrix:</p>
+            <p>\[
+            \text{Adj}(B) = \begin{pmatrix}
+            -2 & +2 & -1 \\
+            -1 & -4 & +3 \\
+            +1 & -3 & -1
+            \end{pmatrix}
+            \]</p>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Inverse of a Matrix Card -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="card-header bg-primary text-white">19. Inverse of a Matrix</h3>
+            </div>
+            <div class="card-body">
+                <p>The inverse of a matrix \(A\) is a matrix denoted \(A^{-1}\) such that:</p>
+                <p>\[
+                A \times A^{-1} = A^{-1} \times A = I
+                \]</p>
+                <p>Where \(I\) is the identity matrix. Not every matrix has an inverse. A matrix has an inverse if and only if its determinant is non-zero.</p>
+                
+                <!-- 2x2 Inverse Example -->
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Inverse of a \(2 \times 2\) Matrix</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>The inverse of a \(2 \times 2\) matrix is calculated using the formula:</p>
+                        <p><strong>Formula:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            A^{-1} = \frac{1}{\text{det}(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+                            \]</p>
+                        </div>
+                        <p><strong>Example:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            A = \begin{pmatrix} 4 & 7 \\ 2 & 6 \end{pmatrix}
+                            \]</p>
+                            <p>The determinant of \(A\) is:</p>
+                            <p>\[
+                            \text{det}(A) = (4 \cdot 6) - (7 \cdot 2) = 24 - 14 = 10
+                            \]</p>
+                            <p>Now, using the formula:</p>
+                            <p>\[
+                            A^{-1} = \frac{1}{10} \begin{pmatrix} 6 & -7 \\ -2 & 4 \end{pmatrix}
+                            \]</p>
+                            <p>So, the inverse is:</p>
+                            <div class="text-center">
+                                <p>\[
+                                A^{-1} = \begin{pmatrix} 0.6 & -0.7 \\ -0.2 & 0.4 \end{pmatrix}
+                                \]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3x3 Inverse Example -->
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Inverse of a \(3 \times 3\) Matrix</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>For a \(3 \times 3\) matrix, the inverse is calculated using the formula:</p>
+                        <p><strong>Formula:</strong></p>
+                        <p>Inverting a \(3 \times 3\) matrix involves finding the adjoint matrix and then multiplying it by the reciprocal of the determinant of the original matrix. This is a more complex process than for a \(2 \times 2\) matrix and typically involves cofactor expansion.</p>
+                        <p><strong>Example:</strong></p>
+                        <div class="text-center">
+                            <p>\[
+                            A = \begin{pmatrix} 1 & 2 & 3 \\ 0 & 4 & 5 \\ 1 & 0 & 6 \end{pmatrix}
+                            \]</p>
+                            <p>Step 1: Find the determinant of \(A\).</p>
+                            <p>Step 2: Calculate the adjoint of \(A\).</p>
+                            <p>Step 3: Multiply the adjoint by \(1/\text{det}(A)\) to get \(A^{-1}\).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+                <!-- Elementary Transformations of a Matrix Card -->
+<div class="card mb-4">
+    <div class="card-header bg-warning text-white">
+        <h3 class="card-title">20. Elementary Transformations of a Matrix</h3>
+    </div>
+    <div class="card-body">
+        <p>Elementary transformations are operations that can be applied to the rows or columns of a matrix. These transformations are used in finding the inverse of a matrix, solving systems of linear equations, and performing other matrix manipulations. There are three types of elementary transformations:</p>
+
+        <ol>
+            <li><strong>Row Interchange:</strong> Interchanging two rows (or columns) of a matrix.</li>
+            <li><strong>Row Multiplication:</strong> Multiplying all elements of a row (or column) by a non-zero scalar.</li>
+            <li><strong>Row Addition:</strong> Adding a multiple of one row (or column) to another row (or column).</li>
+        </ol>
+
+        <p><strong>Example:</strong></p>
+        <div class="text-center">
+            <p>\[
+            A = \begin{pmatrix}
+            1 & 2 & 3 \\
+            4 & 5 & 6 \\
+            7 & 8 & 9
+            \end{pmatrix}
+            \]</p>
+            <p>Let's apply each elementary transformation to the matrix \(A\):</p>
+
+            <!-- Row Interchange -->
+            <p><strong>1. Row Interchange:</strong> Interchange Row 1 and Row 2:</p>
+            <p>We perform the operation \( R1 \leftrightarrow R2 \) (Interchange Row 1 and Row 2):</p>
+            <p>\[
+            A' = \begin{pmatrix}
+            4 & 5 & 6 \\
+            1 & 2 & 3 \\
+            7 & 8 & 9
+            \end{pmatrix}
+            \]</p>
+
+            <!-- Row Multiplication -->
+            <p><strong>2. Row Multiplication:</strong> Multiply Row 3 by 2:</p>
+            <p>We perform the operation \( R3 \rightarrow 2R3 \) (Multiply Row 3 by 2):</p>
+            <p>\[
+            A'' = \begin{pmatrix}
+            1 & 2 & 3 \\
+            4 & 5 & 6 \\
+            14 & 16 & 18
+            \end{pmatrix}
+            \]</p>
+
+            <!-- Row Addition -->
+            <p><strong>3. Row Addition:</strong> Add 2 times Row 1 to Row 2:</p>
+            <p>We perform the operation \( R2 \rightarrow R2 + 2R1 \) (Add 2 times Row 1 to Row 2):</p>
+            <p>\[
+            A''' = \begin{pmatrix}
+            1 & 2 & 3 \\
+            6 & 9 & 12 \\
+            7 & 8 & 9
+            \end{pmatrix}
+            \]</p>
+        </div>
+    </div>
+</div>
+
+<!-- Rank of a Matrix Card -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="card-header bg-primary text-white">21. Rank of a Matrix</h3>
+    </div>
+    <div class="card-body">
+        <p>The rank of a matrix is the maximum number of linearly independent rows or columns in the matrix. It provides the dimension of the vector space generated by its rows or columns. The rank can be determined by transforming the matrix into row echelon form (REF) or reduced row echelon form (RREF).</p>
+
+        <p>The rank of a matrix is denoted as \( \text{rank}(A) \) and it is a non-negative integer less than or equal to the smaller of the number of rows or columns of the matrix.</p>
+
+        <p><strong>Example 1:</strong></p>
+        <div class="text-center">
+            <p>\[
+            A = \begin{pmatrix}
+            1 & 2 & 3 \\
+            4 & 5 & 6 \\
+            7 & 8 & 9
+            \end{pmatrix}
+            \]</p>
+            <p>To find the rank of the matrix, we transform it into row echelon form (REF) by applying elementary row operations:</p>
+
+            <!-- Row Reduction Steps -->
+            <p>First, subtract 4 times Row 1 from Row 2 and subtract 7 times Row 1 from Row 3:</p>
+            <p>\[
+            A' = \begin{pmatrix}
+            1 & 2 & 3 \\
+            0 & -3 & -6 \\
+            0 & -6 & -12
+            \end{pmatrix}
+            \]</p>
+
+            <p>Next, divide Row 2 by -3 and subtract 2 times Row 2 from Row 3:</p>
+            <p>\[
+            A'' = \begin{pmatrix}
+            1 & 2 & 3 \\
+            0 & 1 & 2 \\
+            0 & 0 & 0
+            \end{pmatrix}
+            \]</p>
+
+            <p>Now, the rank of the matrix \(A\) is 2, as there are 2 non-zero rows in the row echelon form.</p>
+        </div>
+
+        <p><strong>Example 2:</strong></p>
+        <div class="text-center">
+            <p>\[
+            B = \begin{pmatrix}
+            1 & 0 & 2 \\
+            2 & 0 & 4 \\
+            3 & 0 & 6
+            \end{pmatrix}
+            \]</p>
+            <p>Performing row operations:</p>
+            <p>First, subtract 2 times Row 1 from Row 2 and subtract 3 times Row 1 from Row 3:</p>
+            <p>\[
+            B' = \begin{pmatrix}
+            1 & 0 & 2 \\
+            0 & 0 & 0 \\
+            0 & 0 & 0
+            \end{pmatrix}
+            \]</p>
+
+            <p>The rank of matrix \(B\) is 1, as there is only 1 non-zero row in the row echelon form.</p>
+        </div>
+
+        <p><strong>Conclusion:</strong> The rank of a matrix gives important information about its row and column dependencies and plays a crucial role in solving linear systems, finding determinants, and understanding the structure of matrices.</p>
+    </div>
+</div>
+
+<!-- Solving Homogeneous System of Linear Equations Using Rank of Matrix Card -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="card-header bg-dark text-white">22. Solving Homogeneous System of Linear Equations Using Rank of Matrix</h3>
+    </div>
+    <div class="card-body">
+        <p>A homogeneous system of linear equations is a system of the form \(Ax = 0\), where \(A\) is the coefficient matrix, \(x\) is the column vector of variables, and \(0\) is the zero vector. The system always has the trivial solution \(x = 0\), but we can determine if there are non-trivial solutions using the rank of the matrix.</p>
+
+        <p><strong>Steps to Solve:</strong></p>
+        <ol>
+            <li>Write the system in matrix form \(Ax = 0\).</li>
+            <li>Find the rank of the coefficient matrix \(A\).</li>
+            <li>If the rank of the matrix is less than the number of variables (columns), then there are infinitely many solutions (non-trivial solutions).</li>
+            <li>If the rank of the matrix is equal to the number of variables, the only solution is the trivial solution \(x = 0\).</li>
+        </ol>
+
+        <p><strong>Example 1:</strong></p>
+        <div class="text-center">
+            <p>Consider the system of equations:</p>
+            <p>
+            \[
+            \begin{aligned}
+            x + 2y - z &= 0 \\
+            2x + 4y - 2z &= 0 \\
+            -x - 2y + z &= 0
+            \end{aligned}
+            \]
+            </p>
+            <p>We represent the system in matrix form \(Ax = 0\) with the augmented matrix:</p>
+            <p>
+            \[
+            A = \left( \begin{array}{ccc}
+            1 & 2 & -1 \\
+            2 & 4 & -2 \\
+            -1 & -2 & 1
+            \end{array} \right)
+            \]
+            </p>
+            <p>Now, find the rank of matrix \(A\) using row operations. The row echelon form of \(A\) is:</p>
+            <p>
+            \[
+            \left( \begin{array}{ccc}
+            1 & 2 & -1 \\
+            0 & 0 & 0 \\
+            0 & 0 & 0
+            \end{array} \right)
+            \]
+            </p>
+            <p>The rank of matrix \(A\) is 1 (since there is only one non-zero row).</p>
+            <p>Since the rank of the matrix (1) is less than the number of variables (3), the system has infinite solutions (non-trivial solutions).</p>
+            <p>The general solution is:</p>
+            <p>
+            \[
+            x = -2y + z
+            \quad \text{(where \(y\) and \(z\) are free variables).}
+            \]
+            </p>
+        </div>
+
+        <p><strong>Example 2:</strong></p>
+        <div class="text-center">
+            <p>Consider the system of equations:</p>
+            <p>
+            \[
+            x + y + z = 0 \\
+            2x + 2y + 2z = 0 \\
+            -x - y - z = 0
+            \]
+            </p>
+            <p>We represent the system in matrix form \(Ax = 0\) with the augmented matrix:</p>
+            <p>
+            \[
+            A = \left( \begin{array}{ccc}
+            1 & 1 & 1 \\
+            2 & 2 & 2 \\
+            -1 & -1 & -1
+            \end{array} \right)
+            \]
+            </p>
+            <p>Now, reduce the matrix \(A\) to row echelon form:</p>
+            <p>First, subtract 2 times Row 1 from Row 2:</p>
+            <p>
+            \[
+            \left( \begin{array}{ccc}
+            1 & 1 & 1 \\
+            0 & 0 & 0 \\
+            -1 & -1 & -1
+            \end{array} \right)
+            \]
+            </p>
+            <p>Next, add Row 1 to Row 3:</p>
+            <p>
+            \[
+            \left( \begin{array}{ccc}
+            1 & 1 & 1 \\
+            0 & 0 & 0 \\
+            0 & 0 & 0
+            \end{array} \right)
+            \]
+            </p>
+            <p>The rank of matrix \(A\) is 1 (since there is only one non-zero row).</p>
+            <p>Since the rank of the matrix (1) is less than the number of variables (3), the system has infinite solutions (non-trivial solutions).</p>
+            <p>The general solution is:</p>
+            <p>
+            \[
+            x = -y - z
+            \quad \text{(where \(y\) and \(z\) are free variables).}
+            \]
+            </p>
+        </div>
+
+        <p><strong>Conclusion:</strong> In both examples, the rank of the matrix is less than the number of variables, leading to infinite solutions. By using the rank of the matrix, we can determine if the system has a unique solution (if the rank equals the number of variables) or infinite solutions (if the rank is less than the number of variables).</p>
+    </div>
+</div>
+
+<!-- Solving Non-Homogeneous System of Linear Equations Using Rank of Matrix Card -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h3 class="card-header bg-danger text-white">23. Solving Non-Homogeneous System of Linear Equations Using Rank of Matrix</h3>
+    </div>
+    <div class="card-body">
+        <p>A non-homogeneous system of linear equations is a system where the right-hand side of the equations is not equal to zero. The system can be written as \(Ax = b\), where \(A\) is the coefficient matrix, \(x\) is the column vector of variables, and \(b\) is the constant vector.</p>
+
+        <p><strong>Steps to Solve:</strong></p>
+        <ol>
+            <li>Write the system in matrix form \(Ax = b\).</li>
+            <li>Find the rank of the coefficient matrix \(A\) and the augmented matrix \([A|b]\).</li>
+            <li>If the rank of matrix \(A\) is equal to the rank of the augmented matrix \([A|b]\) and is equal to the number of variables, the system has a unique solution.</li>
+            <li>If the rank of matrix \(A\) is equal to the rank of the augmented matrix but is less than the number of variables, the system has infinitely many solutions.</li>
+            <li>If the rank of matrix \(A\) is less than the rank of the augmented matrix \([A|b]\), the system has no solution.</li>
+        </ol>
+
+        <p><strong>Conditions:</strong></p>
+        <ul>
+            <li>If \(\text{rank}(A) = \text{rank}([A|b]) = n\), where \(n\) is the number of variables, the system has a unique solution.</li>
+            <li>If \(\text{rank}(A) = \text{rank}([A|b]) < n\), the system has infinitely many solutions.</li>
+            <li>If \(\text{rank}(A) < \text{rank}([A|b])\), the system has no solution.</li>
+        </ul>
+
+        <p><strong>Example 1:</strong></p>
+        <div class="text-center">
+            <p>Consider the system of equations:</p>
+            <p>
+            \[
+            x + 2y + z = 3 \\
+            2x + 4y + 3z = 6 \\
+            -x - 2y + z = 1
+            \]
+            </p>
+            <p>We represent the system in matrix form \(Ax = b\) with the augmented matrix:</p>
+            <p>
+            \[
+            A = \left( \begin{array}{ccc}
+            1 & 2 & 1 \\
+            2 & 4 & 3 \\
+            -1 & -2 & 1
+            \end{array} \right)
+            \quad
+            b = \left( \begin{array}{c}
+            3 \\
+            6 \\
+            1
+            \end{array} \right)
+            \]
+            </p>
+            <p>Now, perform row operations to find the row echelon form of the augmented matrix \([A|b]\):</p>
+            <p>Subtract 2 times Row 1 from Row 2:</p>
+            <p>
+            \[
+            \left( \begin{array}{ccc|c}
+            1 & 2 & 1 & 3 \\
+            0 & 0 & 1 & 0 \\
+            -1 & -2 & 1 & 1
+            \end{array} \right)
+            \]
+            </p>
+            <p>Now, add Row 1 to Row 3:</p>
+            <p>
+            \[
+            \left( \begin{array}{ccc|c}
+            1 & 2 & 1 & 3 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 2 & 4
+            \end{array} \right)
+            \]
+            </p>
+            <p>Now, subtract Row 2 from Row 3:</p>
+            <p>
+            \[
+            \left( \begin{array}{ccc|c}
+            1 & 2 & 1 & 3 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 4
+            \end{array} \right)
+            \]
+            </p>
+            <p>We can see that the rank of matrix \(A\) is 2 and the rank of the augmented matrix \([A|b]\) is 3. Since the rank of \(A\) is less than the rank of the augmented matrix, the system has no solution.</p>
+        </div>
+
+        <p><strong>Example 2:</strong></p>
+        <div class="text-center">
+            <p>Consider the system of equations:</p>
+            <p>
+            \[
+            x + y + z = 6 \\
+            2x + 2y + 2z = 12 \\
+            -x - y - z = -6
+            \]
+            </p>
+            <p>We represent the system in matrix form \(Ax = b\) with the augmented matrix:</p>
+            <p>
+            \[
+            A = \left( \begin{array}{ccc}
+            1 & 1 & 1 \\
+            2 & 2 & 2 \\
+            -1 & -1 & -1
+            \end{array} \right)
+            \quad
+            b = \left( \begin{array}{c}
+            6 \\
+            12 \\
+            -6
+            \end{array} \right)
+            \]
+            </p>
+            <p>Now, perform row operations to find the row echelon form of the augmented matrix \([A|b]\):</p>
+            <p>Subtract 2 times Row 1 from Row 2:</p>
+            <p>
+            \[
+            \left( \begin{array}{ccc|c}
+            1 & 1 & 1 & 6 \\
+            0 & 0 & 0 & 0 \\
+            -1 & -1 & -1 & -6
+            \end{array} \right)
+            \]
+            </p>
+            <p>Now, add Row 1 to Row 3:</p>
+            <p>
+            \[
+            \left( \begin{array}{ccc|c}
+            1 & 1 & 1 & 6 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0
+            \end{array} \right)
+            \]
+            </p>
+            <p>The rank of matrix \(A\) is 1, and the rank of the augmented matrix \([A|b]\) is also 1. Since the rank is equal to the number of variables (3), the system has infinitely many solutions.</p>
+            <p>The general solution is:</p>
+            <p>
+            \[
+            x = 6 - y - z
+            \quad \text{(where \(y\) and \(z\) are free variables).}
+            \]
+            </p>
+        </div>
+
+        <p><strong>Conclusion:</strong> By comparing the ranks of the coefficient matrix and the augmented matrix, we can determine if a non-homogeneous system of linear equations has a unique solution, infinitely many solutions, or no solution:</p>
+        <ul>
+            <li>If \(\text{rank}(A) = \text{rank}([A|b]) = n\), the system has a unique solution.</li>
+            <li>If \(\text{rank}(A) = \text{rank}([A|b]) < n\), the system has infinitely many solutions.</li>
+            <li>If \(\text{rank}(A) < \text{rank}([A|b])\), the system has no solution.</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion in a Plane - Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Motion in a Plane</h1>
+        
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h2>Motion in a Plane - Vectors</h2>
+            </div>
+            <div class="card-body">
+                
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">Position Vector</div>
+                    <div class="card-body">
+                        <p><strong>Definition:</strong> The position vector <strong>r</strong> of a particle in a two-dimensional plane is given by its coordinates (x, y) relative to an origin O.</p>
+                        <p><strong>Formula:</strong></p>
+                        <p>\[ \vec{r} = x \hat{i} + y \hat{j} \]</p>
+                    </div>
+                </div>
+                
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">Displacement Vector</div>
+                    <div class="card-body">
+                        <p><strong>Definition:</strong> The displacement vector \( \Delta \vec{r} \) represents the change in position of a particle over time.</p>
+                        <p><strong>Formula:</strong></p>
+                        <p>\[ \Delta \vec{r} = (x_2 - x_1) \hat{i} + (y_2 - y_1) \hat{j} \]</p>
+                    </div>
+                </div>
+                
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">Velocity Vector</div>
+                    <div class="card-body">
+                        <p><strong>Definition:</strong> The velocity vector \( \vec{v} \) is the rate of change of displacement with respect to time.</p>
+                        <p><strong>Formula:</strong></p>
+                        <p>\[ \vec{v} = \frac{d \vec{r}}{dt} = \frac{dx}{dt} \hat{i} + \frac{dy}{dt} \hat{j} \]</p>
+                    </div>
+                </div>
+                
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">Acceleration Vector</div>
+                    <div class="card-body">
+                        <p><strong>Definition:</strong> The acceleration vector \( \vec{a} \) is the rate of change of velocity with respect to time.</p>
+                        <p><strong>Formula:</strong></p>
+                        <p>\[ \vec{a} = \frac{d \vec{v}}{dt} = \frac{d^2x}{dt^2} \hat{i} + \frac{d^2y}{dt^2} \hat{j} \]</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header bg-info text-white">
+                <h2>Projectile Motion</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>Definition:</strong> Projectile motion is the motion of an object thrown into the air under the influence of gravity, following a curved trajectory.</p>
+        
+                <h4><strong>Parameters Used:</strong></h4>
+                <ul>
+                    <li><strong>θ (Theta):</strong> Angle of projection from the horizontal.</li>
+                    <li><strong>u:</strong> Initial velocity of the projectile.</li>
+                    <li><strong>uₓ (Horizontal Velocity):</strong> uₓ = u cos θ (Constant throughout motion).</li>
+                    <li><strong>uᵧ (Vertical Velocity):</strong> uᵧ = u sin θ (Changes due to gravity).</li>
+                    <li><strong>g:</strong> Acceleration due to gravity (9.8 m/s²).</li>
+                    <li><strong>T (Time of Flight):</strong> Total time the projectile remains in the air.</li>
+                    <li><strong>H (Maximum Height):</strong> The highest point reached by the projectile.</li>
+                    <li><strong>R (Horizontal Range):</strong> The total horizontal distance covered by the projectile.</li>
+                    <li><strong>x:</strong> Horizontal displacement at time <em>t</em>.</li>
+                    <li><strong>y:</strong> Vertical displacement at time <em>t</em>.</li>
+                </ul>
+        
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white">Time of Flight</div>
+                            <div class="card-body">
+                                <p><strong>Formula:</strong></p>
+                                <p> T = (2u sin θ) / g </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">Maximum Height</div>
+                            <div class="card-body">
+                                <p><strong>Formula:</strong></p>
+                                <p> H = (u² sin² θ) / (2g) </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">Horizontal Range</div>
+                            <div class="card-body">
+                                <p><strong>Formula:</strong></p>
+                                <p> R = (u² sin 2θ) / g </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="card mt-3">
+                    <div class="card-header bg-warning text-white">Equation of Trajectory</div>
+                    <div class="card-body">
+                        <p><strong>Equation of Motion:</strong></p>
+                        <p> y = x tan θ - (g x²) / (2 u² cos² θ) </p>
+                        <p><strong>Explanation:</strong> This equation represents the path of the projectile, which is a <strong>parabola</strong>.</p>
+                    </div>
+                </div>
+        
+                <div class="card mt-3">
+                    <div class="card-header bg-dark text-white">Important Points in Projectile Motion</div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Maximum Range Condition:</strong> The range is maximum when the angle of projection is <strong>45°</strong>. That is, R<sub>max</sub> occurs at θ = 45°.</li>
+                            <li><strong>Maximum Height Condition:</strong> The maximum height depends on the initial velocity and occurs at the peak of the trajectory.</li>
+                            <li><strong>Time to Reach Maximum Height:</strong> It takes <strong>half</strong> of the total time of flight to reach maximum height.</li>
+                            <li><strong>Symmetry of Motion:</strong> The path of the projectile is symmetrical. The time taken to rise is equal to the time taken to fall.</li>
+                            <li><strong>Velocity at Maximum Height:</strong> At the highest point, the vertical component of velocity is zero, but the horizontal component remains constant.</li>
+                            <li><strong>Nature of Path:</strong> The trajectory of a projectile is always a <strong>parabolic path</strong> (except for vertical motion).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h2>Circular Motion</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>Definition:</strong> Circular motion is the movement of an object along the circumference of a circle or a circular path.</p>
+        
+                <div class="mt-4">
+                    
+                    <p><strong>Angular Displacement:</strong> The angle through which an object moves on a circular path, typically measured in radians.</p>
+                    <p><strong>Angular Velocity:</strong> The rate at which an object rotates around a circular path. It is defined as the time rate of change of angular displacement, and is typically measured in radians per second (rad/s).</p>
+                    <p><strong>Formula:</strong> <span>ω = dθ / dt</span></p>
+                    <p><strong>Angular Acceleration:</strong> The rate at which the angular velocity of an object changes with time, measured in radians per second squared (rad/s²).</p>
+                    <p><strong>Formula:</strong> <span>α = dω / dt</span></p>
+                </div>
+                
+                <div class="row">
+                    <!-- Uniform Circular Motion Card -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">Uniform Circular Motion (UCM)</div>
+                            <div class="card-body">
+                                <p>In <strong>Uniform Circular Motion</strong>, the object moves in a circular path with a constant speed.</p>
+                                <p><strong>Key Characteristics:</strong></p>
+                                <ul>
+                                    <li>Speed remains constant.</li>
+                                    <li>Velocity changes due to continuous change in direction.</li>
+                                    <li>Acceleration (Centripetal Acceleration) acts towards the center.</li>
+                                </ul>
+                                <p><strong>Formulas:</strong></p>
+                                <ul>
+                                    <li><span>Centripetal Acceleration: a<sub>c</sub> = v² / r</span></li>
+                                    <li><span>Centripetal Force: F<sub>c</sub> = (m v²) / r</span></li>
+                                    <li><span>Linear Velocity: v = rω</span></li> <!-- Added v = rω formula -->
+                                    <li><span>Linear Acceleration: a = rα</span></li> <!-- Added a = rα formula -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Non-Uniform Circular Motion Card -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white">Non-Uniform Circular Motion (NUCM)</div>
+                            <div class="card-body">
+                                <p>In <strong>Non-Uniform Circular Motion</strong>, the object moves in a circular path but its speed changes over time.</p>
+                                <p><strong>Key Characteristics:</strong></p>
+                                <ul>
+                                    <li>Speed is not constant.</li>
+                                    <li>Velocity changes due to change in both magnitude and direction.</li>
+                                    <li>Has both <strong>radial</strong> (centripetal) and <strong>tangential</strong> acceleration.</li>
+                                </ul>
+                                <p><strong>Formulas:</strong></p>
+                                <ul>
+                                    <li><span>Tangential Acceleration: a<sub>t</sub> = d|v| / dt</span> = rα</li>
+                                    <li><span>Net Acceleration: a = √(a<sub>c</sub>² + a<sub>t</sub>²)</span></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+               
+         
+              
+            </div>
+        </div>
+        
+
+        <div class="card mt-4">
+            <div class="card-header bg-info text-white">
+                <h4>Kinematic Equations for Circular Motion</h4>
+            </div>
+            <div class="card-body">
+                <p>The kinematic equations for circular motion are as follows:</p>
+                <ul>
+                    
+                    <li>\( \omega = \omega_0 + \alpha t \)</li>
+                    <li> \( \omega^2 = \omega_0^2 + 2\alpha \Delta\theta \)</li>
+                    <li> \( \theta = \omega_0 t + \frac{1}{2} \alpha t^2 \)</li>
+                </ul>
+        
+                <h5>Parameters Used:</h5>
+                <ul>
+                    <li><strong>θ:</strong> Angular displacement (in radians)</li>
+                    
+                    <li><strong>ω:</strong> Angular velocity (in radians per second)</li>
+                    <li><strong>ω₀:</strong> Initial angular velocity (in radians per second)</li>
+                    <li><strong>α:</strong> Angular acceleration (in radians per second squared)</li>
+                    <li><strong>t:</strong> Time (in seconds)</li>
+                    <li><strong>Δθ:</strong> Change in angular displacement (in radians)</li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="card mt-4">
+            <div class="card-header bg-warning text-white">
+                <h4>Centripetal and Centrifugal Force</h4>
+            </div>
+            <div class="card-body">
+                <p><strong>Centripetal Force:</strong> Centripetal force is the force that keeps an object moving in a circular path, always pointing towards the center of the circle.</p>
+                <p><strong>Formula:</strong> \( F_c = \frac{m v^2}{r} \), where:</p>
+                <ul>
+                    <li><strong>m:</strong> Mass of the object (in kg)</li>
+                    <li><strong>v:</strong> Linear velocity of the object (in m/s)</li>
+                    <li><strong>r:</strong> Radius of the circular path (in meters)</li>
+                </ul>
+        
+                <p><strong>Centrifugal Force:</strong> Centrifugal force is the apparent force that acts outward on an object moving around a center, perceived in a rotating reference frame.</p>
+                <p><strong>Formula:</strong> \( F_{cf} = \frac{m v^2}{r} \), same as centripetal force but acts in the opposite direction (outwards).</p>
+        
+                <h5>Key Points:</h5>
+                <ul>
+                    <li>Centripetal force is a real force that keeps an object in its circular path, while centrifugal force is a fictitious force that appears when observed from a rotating frame of reference.</li>
+                    <li>Both forces have the same magnitude, but they act in opposite directions.</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="card mt-4">
+            <div class="card-header bg-info text-white">
+                <h4>Circular Turning of Road & Bending of Cyclist</h4>
+            </div>
+            <div class="card-body">
+                <h5>Circular Turning of Road:</h5>
+                <p>When a vehicle turns along a curved road, the friction between the tires and the road provides the necessary centripetal force to maintain the curved motion. The coefficient of friction (\( \mu \)) between the tires and the road surface plays an important role in preventing the vehicle from skidding.</p>
+                
+                
+                <p>The frictional force (\( F_f \)) that provides the centripetal force is given by:</p>
+                \[
+                F_f = \mu m g
+                \]
+                Where:
+                <ul>
+                    <li><strong>\( \mu \):</strong> Coefficient of friction between the tires and the road</li>
+                    <li><strong>g:</strong> Acceleration due to gravity (9.8 m/s²)</li>
+                </ul>
+                
+                <p>The frictional force must be equal to or greater than the required centripetal force to ensure that the vehicle does not skid:</p>
+                \[
+                F_f \geq F_c
+                \]
+                
+                Simplifying:
+                \[
+                \mu \geq \frac{v^2}{r g}
+                \]
+        
+                <h5>Bending of Cyclist:</h5>
+                <p>When a cyclist turns in a circular path, they lean towards the inside of the turn to balance the centrifugal force. The friction between the tires and the road provides the necessary centripetal force to keep the cyclist in motion along the curve.</p>
+                
+                <p><strong>Formula for Centripetal Force in Bending of Cyclist:</strong> \( F_c = \frac{m v^2}{r} \)</p>
+                
+                <p><strong>Formula for the Angle of Lean:</strong> The angle \( \theta \) at which the cyclist must lean can be calculated as:</p>
+                \[
+                \tan(\theta) = \frac{v^2}{r g}
+                \]
+        
+                <p>However, the frictional force here also plays a crucial role in maintaining the turn. The frictional force \( F_f \) between the cyclist's tires and the road is:</p>
+                \[
+                F_f = \mu m g
+                \]
+                
+                <h5>Key Points:</h5>
+                <ul>
+                    <li>The coefficient of friction between the road and tires plays a crucial role in both circular turning and the cyclist's bending motion.</li>
+                    <li>In both cases, the frictional force must be sufficient to provide the necessary centripetal force to avoid skidding.</li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Conical Pendulum</h4>
+            </div>
+            <div class="card-body">
+                <p><strong>Formulae for Conical Pendulum:</strong></p>
+        
+                <ul>
+                    <li><strong>Vertical Component of Tension:</strong> \( T \cos(\theta) = mg \)</li>
+                    <li><strong>Horizontal Component of Tension:</strong> \( T \sin(\theta) = \frac{m v^2}{r} \)</li>
+                    <li><strong>Speed of the Bob:</strong> \( v = \sqrt{r g \tan(\theta)} \)</li>
+                </ul>
+        
+                <h5>Parameters Used:</h5>
+                <ul>
+                    <li><strong>T:</strong> Tension in the string (in N)</li>
+                    <li><strong>θ:</strong> Angle between the string and the vertical (in radians)</li>
+                    <li><strong>m:</strong> Mass of the bob (in kg)</li>
+                    <li><strong>g:</strong> Acceleration due to gravity (9.8 m/s²)</li>
+                    <li><strong>v:</strong> Speed of the bob (in m/s)</li>
+                    <li><strong>r:</strong> Radius of the circular path (in meters)</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="card mt-4">
+            <div class="card-header bg-success text-white">
+                <h4>Motion of a Particle in a Vertical Circle</h4>
+            </div>
+            <div class="card-body">
+                <p><strong>Formulae for Motion of a Particle in a Vertical Circle:</strong></p>
+        
+                <ul>
+                    <li><strong>Centripetal Force:</strong> \( F_c = \frac{m v^2}{r} \)</li>
+                    <li><strong>Gravitational Force:</strong> \( F_g = mg \)</li>
+                    <li><strong>At the Highest Point:</strong> The velocity at the highest point \( v_{\text{min}} = \sqrt{g r} \)</li>
+                    <li><strong>At the Lowest Point:</strong> The velocity at the lowest point \( v_{\text{min}} = \sqrt{5 g r} \)</li>
+                    <li><strong>At the Horizontal Position:</strong> The velocity at the horizontal position \( v = \sqrt{3 g r} \)</li>
+                    <li><strong>Tension at the Highest Point:</strong> \( T_{\text{max}} = \frac{m v^2}{r} - mg \)</li>
+                    <li><strong>Tension at the Lowest Point:</strong> \( T_{\text{min}} = \frac{m v^2}{r} + mg \)</li>
+                    <li><strong>Tension at the Horizontal Position:</strong> \( T_{\text{horizontal}} = \frac{m v^2}{r} \)</li>
+                </ul>
+
+        
+                <h5>Parameters Used:</h5>
+                <ul>
+                    <li><strong>m:</strong> Mass of the particle (in kg)</li>
+                    <li><strong>v:</strong> Speed of the particle (in m/s)</li>
+                    <li><strong>r:</strong> Radius of the circular path (in meters)</li>
+                    <li><strong>g:</strong> Acceleration due to gravity (9.8 m/s²)</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

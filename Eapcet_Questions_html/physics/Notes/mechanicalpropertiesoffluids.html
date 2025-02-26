@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Properties of Fluids</title>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Mechanical Properties of Fluids</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Definition of Fluids</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Fluids are substances that have the ability to flow and do not have a fixed shape. They take the shape of the container in which they are placed and include both liquids and gases.</p>
+                        <h5 class="mt-3">Difference Between Solids and Fluids</h5>
+                        <ul>
+                            <li><strong>Shape:</strong> Solids have a fixed shape, whereas fluids take the shape of their container.</li>
+                            <li><strong>Compressibility:</strong> Solids are nearly incompressible, while fluids can be compressed to varying degrees.</li>
+                            <li><strong>Flow:</strong> Solids do not flow under normal conditions, whereas fluids flow easily.</li>
+                            <li><strong>Intermolecular Forces:</strong> Solids have strong intermolecular forces, while fluids have weaker intermolecular forces.</li>
+                            <li><strong>Deformation:</strong> Solids resist deformation, whereas fluids deform continuously under applied stress.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-lg mt-4">
+          <div class="card-header bg-success text-white">
+              <h4>Thrust and Pressure</h4>
+          </div>
+          <div class="card-body">
+              <h5>Thrust</h5>
+              <p>Thrust is the force exerted by an object perpendicular to a surface.</p>
+              <p><strong>Formula:</strong> \( \text{Thrust} = \text{Force} (F) \)</p>
+              <p><strong>Unit:</strong> Newton (N)</p>
+      
+              <hr>
+      
+              <h5>Pressure</h5>
+              <p>Pressure is the force applied per unit area of a surface.</p>
+              <p><strong>Formula:</strong> \( P = \frac{F}{A} \)</p>
+              <p>where \( P \) is Pressure, \( F \) is Force (N), and \( A \) is Area (\( m^2 \)).</p>
+              <p><strong>Unit:</strong> Pascal (Pa) = \( N/m^2 \)</p>
+          </div>
+      </div>
+      
+      <div class="card shadow-lg mt-4">
+        <div class="card-header bg-info text-white">
+            <h4>Pressure Exerted by a Fluid</h4>
+        </div>
+        <div class="card-body">
+            <p>When a fluid is at rest, it exerts pressure in all directions due to its weight.</p>
+            <p><strong>Formula:</strong> \( P = \rho g h \)</p>
+            <p>where:</p>
+            <ul>
+                <li>\( P \) = Pressure (Pascal, Pa)</li>
+                <li>\( \rho \) = Density of the fluid (\( kg/m^3 \))</li>
+                <li>\( g \) = Acceleration due to gravity (\( 9.81 \, m/s^2 \))</li>
+                <li>\( h \) = Height or depth of the fluid column (m)</li>
+            </ul>
+            <p><strong>Unit:</strong> Pascal (Pa) = \( N/m^2 \)</p>
+            
+            <hr>
+    
+            <h5>Variation of Pressure with Depth</h5>
+            <p>The pressure in a fluid increases with depth due to the weight of the fluid above a given point.</p>
+            <p>The total pressure at a depth \( h \) in a liquid open to the atmosphere is given by:</p>
+            <p><strong>Formula:</strong> \( P = P_0 + \rho g h \)</p>
+            <p>where:</p>
+            <ul>
+                <li>\( P_0 \) = Atmospheric pressure (\( 1.013 \times 10^5 \) Pa at sea level)</li>
+                <li>\( \rho g h \) = Pressure due to the fluid column</li>
+            </ul>
+            <p>Thus, pressure increases linearly with depth in a fluid.</p>
+        </div>
+    </div>
+
+    
+    <div class="card shadow-lg mt-4">
+      <div class="card-header bg-warning text-dark">
+          <h4>Atmospheric Pressure and Gauge Pressure</h4>
+      </div>
+      <div class="card-body">
+          <h5>Atmospheric Pressure</h5>
+          <p>Atmospheric pressure is the pressure exerted by the weight of air in the Earth's atmosphere.</p>
+          <p><strong>Standard Atmospheric Pressure:</strong> \( P_0 = 1.013 \times 10^5 \) Pa (or 1 atm)</p>
+          <p><strong>Formula:</strong> \( P_0 = \rho g h \)</p>
+          <p>where:</p>
+          <ul>
+              <li>\( P_0 \) = Atmospheric pressure</li>
+              <li>\( \rho \) = Density of air (\( 1.225 kg/m^3 \) at sea level)</li>
+              <li>\( g \) = Acceleration due to gravity (\( 9.81 \, m/s^2 \))</li>
+              <li>\( h \) = Height of the air column above</li>
+          </ul>
+  
+          <hr>
+  
+          <h5>Gauge Pressure</h5>
+          <p>Gauge pressure is the pressure measured relative to atmospheric pressure.</p>
+          <p><strong>Formula:</strong> \( P_g = P - P_0 \)</p>
+          <p>where:</p>
+          <ul>
+              <li>\( P_g \) = Gauge pressure</li>
+              <li>\( P \) = Absolute pressure (total pressure in the system)</li>
+              <li>\( P_0 \) = Atmospheric pressure</li>
+          </ul>
+          <p>Gauge pressure is positive when the absolute pressure is greater than atmospheric pressure and negative when it is lower (vacuum).</p>
+      </div>
+  </div>
+
+  
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-danger text-white">
+        <h4>Hydrostatic Paradox</h4>
+    </div>
+    <div class="card-body">
+        <p>The hydrostatic paradox states that the pressure at a given depth in a fluid depends only on the height of the fluid column and not on the shape or volume of the container.</p>
+
+        <p><strong>Explanation:</strong> Consider three differently shaped vessels (narrow, wide, and slanted) filled with the same liquid to the same height. Despite differences in shape and volume, the pressure at the bottom of all vessels is the same.</p>
+
+
+        <p>This paradox demonstrates that fluid pressure depends only on depth and not on the overall shape of the container.</p>
+    </div>
+</div>
+
+
+<div class="card shadow-lg mt-4">
+  <div class="card-header bg-primary text-white">
+      <h4>Buoyancy and Pascal’s Law</h4>
+  </div>
+  <div class="card-body">
+      <h5>Buoyancy</h5>
+      <p>Buoyancy is the upward force exerted by a fluid on an object submerged in it. This force opposes the weight of the object and is responsible for floating.</p>
+
+      <p><strong>Formula (Archimedes’ Principle):</strong> \( F_b = \rho_f g V \)</p>
+      <p>where:</p>
+      <ul>
+          <li>\( F_b \) = Buoyant force (N)</li>
+          <li>\( \rho_f \) = Density of the fluid (\( kg/m^3 \))</li>
+          <li>\( g \) = Acceleration due to gravity (\( 9.81 \, m/s^2 \))</li>
+          <li>\( V \) = Volume of displaced fluid (\( m^3 \))</li>
+      </ul>
+
+      <p>The greater the volume of fluid displaced, the greater the buoyant force.</p>
+
+      <hr>
+
+      <h5>Pascal’s Law</h5>
+      <p>Pascal’s Law states that a change in pressure applied to an enclosed fluid is transmitted undiminished to all portions of the fluid and the walls of its container.</p>
+
+      <p><strong>Formula:</strong> \( P_1 = P_2 \) or \( F_1/A_1 = F_2/A_2 \)</p>
+      <p>where:</p>
+      <ul>
+          <li>\( P_1, P_2 \) = Pressures at different points</li>
+          <li>\( F_1, F_2 \) = Forces applied</li>
+          <li>\( A_1, A_2 \) = Cross-sectional areas</li>
+      </ul>
+
+      <p>This principle is used in hydraulic systems, like car brakes and hydraulic lifts.</p>
+  </div>
+</div>
+
+<div class="card shadow-lg mt-4">
+  <div class="card-header bg-success text-white">
+      <h4>Archimedes' Principle</h4>
+  </div>
+  <div class="card-body">
+      <p>Archimedes' Principle states that a body submerged in a fluid experiences an upward buoyant force equal to the weight of the fluid it displaces.</p>
+
+      <p><strong>Formula:</strong> \( F_b = \rho_f g V \)</p>
+      <p>where:</p>
+      <ul>
+          <li>\( F_b \) = Buoyant force (N)</li>
+          <li>\( \rho_f \) = Density of the fluid (\( kg/m^3 \))</li>
+          <li>\( g \) = Acceleration due to gravity (\( 9.81 \, m/s^2 \))</li>
+          <li>\( V \) = Volume of displaced fluid (\( m^3 \))</li>
+      </ul>
+
+      <p><strong>Explanation:</strong> If the buoyant force is greater than the object's weight, the object floats. If it is less, the object sinks. This principle is the basis of ship design, submarines, and hydrometers.</p>
+  </div>
+</div>
+
+
+<div class="card shadow-lg mt-4">
+  <div class="card-header bg-info text-white">
+      <h4>Laws of Flotation</h4>
+  </div>
+  <div class="card-body">
+      <p>The laws of flotation describe the conditions under which a body will float in a fluid.</p>
+
+      <p><strong>First Law:</strong> A body will float in a fluid if the weight of the body is equal to the weight of the fluid displaced by the body.</p>
+
+      <p><strong>Second Law:</strong> A body will float if the buoyant force acting on it is equal to its weight.</p>
+
+      <p><strong>Third Law:</strong> The volume of the fluid displaced by the body is proportional to the volume of the body submerged in the fluid.</p>     
+
+      <p><strong>Formula for Volume of a Floating Body Outside the Liquid:</strong></p>
+      <p><strong>Formula:</strong> \( V_{\text{out}} = V_{\text{total}} \left( 1 - \frac{\rho_{\text{body}}}{\rho_{\text{fluid}}} \right) \)</p>
+      <p>Where:</p>
+      <ul>
+          <li>\( V_{\text{out}} \) = Volume of the body outside the liquid (\( m^3 \))</li>
+          <li>\( V_{\text{total}} \) = Total volume of the body (\( m^3 \))</li>
+          <li>\( \rho_{\text{body}} \) = Density of the body (\( kg/m^3 \))</li>
+          <li>\( \rho_{\text{fluid}} \) = Density of the fluid (\( kg/m^3 \))</li>
+      </ul>
+
+      <p><strong>Explanation:</strong> If the buoyant force is greater than the object's weight, the object floats. If it is less, the object sinks. This principle is the basis of ship design, submarines, and hydrometers.</p>
+  </div>
+
+  
+</div>
+
+<div class="card shadow-lg mt-4">
+  <div class="card-header bg-warning text-white">
+      <h4>Density and Relative Density</h4>
+  </div>
+  <div class="card-body">
+      <p><strong>Density:</strong> The density (\(\rho\)) of a substance is the mass per unit volume. It is defined by the formula:</p>
+      <p><strong>Formula:</strong> \( \rho = \frac{m}{V} \)</p>
+      <p>Where:</p>
+      <ul>
+          <li>\( \rho \) = Density (\( kg/m^3 \))</li>
+          <li>\( m \) = Mass of the object (\( kg \))</li>
+          <li>\( V \) = Volume of the object (\( m^3 \))</li>
+      </ul>
+
+      <p><strong>Relative Density (RD):</strong> Relative density (RD) is the ratio of the density of a substance to the density of water (or another reference fluid). For water, the density is \(1000 \, kg/m^3\):</p>
+      <p><strong>Formula:</strong> \( \text{RD} = \frac{\rho_{\text{substance}}}{\rho_{\text{water}}} \)</p>
+      <p>Where:</p>
+      <ul>
+          <li>\( \rho_{\text{substance}} \) = Density of the substance (\( kg/m^3 \))</li>
+          <li>\( \rho_{\text{water}} \) = Density of water (\( 1000 \, kg/m^3 \))</li>
+      </ul>
+
+      <p><strong>Explanation:</strong> If the relative density of a substance is greater than 1, it will sink in water. If it's less than 1, the substance will float.</p>
+  </div>
+</div>
+
+<div class="card shadow-lg mt-4">
+  <div class="card-header bg-primary text-white">
+      <h4>Density of a Mixture of Substances</h4>
+  </div>
+  <div class="card-body">
+      <p><strong>Density of a Mixture:</strong> The density of a mixture can be determined based on the individual masses and volumes of the components in the mixture.</p>
+      
+      <p><strong>Formula for Density of a Mixture:</strong> The density of a mixture (\(\rho_{\text{mixture}}\)) is given by:</p>
+      <p><strong>Formula:</strong> \( \rho_{\text{mixture}} = \frac{\sum m_i}{\sum V_i} \)</p>
+      <p>Where:</p>
+      <ul>
+          <li>\( \rho_{\text{mixture}} \) = Density of the mixture (\( kg/m^3 \))</li>
+          <li>\( m_i \) = Mass of each component in the mixture (\( kg \))</li>
+          <li>\( V_i \) = Volume of each component in the mixture (\( m^3 \))</li>
+      </ul>
+
+      <p><strong>Volume Fraction Method:</strong> Alternatively, you can calculate the density of a mixture using the volume fraction method:</p>
+      <p><strong>Formula:</strong> \( \rho_{\text{mixture}} = \frac{1}{\sum \frac{V_i}{\rho_i}} \)</p>
+      <p>Where:</p>
+      <ul>
+          <li>\( \rho_i \) = Density of each individual component in the mixture (\( kg/m^3 \))</li>
+          <li>\( V_i \) = Volume of each component in the mixture (\( m^3 \))</li>
+      </ul>
+
+      <p><strong>Explanation:</strong> The density of a mixture depends on the individual densities, volumes, and masses of the substances being mixed. The method used to calculate the mixture's density depends on whether you have mass/volume data or the volume fractions of the components.</p>
+  </div>
+</div>
+
+<div class="card shadow-lg mt-4">
+  <div class="card-header bg-info text-white">
+      <h4>Types of Flow of Liquid</h4>
+  </div>
+  <div class="card-body">
+      <p><strong>1. Laminar Flow:</strong> Laminar flow is smooth and orderly. In this type of flow, the fluid flows in parallel layers with minimal disruption. It typically occurs at low velocities and in small pipes.</p>
+
+      <p><strong>2. Turbulent Flow:</strong> Turbulent flow is chaotic and irregular. The fluid particles move in random directions, creating swirls and eddies. This type of flow generally occurs at high velocities or in larger pipes.</p>
+
+      <p><strong>3. Transitional Flow:</strong> Transitional flow is a mixture of laminar and turbulent flow. It occurs when the flow is unstable and fluctuates between laminar and turbulent behavior, typically in intermediate flow conditions.</p>
+
+      <p><strong>Explanation:</strong> The type of flow (laminar, turbulent, or transitional) largely depends on the flow velocity, the fluid's properties, and the size of the pipe or channel through which the fluid is flowing.</p>
+  </div>
+</div>
+
+
+<div class="card shadow-lg mt-4">
+  <div class="card-header bg-primary text-white">
+      <h4>Reynolds Number</h4>
+  </div>
+  <div class="card-body">
+      <p><strong>Reynolds Number Formula:</strong> The Reynolds number (\( Re \)) is a dimensionless quantity used to predict the flow regime in fluid dynamics. It is calculated as:</p>
+      <p><strong>Formula:</strong> \( Re = \frac{\rho v D}{\mu} \)</p>
+      <p>Where:</p>
+      <ul>
+          <li>\( \rho \) = Density of the fluid (\( kg/m^3 \))</li>
+          <li>\( v \) = Velocity of the fluid (\( m/s \))</li>
+          <li>\( D \) = Diameter of the pipe or channel (\( m \))</li>
+          <li>\( \mu \) = Dynamic viscosity of the fluid (\( Pa.s \))</li>
+      </ul>
+
+      <p><strong>Flow Regimes Based on Reynolds Number:</strong></p>
+      <ul>
+          <li><strong>Laminar Flow:</strong> \( Re < 2000 \) — Smooth and orderly flow.</li>
+          <li><strong>Turbulent Flow:</strong> \( Re > 4000 \) — Chaotic flow with eddies and swirls.</li>
+          <li><strong>Transitional Flow:</strong> \( 2000 < Re < 4000 \) — Flow fluctuates between laminar and turbulent.</li>
+      </ul>
+
+      <p><strong>Explanation:</strong> The Reynolds number helps determine the nature of fluid flow, whether it's smooth (laminar), chaotic (turbulent), or a mix of both (transitional). Higher values indicate more chaotic behavior, while lower values indicate orderly flow.</p>
+  </div>
+</div>
+
+<!-- MathJax CDN -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-warning text-white">
+        <h4>Equation of Continuity</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Equation of Continuity:</strong> The equation of continuity is based on the principle of conservation of mass, stating that the mass flow rate of a fluid remains constant as it moves through a pipe or conduit, provided the fluid is incompressible.</p>
+  
+        <p><strong>Formula:</strong> \( A_1 v_1 = A_2 v_2 \)</p>
+        <p>Where:</p>
+        <ul>
+            <li>\( A_1 \) = Cross-sectional area of the pipe at point 1 (\(m^2\))</li>
+            <li>\( A_2 \) = Cross-sectional area of the pipe at point 2 (\(m^2\))</li>
+            <li>\( v_1 \) = Velocity of the fluid at point 1 (\(m/s\))</li>
+            <li>\( v_2 \) = Velocity of the fluid at point 2 (\(m/s\))</li>
+        </ul>
+  
+        <p><strong>Explanation:</strong> The equation implies that the product of the cross-sectional area and the velocity at any point in the pipe is constant. If the cross-sectional area decreases, the velocity of the fluid must increase to conserve mass.</p>
+    </div>
+  </div>
+
+  
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-danger text-white">
+        <h4>Bernoulli’s Theorem</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Bernoulli's Theorem:</strong> Bernoulli's theorem expresses the conservation of mechanical energy in a fluid flow. It states that the total mechanical energy (sum of pressure energy, kinetic energy, and potential energy) along a streamline is constant, provided the flow is steady and there is no friction.</p>
+  
+        <p><strong>Bernoulli’s Equation:</strong> The mechanical energy of a fluid at a point is the sum of its pressure energy, kinetic energy, and potential energy:</p>
+        <p><strong>Formula:</strong> \( \frac{P}{\rho} + \frac{v^2}{2} + gz = \text{constant} \)</p>
+        <p>Where:</p>
+        <ul>
+            <li>\( P \) = Pressure at the point (\( Pa \))</li>
+            <li>\( \rho \) = Density of the fluid (\( kg/m^3 \))</li>
+            <li>\( v \) = Velocity of the fluid (\( m/s \))</li>
+            <li>\( g \) = Acceleration due to gravity (\( m/s^2 \))</li>
+            <li>\( z \) = Height above a reference level (\( m \))</li>
+        </ul>
+  
+        <p><strong>Types of Energy in Fluid:</strong></p>
+        <ul>
+            <li><strong>Kinetic Energy:</strong> Energy due to the motion of the fluid, given by \( E_k = \frac{1}{2} \rho v^2 \)</li>
+            <li><strong>Potential Energy:</strong> Energy due to the height of the fluid in a gravitational field, given by \( E_p = \rho g h \)</li>
+            <li><strong>Pressure Energy:</strong> Energy stored within the fluid due to its pressure, given by \( E_{\text{pressure}} = \frac{P}{\rho} \)</li>
+        </ul>
+  
+        <p><strong>Applications of Bernoulli's Theorem:</strong></p>
+        <ul>
+            <li><strong>Airplane Wings:</strong> Bernoulli's principle explains how airplanes generate lift. The air moves faster over the curved upper surface of the wing, lowering pressure and creating an upward force.</li>
+            <li><strong>Venturi Effect:</strong> In a constricted pipe, fluid velocity increases and pressure decreases. This principle is used in devices like carburetors and fluid flow meters.</li>
+            <li><strong>Water Supply Systems:</strong> Bernoulli's theorem helps in understanding the distribution of pressure in pipelines, ensuring that water flows efficiently through different heights and distances.</li>
+            <li><strong>Atomizers:</strong> In spray bottles, a fluid is forced through a narrow opening, causing the velocity to increase and pressure to drop, which helps in creating a fine mist.</li>
+            <li><strong>Blood Flow in Arteries:</strong> The flow of blood through the human circulatory system can be understood using Bernoulli’s theorem, helping to explain pressure changes in arteries and veins.</li>
+        </ul>
+  
+        <p><strong>Explanation:</strong> Bernoulli's theorem helps understand how pressure, velocity, and height are related in fluid flow. As a fluid moves, an increase in speed leads to a decrease in pressure or potential energy, and vice versa. This principle is applied in various real-world scenarios, such as in airplane wings and water distribution systems.</p>
+    </div>
+  </div>
+
+  
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-info text-white">
+        <h4>Venturimeter Formula</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Formula for Velocity of a Liquid in a Venturimeter:</strong></p>
+        <p>The velocity of a liquid flowing through a Venturimeter is given by the following formula:</p>
+  
+        <p><strong>Formula:</strong> \( v_2 = \sqrt{\frac{2gh}{\left(\frac{A_1^2}{A_2^2} - 1\right)}} \)</p>
+  
+        <p>Where:</p>
+        <ul>
+            <li>\( v_2 \) = Velocity of the fluid at the narrow section of the pipe (\( m/s \))</li>
+            <li>\( A_1 \) and \( A_2 \) = Cross-sectional areas of the pipe at the wider and narrower sections (\( m^2 \))</li>
+            <li>\( g \) = Acceleration due to gravity (\( 9.81 \, m/s^2 \))</li>
+            <li>\( h \) = Height difference between the two points (\( m \))</li>
+        </ul>
+  
+        <p><strong>Explanation:</strong> In a Venturimeter, the velocity of the fluid at the narrow section can be derived from the pressure difference caused by the change in cross-sectional area. This formula is an application of Bernoulli’s principle and the Continuity equation.</p>
+    </div>
+  </div>
+
+  
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-primary text-white">
+        <h4>Torricelli’s Theorem</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Torricelli's Theorem:</strong> Torricelli’s theorem describes the speed of efflux of a fluid under the force of gravity through an opening in a container. The velocity of the fluid as it exits the hole is similar to the velocity a free-falling object would acquire after falling through the height of the liquid column.</p>
+  
+        <p><strong>Formula:</strong> The velocity of the fluid flowing out of the hole is given by:</p>
+        <p><strong>Formula:</strong> \( v = \sqrt{2gh} \)</p>
+  
+        <p>Where:</p>
+        <ul>
+            <li>\( v \) = Velocity of the fluid as it exits the hole (\( m/s \))</li>
+            <li>\( g \) = Acceleration due to gravity (\( 9.81 \, m/s^2 \))</li>
+            <li>\( h \) = Height of the liquid column above the hole (\( m \))</li>
+        </ul>
+  
+        <p><strong>Explanation:</strong> Torricelli’s theorem is based on the principle of conservation of energy. The potential energy of the fluid at height \( h \) is converted into kinetic energy as the fluid exits through the hole. This theorem is widely used in various applications like fluid discharge from tanks and open containers.</p>
+    </div>
+  </div>
+
+  
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-danger text-white">
+        <h4>Viscosity</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Viscous Force:</strong> Viscous force is the force exerted by a fluid due to its viscosity. This force arises when fluid layers move relative to each other, and it resists the motion of the fluid. It depends on the viscosity, velocity gradient, surface area, and the distance between layers of the fluid.</p>
+  
+        <p><strong>Formula for Viscous Force:</strong> The viscous force \( F \) acting on a fluid is given by:</p>
+        <p><strong>Formula:</strong> \( F = \eta \cdot A \cdot \frac{\Delta v}{\Delta x} \)</p>
+  
+        <p>Where:</p>
+        <ul>
+            <li>\( F \) = Viscous force (\( N \))</li>
+            <li>\( \eta \) = Dynamic viscosity (\( Pa.s \) or \( N.s/m^2 \))</li>
+            <li>\( A \) = Area over which the force is applied (\( m^2 \))</li>
+            <li>\( \frac{\Delta v}{\Delta x} \) = Velocity gradient (\( m/s^2 \))</li>
+        </ul>
+  
+        <p><strong>Explanation:</strong> The formula expresses the relationship between the applied viscous force and the fluid's resistance to flow, which is determined by the velocity difference between fluid layers and their distance apart. The larger the viscosity or the velocity gradient, the greater the viscous force.</p>
+  
+        <p><strong>Variation of Viscosity with Temperature:</strong> Viscosity is temperature-dependent. In general, as the temperature of a liquid increases, its viscosity decreases, because the molecules move faster and can slide past each other more easily. For gases, viscosity increases with temperature because the kinetic energy of molecules increases, leading to more frequent collisions that increase resistance to flow.</p>
+  
+        
+  
+        <p><strong>Explanation:</strong> This equation describes how viscosity decreases exponentially with an increase in temperature for liquids. For gases, the relationship is opposite, with viscosity increasing as temperature increases.</p>
+    </div>
+  </div>
+  
+
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-success text-white">
+        <h4>Stokes' Law and Terminal Velocity</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Stokes' Law:</strong> Stokes' law describes the force of viscosity on a spherical object moving through a viscous fluid. The law applies to small, spherical particles moving slowly through a viscous medium, where the flow is laminar, and the Reynolds number is low.</p>
+  
+        <p><strong>Formula for Stokes' Law:</strong> The viscous drag force \( F_d \) acting on a small spherical particle moving through a fluid is given by:</p>
+        <p><strong>Formula:</strong> \( F_d = 6 \pi \eta r v \)</p>
+  
+        <p>Where:</p>
+        <ul>
+            <li>\( F_d \) = Drag force (\( N \))</li>
+            <li>\( \eta \) = Dynamic viscosity of the fluid (\( Pa.s \) or \( N.s/m^2 \))</li>
+            <li>\( r \) = Radius of the spherical particle (\( m \))</li>
+            <li>\( v \) = Velocity of the particle (\( m/s \))</li>
+        </ul>
+  
+       
+        <p><strong>Terminal Velocity:</strong> Terminal velocity is the constant speed that a freely falling object eventually reaches when the resistance of the medium (air, liquid, etc.) prevents further acceleration. It occurs when the downward force of gravity is balanced by the upward drag force of the fluid, resulting in zero net force.</p>
+  
+        <p><strong>Formula for Terminal Velocity:</strong> The terminal velocity \( v_t \) of a small spherical object falling through a fluid can be calculated using:</p>
+        <p><strong>Formula:</strong> \( v_t = \frac{2 r^2 (\rho_s - \rho_f) g}{9 \eta} \)</p>
+  
+        <p>Where:</p>
+        <ul>
+            <li>\( v_t \) = Terminal velocity (\( m/s \))</li>
+            <li>\( r \) = Radius of the spherical particle (\( m \))</li>
+            <li>\( \rho_s \) = Density of the spherical object (\( kg/m^3 \))</li>
+            <li>\( \rho_f \) = Density of the fluid (\( kg/m^3 \))</li>
+            <li>\( g \) = Acceleration due to gravity (\( 9.81 \, m/s^2 \))</li>
+            <li>\( \eta \) = Dynamic viscosity of the fluid (\( Pa.s \) or \( N.s/m^2 \))</li>
+        </ul>
+  
+        <p><strong>Explanation:</strong> When a small particle falls under gravity, it accelerates until the drag force equals the gravitational force. At this point, the particle reaches terminal velocity and continues falling at a constant speed. This formula helps calculate the terminal velocity for spherical objects falling in fluids like water or air.</p>
+    </div>
+  </div>
+  
+
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-info text-white">
+        <h4>Poiseuille's Formula</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Poiseuille's Law:</strong> Poiseuille's law describes the flow of an incompressible and Newtonian fluid through a long cylindrical pipe. The law calculates the volumetric flow rate of the fluid based on the pressure difference, viscosity, length, and radius of the pipe. It is applicable when the flow is laminar, and the Reynolds number is low.</p>
+  
+        <p><strong>Formula for Volumetric Flow Rate:</strong> The volumetric flow rate \( Q \) of a fluid through a pipe is given by:</p>
+        <p><strong>Formula:</strong> \( Q = \frac{\pi r^4 \Delta P}{8 \eta L} \)</p>
+  
+        <p>Where:</p>
+        <ul>
+            <li>\( Q \) = Volumetric flow rate (\( m^3/s \))</li>
+            <li>\( r \) = Radius of the pipe (\( m \))</li>
+            <li>\( \Delta P \) = Pressure difference across the pipe (\( Pa \))</li>
+            <li>\( \eta \) = Dynamic viscosity of the fluid (\( Pa.s \) or \( N.s/m^2 \))</li>
+            <li>\( L \) = Length of the pipe (\( m \))</li>
+        </ul>
+  
+       
+    </div>
+  </div>
+  
+
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-primary text-white">
+        <h4>Rate of Flow of Liquid in Series and Parallel</h4>
+    </div>
+    <div class="card-body">
+
+      <p><strong>Resistance Formula:</strong></p>
+      <p><strong>Formula:</strong> \( R = \frac{8 \eta L}{\pi r^4} \)</p>
+
+      <p>Where:</p>
+      <ul>
+          <li>\( R \) = Resistance to flow (\( Pa.s/m^3 \))</li>
+          <li>\( \eta \) = Dynamic viscosity of the fluid (\( Pa.s \))</li>
+          <li>\( L \) = Length of the pipe (\( m \))</li>
+          <li>\( r \) = Radius of the pipe (\( m \))</li>
+      </ul>
+        <p><strong>Rate of Flow of Liquid in Series:</strong> When pipes are connected in series, the same fluid flows through them one after another. The total resistance to flow is the sum of the individual resistances. The total flow rate in a series arrangement is governed by the resistance of each pipe.</p>
+  
+        <p><strong>Formula for Resistance in Series:</strong> The total resistance \( R_{\text{total}} \) for pipes in series is given by:</p>
+        <p><strong>Formula:</strong> \( R_{\text{total}} = R_1 + R_2 + \dots \)</p>
+  
+        <p><strong>Formula for Flow Rate in Series:</strong> The flow rate \( Q \) in series is determined by the individual resistances of the pipes:</p>
+        <p><strong>Formula:</strong> \( \frac{1}{Q} = \frac{1}{Q_1} + \frac{1}{Q_2} + \dots \)</p>
+  
+        <p>Where:</p>
+        <ul>
+            <li>\( Q \) = Total flow rate (\( m^3/s \))</li>
+            <li>\( Q_1, Q_2, \dots \) = Flow rates through each pipe in the series arrangement</li>
+            <li>\( R_{\text{total}} \) = Total resistance in series (\( Pa.s/m^3 \))</li>
+            <li>\( R_1, R_2, \dots \) = Resistance of each individual pipe</li>
+        </ul>
+  
+        
+        <p><strong>Rate of Flow of Liquid in Parallel:</strong> When pipes are connected in parallel, the fluid splits, and the total flow rate is the sum of the flow rates through each individual pipe. The total resistance decreases as more paths are available for the fluid to flow through.</p>
+  
+        <p><strong>Formula for Resistance in Parallel:</strong> The total resistance \( R_{\text{total}} \) for pipes in parallel is given by:</p>
+        <p><strong>Formula:</strong> \( \frac{1}{R_{\text{total}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots \)</p>
+  
+        <p><strong>Formula for Flow Rate in Parallel:</strong> The total flow rate \( Q_{\text{total}} \) for pipes in parallel is given by the sum of the individual flow rates through each pipe:</p>
+        <p><strong>Formula:</strong> \( Q_{\text{total}} = Q_1 + Q_2 + \dots \)</p>
+  
+        <p>Where:</p>
+        <ul>
+            <li>\( Q_{\text{total}} \) = Total flow rate (\( m^3/s \))</li>
+            <li>\( Q_1, Q_2, \dots \) = Flow rates through each parallel pipe</li>
+            <li>\( R_{\text{total}} \) = Total resistance in parallel (\( Pa.s/m^3 \))</li>
+            <li>\( R_1, R_2, \dots \) = Resistance of each individual pipe</li>
+        </ul>
+  
+      
+        <p><strong>Comparison:</strong></p>
+        <ul>
+            <li><strong>Series:</strong> Flow rate is limited by the pipe with the highest resistance.</li>
+            <li><strong>Parallel:</strong> Flow rate increases as more pipes are added, leading to decreased total resistance.</li>
+        </ul>
+  
+ </div>
+  </div>
+  
+
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-info text-white">
+        <h4>Surface Tension</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> Surface tension is the force that acts on the surface of a liquid, causing it to behave like a stretched elastic membrane. It results from the cohesive forces between molecules in the liquid, which are stronger at the surface due to the lack of neighboring molecules in the air.</p>
+  
+        <p><strong>Formula:</strong> The surface tension (\( S \)) is defined as the force per unit length acting along the surface of the liquid:</p>
+        <p><strong>Formula:</strong> \( S = \frac{F}{L} \)</p>
+  
+        <p>Where:</p>
+        <ul>
+            <li>\( S \) = Surface tension (N/m)</li>
+            <li>\( F \) = Force acting along the surface (N)</li>
+            <li>\( L \) = Length of the surface over which the force is acting (m)</li>
+        </ul>
+  
+        <p><strong>Explanation:</strong> The molecules at the surface of a liquid experience an inward force due to the cohesive attraction between the molecules. This force acts along the surface, creating surface tension. It is responsible for phenomena such as the formation of droplets, the rise of liquids in capillaries, and the ability of small objects to float on water without sinking, even if they are denser than water.</p>
+
+        <p><strong>Applications:</strong></p>
+        <ul>
+            <li>Capillary rise and depression in narrow tubes.</li>
+            <li>Formation of droplets and bubbles.</li>
+            <li>Floating of small objects on the surface of water (due to surface tension).</li>
+            <li>Use in detergents to break surface tension and clean surfaces.</li>
+        </ul>
+    </div>
+  </div>
+  
+
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-warning text-white">
+        <h4>Adhesive and Cohesive Forces</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Cohesive Forces:</strong> Cohesive forces are the attractive forces between molecules of the same substance. These forces hold the molecules together within the material. In liquids, cohesive forces cause the molecules to stick to each other, leading to phenomena such as surface tension.</p>
+  
+        <p><strong>Explanation:</strong> In a liquid, the molecules experience a pull toward each other, which creates a state of equilibrium in the form of a "surface film." For example, water molecules are attracted to each other, which causes water droplets to form spherical shapes.</p>
+  
+        <p><strong>Examples of Cohesive Forces:</strong></p>
+        <ul>
+            <li>Water droplets forming on a surface.</li>
+            <li>Formation of a liquid meniscus inside a glass tube.</li>
+            <li>Surface tension in liquids.</li>
+        </ul>
+  
+        <p><strong>Adhesive Forces:</strong> Adhesive forces are the attractive forces between molecules of different substances. These forces cause a liquid to spread over or stick to a solid surface. The strength of adhesive forces depends on the nature of the materials involved.</p>
+  
+        <p><strong>Explanation:</strong> When a liquid is in contact with a solid surface, adhesive forces cause the liquid to adhere to the surface. In some cases, these forces are stronger than the cohesive forces of the liquid, causing the liquid to climb up the surface (e.g., in capillary action). In other cases, the cohesive forces dominate, and the liquid tends to pull itself together (e.g., water beading on a waxed surface).</p>
+  
+        <p><strong>Examples of Adhesive Forces:</strong></p>
+        <ul>
+            <li>Water spreading on a clean glass surface.</li>
+            <li>Capillary rise in narrow tubes (e.g., plants absorbing water from the ground).</li>
+            <li>Adhesion of paint to a surface.</li>
+        </ul>
+  
+        <p><strong>Key Difference:</strong> Cohesive forces are between similar molecules (e.g., water molecules to water molecules), while adhesive forces are between different molecules (e.g., water molecules to glass molecules).</p>
+    </div>
+  </div>
+
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-danger text-white">
+        <h4>Surface Energy & Work Done in Liquid Drops</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Surface Energy:</strong> Surface energy is the energy stored due to the increase in the surface area of a liquid, which arises from molecular forces. It is given by the product of the surface tension and the increase in surface area.</p>
+        
+        <p><strong>Formula:</strong> \( U = S \cdot \Delta A \)</p>
+        <p>Where:</p>
+        <ul>
+            <li>\( U \) = Surface energy (Joules)</li>
+            <li>\( S \) = Surface tension (N/m)</li>
+            <li>\( \Delta A \) = Increase in surface area (m²)</li>
+        </ul>
+  
+        <hr>
+  
+        <p><strong>Work Done in Blowing a Liquid Drop:</strong></p>
+        <p>When a liquid drop of radius \( R \) is formed, work is done to create a new surface area. The increase in surface area is \( \Delta A = 4\pi R^2 \).</p>
+        <p><strong>Formula:</strong> \( W = S \cdot 4\pi R^2 \)</p>
+  
+        <hr>
+  
+        <p><strong>Work Done in Blowing a Soap Bubble:</strong></p>
+        <p>A soap bubble has two surfaces (inner and outer), so the total increase in surface area is \( \Delta A = 2 \times 4\pi R^2 = 8\pi R^2 \).</p>
+        <p><strong>Formula:</strong> \( W = S \cdot 8\pi R^2 \)</p>
+  
+        <hr>
+  
+        <p><strong>Work Done in Splitting a Bigger Drop into \( n \) Smaller Droplets:</strong></p>
+        <p>When a large drop of radius \( R \) splits into \( n \) smaller droplets (each of radius \( r \)), the total surface area increases. The increase is:</p>
+        <p><strong>Formula:</strong> \( \Delta A = 4\pi n r^2 - 4\pi R^2 \)</p>
+        <p>Using volume conservation (\( n r^3 = R^3 \)), we get \( r = \frac{R}{n^{1/3}} \). Therefore, the work done is:</p>
+        <p><strong>Formula:</strong> \( W = S \cdot 4\pi R^2 \left(n^{1/3} - 1\right) \)</p>
+  
+        <hr>
+  
+        <p><strong>Coalescence of Drops:</strong></p>
+        <p>When \( n \) small drops coalesce to form a larger drop, the total surface area decreases. The decrease is given by:</p>
+        <p><strong>Formula:</strong> \( \Delta A = 4\pi R^2 - 4\pi n r^2 \)</p>
+        <p>The energy released during coalescence is:</p>
+        <p><strong>Formula:</strong> \( W = S \cdot \left(4\pi R^2 - 4\pi n r^2\right) \)</p>
+    </div>
+  </div>
+
+  
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-primary text-white">
+        <h4>Excess Pressure Due to Surface Tension</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> Surface tension causes a pressure difference between the inside and outside of a curved liquid surface. This excess pressure depends on the number of surfaces and the radius of curvature.</p>
+  
+        <hr>
+  
+        <p><strong>1. Excess Pressure Inside a Liquid Drop:</strong></p>
+        <p>A spherical liquid drop has a single liquid-air interface, and the excess pressure inside is given by:</p>
+        <p><strong>Formula:</strong> \( \Delta P = \frac{2S}{R} \)</p>
+        <p>Where:</p>
+        <ul>
+            <li>\( \Delta P \) = Excess pressure inside the drop</li>
+            <li>\( S \) = Surface tension of the liquid</li>
+            <li>\( R \) = Radius of the drop</li>
+        </ul>
+  
+        <hr>
+  
+        <p><strong>2. Excess Pressure Inside an Air Bubble in a Liquid:</strong></p>
+        <p>An air bubble inside a liquid has only a single liquid-air interface, similar to a liquid drop. Thus, the excess pressure inside the air bubble is:</p>
+        <p><strong>Formula:</strong> \( \Delta P = \frac{2S}{R} \)</p>
+  
+        <hr>
+  
+        <p><strong>3. Excess Pressure Inside a Soap Bubble:</strong></p>
+        <p>A soap bubble has two liquid-air interfaces (inner and outer surfaces), so the excess pressure inside is twice that of a liquid drop or air bubble:</p>
+        <p><strong>Formula:</strong> \( \Delta P = \frac{4S}{R} \)</p>
+  
+    </div>
+  </div>
+
+  
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-info text-white">
+        <h4>Angle of Contact</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> The angle of contact (\( \theta \)) is the angle formed between the tangent to the liquid surface and the solid surface at the point of contact. It determines whether a liquid wets a surface or not.</p>
+  
+        <hr>
+  
+        <p><strong>1. Acute Angle (\( \theta < 90^\circ \)) – Liquid Wets the Surface:</strong></p>
+        <ul>
+            <li>Occurs when <b>adhesive forces</b> (between liquid and solid) are <b>stronger</b> than cohesive forces (between liquid molecules).</li>
+            <li>The liquid spreads on the surface.</li>
+            <li><b>Examples:</b> Water on glass, alcohol on plastic.</li>
+        </ul>
+  
+        <hr>
+  
+        <p><strong>2. Obtuse Angle (\( \theta > 90^\circ \)) – Liquid Does Not Wet the Surface:</strong></p>
+        <ul>
+            <li>Occurs when <b>cohesive forces</b> (between liquid molecules) are <b>stronger</b> than adhesive forces (between liquid and solid).</li>
+            <li>The liquid forms droplets and does not spread.</li>
+            <li><b>Examples:</b> Mercury on glass, water on wax paper.</li>
+        </ul>
+    </div>
+  </div>
+
+  
+  <div class="card shadow-lg mt-4">
+    <div class="card-header bg-success text-white">
+        <h4>Capillarity</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> Capillarity (capillary action) is the rise or fall of a liquid in a narrow tube due to surface tension and adhesive forces between the liquid and the tube.</p>
+  
+        <hr>
+  
+        <p><strong>Formula for Capillary Rise or Depression:</strong></p>
+        <p>
+            \[
+            h = \frac{2S \cos \theta}{\rho g r}
+            \]
+        </p>
+        <p>Where:</p>
+        <ul>
+            <li>\( h \) = Height of liquid rise or fall</li>
+            <li>\( S \) = Surface tension of the liquid</li>
+            <li>\( \theta \) = Angle of contact</li>
+            <li>\( \rho \) = Density of the liquid</li>
+            <li>\( g \) = Acceleration due to gravity</li>
+            <li>\( r \) = Radius of the capillary tube</li>
+        </ul>
+  
+        <hr>
+  
+        <p><strong>1. Capillary Rise:</strong></p>
+        <ul>
+            <li>Occurs when <b>adhesive forces</b> (liquid & tube) are <b>stronger</b> than cohesive forces (liquid molecules).</li>
+            <li>The liquid climbs up the tube.</li>
+            <li><b>Examples:</b> Water rising in a glass capillary, ink being absorbed by blotting paper.</li>
+        </ul>
+  
+        <hr>
+  
+        <p><strong>2. Capillary Depression:</strong></p>
+        <ul>
+            <li>Occurs when <b>cohesive forces</b> (between liquid molecules) are <b>stronger</b> than adhesive forces (liquid & tube).</li>
+            <li>The liquid level lowers in the tube.</li>
+            <li><b>Examples:</b> Mercury in a glass tube.</li>
+        </ul>
+  
+        <hr>
+  
+        <p><strong>Applications of Capillarity:</strong></p>
+        <ul>
+            <li>Rise of water in plants through roots.</li>
+            <li>Oil rising in a lamp wick.</li>
+            <li>Blotting paper absorbing ink.</li>
+            <li>Action of a towel in absorbing water.</li>
+        </ul>
+    </div>
+  </div>
+  
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

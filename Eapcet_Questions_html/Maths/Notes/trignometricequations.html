@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trignometric equations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h1>Trigonometric Equations</h1>
+            </div>
+            <div class="card-body">
+                
+                <h5 class="text-center text-primary">Definition</h5>
+                <p class="text-dark">
+                    A <b>trigonometric equation</b> is an equation that involves trigonometric functions like \( \sin x \), \( \cos x \), \( \tan x \), etc., and requires solving for values of \( x \).
+                </p>
+        
+                <h5 class="text-center text-primary mt-4">Types of Solutions</h5>
+        
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">1. General Solution</div>
+                    <div class="card-body text-dark">
+                        The general solution of a trigonometric equation gives all possible values of the variable that satisfy the equation.  
+                        <br>Example:  
+                        If \( \sin x = 0 \), the general solution is:  
+                        \[
+                        x = n\pi, \quad n \in \mathbb{Z}
+                        \]
+                    </div>
+                </div>
+        
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">2. Principal Solution</div>
+                    <div class="card-body text-dark">
+                        The principal solution consists of the solutions within a single cycle of the trigonometric function, typically in the interval \( [0, 2\pi] \) or \( (-\pi, \pi] \).  
+                        <br>Example:  
+                        For \( \sin x = \frac{1}{2} \), the principal solutions are:  
+                        \[
+                        x = \frac{\pi}{6}, \quad x = \frac{5\pi}{6}
+                        \]
+                    </div>
+                </div>
+        
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">3. Particular Solution</div>
+                    <div class="card-body text-dark">
+                        A particular solution is a specific solution of the equation within a given interval.  
+                        <br>Example:  
+                        Solve \( \tan x = 1 \) for \( x \in [0, \pi] \).  
+                        The solution is \( x = \frac{\pi}{4} \).
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>General Solutions of Trigonometric Equations</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Trigonometric Equation</th>
+                                <th>General Solution</th>
+                                <th>Domain of \( \alpha \)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>\( \sin x = k \)</td>
+                                <td>\( x = n\pi + (-1)^n \alpha \)</td>
+                                <td>\( \alpha = \sin^{-1} k, \quad -\frac{\pi}{2} \leq \alpha \leq \frac{\pi}{2} \)</td>
+                            </tr>
+                            <tr>
+                                <td>\( \cos x = k \)</td>
+                                <td>\( x = 2n\pi \pm \alpha \)</td>
+                                <td>\( \alpha = \cos^{-1} k, \quad 0 \leq \alpha \leq \pi \)</td>
+                            </tr>
+                            <tr>
+                                <td>\( \tan x = k \)</td>
+                                <td>\( x = n\pi + \alpha \)</td>
+                                <td>\( \alpha = \tan^{-1} k, \quad -\frac{\pi}{2} < \alpha < \frac{\pi}{2} \)</td>
+                            </tr>
+                            <tr>
+                                <td>\( \cot x = k \)</td>
+                                <td>\( x = n\pi + \alpha \)</td>
+                                <td>\( \alpha = \cot^{-1} k, \quad 0 < \alpha < \pi \)</td>
+                            </tr>
+                            <tr>
+                                <td>\( \sec x = k \)</td>
+                                <td>\( x = 2n\pi \pm \alpha \)</td>
+                                <td>\( \alpha = \sec^{-1} k, \quad 0 \leq \alpha \leq \pi, \quad \alpha \neq \frac{\pi}{2} \)</td>
+                            </tr>
+                            <tr>
+                                <td>\( \csc x = k \)</td>
+                                <td>\( x = n\pi + (-1)^n \alpha \)</td>
+                                <td>\( \alpha = \csc^{-1} k, \quad -\frac{\pi}{2} \leq \alpha \leq \frac{\pi}{2}, \quad \alpha \neq 0 \)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trigonometric Equations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" async 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body class="bg-light">
+
+<div class="container mt-4">
+    <h2 class="text-center text-primary mb-4">Solving Trigonometric Equations</h2>
+
+    <!-- Example 1: sin x = 1/2 -->
+    <div class="card mb-3 shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h5>Example 1: Solve \( \sin x = \frac{1}{2} \)</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>General Solution:</strong></p>
+            <p>\[
+                x = n\pi + (-1)^n \alpha, \quad \alpha = \sin^{-1} k
+            \]</p>
+            <p>Since \( \sin 30^\circ = \sin \frac{\pi}{6} = \frac{1}{2} \), we get:</p>
+            <p>\[
+                x = n\pi + (-1)^n \frac{\pi}{6}, \quad n \in \mathbb{Z}
+            \]</p>
+        </div>
+    </div>
+
+    <!-- Example 2: cos x = 1/2 -->
+    <div class="card mb-3 shadow-lg">
+        <div class="card-header bg-success text-white">
+            <h5>Example 2: Solve \( \cos x = \frac{1}{2} \)</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>General Solution:</strong></p>
+            <p>\[
+                x = 2n\pi \pm \alpha, \quad \alpha = \cos^{-1} k
+            \]</p>
+            <p>Since \( \cos 60^\circ = \cos \frac{\pi}{3} = \frac{1}{2} \), we get:</p>
+            <p>\[
+                x = 2n\pi \pm \frac{\pi}{3}, \quad n \in \mathbb{Z}
+            \]</p>
+        </div>
+    </div>
+
+    <!-- Example 3: tan x = 1 -->
+    <div class="card mb-3 shadow-lg">
+        <div class="card-header bg-danger text-white">
+            <h5>Example 3: Solve \( \tan x = 1 \)</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>General Solution:</strong></p>
+            <p>\[
+                x = n\pi + \tan^{-1} k
+            \]</p>
+            <p>Since \( \tan 45^\circ = \tan \frac{\pi}{4} = 1 \), we get:</p>
+            <p>\[
+                x = n\pi + \frac{\pi}{4}, \quad n \in \mathbb{Z}
+            \]</p>
+        </div>
+    </div>
+
+    <!-- Example 4: cot x = sqrt(3) -->
+    <div class="card mb-3 shadow-lg">
+        <div class="card-header bg-warning text-dark">
+            <h5>Example 4: Solve \( \cot x = \sqrt{3} \)</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>General Solution:</strong></p>
+            <p>\[
+                x = n\pi + \cot^{-1} k
+            \]</p>
+            <p>Since \( \cot 30^\circ = \cot \frac{\pi}{6} = \sqrt{3} \), we get:</p>
+            <p>\[
+                x = n\pi + \frac{\pi}{6}, \quad n \in \mathbb{Z}
+            \]</p>
+        </div>
+    </div>
+
+    <!-- Example 5: sec x = 2 -->
+    <div class="card mb-3 shadow-lg">
+        <div class="card-header bg-info text-white">
+            <h5>Example 5: Solve \( \sec x = 2 \)</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>General Solution:</strong></p>
+            <p>\[
+                x = 2n\pi \pm \sec^{-1} k
+            \]</p>
+            <p>Since \( \sec 60^\circ = \sec \frac{\pi}{3} = 2 \), we get:</p>
+            <p>\[
+                x = 2n\pi \pm \frac{\pi}{3}, \quad n \in \mathbb{Z}
+            \]</p>
+        </div>
+    </div>
+
+    <!-- Example 6: csc x = -2 -->
+    <div class="card mb-3 shadow-lg">
+        <div class="card-header bg-secondary text-white">
+            <h5>Example 6: Solve \( \csc x = -2 \)</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>General Solution:</strong></p>
+            <p>\[
+                x = n\pi + (-1)^n \csc^{-1} k
+            \]</p>
+            <p>Since \( \csc(-30^\circ) = \csc(-\frac{\pi}{6}) = -2 \), we get:</p>
+            <p>\[
+                x = n\pi + (-1)^n \left( -\frac{\pi}{6} \right)
+            \]</p>
+            <p>\[
+                x = n\pi - (-1)^n \frac{\pi}{6}, \quad n \in \mathbb{Z}
+            \]</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oscillations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+
+        <h1 class="text-center text-primary">Oscillations</h1>
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Periodic Motion and Oscillatory Motion</h5>
+            </div>
+            <div class="card-body text-dark">
+                <p>Periodic and oscillatory motions are fundamental types of motion observed in physics.</p>
+        
+                <!-- Periodic Motion -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>Periodic Motion</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>A motion that repeats itself at regular intervals of time is called <strong>Periodic Motion</strong>.</p>
+                        <p><strong>Examples:</strong> Motion of planets around the sun, motion of a pendulum.</p>
+                       
+                    </div>
+                </div>
+        
+                <!-- Oscillatory Motion -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-warning text-white">
+                        <h6>Oscillatory Motion</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>An object is said to be in <strong>Oscillatory Motion</strong> if it moves back and forth about a fixed point in a definite time interval.</p>
+                        <p><strong>Examples:</strong> Motion of a simple pendulum, vibrating strings of a guitar.</p>
+                        
+                    </div>
+                </div>
+        
+                <!-- Difference Between Periodic and Oscillatory Motion -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Difference Between Periodic and Oscillatory Motion</h6>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Periodic Motion</th>
+                                    <th>Oscillatory Motion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Motion repeats at regular intervals.</td>
+                                    <td>Motion moves back and forth around a mean position.</td>
+                                </tr>
+                                <tr>
+                                    <td>All oscillatory motions are periodic.</td>
+                                    <td>Not all periodic motions are oscillatory.</td>
+                                </tr>
+                                <tr>
+                                    <td>Example: Earth’s revolution around the Sun.</td>
+                                    <td>Example: Pendulum swinging.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Simple Harmonic Motion (SHM)</h5>
+            </div>
+            <div class="card-body text-dark">
+                <p>Simple Harmonic Motion (SHM) is a type of periodic motion in which an object oscillates about a mean position under a restoring force proportional to its displacement.</p>
+        
+                <!-- Definition of SHM -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>Definition</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>A motion is said to be <strong>Simple Harmonic</strong> if the restoring force acting on the object is directly proportional to its displacement from the mean position and is always directed toward the mean position.</p>
+                        <p class="text-center">
+                            \[
+                            F = - k x
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li>\( F \) = Restoring force</li>
+                            <li>\( k \) = Force constant</li>
+                            <li>\( x \) = Displacement from the mean position</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Displacement, Amplitude, and Phase -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h6>Displacement, Amplitude, and Phase</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Displacement (\( x \)):</strong> The distance of the particle from the mean position at any instant.</li>
+                            <li><strong>Amplitude (\( A \)):</strong> The maximum displacement of the particle from the mean position.</li>
+                            <li><strong>Phase (\( \phi \)):</strong> The quantity that determines the initial position of oscillation.</li>
+                        </ul>
+                        <p class="text-center">
+                            \[
+                            x = A \cos(\omega t + \phi)
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Velocity and Acceleration in SHM -->
+                <div class="row mt-3">
+                    <!-- Velocity in SHM -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-success text-white">
+                                <h6>Velocity in SHM</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>The velocity of a particle in SHM is given by:</p>
+                                <p class="text-center">
+                                    \[
+                                    v = \omega \sqrt{A^2 - x^2}
+                                    \]
+                                </p>
+                                <p>Velocity is maximum at the mean position (\( v_{max} = \omega A \)) and zero at extreme positions.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Acceleration in SHM -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-info text-white">
+                                <h6>Acceleration in SHM</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>The acceleration of a particle in SHM is:</p>
+                                <p class="text-center">
+                                    \[
+                                    a = -\omega^2 x
+                                    \]
+                                </p>
+                                <p>Acceleration is maximum at the extreme positions and zero at the mean position.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Time Period and Frequency -->
+                <div class="row mt-3">
+                    <!-- Time Period -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-secondary text-white">
+                                <h6>Time Period (\( T \))</h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <p>
+                                    \[
+                                    T = \frac{2\pi}{\omega} = 2\pi \sqrt{ \frac{m}{k}}
+                                    \]
+                                </p>
+                                <p>Time taken to complete one full oscillation.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Frequency -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-dark text-white">
+                                <h6>Frequency (\( f \))</h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <p>
+                                    \[
+                                    f = \frac{1}{T} = \frac{\omega}{2\pi}
+                                    \]
+                                </p>
+                                <p>Number of oscillations per second.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Terms Related to SHM -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>Terms Related to SHM</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Mean Position:</strong> The equilibrium position where the net force is zero.</li>
+                            <li><strong>Restoring Force:</strong> The force that brings the system back to equilibrium.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Important Values in Simple Harmonic Motion (SHM)</h5>
+            </div>
+            <div class="card-body text-dark">
+                <p>In SHM, velocity and acceleration vary periodically. The maximum and minimum values occur at specific positions in the motion.</p>
+        
+                <!-- Maximum and Minimum Velocity -->
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-success text-white">
+                                <h6>Maximum Velocity (\( v_{max} \))</h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <p>
+                                    \[
+                                    v_{max} = \omega A
+                                    \]
+                                </p>
+                                <p><strong>Occurs at:</strong> Mean position (\( x = 0 \))</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-danger text-white">
+                                <h6>Minimum Velocity (\( v_{min} \))</h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <p>
+                                    \[
+                                    v_{min} = 0
+                                    \]
+                                </p>
+                                <p><strong>Occurs at:</strong> Extreme positions (\( x = \pm A \))</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Maximum and Minimum Acceleration -->
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-warning text-white">
+                                <h6>Maximum Acceleration (\( a_{max} \))</h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <p>
+                                    \[
+                                    a_{max} = \omega^2 A
+                                    \]
+                                </p>
+                                <p><strong>Occurs at:</strong> Extreme positions (\( x = \pm A \))</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-info text-white">
+                                <h6>Minimum Acceleration (\( a_{min} \))</h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <p>
+                                    \[
+                                    a_{min} = 0
+                                    \]
+                                </p>
+                                <p><strong>Occurs at:</strong> Mean position (\( x = 0 \))</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Force and Energy in Simple Harmonic Motion (SHM)</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Force in SHM -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>Force in SHM</h6>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Expression for Force:</strong></p>
+                        <p>
+                            \[
+                            F = -m \omega^2 x
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li>\( F \) = Restoring force</li>
+                            <li>\( m \) = Mass of the particle</li>
+                            <li>\( \omega \) = Angular frequency</li>
+                            <li>\( x \) = Displacement from mean position</li>
+                        </ul>
+                        <p><strong>Key Point:</strong> The negative sign indicates that the force is always directed towards the mean position.</p>
+                    </div>
+                </div>
+        
+                <!-- Energy in SHM -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Energy in SHM</h6>
+                    </div>
+                    <div class="card-body">
+        
+                        <!-- Kinetic Energy -->
+                        <div class="card mb-3 shadow-sm">
+                            <div class="card-header bg-info text-white">
+                                <h6>Kinetic Energy (\( KE \))</h6>
+                            </div>
+                            <div class="card-body ">
+                                <p>
+                                    \[
+                                    KE = \frac{1}{2} m \omega^2 (A^2 - x^2)
+                                    \]
+                                </p>
+                                <p><strong>Key Points:</strong></p>
+                                <ul>
+                                    <li>Maximum at the mean position (\( x = 0 \)).</li>
+                                    <li>Minimum (zero) at the extreme positions (\( x = \pm A \)).</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!-- Potential Energy -->
+                        <div class="card mb-3 shadow-sm">
+                            <div class="card-header bg-warning text-white">
+                                <h6>Potential Energy (\( PE \))</h6>
+                            </div>
+                            <div class="card-body ">
+                                <p>
+                                    \[
+                                    PE = \frac{1}{2} m \omega^2 x^2
+                                    \]
+                                </p>
+                                <p><strong>Key Points:</strong></p>
+                                <ul>
+                                    <li>Maximum at the extreme positions (\( x = \pm A \)).</li>
+                                    <li>Minimum (zero) at the mean position (\( x = 0 \)).</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!-- Total Energy -->
+                        <div class="card mb-3 shadow-sm">
+                            <div class="card-header bg-secondary text-white">
+                                <h6>Total Energy (\( TE \))</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    \[
+                                    TE = \frac{1}{2} m \omega^2 A^2
+                                    \]
+                                </p>
+                                <p><strong>Key Points:</strong></p>
+                                <ul>
+                                    <li>Remains constant throughout the motion.</li>
+                                    <li>Sum of kinetic and potential energy at any point.</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Simple Pendulum</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Definition -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>Definition</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>A simple pendulum consists of a small mass (bob) suspended from a fixed point by a light, inextensible string of length \( L \), which oscillates back and forth under the influence of gravity.</p>
+                    </div>
+                </div>
+        
+                <!-- Time Period -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Time Period of a Simple Pendulum</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{L}{g}}
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li>\( T \) = Time period of oscillation</li>
+                            <li>\( L \) = Length of the pendulum</li>
+                            <li>\( g \) = Acceleration due to gravity</li>
+                        </ul>
+                        <p><strong>Key Point:</strong> The time period is independent of the mass of the bob.</p>
+                    </div>
+                </div>
+        
+                <!-- Frequency -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-warning text-white">
+                        <h6>Frequency</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>
+                            \[
+                            f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{g}{L}}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Maximum Velocity -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h6>Maximum Velocity</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>
+                            \[
+                            v_{\max} = \omega A = \sqrt{\frac{2gA}{L}}
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li>\( v_{\max} \) = Maximum velocity</li>
+                            <li>\( A \) = Amplitude of oscillation</li>
+                            <li>\( \omega = \sqrt{\frac{g}{L}} \) = Angular frequency</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Small Angle Approximation -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h6>Small Angle Approximation</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>For small angles (\( \theta \approx \sin\theta \)), the motion of a simple pendulum is approximately simple harmonic.</p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Special Cases of Simple Pendulum</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Case 1: Length equal to Radius of Earth -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>1. Length of Pendulum Equal to Radius of Earth (\( L = R \))</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Time period is given by:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{R}{2g}}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Case 2: Infinite Length -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-warning text-white">
+                        <h6>2. Infinite Length (\( L \to \infty \))</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>For an infinitely long pendulum, the time period becomes very large:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{R}{g}}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Case 3: Due to Increase in Length from Temperature -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>3. Effect of Temperature on Time Period</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>If temperature increases, the length increases as:</p>
+                        <p>
+                            \[
+                            L' = L(1 + \alpha \Delta T)
+                            \]
+                        </p>
+                        <p>New time period:</p>
+                        <p>
+                            \[
+                            T' = T \left(1 + \frac{\alpha \Delta T}{2} \right)
+                            \]
+                        </p>
+                        <p><strong>Where:</strong> \( \alpha \) = Coefficient of linear expansion.</p>
+                    </div>
+                </div>
+        
+                <!-- Case 4: Pendulum in a Fluid of Density ρ -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h6>4. Simple Pendulum in a Fluid of Density \( \rho \)</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Effective acceleration due to gravity:</p>
+                        <p>
+                            \[
+                            g' = g \left(1 - \frac{\rho}{\sigma} \right)
+                            \]
+                        </p>
+                        <p>Modified time period:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{L}{g'}}
+                            \]
+                        </p>
+                        <p><strong>Where:</strong> \( \sigma \) = Density of the pendulum bob.</p>
+                    </div>
+                </div>
+        
+                <!-- Case 5: Pendulum in a Horizontally Accelerating Vehicle -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h6>5. Simple Pendulum in a Horizontally Accelerating Vehicle</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>For a vehicle accelerating with acceleration \( a \):</p>
+                        <p>Effective gravity:</p>
+                        <p>
+                            \[
+                            g' = \sqrt{g^2 + a^2}
+                            \]
+                        </p>
+                        <p>Time period:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{L}{g'}}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Case 6: Pendulum in a Vehicle Sliding Down an Inclined Plane -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>6. Simple Pendulum in a Vehicle Sliding Down an Inclined Plane</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>For an incline with angle \( \theta \):</p>
+                        <p>Effective gravity:</p>
+                        <p>
+                            \[
+                            g' = g \cos\theta
+                            \]
+                        </p>
+                        <p>Time period:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{L}{g\cos\theta}}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Case 7: Pendulum in a Uniform Electric Field (Upward) -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h6>7. Simple Pendulum in a Uniform Electric Field (Upward)</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>For a charged bob of charge \( q \) in an electric field \( E \) acting upwards:</p>
+                        <p>Effective gravity:</p>
+                        <p>
+                            \[
+                            g' = g - \frac{qE}{m}
+                            \]
+                        </p>
+                        <p>Time period:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{L}{g'}}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Types of Pendulums</h5>
+            </div>
+            <div class="card-body text-dark">
+        
+                <!-- Second's Pendulum -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>1. Second's Pendulum</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>A pendulum that takes 1 second to move from one extreme to another (total time period = 2 seconds).</p>
+                        <p>Time period:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{L}{g}}
+                            \]
+                        </p>
+                        <p>For a second’s pendulum:</p>
+                        <p>
+                            \[
+                            T = 2 \text{ s}, \quad L = 0.994 \text{ m} \quad (\approx 1 \text{ m})
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Conical Pendulum -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-warning text-white">
+                        <h6>2. Conical Pendulum</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>A pendulum moving in a horizontal circular path with a constant angular velocity, making an angle \( \theta \) with the vertical.</p>
+                        <p>Time period:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{L \cos \theta}{g}}
+                            \]
+                        </p>
+                        <p>Centripetal force:</p>
+                        <p>
+                            \[
+                            T \sin \theta = m \frac{v^2}{r}
+                            \]
+                        </p>
+                        <p>Height of conical motion:</p>
+                        <p>
+                            \[
+                            h = L \cos \theta
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Spring Pendulum -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>3. Spring Pendulum</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>When a mass \( m \) is attached to a spring with force constant \( k \), it oscillates vertically.</p>
+                        <p>Time period:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{m}{k}}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Spring in Series -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h6>4. Spring Pendulum (Springs in Series)</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>For two springs in series with force constants \( k_1 \) and \( k_2 \), the effective spring constant is:</p>
+                        <p>
+                            \[
+                            \frac{1}{k_{\text{eff}}} = \frac{1}{k_1} + \frac{1}{k_2}
+                            \]
+                        </p>
+                        <p>Time period:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{m}{k_{\text{eff}}}}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Spring in Parallel -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h6>5. Spring Pendulum (Springs in Parallel)</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>For two springs in parallel with force constants \( k_1 \) and \( k_2 \), the effective spring constant is:</p>
+                        <p>
+                            \[
+                            k_{\text{eff}} = k_1 + k_2
+                            \]
+                        </p>
+                        <p>Time period:</p>
+                        <p>
+                            \[
+                            T = 2\pi \sqrt{\frac{m}{k_{\text{eff}}}}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

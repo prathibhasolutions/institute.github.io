@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravitation Chapter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Chapter Header -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h2>Gravitation</h2>
+            </div>
+            <div class="card-body">
+                <h5><strong>Definition:</strong></h5>
+                <p>Gravitation is a fundamental force of nature that causes two objects with mass to attract each other. This force is what gives weight to objects and governs the motion of celestial bodies in space.</p>
+            </div>
+        </div>
+
+        <!-- Forces in Nature Table -->
+        <div class="card mt-4">
+            <div class="card-header bg-success text-white">
+                <h4>Forces in Nature</h4>
+            </div>
+            <div class="card-body">
+                <h5><strong>Comparison of Relative Strength of Forces:</strong></h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Force</th>
+                            <th>Relative Strength</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gravitational Force</td>
+                            <td>10<sup>-38</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Electromagnetic Force</td>
+                            <td>10<sup>-2</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Weak Nuclear Force</td>
+                            <td>10<sup>-18</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Strong Nuclear Force</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Newton's Law of Gravitation</h4>
+            </div>
+            <div class="card-body">
+                <p><strong>Statement:</strong> Every point mass attracts every other point mass with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers.</p>
+                <p><strong>Formula:</strong></p>
+                <p><strong>F</strong> = <strong>G (m₁ m₂) / r²</p></strong>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li><strong>F</strong> = Gravitational force between two masses</li>
+                    <li><strong>G</strong> = Gravitational constant (6.674 × 10<sup>-11</sup> N·m²/kg²)</li>
+                    <li><strong>m₁</strong>, <strong>m₂</strong> = Masses of the two objects</li>
+                    <li><strong>r</strong> = Distance between the centers of the two masses</li>
+                </ul>
+                
+                <p><strong>Dimensional Formula of G:</strong></p>
+                <p>The dimensional formula of the gravitational constant (G) is:</p>
+                <p><strong>[G] = [M]<sup>-1</sup> [L]<sup>3</sup> [T]<sup>-2</sup></strong></p>
+            </div>
+        </div>
+        
+
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>Acceleration Due to Gravity</h4>
+                </div>
+                <div class="card-body">
+                    <p><strong>Definition:</strong> Acceleration due to gravity (denoted as <strong>g</strong>) is the rate at which an object accelerates when it is freely falling under the influence of gravity. On Earth, the average value of <strong>g</strong> is approximately 9.8 m/s².</p>
+                    
+                    <p><strong>Formula:</strong></p>
+                    <p>
+                        <span id="formula">\( g = \frac{GM}{R^2} \)</span>
+                    </p>
+                    <p><strong>Where:</strong></p>
+                    <ul>
+                        <li><strong>g</strong> = Acceleration due to gravity</li>
+                        <li><strong>G</strong> = Gravitational constant (6.674 × 10<sup>-11</sup> N·m²/kg²)</li>
+                        <li><strong>M</strong> = Mass of the Earth</li>
+                        <li><strong>R</strong> = Radius of the Earth</li>
+                    </ul>
+        
+                    <p><strong>Value of Acceleration Due to Gravity:</strong></p>
+                    <p>The value of <strong>g</strong> on the surface of Earth is approximately 9.8 m/s². However, it varies slightly with altitude and latitude. The value of <strong>g</strong> at the Earth's surface is:</p>
+                    <p><strong>g</strong> ≈ 9.8 m/s²</p>
+        
+                    <p><strong>Dimensional Formula:</strong></p>
+                    <p><span id="dimensional">\( [g] = [L][T]^{-2} \)</span></p>
+        
+                    <p><strong>Factors Affecting Acceleration Due to Gravity:</strong></p>
+                    <ul>
+                        <li><strong>Altitude:</strong> As the altitude increases, the distance from the center of the Earth increases, leading to a decrease in the value of <strong>g</strong>.</li>
+                        <li><strong>Latitude:</strong> The value of <strong>g</strong> is greater at the poles and smaller at the equator due to the Earth's rotation and its shape as an oblate spheroid.</li>
+                        <li><strong>At the Equator and Poles:</strong> The value of <strong>g</strong> is minimum at the equator and maximum at the poles due to the Earth's rotation.</li>
+                    </ul>
+                    
+                    <p><strong>Effect of Altitude:</strong></p>
+                    <p>The formula to calculate acceleration due to gravity at height <strong>h</strong> above Earth's surface is:</p>
+                    <p><span id="altitude">\( g_h = \frac{g_0}{\left(1 + \frac{h}{R}\right)^2} \)</span></p>
+                    <p><strong>Where:</strong></p>
+                    <ul>
+                        <li><strong>g<sub>h</sub></strong> = Acceleration due to gravity at height <strong>h</strong></li>
+                        <li><strong>g₀</strong> = Acceleration due to gravity at the Earth's surface (9.8 m/s²)</li>
+                        <li><strong>R</strong> = Radius of Earth</li>
+                        <li><strong>h</strong> = Height above the Earth's surface</li>
+                    </ul>
+                    <p><strong>Note:</strong> If the altitude <strong>h</strong> is much smaller than the radius of Earth (h << R), we can approximate the formula as:</p>
+                    <p><span id="approx-altitude">\( g_h \approx g_0 \left(1 - \frac{2h}{R}\right) \)</span></p>
+        
+                    <p><strong>Effect of Depth:</strong></p>
+                    <p>The formula to calculate acceleration due to gravity at depth <strong>d</strong> below Earth's surface is:</p>
+                    <p><span id="depth">\( g_d = g_0 \left(1 - \frac{d}{R}\right) \)</span></p>
+                    <p><strong>Where:</strong></p>
+                    <ul>
+                        <li><strong>g<sub>d</sub></strong> = Acceleration due to gravity at depth <strong>d</strong></li>
+                        <li><strong>g₀</strong> = Acceleration due to gravity at the Earth's surface (9.8 m/s²)</li>
+                        <li><strong>R</strong> = Radius of Earth</li>
+                        <li><strong>d</strong> = Depth below the Earth's surface</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Gravitational Field and Potential</h4>
+            </div>
+            <div class="card-body">
+                <p><strong>Gravitational Field:</strong> The gravitational field is the region of space surrounding a mass in which another mass experiences a force due to gravity. It is a vector quantity, with both magnitude and direction, pointing towards the center of the mass causing the field.</p>
+        
+                <p><strong>Formula for Gravitational Field:</strong></p>
+                <p><span id="gravitational-field">\( \vec{E} = - \frac{GM}{r^2} \hat{r} \)</span></p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li><strong>\( \vec{E} \)</strong> = Gravitational field intensity (vector)</li>
+                    <li><strong>G</strong> = Gravitational constant (6.674 × 10<sup>-11</sup> N·m²/kg²)</li>
+                    <li><strong>M</strong> = Mass of the object creating the gravitational field</li>
+                    <li><strong>r</strong> = Distance from the center of the mass creating the field</li>
+                    <li><strong>\( \hat{r} \)</strong> = Unit vector in the direction of the gravitational force (towards the center)</li>
+                </ul>
+        
+                <p><strong>Intensity of Gravitational Field:</strong> The gravitational field intensity at a point is the force experienced by a unit mass placed at that point. It is measured in N/kg.</p>
+                
+                <p><strong>Formula for Gravitational Field Intensity:</strong></p>
+                <p><span id="gravitational-field-intensity">\( E = \frac{F}{m} = \frac{GM}{r^2} \)</span></p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li><strong>F</strong> = Gravitational force acting on a mass</li>
+                    <li><strong>m</strong> = Mass of the object experiencing the gravitational force</li>
+                    <li><strong>G</strong> = Gravitational constant (6.674 × 10<sup>-11</sup> N·m²/kg²)</li>
+                    <li><strong>M</strong> = Mass of the object creating the gravitational field</li>
+                    <li><strong>r</strong> = Distance from the center of the mass creating the field</li>
+                </ul>
+        
+                <p><strong>Gravitational Potential:</strong> Gravitational potential at a point is the work done per unit mass to move a small mass from infinity to that point in the gravitational field. It is a scalar quantity.</p>
+        
+                <p><strong>Formula for Gravitational Potential:</strong></p>
+                <p><span id="gravitational-potential">\( V = - \frac{GM}{r} \)</span></p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li><strong>V</strong> = Gravitational potential</li>
+                    <li><strong>G</strong> = Gravitational constant (6.674 × 10<sup>-11</sup> N·m²/kg²)</li>
+                    <li><strong>M</strong> = Mass of the object creating the gravitational potential</li>
+                    <li><strong>r</strong> = Distance from the center of the mass creating the potential</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Gravitational Potential Energy</h4>
+            </div>
+            <div class="card-body">
+                <p><strong>Gravitational Potential Energy:</strong> Gravitational potential energy is the energy stored in an object due to its position in a gravitational field. It depends on the mass of the object, the height of the object above a reference point, and the strength of the gravitational field.</p>
+        
+                <p><strong>Formula for Gravitational Potential Energy:</strong></p>
+                <p><span id="gravitational-potential-energy">\( U = - \frac{GMm}{r} \)</span></p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li><strong>U</strong> = Gravitational potential energy</li>
+                    <li><strong>G</strong> = Gravitational constant (6.674 × 10<sup>-11</sup> N·m²/kg²)</li>
+                    <li><strong>M</strong> = Mass of the object creating the gravitational field</li>
+                    <li><strong>m</strong> = Mass of the object experiencing the gravitational force</li>
+                    <li><strong>r</strong> = Distance from the center of the object creating the gravitational field</li>
+                </ul>
+        
+                <p><strong>Two-Particle System:</strong> For two masses \( m_1 \) and \( m_2 \) separated by a distance \( r \), the gravitational potential energy of the system is given by:</p>
+                <p><span id="two-particle-system">\( U = - \frac{G m_1 m_2}{r} \)</span></p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li><strong>m<sub>1</sub>, m<sub>2</sub></strong> = Masses of the two objects</li>
+                    <li><strong>r</strong> = Distance between the two masses</li>
+                </ul>
+        
+                <p><strong>System of More than Two Particles:</strong> For a system of more than two masses, the total gravitational potential energy is the sum of the potential energies between each pair of masses. If there are \( n \) masses, the total potential energy is:</p>
+                <p><span id="multiple-particles-system">\( U = - \sum_{1 \leq i < j \leq n} \frac{G m_i m_j}{r_{ij}} \)</span></p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li><strong>m<sub>i</sub>, m<sub>j</sub></strong> = Masses of any two objects in the system</li>
+                    <li><strong>r<sub>ij</sub></strong> = Distance between the \( i \)-th and \( j \)-th masses</li>
+                    <li><strong>G</strong> = Gravitational constant</li>
+                </ul>
+        
+                <p><strong>Important Notes:</strong></p>
+                <ul>
+                    <li>The gravitational potential energy is negative because work is done by the gravitational field when the object moves towards the mass creating the field.</li>
+                    <li>At infinity, the gravitational potential energy is considered to be zero.</li>
+                    <li>The change in gravitational potential energy is important in calculating the work done when an object moves in a gravitational field.</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Relation Between Gravitational Field and Potential</h4>
+            </div>
+            <div class="card-body">
+              
+                <p><strong>Mathematical Relation:</strong></p>
+                <p><span id="gravitational-field-potential-relation">\( \vec{g} = - \frac{dV}{dr} \)</span></p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li><strong>\( \vec{g} \)</strong> = Gravitational field (Gravitational intensity)</li>
+                    <li><strong>V</strong> = Gravitational potential</li>
+                    <li><strong>r</strong> = Radial distance from the mass creating the field</li>
+                </ul>
+        
+                <p><strong>Explanation:</strong></p>
+                <ul>
+                    <li>The gravitational field is the negative gradient of the gravitational potential.</li>
+                    <li>The negative sign indicates that the gravitational field points in the direction of decreasing potential (towards the mass causing the field).</li>
+                    <li>If the gravitational potential increases with distance, the field points towards the increasing potential (which is rare for most practical gravitational fields, as the potential generally decreases with distance).</li>
+                </ul>
+        
+            </div>
+        </div>
+        
+
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Kepler's Laws of Planetary Motion</h4>
+            </div>
+            <div class="card-body">
+               
+                <!-- Kepler's First Law -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Kepler's First Law (Law of Ellipses)</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Statement:</strong> Every planet moves along an elliptical orbit with the Sun at one of the foci.</p>
+                        <p><strong>Explanation:</strong> The planets do not move in perfect circles; instead, their orbits are elliptical. The Sun is not at the center but at one of the two foci of the ellipse.</p>
+                    </div>
+                </div>
+        
+                <!-- Kepler's Second Law -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Kepler's Second Law (Law of Equal Areas)</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Statement:</strong> The line joining a planet and the Sun sweeps out equal areas in equal intervals of time.</p>
+                        <p><strong>Formula:</strong></p>
+                        <p><span id="keplers-second-law">\( \frac{dA}{dt} = \text{constant} \)</span></p>
+                        <p><strong>Explanation:</strong> A planet moves faster when it is closer to the Sun and slower when it is farther away. This ensures that the areas swept by the line joining the planet and the Sun are always the same over equal time periods.</p>
+                    </div>
+                </div>
+        
+                <!-- Kepler's Third Law -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Kepler's Third Law (Law of Harmonies)</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Statement:</strong> The square of the period of revolution of a planet is directly proportional to the cube of the semi-major axis of its orbit.</p>
+                        <p><strong>Formula:</strong></p>
+                        <p><span id="keplers-third-law">\( T^2 \propto r^3 \)</span></p>
+                        <p>or</p>
+                        <p><span id="keplers-third-law-eq">\( \frac{T^2}{r^3} = \text{constant} \)</span></p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li><strong>T</strong> = Orbital period of the planet (time taken to complete one revolution around the Sun)</li>
+                            <li><strong>r</strong> = Semi-major axis of the planet's orbit (average distance from the Sun)</li>
+                        </ul>
+                        <p><strong>Explanation:</strong> This law shows that planets that are farther from the Sun take longer to orbit the Sun than those closer to the Sun. The period of revolution increases as the distance from the Sun increases.</p>
+                    </div>
+                </div>
+        
+                <h5>General Explanation:</h5>
+                <ul>
+                    <li><strong>Kepler's First Law</strong> tells us the shape of a planet's orbit.</li>
+                    <li><strong>Kepler's Second Law</strong> explains how a planet's speed varies as it orbits the Sun.</li>
+                    <li><strong>Kepler's Third Law</strong> relates the period of a planet's orbit to its distance from the Sun.</li>
+                </ul>
+        
+                <p><strong>Important Notes:</strong></p>
+                <ul>
+                    <li>Kepler's Laws apply to the motion of all planets, moons, and artificial satellites in orbit around a star or other central mass.</li>
+                    <li>Kepler's laws were later explained through Newton's Law of Universal Gravitation.</li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Satellite Motion</h4>
+            </div>
+            <div class="card-body">
+                <p>A satellite is an object that orbits another object in space due to gravitational forces. Satellites can be artificial or natural (like moons), and they follow a predictable path around a planet or star.</p>
+        
+                <!-- Time Period of a Satellite -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Time Period of a Satellite</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Formula:</strong></p>
+                        <p><span id="satellite-time-period">\( T = 2 \pi \sqrt{\frac{r^3}{GM}} \)</span></p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li><strong>T</strong> = Time period of the satellite (time taken to complete one revolution around the Earth)</li>
+                            <li><strong>r</strong> = Orbital radius (distance from the center of the Earth to the satellite)</li>
+                            <li><strong>G</strong> = Universal gravitational constant</li>
+                            <li><strong>M</strong> = Mass of the Earth</li>
+                        </ul>
+                        <p><strong>Explanation:</strong> The time period depends on the radius of the orbit and the mass of the Earth. The satellite takes longer to complete one orbit if it is farther away from the Earth.</p>
+                    </div>
+                </div>
+        
+                <!-- Geostationary Satellite -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Geostationary Satellite</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Definition:</strong> A geostationary satellite is an artificial satellite that orbits the Earth at the same rotational speed as the Earth. It remains stationary with respect to a fixed point on the Earth's surface.</p>
+                        <p><strong>Conditions:</strong></p>
+                        <ul>
+                            <li>The satellite must be at a specific altitude (about 35,786 km above the equator).</li>
+                            <li>The satellite must have an orbital period of exactly 24 hours.</li>
+                            <li>It must orbit along the equatorial plane of the Earth.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Orbital Velocity -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Orbital Velocity</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Formula 1:</strong></p>
+                        <p><span id="orbital-velocity">\( v = \sqrt{\frac{GM}{r}} \)</span></p>
+        
+                        <p><strong>Formula 2 (Alternative):</strong></p>
+                        <p><span id="orbital-velocity-alternative">\( v = \sqrt{gR} \)</span></p>
+                        
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li><strong>v</strong> = Orbital velocity of the satellite</li>
+                            <li><strong>G</strong> = Universal gravitational constant</li>
+                            <li><strong>M</strong> = Mass of the central object (Earth)</li>
+                            <li><strong>r</strong> = Orbital radius of the satellite</li>
+                            <li><strong>g</strong> = Acceleration due to gravity at the Earth's surface</li>
+                            <li><strong>R</strong> = Radius of the Earth</li>
+                        </ul>
+                        <p><strong>Explanation:</strong> The orbital velocity is the speed the satellite must maintain to counterbalance the gravitational force. The satellite will fall towards Earth if its velocity is too low or escape into space if the velocity is too high.</p>
+                    </div>
+                </div>
+        
+                <!-- Energy of a Satellite -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Energy of a Satellite</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>The total mechanical energy of a satellite in orbit is the sum of its kinetic energy and potential energy.</p>
+        
+                        <p><strong>Formula for Total Energy:</strong></p>
+                        <p><span id="satellite-energy">\( E = -\frac{GMm}{2r} \)</span></p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li><strong>E</strong> = Total energy of the satellite</li>
+                            <li><strong>G</strong> = Universal gravitational constant</li>
+                            <li><strong>M</strong> = Mass of the central object (Earth)</li>
+                            <li><strong>m</strong> = Mass of the satellite</li>
+                            <li><strong>r</strong> = Orbital radius of the satellite</li>
+                        </ul>
+                        <p><strong>Explanation:</strong> The total energy of the satellite is negative, indicating that the satellite is bound to the Earth. The magnitude of the energy is proportional to the distance between the satellite and the Earth.</p>
+        
+                        <p><strong>Formula for Kinetic Energy:</strong></p>
+                        <p><span id="kinetic-energy">\( K = \frac{GMm}{2r} \)</span></p>
+        
+                        <p><strong>Formula for Potential Energy:</strong></p>
+                        <p><span id="potential-energy">\( U = -\frac{GMm}{r} \)</span></p>
+                        <p><strong>Explanation:</strong> The kinetic energy is positive, while the potential energy is negative, leading to a total negative energy. This is typical for any satellite in orbit around a central body.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Escape Velocity</h4>
+            </div>
+            <div class="card-body">
+                <p>Escape velocity is the minimum velocity an object must have to break free from the gravitational influence of a celestial body, without any further propulsion.</p>
+        
+                <!-- Escape Velocity Formula -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Formula for Escape Velocity</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Formula 1 (General):</strong></p>
+                        <p><span id="escape-velocity">\( v_{e} = \sqrt{\frac{2GM}{r}} \)</span></p>
+                        <p><strong>Formula 2 (Using g):</strong></p>
+                        <p><span id="escape-velocity-g">\( v_{e} = \sqrt{2gR} \)</span></p>
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li><strong>v<sub>e</sub></strong> = Escape velocity</li>
+                            <li><strong>G</strong> = Universal gravitational constant</li>
+                            <li><strong>M</strong> = Mass of the central body (e.g., Earth)</li>
+                            <li><strong>r</strong> = Distance from the center of the body (e.g., radius of the Earth or orbital radius)</li>
+                            <li><strong>g</strong> = Acceleration due to gravity at the Earth's surface</li>
+                            <li><strong>R</strong> = Radius of the Earth (or distance from the center of the central body)</li>
+                        </ul>
+                        <p><strong>Explanation:</strong> The second formula \( v_e = \sqrt{2gR} \) is useful when the object is close to the Earth's surface, where the acceleration due to gravity \( g \) is constant, and \( R \) is the radius of the Earth.</p>
+                    </div>
+                </div>
+        
+                <!-- Relation Between Orbital Velocity and Escape Velocity -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Relation Between Orbital Velocity and Escape Velocity</h5>
+                    </div>
+                    <div class="card-body">
+        
+                        <p><strong>Formula for Relation:</strong></p>
+                        <p><span id="escape-orbital-velocity-relation">\( v_e = \sqrt{2} \cdot v_o \)</span></p>
+        
+                        <p><strong>Where:</strong></p>
+                        <ul>
+                            <li><strong>v<sub>e</sub></strong> = Escape velocity</li>
+                            <li><strong>v<sub>o</sub></strong> = Orbital velocity</li>
+                        </ul>
+        
+                        <p><strong>Explanation:</strong> Escape velocity is always greater than orbital velocity by a factor of \( \sqrt{2} \), meaning the object requires more velocity to escape than to simply remain in orbit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

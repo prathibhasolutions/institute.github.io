@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kinetic Theory of gases</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+
+        <div class="container mt-4">
+
+            <!-- Kinetic Theory of Gases -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-dark text-white">
+                    <h1>Kinetic Theory of Gases</h1>
+                </div>
+                <div class="card-body text-dark">
+                    <p>The <strong>Kinetic Theory of Gases</strong> explains the behavior of gases by considering their molecular composition and motion.</p>
+                    <p>It provides a microscopic understanding of macroscopic properties like pressure, temperature, and volume.</p>
+                </div>
+            </div>
+        
+            <!-- Assumptions of Kinetic Theory -->
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h5>Assumptions of Kinetic Theory</h5>
+                </div>
+                <div class="card-body text-dark">
+                    <ul>
+                        <li>A gas consists of a large number of identical molecules in continuous random motion.</li>
+                        <li>The size of gas molecules is negligible compared to the distance between them.</li>
+                        <li>Molecules undergo perfectly elastic collisions with each other and the container walls.</li>
+                        <li>There are no intermolecular forces except during collisions.</li>
+                        <li>The average kinetic energy of molecules is directly proportional to the absolute temperature.</li>
+                        <li>The time spent in collisions is negligible compared to the time spent in free motion.</li>
+                        <li>The pressure exerted by the gas is due to the collisions of molecules with the container walls.</li>
+                        <li>The motion of gas molecules obeys Newton’s laws of motion.</li>
+                        <li>The distribution of molecular speeds follows the Maxwell-Boltzmann distribution.</li>
+                        <li>All molecules do not have the same speed; instead, their speeds vary over a range.</li>
+                    </ul>
+                </div>
+            </div>
+        
+        </div>
+        
+
+        <div class="container mt-4">
+
+            <!-- Gas Laws Card -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-dark text-white">
+                    <h5>Gas Laws</h5>
+                </div>
+                <div class="card-body text-dark">
+                    <p>Gas laws describe the relationships between pressure, volume, temperature, and the number of gas molecules.</p>
+                </div>
+            </div>
+        
+            <div class="row">
+                <!-- Boyle's Law -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h6>Boyle’s Law</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Statement:</strong> At constant temperature, the pressure of a gas is inversely proportional to its volume.</p>
+                            <p class="text-center">
+                                \[
+                                P \propto \frac{1}{V} \quad \text{or} \quad P_1V_1 = P_2V_2
+                                \]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Charles' Law -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <h6>Charles’ Law</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Statement:</strong> At constant pressure, the volume of a gas is directly proportional to its absolute temperature.</p>
+                            <p class="text-center">
+                                \[
+                                V \propto T \quad \text{or} \quad \frac{V_1}{T_1} = \frac{V_2}{T_2}
+                                \]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row mt-3">
+                <!-- Gay-Lussac's Law -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-warning text-white">
+                            <h6>Gay-Lussac’s Law</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Statement:</strong> At constant volume, the pressure of a gas is directly proportional to its absolute temperature.</p>
+                            <p class="text-center">
+                                \[
+                                P \propto T \quad \text{or} \quad \frac{P_1}{T_1} = \frac{P_2}{T_2}
+                                \]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Avogadro’s Law -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-danger text-white">
+                            <h6>Avogadro’s Law</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Statement:</strong> At constant temperature and pressure, the volume of a gas is directly proportional to the number of molecules.</p>
+                            <p class="text-center">
+                                \[
+                                V \propto n \quad \text{or} \quad \frac{V_1}{n_1} = \frac{V_2}{n_2}
+                                \]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        
+        <div class="container mt-4">
+
+            <!-- Dalton's Law of Partial Pressures -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5>Dalton’s Law of Partial Pressures</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Statement:</strong> The total pressure exerted by a mixture of non-reacting gases is equal to the sum of the partial pressures of individual gases.</p>
+                    <p class="text-center">
+                        \[
+                        P_{\text{total}} = P_1 + P_2 + P_3 + \dots
+                        \]
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Ideal Gas Equation -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-success text-white">
+                    <h5>Ideal Gas Equation</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Equation:</strong> The relationship between pressure, volume, temperature, and the number of moles of an ideal gas is given by:</p>
+                    <p class="text-center">
+                        \[
+                        PV = nRT
+                        \]
+                    </p>
+                    <p><strong>Where:</strong></p>
+                    <ul>
+                        <li>\( P \) = Pressure</li>
+                        <li>\( V \) = Volume</li>
+                        <li>\( n \) = Number of moles</li>
+                        <li>\( R \) = Universal gas constant</li>
+                        <li>\( T \) = Temperature</li>
+                    </ul>
+        
+                    <p><strong>Values of \( R \):</strong></p>
+                    <ul>
+                        <li>\( R = 8.314 \, J \cdot mol^{-1} \cdot K^{-1} \)</li>
+                        <li>\( R = 0.0821 \, L \cdot atm \cdot mol^{-1} \cdot K^{-1} \)</li>
+                        <li>\( R = 1.987 \, cal \cdot mol^{-1} \cdot K^{-1} \)</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Real Gases and Van der Waals Equation -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-danger text-white">
+                    <h5>Real Gases and Van der Waals Equation</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Real Gases:</strong> Deviate from ideal behavior due to intermolecular forces and finite molecular volume. Deviations are significant at high pressures and low temperatures.</p>
+                    <p><strong>Van der Waals Equation:</strong></p>
+                    <p class="text-center">
+                        \[
+                        \left( P + \frac{a}{V^2} \right) (V - b) = RT
+                        \]
+                    </p>
+                    <p><strong>Where:</strong></p>
+                    <ul>
+                        <li>\( a \) = Attraction between molecules</li>
+                        <li>\( b \) = Volume occupied by gas molecules</li>
+                        <li>\( P \), \( V \), \( T \), and \( R \) are standard gas variables</li>
+                    </ul>
+                </div>
+            </div>
+        
+        </div>
+        
+
+        <div class="container mt-4">
+
+            <!-- Pressure of a Gas and Kinetic Energy -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5>Pressure of a Gas & Kinetic Energy of Gas Molecules</h5>
+                </div>
+                <div class="card-body">
+                    
+                    <!-- Pressure of a Gas -->
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <h6>Pressure of a Gas</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Equation for Pressure:</strong></p>
+                            <p class="text-center">
+                                \[
+                                P = \frac{1}{3} \frac{mN}{V} \bar{v^2}
+                                \]
+                            </p>
+                            <p><strong>Where:</strong></p>
+                            <ul>
+                                <li>\( P \) = Pressure</li>
+                                <li>\( m \) = Mass of one molecule</li>
+                                <li>\( N \) = Number of molecules</li>
+                                <li>\( V \) = Volume of gas</li>
+                                <li>\( \bar{v^2} \) = Mean square velocity of molecules</li>
+                            </ul>
+                        </div>
+                    </div>
+        <!-- Equation for Kinetic Energy -->
+<div class="card mb-3 shadow-sm">
+    <div class="card-header bg-danger text-white">
+        <h6>Kinetic Energy of a Gas Molecule</h6>
+    </div>
+    <div class="card-body">
+        <p><strong>Expression for Kinetic Energy:</strong></p>
+        <p class="text-center">
+            \[
+            E_k = \frac{3}{2} k_B T
+            \]
+        </p>
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>\( E_k \) = Average kinetic energy of a gas molecule</li>
+            <li>\( k_B \) = Boltzmann constant \( (1.38 \times 10^{-23} \, \text{J/K}) \)</li>
+            <li>\( T \) = Temperature (in Kelvin)</li>
+        </ul>
+    </div>
+</div>
+
+        
+                    <!-- Pressure in Terms of Density -->
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header bg-warning text-white">
+                            <h6>Pressure in Terms of Density</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Equation:</strong></p>
+                            <p class="text-center">
+                                \[
+                                P = \frac{1}{3} \rho \bar{v^2}
+                                \]
+                            </p>
+                            <p><strong>Where:</strong></p>
+                            <ul>
+                                <li>\( \rho \) = Density of the gas</li>
+                                <li>\( \bar{v^2} \) = Mean square velocity of molecules</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Relation Between Kinetic Energy and Pressure -->
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-secondary text-white">
+                            <h6>Relation Between Kinetic Energy & Pressure</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Equation:</strong></p>
+                            <p class="text-center">
+                                \[
+                                P V = \frac{2}{3} N E_k
+                                \]
+                            </p>
+                            <p><strong>Where:</strong></p>
+                            <ul>
+                                <li>\( P \) = Pressure</li>
+                                <li>\( V \) = Volume</li>
+                                <li>\( N \) = Number of molecules</li>
+                                <li>\( E_k \) = Average kinetic energy</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        
+        </div>
+        
+
+        <div class="container mt-4">
+
+            <!-- Speed of Gas Molecules -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5>Speed of Gas Molecules</h5>
+                </div>
+                <div class="card-body">
+                    
+                    <!-- Root Mean Square (RMS) Speed -->
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <h6>Root Mean Square (RMS) Speed</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Equation:</strong></p>
+                            <p class="text-center">
+                                \[
+                                v_{\text{rms}} = \sqrt{\frac{3RT}{M}}
+                                \]
+                            </p>
+                            <p><strong>Where:</strong></p>
+                            <ul>
+                                <li>\( v_{\text{rms}} \) = Root mean square speed</li>
+                                <li>\( R \) = Universal gas constant</li>
+                                <li>\( T \) = Temperature (in Kelvin)</li>
+                                <li>\( M \) = Molar mass of the gas</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Average Speed -->
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header bg-danger text-white">
+                            <h6>Average Speed</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Equation:</strong></p>
+                            <p class="text-center">
+                                \[
+                                v_{\text{avg}} = \sqrt{\frac{8RT}{\pi M}}
+                                \]
+                            </p>
+                            <p><strong>Where:</strong></p>
+                            <ul>
+                                <li>\( v_{\text{avg}} \) = Average speed of molecules</li>
+                                <li>\( R \) = Universal gas constant</li>
+                                <li>\( T \) = Temperature (in Kelvin)</li>
+                                <li>\( M \) = Molar mass of the gas</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Most Probable Speed -->
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header bg-warning text-white">
+                            <h6>Most Probable Speed</h6>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Equation:</strong></p>
+                            <p class="text-center">
+                                \[
+                                v_{\text{mp}} = \sqrt{\frac{2RT}{M}}
+                                \]
+                            </p>
+                            <p><strong>Where:</strong></p>
+                            <ul>
+                                <li>\( v_{\text{mp}} \) = Most probable speed</li>
+                                <li>\( R \) = Universal gas constant</li>
+                                <li>\( T \) = Temperature (in Kelvin)</li>
+                                <li>\( M \) = Molar mass of the gas</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Comparison of Speeds -->
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-secondary text-white">
+                            <h6>Comparison of Different Speeds</h6>
+                        </div>
+                        <div class="card-body text-center">
+                            <p><strong>Ratio of Speeds:</strong></p>
+                            <p class="text-center">
+                                \[
+                                v_{\text{mp}} : v_{\text{avg}} : v_{\text{rms}} = \sqrt{2} : \sqrt{\frac{8}{\pi}} : \sqrt{3} \approx 1 : 1.128 : 1.225
+                                \]
+                            </p>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        
+        </div>
+
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Degrees of Freedom</h5>
+            </div>
+            <div class="card-body text-dark">
+                <p>The degrees of freedom of a gas molecule refer to the independent ways in which it can store energy through motion.</p>
+        
+                <!-- Table for Degrees of Freedom -->
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Type of Molecule</th>
+                                <th>Translational</th>
+                                <th>Rotational</th>
+                                <th>Vibrational</th>
+                                <th>Total Degrees of Freedom</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monoatomic</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Diatomic (Rigid)</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Diatomic (Non-Rigid)</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Polyatomic (Non-Linear)</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>Vibrational Modes</td>
+                                <td>\(3N\)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        
+        
+                <!-- Relation with Specific Heats -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h6>Specific Heat and Degree of Freedom</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>
+                            \[
+                            C_v = \frac{f}{2} R, \quad C_p = C_v + R
+                            \]
+                        </p>
+                        <p>
+                            \[
+                            \gamma = \frac{C_p}{C_v} = 1+\frac{2}{f}
+                            \]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Mean Free Path</h5>
+            </div>
+            <div class="card-body text-dark">
+                <p>The mean free path (\(\lambda\)) is the average distance a gas molecule travels before colliding with another molecule.</p>
+        
+                <!-- Formula for Mean Free Path -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h6>Formula for Mean Free Path</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>
+                            \[
+                            \lambda = \frac{k_B T}{\sqrt{2} \pi d^2 P}
+                            \]
+                        </p>
+                        <p><strong>Where:</strong></p>
+                        <ul class="text-start">
+                            <li>\(\lambda\) = Mean free path</li>
+                            <li>\(k_B\) = Boltzmann constant</li>
+                            <li>\(T\) = Absolute temperature (K)</li>
+                            <li>\(d\) = Diameter of the gas molecule</li>
+                            <li>\(P\) = Pressure of the gas</li>
+                        </ul>
+                    </div>
+                </div>
+        
+              
+        
+                <!-- Dependence of Mean Free Path -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>Dependence of Mean Free Path</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>\(\lambda\) is inversely proportional to pressure (\(P\)).</li>
+                            <li>\(\lambda\) increases with temperature (\(T\)).</li>
+                            <li>\(\lambda\) is inversely proportional to molecular diameter (\(d\)).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h5>Critical Temperature, Pressure, and Volume</h5>
+            </div>
+            <div class="card-body text-dark">
+                <p>The critical point of a gas is defined by the critical temperature, pressure, and volume, beyond which the gas cannot be liquefied by pressure alone.</p>
+        
+                <!-- Critical Temperature -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h6>Critical Temperature (\(T_c\))</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>The highest temperature at which a gas can be liquefied by applying pressure.</p>
+                        <p class="text-center">
+                            \[
+                            T_c = \frac{8a}{27Rb}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Critical Pressure -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-warning text-white">
+                        <h6>Critical Pressure (\(P_c\))</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>The minimum pressure required to liquefy a gas at its critical temperature.</p>
+                        <p class="text-center">
+                            \[
+                            P_c = \frac{a}{27b^2}
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Critical Volume -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h6>Critical Volume (\(V_c\))</h6>
+                    </div>
+                    <div class="card-body">
+                        <p>The volume occupied by one mole of gas at the critical temperature and pressure.</p>
+                        <p class="text-center">
+                            \[
+                            V_c = 3b
+                            \]
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Critical Constants Relation -->
+                <div class="card mt-3 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h6>Critical Constants Relation</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>
+                            \[
+                            P_c V_c = \frac{R T_c}{8}
+                            \]
+                        </p>
+                        <p>All critical constants are related through the Van der Waals equation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

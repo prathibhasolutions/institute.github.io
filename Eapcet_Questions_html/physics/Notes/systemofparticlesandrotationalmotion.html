@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>System of particles and rotational motion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">System of Particles and Rotational Motion</h1>
+        <!-- Center of Mass and System of Particles -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-success text-white">
+        <h5>Center of Mass & System of Particles</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> The center of mass (COM) is the point where the entire mass of a system is assumed to be concentrated for motion analysis.</p>
+
+        <!-- COM Formula -->
+        <p><strong>Coordinates of Center of Mass:</strong></p>
+        <p class="text-center">
+            \[
+            x_{cm} = \frac{\sum m_i x_i}{\sum m_i}, \quad
+            y_{cm} = \frac{\sum m_i y_i}{\sum m_i}, \quad
+            z_{cm} = \frac{\sum m_i z_i}{\sum m_i}
+            \]
+        </p>
+
+        <p><strong>Velocity of Center of Mass:</strong></p>
+        <p class="text-center">
+            \[
+            V_{cm} = \frac{\sum m_i V_i}{\sum m_i}
+            \]
+        </p>
+
+        <p><strong>Acceleration of Center of Mass:</strong></p>
+        <p class="text-center">
+            \[
+            a_{cm} = \frac{\sum m_i a_i}{\sum m_i}
+            \]
+        </p>
+
+        <!-- Linear Momentum -->
+        <div class="card mt-3 shadow-sm">
+            <div class="card-header bg-warning text-white">
+                <h6>Linear Momentum of System of Particles</h6>
+            </div>
+            <div class="card-body text-center">
+                <p><strong>Total Linear Momentum:</strong></p>
+                <p class="text-center">
+                    \[
+                    P = M V_{cm}
+                    \]
+                </p>
+                <p><strong>Newton’s Second Law for System:</strong></p>
+                <p class="text-center">
+                    \[
+                    F_{ext} = M a_{cm}
+                    \]
+                </p>
+                <p>Where \( F_{ext} \) is the external force acting on the system.</p>
+            </div>
+        </div>
+
+        <!-- Important Points -->
+        <p><strong>Important Points:</strong></p>
+        <ul>
+            <li>The COM moves as if all mass were concentrated at a single point.</li>
+            <li>If no external force acts, the velocity of the COM remains constant.</li>
+            <li>COM of a rigid body depends only on its shape and mass distribution.</li>
+            <li>For a symmetric body with uniform density, the COM is at its geometric center.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Rigid Body, Translational & Rotational Motion -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-primary text-white">
+        <h5>Rigid Body, Translational & Rotational Motion</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Rigid Body:</strong> A rigid body is an object in which the relative positions of all particles remain constant under any force.</p>
+
+        <!-- Translational Motion -->
+        <div class="card mt-3 shadow-sm">
+            <div class="card-header bg-success text-white">
+                <h6>Translational Motion</h6>
+            </div>
+            <div class="card-body">
+                <p>In translational motion, every point in the body moves parallel to others. It follows Newton’s laws.</p>
+                <p><strong>Equations of Motion (SUVAT):</strong></p>
+                <p class="text-center">
+                    \[
+                    v = u + at, \quad s = ut + \frac{1}{2}at^2, \quad v^2 = u^2 + 2as
+                    \]
+                </p>
+                <p><strong>Momentum:</strong> \( P = mv \)</p>
+                <p><strong>Kinetic Energy:</strong> \( K = \frac{1}{2} m v^2 \)</p>
+            </div>
+        </div>
+
+        <!-- Rotational Motion -->
+        <div class="card mt-3 shadow-sm">
+            <div class="card-header bg-warning text-white">
+                <h6>Rotational Motion</h6>
+            </div>
+            <div class="card-body">
+                <p>In rotational motion, different points move in circular paths around a fixed axis.</p>
+                <p><strong>Angular Kinematics Equations:</strong></p>
+                <p class="text-center">
+                    \[
+                    \omega = \omega_0 + \alpha t, \quad \theta = \omega_0 t + \frac{1}{2} \alpha t^2, \quad \omega^2 = \omega_0^2 + 2\alpha \theta
+                    \]
+                </p>
+                <p><strong>Moment of Inertia:</strong> \( I = \sum m_i r_i^2 \)</p>
+                <p><strong>Torque:</strong> \( \tau = I \alpha \)</p>
+                <p><strong>Angular Momentum:</strong> \( L = I \omega \)</p>
+                <p><strong>Kinetic Energy of Rotation:</strong> \( K_{rot} = \frac{1}{2} I \omega^2 \)</p>
+            </div>
+        </div>
+
+        <!-- Important Parameters -->
+        <div class="card mt-3 shadow-sm">
+            <div class="card-header bg-danger text-white">
+                <h6>Comparison of Translational & Rotational Motion</h6>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>Translational Motion</th>
+                            <th>Rotational Motion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Displacement \( x \)</td>
+                            <td>Angular Displacement \( \theta \)</td>
+                        </tr>
+                        <tr>
+                            <td>Velocity \( v \)</td>
+                            <td>Angular Velocity \( \omega \)</td>
+                        </tr>
+                        <tr>
+                            <td>Acceleration \( a \)</td>
+                            <td>Angular Acceleration \( \alpha \)</td>
+                        </tr>
+                        <tr>
+                            <td>Force \( F = ma \)</td>
+                            <td>Torque \( \tau = I \alpha \)</td>
+                        </tr>
+                        <tr>
+                            <td>Momentum \( P = mv \)</td>
+                            <td>Angular Momentum \( L = I \omega \)</td>
+                        </tr>
+                        <tr>
+                            <td>Kinetic Energy \( K = \frac{1}{2} m v^2 \)</td>
+                            <td>Rotational Kinetic Energy \( K_{rot} = \frac{1}{2} I \omega^2 \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Moment of Inertia & Related Theorems -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-primary text-white">
+        <h5>Moment of Inertia & Related Theorems</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Moment of Inertia (\( I \)):</strong> It is the rotational analog of mass in linear motion, representing a body's resistance to rotational motion.</p>
+        <p class="text-center">
+            \[
+            I = \sum m_i r_i^2
+            \]
+        </p>
+        <p><strong>Depends on:</strong></p>
+        <ul>
+            <li>Mass of the body</li>
+            <li>Distribution of mass about the axis</li>
+            <li>Position of the axis of rotation</li>
+        </ul>
+
+        <!-- Radius of Gyration -->
+        <div class="card mt-3 shadow-sm">
+            <div class="card-header bg-success text-white">
+                <h6>Radius of Gyration</h6>
+            </div>
+            <div class="card-body">
+                <p><strong>Definition:</strong> The distance from the axis of rotation at which the entire mass of the body can be assumed to be concentrated to have the same moment of inertia.</p>
+                <p class="text-center">
+                    \[
+                    I = M k^2
+                    \]
+                </p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li>\( I \) = Moment of Inertia</li>
+                    <li>\( M \) = Mass of the body</li>
+                    <li>\( k \) = Radius of Gyration</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Parallel Axes Theorem -->
+        <div class="card mt-3 shadow-sm">
+            <div class="card-header bg-warning text-white">
+                <h6>Parallel Axes Theorem</h6>
+            </div>
+            <div class="card-body">
+                <p><strong>Statement:</strong> The moment of inertia about any axis parallel to the center of mass axis is given by:</p>
+                <p class="text-center">
+                    \[
+                    I = I_{cm} + Md^2
+                    \]
+                </p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li>\( I \) = Moment of inertia about any parallel axis</li>
+                    <li>\( I_{cm} \) = Moment of inertia about the center of mass</li>
+                    <li>\( M \) = Mass of the body</li>
+                    <li>\( d \) = Perpendicular distance between axes</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Perpendicular Axes Theorem -->
+        <div class="card mt-3 shadow-sm">
+            <div class="card-header bg-danger text-white">
+                <h6>Perpendicular Axes Theorem</h6>
+            </div>
+            <div class="card-body">
+                <p><strong>Statement:</strong> The moment of inertia about an axis perpendicular to a plane is the sum of the moments of inertia about two mutually perpendicular axes in the same plane.</p>
+                <p class="text-center">
+                    \[
+                    I_z = I_x + I_y
+                    \]
+                </p>
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li>\( I_z \) = Moment of inertia about the perpendicular axis</li>
+                    <li>\( I_x, I_y \) = Moments of inertia about the two perpendicular axes in the plane</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        
+            <h1 class="text-center  mt-4 mb-4">Moment of Inertia for Different Shapes</h1>
+        
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead class="table-dark">
+  
+                      
+                    <tr>
+                      <th>Shape</th>
+                      <th>Axis Orientation</th>
+                      <th>Moment of Inertia Formula</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+                      <tr>
+                          <td>Disc</td>
+                          <td>Central axis perpendicular to the plane</td>
+                          <td>\( I = \frac{1}{2} M R^2 \)</td>
+                        </tr>
+                        <tr>
+                          <td>Disc</td>
+                          <td>Diameter axis (in-plane)</td>
+                          <td>\( I = \frac{1}{4} M R^2 \)</td>
+                        </tr>
+                        <tr>
+                          <td>Thin Circular Ring</td>
+                          <td>Axis passing through the center and perpendicular to the plane</td>
+                          <td>\( I = M R^2 \)</td>
+                        </tr>
+                        <tr>
+                          <td>Thin Circular Ring</td>
+                          <td>Diameter axis (in-plane)</td>
+                          <td>\( I = \frac{1}{2} M R^2 \)</td>
+                        </tr>
+                    <tr>
+                      <td>Solid Cylinder</td>
+                      <td>Central longitudinal axis along the length of the cylinder</td>
+                      <td>\( I = \frac{1}{2} M R^2 \)</td>
+                    </tr>
+                    <tr>
+                      <td>Solid Cylinder</td>
+                      <td>Perpendicular to the length through the center</td>
+                      <td>\( I = \frac{1}{4} M R^2 + \frac{1}{12} M L^2 \)</td>
+                    </tr>
+                    <tr>
+                      <td>Hollow Cylinder</td>
+                      <td>Central longitudinal axis along the length</td>
+                      <td>\( I = M R^2 \)</td>
+                    </tr>
+                    <tr>
+                      <td>Hollow Cylinder</td>
+                      <td>Perpendicular to the length through the center</td>
+                      <td>\( I = \frac{1}{2} M R^2 + \frac{1}{12} M L^2 \)</td>
+                    </tr>
+                    <tr>
+                      <td>Solid Sphere</td>
+                      <td>Central axis through the center</td>
+                      <td>\( I = \frac{2}{5} M R^2 \)</td>
+                    </tr>
+                    <tr>
+                      <td>Thin Spherical Shell</td>
+                      <td>Central axis through the center</td>
+                      <td>\( I = \frac{2}{3} M R^2 \)</td>
+                    </tr>
+                    <tr>
+                      <td>Hollow Sphere</td>
+                      <td>Central axis through the center</td>
+                      <td>\( I = \frac{2}{3} M R^2 \)</td>
+                    </tr>
+                    <tr>
+                      <td>Thin Rod</td>
+                      <td>Perpendicular to the length through the center</td>
+                      <td>\( I = \frac{1}{12} M L^2 \)</td>
+                    </tr>
+                    <tr>
+                      <td>Thin Rod</td>
+                      <td>Perpendicular to the length through one end</td>
+                      <td>\( I = \frac{1}{3} M L^2 \)</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>Rectangular Plate</td>
+                      <td>Perpendicular to the plane through the center</td>
+                      <td>\( I = \frac{1}{12} M (a^2 + b^2) \)</td>
+                    </tr>
+                  
+                    
+                    <tr>
+                      <td>Square Plate</td>
+                      <td>Axis along one side of the square plate</td>
+                      <td>\( I = \frac{1}{3} M L^2 \)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        
+           
+
+              <!-- Torque (Moment of Force) -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-primary text-white">
+        <h5>Torque (Moment of Force)</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> Torque is the rotational equivalent of force, which causes an object to rotate about an axis.</p>
+        <p class="text-center">
+            \[
+            \tau = r \times F = rF \sin\theta
+            \]
+        </p>
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>\( \tau \) = Torque</li>
+            <li>\( r \) = Perpendicular distance from axis of rotation</li>
+            <li>\( F \) = Applied force</li>
+            <li>\( \theta \) = Angle between \( r \) and \( F \)</li>
+        </ul>
+        <p><strong>Units:</strong> Newton-meter (N·m)</p>
+    </div>
+</div>
+
+
+<!-- Angular Momentum -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-success text-white">
+        <h5>Angular Momentum</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> Angular momentum is the rotational equivalent of linear momentum.</p>
+        <p class="text-center">
+            \[
+            L = r \times p = r m v \sin\theta
+            \]
+        </p>
+        <p><strong>For a rotating body:</strong></p>
+        <p class="text-center">
+            \[
+            L = I \omega
+            \]
+        </p>
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>\( L \) = Angular momentum</li>
+            <li>\( r \) = Radius vector</li>
+            <li>\( p \) = Linear momentum</li>
+            <li>\( I \) = Moment of Inertia</li>
+            <li>\( \omega \) = Angular velocity</li>
+        </ul>
+        <p><strong>Units:</strong> kg·m²/s</p>
+    </div>
+</div>
+
+
+
+<!-- Principle of Moments -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-warning text-white">
+        <h5>Principle of Moments</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Statement:</strong> For an object in rotational equilibrium, the sum of clockwise moments equals the sum of counterclockwise moments.</p>
+        <p class="text-center">
+            \[
+            \sum \tau_{clockwise} = \sum \tau_{counterclockwise}
+            \]
+        </p>
+        <p><strong>Application:</strong></p>
+        <ul>
+            <li>Used in balancing beams, levers, and seesaws.</li>
+            <li>Essential in engineering and mechanical design.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Conservation of Angular Momentum -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-danger text-white">
+        <h5>Conservation of Angular Momentum</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Statement:</strong> If no external torque acts on a system, its total angular momentum remains constant.</p>
+        <p class="text-center">
+            \[
+            I_1 \omega_1 = I_2 \omega_2
+            \]
+        </p>
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>\( I_1, I_2 \) = Moments of inertia before and after</li>
+            <li>\( \omega_1, \omega_2 \) = Angular velocities before and after</li>
+        </ul>
+        <p><strong>Example:</strong> A spinning ice skater pulls in their arms to rotate faster.</p>
+    </div>
+</div>
+
+
+<!-- Torque & Angular Momentum of a System of Particles -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-info text-white">
+        <h5>Torque & Angular Momentum of a System of Particles</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>For a system of particles:</strong></p>
+        <p class="text-center">
+            \[
+            \tau_{ext} = \frac{dL}{dt}
+            \]
+        </p>
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>\( \tau_{ext} \) = Net external torque on the system</li>
+            <li>\( L \) = Total angular momentum</li>
+            <li>\( \frac{dL}{dt} \) = Rate of change of angular momentum</li>
+        </ul>
+        <p><strong>Implication:</strong> If \( \tau_{ext} = 0 \), then \( L \) is conserved.</p>
+    </div>
+</div>
+
+
+<!-- Equilibrium -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-primary text-white">
+        <h5>Equilibrium</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> A body is said to be in equilibrium if the net force and net torque acting on it are zero.</p>
+        <p><strong>Types of Equilibrium:</strong></p>
+        <ul>
+            <li><strong>Static Equilibrium:</strong> Object is at rest.</li>
+            <li><strong>Dynamic Equilibrium:</strong> Object moves with constant velocity.</li>
+        </ul>
+        <p><strong>Conditions for Equilibrium:</strong></p>
+        <p class="text-center">
+            \[
+            \sum F = 0, \quad \sum \tau = 0
+            \]
+        </p>
+    </div>
+</div>
+
+
+<!-- Couple -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-success text-white">
+        <h5>Couple</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> A couple is a pair of equal and opposite forces acting at different points, producing rotation without translation.</p>
+        <p><strong>Torque Due to a Couple:</strong></p>
+        <p class="text-center">
+            \[
+            \tau = F \times d
+            \]
+        </p>
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>\( F \) = Magnitude of force</li>
+            <li>\( d \) = Perpendicular distance between forces</li>
+        </ul>
+        <p><strong>Examples:</strong> Steering wheel, opening a bottle cap.</p>
+    </div>
+</div>
+
+
+<!-- Centre of Gravity -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-warning text-white">
+        <h5>Centre of Gravity</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> The centre of gravity of a body is the point where the entire weight of the body acts.</p>
+        <p><strong>Formula:</strong></p>
+        <p class="text-center">
+            \[
+            X_{cg} = \frac{\sum m_i x_i}{\sum m_i}, \quad Y_{cg} = \frac{\sum m_i y_i}{\sum m_i}
+            \]
+        </p>
+        <p><strong>Examples:</strong> Centre of gravity of a uniform rod is at its midpoint.</p>
+    </div>
+</div>
+
+
+<!-- Angular Impulse -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-danger text-white">
+        <h5>Angular Impulse</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> Angular impulse is the product of torque and the time duration for which it acts.</p>
+        <p class="text-center">
+            \[
+            J = \int \tau dt
+            \]
+        </p>
+        <p><strong>Impulse-Angular Momentum Theorem:</strong></p>
+        <p class="text-center">
+            \[
+            J = \Delta L
+            \]
+        </p>
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>\( J \) = Angular impulse</li>
+            <li>\( \tau \) = Torque</li>
+            <li>\( L \) = Angular momentum</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Rotational Kinetic Energy -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-info text-white">
+        <h5>Rotational Kinetic Energy</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> The kinetic energy possessed by a rotating object due to its angular motion.</p>
+        <p class="text-center">
+            \[
+            KE_{rot} = \frac{1}{2} I \omega^2
+            \]
+        </p>
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>\( I \) = Moment of inertia</li>
+            <li>\( \omega \) = Angular velocity</li>
+        </ul>
+        <p><strong>Example:</strong> A spinning wheel has rotational kinetic energy.</p>
+    </div>
+</div>
+
+
+<!-- Motion of Rolling Body on Inclined Plane -->
+<div class="card shadow-lg mt-4">
+    <div class="card-header bg-dark text-white">
+        <h5>Rolling Motion on an Inclined Plane</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Definition:</strong> When a body rolls down an inclined plane without slipping, it has both translational and rotational motion.</p>
+
+        <p><strong>Acceleration of Rolling Body:</strong></p>
+        <p class="text-center">
+            \[
+            a = \frac{g \sin\theta}{1 + \frac{K^2}{R^2}}
+            \]
+        </p>
+
+        <p><strong>Velocity at the Bottom:</strong></p>
+        <p class="text-center">
+            \[
+            v = \sqrt{\frac{2 g h}{1 + \frac{K^2}{R^2}}}
+            \]
+        </p>
+
+        <p><strong>Time Taken to Reach the Bottom:</strong></p>
+        <p class="text-center">
+            \[
+            t = \sqrt{\frac{2 h (1 + \frac{K^2}{R^2})}{g \sin\theta}}
+            \]
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>\( g \) = Acceleration due to gravity</li>
+            <li>\( \theta \) = Angle of inclination</li>
+            <li>\( K \) = Radius of gyration</li>
+            <li>\( R \) = Radius of the rolling body</li>
+            <li>\( h \) = Height from which the body starts rolling</li>
+        </ul>
+
+        <p><strong>Power Delivered by Torque:</strong></p>
+        <p class="text-center">
+            \[
+            P = \tau \omega
+            \]
+        </p>
+
+        <p><strong>Work Done by Torque:</strong></p>
+        <p class="text-center">
+            \[
+            W = \tau \theta
+            \]
+        </p>
+
+        <p><strong>Condition for Rolling Without Slipping:</strong></p>
+        <p class="text-center">
+            \[
+            v = R \omega
+            \]
+        </p>
+
+        <p><strong>Energy Conservation:</strong></p>
+        <p class="text-center">
+            \[
+            mgh = \frac{1}{2} M v^2 + \frac{1}{2} I \omega^2
+            \]
+        </p>
+
+        <p><strong>Comparison of Angular & Linear Speeds:</strong></p>
+        <ul>
+            <li>In **pure translational motion**, all points have the **same linear speed** and **zero angular speed**.</li>
+            <li>In **pure rotational motion**, all points have **different linear speeds**, but the **same angular speed**.</li>
+            <li>In **rolling motion**, all points have the **same angular speed** but **different linear speeds**, with the velocity of the point in contact with the surface being zero.</li>
+        </ul>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

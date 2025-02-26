@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hyperbolic functions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-lg mt-4">
+            <div class="text-center text-primary">
+                <h1>Hyperbolic Functions</h1>
+            </div>
+            <div class="card-body">
+                
+                <h3 class="text-center ">Definition of Hyperbolic Functions</h3>
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Function</th>
+                            <th>Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-dark">\( \sinh x \)</td>
+                            <td class="text-dark">\( \frac{e^x - e^{-x}}{2} \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( \cosh x \)</td>
+                            <td class="text-dark">\( \frac{e^x + e^{-x}}{2} \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( \tanh x \)</td>
+                            <td class="text-dark">\( \frac{\sinh x}{\cosh x} = \frac{e^x - e^{-x}}{e^x + e^{-x}} \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( \coth x \)</td>
+                            <td class="text-dark">\( \frac{\cosh x}{\sinh x} = \frac{e^x + e^{-x}}{e^x - e^{-x}} \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( sech x \)</td>
+                            <td class="text-dark">\( \frac{1}{\cosh x} = \frac{2}{e^x + e^{-x}} \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( csch x \)</td>
+                            <td class="text-dark">\( \frac{1}{\sinh x} = \frac{2}{e^x - e^{-x}} \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Domain and Range of Hyperbolic Functions</h4>
+            </div>
+            <div class="card-body">
+                
+                <h3 class="text-center text-primary">Domain and Range</h3>
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Function</th>
+                            <th>Domain</th>
+                            <th>Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-dark">\( \sinh x \)</td>
+                            <td class="text-dark">\( (-\infty, \infty) \)</td>
+                            <td class="text-dark">\( (-\infty, \infty) \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( \cosh x \)</td>
+                            <td class="text-dark">\( (-\infty, \infty) \)</td>
+                            <td class="text-dark">\( [1, \infty) \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( \tanh x \)</td>
+                            <td class="text-dark">\( (-\infty, \infty) \)</td>
+                            <td class="text-dark">\( (-1, 1) \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( \coth x \)</td>
+                            <td class="text-dark">\( (-\infty, \infty) \setminus \{0\} \)</td>
+                            <td class="text-dark">\( (-\infty, -1) \cup (1, \infty) \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( sech x \)</td>
+                            <td class="text-dark">\( (-\infty, \infty) \)</td>
+                            <td class="text-dark">\( (0, 1] \)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">\( csch x \)</td>
+                            <td class="text-dark">\( (-\infty, \infty) \setminus \{0\} \)</td>
+                            <td class="text-dark">\( (-\infty, 0) \cup (0, \infty) \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+            </div>
+        </div>
+        
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-success text-white">
+                <h4>Hyperbolic Identities</h4>
+            </div>
+            <div class="card-body">
+                
+                <h5 class="card-header bg-warning text-white">Fundamental Identities</h5>
+                <ul class="list-group">
+                    <li class="list-group-item text-dark">\( \cosh^2 x - \sinh^2 x = 1 \)</li>
+                    <li class="list-group-item text-dark">\( 1 - \tanh^2 x = sech^2 x \)</li>
+                    <li class="list-group-item text-dark">\( \coth^2 x - 1 = csch^2 x \)</li>
+                </ul>
+        
+                <h5 class="card-header bg-dark text-white">Addition and Subtraction Formulas</h5>
+                <ul class="list-group">
+                    <li class="list-group-item text-dark">\( \sinh (a + b) = \sinh a \cosh b + \cosh a \sinh b \)</li>
+                    <li class="list-group-item text-dark">\( \sinh (a - b) = \sinh a \cosh b - \cosh a \sinh b \)</li>
+                    <li class="list-group-item text-dark">\( \cosh (a + b) = \cosh a \cosh b + \sinh a \sinh b \)</li>
+                    <li class="list-group-item text-dark">\( \cosh (a - b) = \cosh a \cosh b - \sinh a \sinh b \)</li>
+                    <li class="list-group-item text-dark">\( \tanh (a + b) = \frac{\tanh a + \tanh b}{1 + \tanh a \tanh b} \)</li>
+                    <li class="list-group-item text-dark">\( \tanh (a - b) = \frac{\tanh a - \tanh b}{1 - \tanh a \tanh b} \)</li>
+                </ul>
+        
+                <h5 class="card-header bg-secondary text-white">Hyperbolic Function Relations</h5>
+                <ul class="list-group">
+                    <li class="list-group-item text-dark">\( \tanh x = \frac{\sinh x}{\cosh x} \)</li>
+                    <li class="list-group-item text-dark">\( \coth x = \frac{\cosh x}{\sinh x} \)</li>
+                    <li class="list-group-item text-dark">\( sech x = \frac{1}{\cosh x} \)</li>
+                    <li class="list-group-item text-dark">\( csch x = \frac{1}{\sinh x} \)</li>
+                </ul>
+        
+                <h5 class="card-header bg-primary text-white">Product-to-Sum Formulas</h5>
+                <ul class="list-group">
+                    <li class="list-group-item text-dark">\( \sinh a \sinh b = \frac{1}{2} [\cosh (a - b) - \cosh (a + b)] \)</li>
+                    <li class="list-group-item text-dark">\( \cosh a \cosh b = \frac{1}{2} [\cosh (a + b) + \cosh (a - b)] \)</li>
+                    <li class="list-group-item text-dark">\( \sinh a \cosh b = \frac{1}{2} [\sinh (a + b) + \sinh (a - b)] \)</li>
+                    <li class="list-group-item text-dark">\( \cosh a \sinh b = \frac{1}{2} [\sinh (a + b) - \sinh (a - b)] \)</li>
+                </ul>
+        
+                <h5 class="card-header bg-danger text-white">Sum-to-Product Formulas</h5>
+                <ul class="list-group">
+                    <li class="list-group-item text-dark">\( \sinh a + \sinh b = 2 \sinh \frac{(a+b)}{2} \cosh \frac{(a-b)}{2} \)</li>
+                    <li class="list-group-item text-dark">\( \sinh a - \sinh b = 2 \cosh \frac{(a+b)}{2} \sinh \frac{(a-b)}{2} \)</li>
+                    <li class="list-group-item text-dark">\( \cosh a + \cosh b = 2 \cosh \frac{(a+b)}{2} \cosh \frac{(a-b)}{2} \)</li>
+                    <li class="list-group-item text-dark">\( \cosh a - \cosh b = 2 \sinh \frac{(a+b)}{2} \sinh \frac{(a-b)}{2} \)</li>
+                </ul>
+        
+            </div>
+        </div>
+        
+
+        <div class="card shadow-lg mt-4">
+            <div class="card-header bg-primary text-white">
+                <h4>Hyperbolic Multiple Angle Formulas</h4>
+            </div>
+            <div class="card-body">
+                
+                <h5 class="card-header bg-success text-white">Double Angle Formulas</h5>
+                <ul class="list-group">
+                    <li class="list-group-item text-dark">\( \sinh 2x = 2 \sinh x \cosh x \)</li>
+                    <li class="list-group-item text-dark">\( \cosh 2x = \cosh^2 x + \sinh^2 x = 2\cosh^2 x - 1 = 1 + 2\sinh^2 x \)</li>
+                    <li class="list-group-item text-dark">\( \tanh 2x = \frac{2 \tanh x}{1 + \tanh^2 x} \)</li>
+                    <li class="list-group-item text-dark">\( \coth 2x = \frac{\coth^2 x + 1}{2 \coth x} \)</li>
+                </ul>
+        
+                <h5 class="card-header bg-warning text-white">Triple Angle Formulas</h5>
+                <ul class="list-group">
+                    <li class="list-group-item text-dark">\( \sinh 3x = 3\sinh x + 4\sinh^3 x \)</li>
+                    <li class="list-group-item text-dark">\( \cosh 3x = 4\cosh^3 x - 3\cosh x \)</li>
+                    <li class="list-group-item text-dark">\( \tanh 3x = \frac{3\tanh x + \tanh^3 x}{1 + 3\tanh^2 x} \)</li>
+                </ul>
+        
+               
+        
+            </div>
+        </div>
+        
+
+        <div class="container mt-4">
+            <div class="card shadow-lg">
+              <div class="text-center text-primary">
+                <h3>Domain & Range of Inverse Hyperbolic Functions</h3>
+              </div>
+              <div class="card-body text-dark">
+                <table class="table table-bordered text-center">
+                  <thead class="table-dark">
+                    <tr>
+                      <th>Function</th>
+                      <th>Domain</th>
+                      <th>Range</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>\(\sinh^{-1} x\)</td>
+                      <td>\(\mathbb{R}\) (All real numbers)</td>
+                      <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(\cosh^{-1} x\)</td>
+                      <td>\([1, \infty)\)</td>
+                      <td>\([0, \infty)\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(\tanh^{-1} x\)</td>
+                      <td>\((-1,1)\)</td>
+                      <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(\coth^{-1} x\)</td>
+                      <td>\((-\infty, -1) \cup (1, \infty)\)</td>
+                      <td>\(\mathbb{R}\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(sech^{-1} x\)</td>
+                      <td>\((0,1]\)</td>
+                      <td>\([0, \infty)\)</td>
+                    </tr>
+                    <tr>
+                      <td>\(csch^{-1} x\)</td>
+                      <td>\(\mathbb{R} \setminus \{0\}\)</td>
+                      <td>\(\mathbb{R} \setminus \{0\}\)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="container mt-4">
+            <div class="card shadow-lg">
+              <div class="card-header bg-primary text-white">
+                <h5>Inverse Hyperbolic Functions in Logarithmic Form</h5>
+              </div>
+              <div class="card-body text-dark">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <b>\(\sinh^{-1} x = \ln \left( x + \sqrt{x^2 + 1} \right) \)</b>
+                  </li>
+                  <li class="list-group-item">
+                    <b>\(\cosh^{-1} x = \ln \left( x + \sqrt{x^2 - 1} \right) \), &nbsp; \( x \geq 1 \)</b>
+                  </li>
+                  <li class="list-group-item">
+                    <b>\(\tanh^{-1} x = \frac{1}{2} \ln \left( \frac{1 + x}{1 - x} \right) \), &nbsp; \( |x| < 1 \)</b>
+                  </li>
+                  <li class="list-group-item">
+                    <b>\(\coth^{-1} x = \frac{1}{2} \ln \left( \frac{x + 1}{x - 1} \right) \), &nbsp; \( |x| > 1 \)</b>
+                  </li>
+                  <li class="list-group-item">
+                    <b>\(sech^{-1} x = \ln \left( \frac{1 + \sqrt{1 - x^2}}{x} \right) \), &nbsp; \( 0 < x \leq 1 \)</b>
+                  </li>
+                  <li class="list-group-item">
+                    <b>\(csch^{-1} x = \ln \left( \frac{1}{x} + \frac{\sqrt{1 + x^2}}{|x|} \right) \), &nbsp; \( x \neq 0 \)</b>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
