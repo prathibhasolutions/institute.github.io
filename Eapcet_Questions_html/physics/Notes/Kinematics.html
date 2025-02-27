@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kinematics</title>
+    <link rel="icon" type="image/png" href="../../../logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .graph-container {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center ">Kinematics</h1>
+        <h2 class="text-center text-primary">Motion in a Straight Line</h2>
+        <!-- Include MathJax for rendering formulas -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<div class="container mt-4">
+    <h3 class="text-center">Key Concepts in Motion</h3>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-header bg-danger text-white">Motion</h4>
+                    <p class="card-text">An object is said to be in motion if its position changes with respect to time and a reference point.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-header bg-warning text-white">Rest</h4>
+                    <p class="card-text">An object is said to be at rest if its position does not change with respect to time and a reference point.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-header bg-success text-white">Distance</h4>
+                    <p class="card-text">The total length of the path traveled by an object, irrespective of direction.</p>
+                    <p><strong>Formula:</strong> \( d = s_1 + s_2 + ... + s_n \)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-header bg-primary text-white">Displacement</h5>
+                    <p class="card-text">The shortest straight-line distance between the initial and final position of an object.</p>
+                    <p><strong>Formula:</strong> \( s = x_f - x_i \)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-header bg-secondary text-white">Velocity</h4>
+                    <p class="card-text">The rate of change of displacement with respect to time.</p>
+                    <p><strong>Formula (Average Velocity):</strong> \( v = \frac{s}{t} \)</p>
+                    <p><strong>Formula (Instantaneous Velocity):</strong> \( v = \frac{ds}{dt} \)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-header bg-success text-white">Acceleration</h4>
+                    <p class="card-text">The rate of change of velocity with respect to time.</p>
+                    <p><strong>Formula (Average Acceleration):</strong> \( a = \frac{v_f - v_i}{t} \)</p>
+                    <p><strong>Formula (Instantaneous Acceleration):</strong> \( a = \frac{dv}{dt} \)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-header bg-warning text-white">Uniform Motion</h4>
+                    <p class="card-text">An object is in uniform motion if it covers equal distances in equal intervals of time.</p>
+                    <p><strong>Formula:</strong> \( v = \frac{s}{t} \), where velocity remains constant.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-header bg-danger text-white">Non-Uniform Motion</h4>
+                    <p class="card-text">An object is in non-uniform motion if it covers unequal distances in equal intervals of time.</p>
+                    <p><strong>Formula:</strong> \( v_{\text{avg}} = \frac{\Delta s}{\Delta t} \)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-header bg-primary text-white">Average Velocity</h4>
+                <p class="card-text">
+                    Average velocity is the total displacement divided by the total time taken.
+                </p>
+                <p><strong>Formula:</strong></p>
+                <p>\[
+                    v_{\text{avg}} = \frac{s_{\text{total}}}{t_{\text{total}}} = \frac{x_f - x_i}{t_f - t_i}
+                \]</p>
+
+                <h6>Example 1:</h6>
+                <p>A car moves from \( x = 2 \) m to \( x = 10 \) m in 4 seconds. Find its average velocity.</p>
+                <p><strong>Solution:</strong></p>
+                <p>\[
+                    v_{\text{avg}} = \frac{10 - 2}{4} = \frac{8}{4} = 2 \text{ m/s}
+                \]</p>
+
+                <h6>Example 2:</h6>
+                <p>A person walks 5 m east and then 12 m west in 6 seconds. Find their average velocity.</p>
+                <p><strong>Solution:</strong></p>
+                <p>Displacement = \( 12 - 5 = 7 \) m (west)</p>
+                <p>\[
+                    v_{\text{avg}} = \frac{-7}{6} \approx -1.17 \text{ m/s}
+                \]</p>
+                <p>The negative sign indicates motion towards the west.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-header bg-warning text-white">Average Speed</h4>
+                <p class="card-text">
+                    Average speed is the total distance traveled divided by the total time taken.
+                </p>
+                <p><strong>General Formula:</strong></p>
+                <p>\[
+                    \text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}}
+                \]</p>
+
+                <h6>Case 1: When distances \( s_1, s_2, s_3, \dots \) are given with respective speeds \( v_1, v_2, v_3, \dots \)</h6>
+                <p>\[
+                    v_{\text{avg}} = \frac{s_1 + s_2 + s_3 + \dots}{\frac{s_1}{v_1} + \frac{s_2}{v_2} + \frac{s_3}{v_3} + \dots}
+                \]</p>
+
+                <h6>Case 2: When a particle moves at different speeds for equal time intervals \( t_1, t_2, t_3, \dots \)</h6>
+                <p>\[
+                    v_{\text{avg}} = \frac{v_1 + v_2 + v_3 + \dots}{n}
+                \]</p>
+                <p>where \( n \) is the number of time intervals.</p>
+
+                <h6>Case 3: When a particle travels equal distances at different speeds</h6>
+                <p>\[
+                    v_{\text{avg}} = \frac{2 v_1 v_2}{v_1 + v_2}
+                \]</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="mt-3">
+            <h3>Motion Graphs</h3>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-header bg-secondary text-white">Stationary Body</h5>
+                            <div class="graph-container">
+                                <canvas id="dispTimeGraph"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-header bg-secondary text-white">Constant Velocity</h5>
+                            <div class="graph-container">
+                                <canvas id="constVelGraph"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-header bg-secondary text-white">Constant Acceleration</h5>
+                            <div class="graph-container">
+                                <canvas id="constAccGraph"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-header bg-secondary text-white">Constant Deceleration</h5>
+                            <div class="graph-container">
+                                <canvas id="constDecGraph"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-header bg-secondary text-white">Velocity-Time (Constant Velocity)</h5>
+                            <div class="graph-container">
+                                <canvas id="velTimeConstVel"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-header bg-secondary text-white">Velocity-Time (Constant Acceleration)</h5>
+                            <div class="graph-container">
+                                <canvas id="velTimeConstAcc"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-header bg-secondary text-white">Velocity-Time (Constant Deceleration)</h5>
+                            <div class="graph-container">
+                                <canvas id="velTimeConstDec"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-header bg-secondary text-white">Velocity-Time (Increasing Acceleration)</h5>
+                            <div class="graph-container">
+                                <canvas id="velTimeIncAcc"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-header bg-secondary text-white">Velocity-Time (Decreasing Acceleration)</h5>
+                            <div class="graph-container">
+                                <canvas id="velTimeDecAcc"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-header bg-warning text-white">Equations of Uniformly Accelerated Motion</h4>
+                    <p class="card-text">
+                        When an object moves with uniform acceleration, the following three equations describe its motion:
+                    </p>
+    
+                    <h6>First Equation of Motion:</h6>
+                    <p>\[
+                        v = u + at
+                    \]</p>
+                    <p>where:</p>
+                    <ul>
+                        <li>\( v \) = Final velocity</li>
+                        <li>\( u \) = Initial velocity</li>
+                        <li>\( a \) = Acceleration</li>
+                        <li>\( t \) = Time</li>
+                    </ul>
+    
+                    <h6>Second Equation of Motion:</h6>
+                    <p>\[
+                        s = ut + \frac{1}{2} a t^2
+                    \]</p>
+                    <p>where:</p>
+                    <ul>
+                        <li>\( s \) = Displacement</li>
+                    </ul>
+    
+                    <h6>Third Equation of Motion:</h6>
+                    <p>\[
+                        v^2 = u^2 + 2as
+                    \]</p>
+    
+                    <h5>Example:</h5>
+                    <p><strong>Problem:</strong> A car starts from rest and accelerates at \( 2 \, m/s^2 \) for 5 seconds. Find its final velocity and displacement.</p>
+    
+                    <p><strong>Solution:</strong></p>
+                    <ul>
+                        <li>Given: \( u = 0 \), \( a = 2 \, m/s^2 \), \( t = 5 \) sec</li>
+                        <li>Using first equation: \( v = 0 + (2 \times 5) = 10 \, m/s \)</li>
+                        <li>Using second equation: \( s = (0 \times 5) + \frac{1}{2} (2 \times 5^2) \)</li>
+                        <li>\( s = 0 + \frac{1}{2} (2 \times 25) = 25 \) m</li>
+                    </ul>
+                    <p><strong>Answer:</strong> Final velocity = \( 10 \) m/s, Displacement = \( 25 \) m</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Add MathJax for rendering mathematical formulas -->
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<div class="row mb-3">
+  <div class="col-12">
+      <div class="card">
+          <div class="card-body">
+              <h4 class="card-header bg-dark text-white">Motion Under Gravity</h4>
+              <p class="card-text">
+                  When an object moves under the influence of gravity alone, it experiences uniform acceleration due to gravity (\( g \)).
+                  The equations of motion remain the same, but acceleration (\( a \)) is replaced by (\( g \)).
+              </p>
+
+              <h6>Equations of Motion Under Gravity:</h6>
+              <ul>
+                  <li>\( v = u + gt \) (For objects in free fall, take \( g = +9.8 \) m/s² downward)</li>
+                  <li>\( s = ut + \frac{1}{2} g t^2 \)</li>
+                  <li>\( v^2 = u^2 + 2gs \)</li>
+              </ul>
+
+              <h6>For Objects Thrown Upwards:</h6>
+              <p>When an object is thrown upwards, acceleration due to gravity is taken as negative (\( g = -9.8 \) m/s²).</p>
+              <ul>
+                  <li>\( v = u - gt \)</li>
+                  <li>\( s = ut - \frac{1}{2} g t^2 \)</li>
+                  <li>\( v^2 = u^2 - 2gs \)</li>
+              </ul>
+
+              <h6>Important Concepts:</h6>
+              <ul>
+                  <li>At the highest point, velocity \( v = 0 \).</li>
+                  <li>Time to reach max height: \( t = \frac{u}{g} \)</li>
+                  <li>Max height reached: \( h = \frac{u^2}{2g} \)</li>
+                  <li>Total time of flight (up + down): \( T = \frac{2u}{g} \)</li>
+              </ul>
+
+              <h5>Example:</h5>
+              <p>Problem: A ball is thrown upwards with a velocity of \( 20 \) m/s. Find:</p>
+              <ul>
+                  <li>Time to reach max height</li>
+                  <li>Maximum height</li>
+                  <li>Total time of flight</li>
+              </ul>
+
+              <p>Solution:</p>
+              <ul>
+                  <li>Given: \( u = 20 \) m/s, \( g = 9.8 \) m/s²</li>
+                  <li>Time to reach max height: \( t = \frac{u}{g} = \frac{20}{9.8} \approx 2.04 \) s</li>
+                  <li>Max height: \( h = \frac{u^2}{2g} = \frac{20^2}{2 \times 9.8} \approx 20.4 \) m</li>
+                  <li>Total time of flight: \( T = \frac{2u}{g} = \frac{2 \times 20}{9.8} \approx 4.08 \) s</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container mt-5">
+    <h1 class="text-center">Motion in a Plane</h1>
+    
+    <div class="card mt-4">
+        <div class="card-header bg-primary text-white">
+            <h2>Motion in a Plane - Vectors</h2>
+        </div>
+        <div class="card-body">
+            
+            <div class="card mt-3">
+                <div class="card-header bg-secondary text-white">Position Vector</div>
+                <div class="card-body">
+                    <p><strong>Definition:</strong> The position vector <strong>r</strong> of a particle in a two-dimensional plane is given by its coordinates (x, y) relative to an origin O.</p>
+                    <p><strong>Formula:</strong></p>
+                    <p>\[ \vec{r} = x \hat{i} + y \hat{j} \]</p>
+                </div>
+            </div>
+            
+            <div class="card mt-3">
+                <div class="card-header bg-secondary text-white">Displacement Vector</div>
+                <div class="card-body">
+                    <p><strong>Definition:</strong> The displacement vector \( \Delta \vec{r} \) represents the change in position of a particle over time.</p>
+                    <p><strong>Formula:</strong></p>
+                    <p>\[ \Delta \vec{r} = (x_2 - x_1) \hat{i} + (y_2 - y_1) \hat{j} \]</p>
+                </div>
+            </div>
+            
+            <div class="card mt-3">
+                <div class="card-header bg-secondary text-white">Velocity Vector</div>
+                <div class="card-body">
+                    <p><strong>Definition:</strong> The velocity vector \( \vec{v} \) is the rate of change of displacement with respect to time.</p>
+                    <p><strong>Formula:</strong></p>
+                    <p>\[ \vec{v} = \frac{d \vec{r}}{dt} = \frac{dx}{dt} \hat{i} + \frac{dy}{dt} \hat{j} \]</p>
+                </div>
+            </div>
+            
+            <div class="card mt-3">
+                <div class="card-header bg-secondary text-white">Acceleration Vector</div>
+                <div class="card-body">
+                    <p><strong>Definition:</strong> The acceleration vector \( \vec{a} \) is the rate of change of velocity with respect to time.</p>
+                    <p><strong>Formula:</strong></p>
+                    <p>\[ \vec{a} = \frac{d \vec{v}}{dt} = \frac{d^2x}{dt^2} \hat{i} + \frac{d^2y}{dt^2} \hat{j} \]</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header bg-info text-white">
+            <h2>Projectile Motion</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>Definition:</strong> Projectile motion is the motion of an object thrown into the air under the influence of gravity, following a curved trajectory.</p>
+    
+            <h4><strong>Parameters Used:</strong></h4>
+            <ul>
+                <li><strong>θ (Theta):</strong> Angle of projection from the horizontal.</li>
+                <li><strong>u:</strong> Initial velocity of the projectile.</li>
+                <li><strong>uₓ (Horizontal Velocity):</strong> uₓ = u cos θ (Constant throughout motion).</li>
+                <li><strong>uᵧ (Vertical Velocity):</strong> uᵧ = u sin θ (Changes due to gravity).</li>
+                <li><strong>g:</strong> Acceleration due to gravity (9.8 m/s²).</li>
+                <li><strong>T (Time of Flight):</strong> Total time the projectile remains in the air.</li>
+                <li><strong>H (Maximum Height):</strong> The highest point reached by the projectile.</li>
+                <li><strong>R (Horizontal Range):</strong> The total horizontal distance covered by the projectile.</li>
+                <li><strong>x:</strong> Horizontal displacement at time <em>t</em>.</li>
+                <li><strong>y:</strong> Vertical displacement at time <em>t</em>.</li>
+            </ul>
+    
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-danger text-white">Time of Flight</div>
+                        <div class="card-body">
+                            <p><strong>Formula:</strong></p>
+                            <p> T = (2u sin θ) / g </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">Maximum Height</div>
+                        <div class="card-body">
+                            <p><strong>Formula:</strong></p>
+                            <p> H = (u² sin² θ) / (2g) </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">Horizontal Range</div>
+                        <div class="card-body">
+                            <p><strong>Formula:</strong></p>
+                            <p> R = (u² sin 2θ) / g </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card mt-3">
+                <div class="card-header bg-warning text-white">Equation of Trajectory</div>
+                <div class="card-body">
+                    <p><strong>Equation of Motion:</strong></p>
+                    <p> y = x tan θ - (g x²) / (2 u² cos² θ) </p>
+                    <p><strong>Explanation:</strong> This equation represents the path of the projectile, which is a <strong>parabola</strong>.</p>
+                </div>
+            </div>
+    
+            <div class="card mt-3">
+                <div class="card-header bg-dark text-white">Important Points in Projectile Motion</div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Maximum Range Condition:</strong> The range is maximum when the angle of projection is <strong>45°</strong>. That is, R<sub>max</sub> occurs at θ = 45°.</li>
+                        <li><strong>Maximum Height Condition:</strong> The maximum height depends on the initial velocity and occurs at the peak of the trajectory.</li>
+                        <li><strong>Time to Reach Maximum Height:</strong> It takes <strong>half</strong> of the total time of flight to reach maximum height.</li>
+                        <li><strong>Symmetry of Motion:</strong> The path of the projectile is symmetrical. The time taken to rise is equal to the time taken to fall.</li>
+                        <li><strong>Velocity at Maximum Height:</strong> At the highest point, the vertical component of velocity is zero, but the horizontal component remains constant.</li>
+                        <li><strong>Nature of Path:</strong> The trajectory of a projectile is always a <strong>parabolic path</strong> (except for vertical motion).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="card mt-4">
+        <div class="card-header bg-primary text-white">
+            <h2>Circular Motion</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>Definition:</strong> Circular motion is the movement of an object along the circumference of a circle or a circular path.</p>
+    
+            <div class="mt-4">
+                
+                <p><strong>Angular Displacement:</strong> The angle through which an object moves on a circular path, typically measured in radians.</p>
+                <p><strong>Angular Velocity:</strong> The rate at which an object rotates around a circular path. It is defined as the time rate of change of angular displacement, and is typically measured in radians per second (rad/s).</p>
+                <p><strong>Formula:</strong> <span>ω = dθ / dt</span></p>
+                <p><strong>Angular Acceleration:</strong> The rate at which the angular velocity of an object changes with time, measured in radians per second squared (rad/s²).</p>
+                <p><strong>Formula:</strong> <span>α = dω / dt</span></p>
+            </div>
+            
+            <div class="row">
+                <!-- Uniform Circular Motion Card -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">Uniform Circular Motion (UCM)</div>
+                        <div class="card-body">
+                            <p>In <strong>Uniform Circular Motion</strong>, the object moves in a circular path with a constant speed.</p>
+                            <p><strong>Key Characteristics:</strong></p>
+                            <ul>
+                                <li>Speed remains constant.</li>
+                                <li>Velocity changes due to continuous change in direction.</li>
+                                <li>Acceleration (Centripetal Acceleration) acts towards the center.</li>
+                            </ul>
+                            <p><strong>Formulas:</strong></p>
+                            <ul>
+                                <li><span>Centripetal Acceleration: a<sub>c</sub> = v² / r</span></li>
+                                <li><span>Centripetal Force: F<sub>c</sub> = (m v²) / r</span></li>
+                                <li><span>Linear Velocity: v = rω</span></li> <!-- Added v = rω formula -->
+                                <li><span>Linear Acceleration: a = rα</span></li> <!-- Added a = rα formula -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Non-Uniform Circular Motion Card -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-danger text-white">Non-Uniform Circular Motion (NUCM)</div>
+                        <div class="card-body">
+                            <p>In <strong>Non-Uniform Circular Motion</strong>, the object moves in a circular path but its speed changes over time.</p>
+                            <p><strong>Key Characteristics:</strong></p>
+                            <ul>
+                                <li>Speed is not constant.</li>
+                                <li>Velocity changes due to change in both magnitude and direction.</li>
+                                <li>Has both <strong>radial</strong> (centripetal) and <strong>tangential</strong> acceleration.</li>
+                            </ul>
+                            <p><strong>Formulas:</strong></p>
+                            <ul>
+                                <li><span>Tangential Acceleration: a<sub>t</sub> = d|v| / dt</span> = rα</li>
+                                <li><span>Net Acceleration: a = √(a<sub>c</sub>² + a<sub>t</sub>²)</span></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+           
+     
+          
+        </div>
+    </div>
+    
+
+    <div class="card mt-4">
+        <div class="card-header bg-info text-white">
+            <h4>Kinematic Equations for Circular Motion</h4>
+        </div>
+        <div class="card-body">
+            <p>The kinematic equations for circular motion are as follows:</p>
+            <ul>
+                
+                <li>\( \omega = \omega_0 + \alpha t \)</li>
+                <li> \( \omega^2 = \omega_0^2 + 2\alpha \Delta\theta \)</li>
+                <li> \( \theta = \omega_0 t + \frac{1}{2} \alpha t^2 \)</li>
+            </ul>
+    
+            <h5>Parameters Used:</h5>
+            <ul>
+                <li><strong>θ:</strong> Angular displacement (in radians)</li>
+                
+                <li><strong>ω:</strong> Angular velocity (in radians per second)</li>
+                <li><strong>ω₀:</strong> Initial angular velocity (in radians per second)</li>
+                <li><strong>α:</strong> Angular acceleration (in radians per second squared)</li>
+                <li><strong>t:</strong> Time (in seconds)</li>
+                <li><strong>Δθ:</strong> Change in angular displacement (in radians)</li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="card mt-4">
+        <div class="card-header bg-warning text-white">
+            <h4>Centripetal and Centrifugal Force</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Centripetal Force:</strong> Centripetal force is the force that keeps an object moving in a circular path, always pointing towards the center of the circle.</p>
+            <p><strong>Formula:</strong> \( F_c = \frac{m v^2}{r} \), where:</p>
+            <ul>
+                <li><strong>m:</strong> Mass of the object (in kg)</li>
+                <li><strong>v:</strong> Linear velocity of the object (in m/s)</li>
+                <li><strong>r:</strong> Radius of the circular path (in meters)</li>
+            </ul>
+    
+            <p><strong>Centrifugal Force:</strong> Centrifugal force is the apparent force that acts outward on an object moving around a center, perceived in a rotating reference frame.</p>
+            <p><strong>Formula:</strong> \( F_{cf} = \frac{m v^2}{r} \), same as centripetal force but acts in the opposite direction (outwards).</p>
+    
+            <h5>Key Points:</h5>
+            <ul>
+                <li>Centripetal force is a real force that keeps an object in its circular path, while centrifugal force is a fictitious force that appears when observed from a rotating frame of reference.</li>
+                <li>Both forces have the same magnitude, but they act in opposite directions.</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="card mt-4">
+        <div class="card-header bg-info text-white">
+            <h4>Circular Turning of Road & Bending of Cyclist</h4>
+        </div>
+        <div class="card-body">
+            <h5>Circular Turning of Road:</h5>
+            <p>When a vehicle turns along a curved road, the friction between the tires and the road provides the necessary centripetal force to maintain the curved motion. The coefficient of friction (\( \mu \)) between the tires and the road surface plays an important role in preventing the vehicle from skidding.</p>
+            
+            
+            <p>The frictional force (\( F_f \)) that provides the centripetal force is given by:</p>
+            \[
+            F_f = \mu m g
+            \]
+            Where:
+            <ul>
+                <li><strong>\( \mu \):</strong> Coefficient of friction between the tires and the road</li>
+                <li><strong>g:</strong> Acceleration due to gravity (9.8 m/s²)</li>
+            </ul>
+            
+            <p>The frictional force must be equal to or greater than the required centripetal force to ensure that the vehicle does not skid:</p>
+            \[
+            F_f \geq F_c
+            \]
+            
+            Simplifying:
+            \[
+            \mu \geq \frac{v^2}{r g}
+            \]
+    
+            <h5>Bending of Cyclist:</h5>
+            <p>When a cyclist turns in a circular path, they lean towards the inside of the turn to balance the centrifugal force. The friction between the tires and the road provides the necessary centripetal force to keep the cyclist in motion along the curve.</p>
+            
+            <p><strong>Formula for Centripetal Force in Bending of Cyclist:</strong> \( F_c = \frac{m v^2}{r} \)</p>
+            
+            <p><strong>Formula for the Angle of Lean:</strong> The angle \( \theta \) at which the cyclist must lean can be calculated as:</p>
+            \[
+            \tan(\theta) = \frac{v^2}{r g}
+            \]
+    
+            <p>However, the frictional force here also plays a crucial role in maintaining the turn. The frictional force \( F_f \) between the cyclist's tires and the road is:</p>
+            \[
+            F_f = \mu m g
+            \]
+            
+            <h5>Key Points:</h5>
+            <ul>
+                <li>The coefficient of friction between the road and tires plays a crucial role in both circular turning and the cyclist's bending motion.</li>
+                <li>In both cases, the frictional force must be sufficient to provide the necessary centripetal force to avoid skidding.</li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="card mt-4">
+        <div class="card-header bg-primary text-white">
+            <h4>Conical Pendulum</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Formulae for Conical Pendulum:</strong></p>
+    
+            <ul>
+                <li><strong>Vertical Component of Tension:</strong> \( T \cos(\theta) = mg \)</li>
+                <li><strong>Horizontal Component of Tension:</strong> \( T \sin(\theta) = \frac{m v^2}{r} \)</li>
+                <li><strong>Speed of the Bob:</strong> \( v = \sqrt{r g \tan(\theta)} \)</li>
+            </ul>
+    
+            <h5>Parameters Used:</h5>
+            <ul>
+                <li><strong>T:</strong> Tension in the string (in N)</li>
+                <li><strong>θ:</strong> Angle between the string and the vertical (in radians)</li>
+                <li><strong>m:</strong> Mass of the bob (in kg)</li>
+                <li><strong>g:</strong> Acceleration due to gravity (9.8 m/s²)</li>
+                <li><strong>v:</strong> Speed of the bob (in m/s)</li>
+                <li><strong>r:</strong> Radius of the circular path (in meters)</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="card mt-4">
+        <div class="card-header bg-success text-white">
+            <h4>Motion of a Particle in a Vertical Circle</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Formulae for Motion of a Particle in a Vertical Circle:</strong></p>
+    
+            <ul>
+                <li><strong>Centripetal Force:</strong> \( F_c = \frac{m v^2}{r} \)</li>
+                <li><strong>Gravitational Force:</strong> \( F_g = mg \)</li>
+                <li><strong>At the Highest Point:</strong> The velocity at the highest point \( v_{\text{min}} = \sqrt{g r} \)</li>
+                <li><strong>At the Lowest Point:</strong> The velocity at the lowest point \( v_{\text{min}} = \sqrt{5 g r} \)</li>
+                <li><strong>At the Horizontal Position:</strong> The velocity at the horizontal position \( v = \sqrt{3 g r} \)</li>
+                <li><strong>Tension at the Highest Point:</strong> \( T_{\text{max}} = \frac{m v^2}{r} - mg \)</li>
+                <li><strong>Tension at the Lowest Point:</strong> \( T_{\text{min}} = \frac{m v^2}{r} + mg \)</li>
+                <li><strong>Tension at the Horizontal Position:</strong> \( T_{\text{horizontal}} = \frac{m v^2}{r} \)</li>
+            </ul>
+
+    
+            <h5>Parameters Used:</h5>
+            <ul>
+                <li><strong>m:</strong> Mass of the particle (in kg)</li>
+                <li><strong>v:</strong> Speed of the particle (in m/s)</li>
+                <li><strong>r:</strong> Radius of the circular path (in meters)</li>
+                <li><strong>g:</strong> Acceleration due to gravity (9.8 m/s²)</li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+
+    
+    
+    
+
+
+</div>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    <script>
+        function createGraph(canvasId, data, borderColor) {
+            var ctx = document.getElementById(canvasId).getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [0, 1, 2, 3, 4, 5],
+                    datasets: [{
+                        data: data,
+                        borderColor: borderColor,
+                        borderWidth: 2,
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: { title: { display: true, text: 'Time (s)' } },
+                        y: { title: { display: true, text: 'Velocity' } }
+                    }
+                }
+            });
+        }
+        
+        createGraph('dispTimeGraph', [5, 5, 5, 5, 5, 5], 'red');
+        createGraph('constVelGraph', [0, 2, 4, 6, 8, 10], 'blue');
+        createGraph('constAccGraph', [0, 1, 4, 9, 16, 25], 'green');
+        createGraph('constDecGraph', [30, 20, 13, 8, 4, 2], 'orange');
+        createGraph('velTimeConstVel', [5, 5, 5, 5, 5, 5], 'blue');
+        createGraph('velTimeConstAcc', [0, 2, 4, 6, 8, 10], 'green');
+        createGraph('velTimeConstDec', [10, 8, 6, 4, 2, 0], 'orange');
+        createGraph('velTimeIncAcc', [0, 1, 3, 6, 10, 15], 'purple');
+        createGraph('velTimeDecAcc', [10, 8, 6.5, 5, 4, 3.5], 'brown');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

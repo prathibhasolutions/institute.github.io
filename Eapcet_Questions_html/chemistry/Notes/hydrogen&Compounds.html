@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydrogen</title>
+    <link rel="icon" type="image/png" href="../../../logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+            tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+            svg: {fontCache: 'global'}
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <h1 class="text-center ">Hydrogen and its Compounds</h1>
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Position of Hydrogen in the Periodic Table
+            </div>
+            <div class="card-body">
+                <p>Hydrogen is the first element in the periodic table with atomic number <strong>1</strong> and electronic configuration <strong>1s¹</strong>. Its position is unique because:</p>
+                <ul>
+                    <li><strong>Resemblance to Group 1 (Alkali Metals):</strong> Forms H⁺ ion like alkali metals.</li>
+                    <li><strong>Resemblance to Group 17 (Halogens):</strong> Exists as H₂ molecule and forms H⁻ like halogens.</li>
+                    <li><strong>Unique Placement:</strong> Placed separately due to its dual behavior.</li>
+                </ul>
+        
+                <!-- Nested Card for Isotopes -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        Isotopes of Hydrogen
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Isotope</th>
+                                    <th>Symbol</th>
+                                    <th>Protons</th>
+                                    <th>Neutrons</th>
+                                    <th>Mass Number</th>
+                                    <th>Occurrence</th>
+                                    <th>Uses</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Protium</td>
+                                    <td>¹H</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>99.98%</td>
+                                    <td>Fuel cells, rocket fuel, ammonia production</td>
+                                </tr>
+                                <tr>
+                                    <td>Deuterium</td>
+                                    <td>²H (D)</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>0.02%</td>
+                                    <td>Nuclear reactors, heavy water (D₂O), medical research</td>
+                                </tr>
+                                <tr>
+                                    <td>Tritium</td>
+                                    <td>³H (T)</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>Trace</td>
+                                    <td>Nuclear fusion, glow-in-the-dark materials, radioactive tracing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> <!-- End Nested Card -->
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Methods of Preparation of Dihydrogen (H₂)
+            </div>
+            <div class="card-body">
+                <p>Dihydrogen (H₂) can be prepared using various methods, broadly classified as:</p>
+        
+                <!-- Nested Card for Laboratory Methods -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        1. Laboratory Methods
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Reaction of Dilute Acids with Metals:</strong> 
+                                <br>Zn + 2HCl → ZnCl₂ + H₂ ↑
+                            </li>
+                            <li><strong>Reaction of Metals with Alkalis:</strong> 
+                                <br>Zn + 2NaOH → Na₂ZnO₂ + H₂ ↑
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Industrial Methods -->
+                <div class="card mt-3">
+                    <div class="card-header bg-warning text-white">
+                        2. Industrial Methods
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Electrolysis of Water:</strong> 
+                                <br>2H₂O → 2H₂ + O₂ (using platinum electrodes)
+                            </li>
+                            <li><strong>Steam Reforming of Methane:</strong> 
+                                <br>CH₄ + H₂O → CO + 3H₂ (Nickel catalyst)
+                            </li>
+                            <li><strong>Lane's Process:</strong> 
+                                <br>Iron reacts with steam to produce H₂
+                                <br>3Fe + 4H₂O → Fe₃O₄ + 4H₂ ↑
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Biological Method -->
+                <div class="card mt-3">
+                    <div class="card-header bg-danger text-white">
+                        3. Biological Method
+                    </div>
+                    <div class="card-body">
+                        <p>Some anaerobic bacteria produce H₂ by fermentation of organic matter.</p>
+                        <p>Example: Glucose fermentation</p>
+                        <p>C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ + 2H₂</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Physical and Chemical Properties of Dihydrogen (H₂)
+            </div>
+            <div class="card-body">
+                <p>Dihydrogen (H₂) exhibits various physical and chemical properties, as detailed below:</p>
+        
+                <!-- Nested Card for Physical Properties -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Physical Properties
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Color and Odor:</strong> H₂ is a colorless, odorless, and tasteless gas.</li>
+                            <li><strong>Density:</strong> It is the lightest known gas (0.0899 g/L at STP).</li>
+                            <li><strong>Solubility:</strong> Slightly soluble in water.</li>
+                            <li><strong>Boiling and Melting Points:</strong> Very low (Melting point: -259°C, Boiling point: -253°C).</li>
+                            <li><strong>Thermal and Electrical Conductivity:</strong> Poor conductor of heat and electricity.</li>
+                            <li><strong>Diffusion Rate:</strong> Highly diffusive due to its low molecular mass.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Chemical Properties -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Chemical Properties
+                    </div>
+                    <div class="card-body">
+                        <p>Dihydrogen is a highly reactive molecule and participates in various reactions:</p>
+        
+                        <!-- Sub-Card for Combustion -->
+                        <div class="card mt-2">
+                            <div class="card-header bg-warning text-white">
+                                (i) Combustion
+                            </div>
+                            <div class="card-body">
+                                <p>H₂ burns in oxygen with a blue flame, producing water.</p>
+                                <p>2H₂ + O₂ → 2H₂O + Energy</p>
+                            </div>
+                        </div>
+        
+                        <!-- Sub-Card for Reaction with Halogens -->
+                        <div class="card mt-2">
+                            <div class="card-header bg-danger text-white">
+                                (ii) Reaction with Halogens
+                            </div>
+                            <div class="card-body">
+                                <p>Forms hydrogen halides:</p>
+                                <p>H₂ + Cl₂ → 2HCl</p>
+                                <p>H₂ + Br₂ → 2HBr</p>
+                            </div>
+                        </div>
+        
+                        <!-- Sub-Card for Reaction with Metals -->
+                        <div class="card mt-2">
+                            <div class="card-header bg-secondary text-white">
+                                (iii) Reaction with Metals
+                            </div>
+                            <div class="card-body">
+                                <p>Forms metal hydrides:</p>
+                                <p>2Na + H₂ → 2NaH</p>
+                                <p>Ca + H₂ → CaH₂</p>
+                            </div>
+                        </div>
+        
+                        <!-- Sub-Card for Reaction with Non-Metals -->
+                        <div class="card mt-2">
+                            <div class="card-header bg-dark text-white">
+                                (iv) Reaction with Non-Metals
+                            </div>
+                            <div class="card-body">
+                                <p>Forms compounds like ammonia and methane:</p>
+                                <p>N₂ + 3H₂ → 2NH₃</p>
+                                <p>C + 2H₂ → CH₄</p>
+                            </div>
+                        </div>
+        
+                        <!-- Sub-Card for Reducing Agent Property -->
+                        <div class="card mt-2">
+                            <div class="card-header bg-primary text-white">
+                                (v) Acts as a Reducing Agent
+                            </div>
+                            <div class="card-body">
+                                <p>Reduces metal oxides to metals:</p>
+                                <p>CuO + H₂ → Cu + H₂O</p>
+                                <p>Fe₂O₃ + 3H₂ → 2Fe + 3H₂O</p>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Uses of Dihydrogen (H₂)
+            </div>
+            <div class="card-body">
+                <p>Dihydrogen (H₂) is widely used in various industries and applications:</p>
+        
+                <!-- Nested Card for Industrial Uses -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Industrial Uses
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Ammonia Production:</strong> Used in the Haber process to produce ammonia (NH₃), a key ingredient in fertilizers.</li>
+                            <li><strong>Hydrogenation of Oils:</strong> Converts vegetable oils into solid fats (e.g., margarine).</li>
+                            <li><strong>Petroleum Industry:</strong> Used in hydrocracking and refining crude oil.</li>
+                            <li><strong>Metal Extraction:</strong> Acts as a reducing agent in the extraction of metals from their oxides.</li>
+                            <li><strong>Rocket Fuel:</strong> Used in liquid hydrogen-oxygen fuel for space exploration.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Energy Uses -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Energy Uses
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Hydrogen Fuel Cells:</strong> Used in hydrogen-powered vehicles to produce clean energy.</li>
+                            <li><strong>Rocket Propulsion:</strong> Used as a fuel in space rockets.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Laboratory and Medical Uses -->
+                <div class="card mt-3">
+                    <div class="card-header bg-warning text-white">
+                        3. Laboratory and Medical Uses
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Reducing Agent:</strong> Used in laboratories for reduction reactions.</li>
+                            <li><strong>Medical Applications:</strong> Used in respiratory treatments and as an antioxidant.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Other Uses -->
+                <div class="card mt-3">
+                    <div class="card-header bg-danger text-white">
+                        4. Other Uses
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Welding:</strong> Used in oxy-hydrogen torches for welding and cutting metals.</li>
+                            <li><strong>Balloon Filling:</strong> Used in weather balloons due to its low density.</li>
+                            <li><strong>Production of Heavy Water (D₂O):</strong> Used in nuclear reactors.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card mt-4">
+            <div class="card-header bg-primary text-white">
+                Different Forms of Hydrogen
+            </div>
+            <div class="card-body">
+                <p>Hydrogen exists in different forms based on its bonding, reactivity, and occurrence.</p>
+        
+                <!-- Nested Card for Atomic Hydrogen -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Atomic Hydrogen (H)
+                    </div>
+                    <div class="card-body">
+                        <p>Atomic hydrogen consists of single hydrogen atoms. It is highly reactive and exists only under special conditions.</p>
+                        <ul>
+                            <li>Produced by dissociation of molecular hydrogen at high temperatures.</li>
+                            <li>Used in atomic hydrogen welding due to its high reactivity.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Molecular Hydrogen -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Molecular Hydrogen (H₂)
+                    </div>
+                    <div class="card-body">
+                        <p>The most stable form of hydrogen, found in nature as a diatomic molecule (H₂).</p>
+                        <ul>
+                            <li>Major component of the universe and used in industrial applications.</li>
+                            <li>Exists as ortho-hydrogen and para-hydrogen based on spin states.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Nascent Hydrogen -->
+                <div class="card mt-3">
+                    <div class="card-header bg-warning text-white">
+                        3. Nascent Hydrogen
+                    </div>
+                    <div class="card-body">
+                        <p>Freshly liberated hydrogen atoms in a highly reactive state.</p>
+                        <ul>
+                            <li>More reactive than molecular hydrogen.</li>
+                            <li>Generated in situ during chemical reactions.</li>
+                            <li>Used in reduction reactions (e.g., in metal extraction).</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Adsorbed Hydrogen -->
+                <div class="card mt-3">
+                    <div class="card-header bg-danger text-white">
+                        4. Adsorbed Hydrogen
+                    </div>
+                    <div class="card-body">
+                        <p>Hydrogen that is adsorbed on the surface of metals like platinum and palladium.</p>
+                        <ul>
+                            <li>Used in catalysis and hydrogenation reactions.</li>
+                            <li>Known for its high storage capacity in metal hydrides.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Isotopic Hydrogen -->
+                <div class="card mt-3">
+                    <div class="card-header bg-secondary text-white">
+                        5. Isotopic Forms of Hydrogen
+                    </div>
+                    <div class="card-body">
+                        <p>Hydrogen exists in three isotopic forms:</p>
+                        <ul>
+                            <li><strong>Protium (¹H):</strong> The most common form, with one proton and no neutrons.</li>
+                            <li><strong>Deuterium (²H or D):</strong> Contains one proton and one neutron; used in nuclear reactors.</li>
+                            <li><strong>Tritium (³H or T):</strong> Contains one proton and two neutrons; radioactive and used in nuclear fusion.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Hydrides and Their Types
+            </div>
+            <div class="card-body">
+                <p>Hydrides are compounds of hydrogen with other elements. They are classified into different types based on their bonding and properties.</p>
+        
+                <!-- Nested Card for Ionic Hydrides -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Ionic Hydrides (Saline Hydrides)
+                    </div>
+                    <div class="card-body">
+                        <p>Formed when hydrogen combines with highly electropositive metals (alkali and alkaline earth metals).</p>
+                        <ul>
+                            <li>Composed of H⁻ (hydride ion).</li>
+                            <li>Examples: NaH (Sodium Hydride), CaH₂ (Calcium Hydride).</li>
+                            <li>Highly reactive with water, liberating H₂ gas.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Covalent Hydrides -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Covalent Hydrides (Molecular Hydrides)
+                    </div>
+                    <div class="card-body">
+                        <p>Formed by non-metals and hydrogen through covalent bonding.</p>
+                        <ul>
+                            <li>Exist as discrete molecules.</li>
+                            <li>Examples: CH₄ (Methane), NH₃ (Ammonia), H₂O (Water).</li>
+                            <li>Can be classified as electron-deficient (e.g., B₂H₆), electron-precise (e.g., CH₄), and electron-rich (e.g., NH₃).</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Metallic Hydrides -->
+                <div class="card mt-3">
+                    <div class="card-header bg-warning text-white">
+                        3. Metallic Hydrides (Interstitial Hydrides)
+                    </div>
+                    <div class="card-body">
+                        <p>Formed by transition metals where hydrogen atoms occupy interstitial spaces in the metal lattice.</p>
+                        <ul>
+                            <li>Exhibit metallic properties (conductivity, luster).</li>
+                            <li>Examples: TiH₂ (Titanium Hydride), PdH (Palladium Hydride).</li>
+                            <li>Used in hydrogen storage applications.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Complex Hydrides -->
+                <div class="card mt-3">
+                    <div class="card-header bg-danger text-white">
+                        4. Complex Hydrides
+                    </div>
+                    <div class="card-body">
+                        <p>Contain metal cations bonded to hydride anions in a complex structure.</p>
+                        <ul>
+                            <li>Highly reactive and used in hydrogen storage.</li>
+                            <li>Examples: NaBH₄ (Sodium Borohydride), LiAlH₄ (Lithium Aluminium Hydride).</li>
+                            <li>Used as reducing agents in organic synthesis.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Water (H₂O)
+            </div>
+            <div class="card-body">
+                <p>Water is a vital molecule essential for life, exhibiting unique physical and chemical properties.</p>
+        
+                <!-- Nested Card for Structure of Water -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Structure of Water
+                    </div>
+                    <div class="card-body">
+                        <p>Water has a **bent (V-shaped)** structure due to **sp³ hybridization** of oxygen and **two lone pairs**.</p>
+                        <ul>
+                            <li>Bond Angle: **104.5°**</li>
+                            <li>Polar molecule due to dipole moment.</li>
+                            <li>Forms strong **hydrogen bonds**, responsible for its unique properties.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Physical Properties -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Physical Properties of Water
+                    </div>
+                    <div class="card-body">
+                        <p>Water exhibits unique physical properties due to hydrogen bonding.</p>
+                        <ul>
+                            <li>**High Boiling & Melting Point**: Due to strong hydrogen bonding.</li>
+                            <li>**Density Anomaly**: Water is denser at **4°C** than at 0°C.</li>
+                            <li>**High Specific Heat Capacity**: Helps in temperature regulation.</li>
+                            <li>**Universal Solvent**: Dissolves many ionic and polar substances.</li>
+                            <li>**High Surface Tension**: Leads to capillary action.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Chemical Properties -->
+                <div class="card mt-3">
+                    <div class="card-header bg-warning text-white">
+                        3. Chemical Properties of Water
+                    </div>
+                    <div class="card-body">
+                        <p>Water undergoes various chemical reactions:</p>
+                        <ul>
+                            <li><strong>Amphoteric Nature:</strong> Acts as both acid & base.</li>
+                            <li><strong>Hydrolysis:</strong> Reacts with salts like Na₂CO₃ → NaOH + CO₂ + H₂O.</li>
+                            <li><strong>Reaction with Metals:</strong> Forms metal hydroxides & hydrogen gas (e.g., Na + H₂O → NaOH + H₂).</li>
+                            <li><strong>Reaction with Non-Metals:</strong> Forms acids (e.g., Cl₂ + H₂O → HCl + HOCl).</li>
+                            <li><strong>Redox Reactions:</strong> Water gets reduced in electrolysis, forming H₂ & O₂.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Purification of Water & Types of Water
+            </div>
+            <div class="card-body">
+                <p>Water needs purification before consumption to remove impurities and make it safe for use. Water can be classified as soft and hard water.</p>
+        
+                <!-- Nested Card for Purification of Water -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Purification of Water
+                    </div>
+                    <div class="card-body">
+                        <p>Purification of water involves removing **physical, chemical, and biological impurities** using various methods:</p>
+                        <ul>
+                            <li><strong>Filtration:</strong> Removal of suspended particles using sand filters or activated charcoal.</li>
+                            <li><strong>Boiling:</strong> Kills bacteria and microorganisms.</li>
+                            <li><strong>Chlorination:</strong> Addition of chlorine to disinfect water.</li>
+                            <li><strong>Ozonation:</strong> Use of ozone gas for sterilization.</li>
+                            <li><strong>Reverse Osmosis (RO):</strong> Removes dissolved salts and contaminants.</li>
+                            <li><strong>Ion Exchange:</strong> Used for softening hard water.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Soft and Hard Water -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Soft Water vs Hard Water
+                    </div>
+                    <div class="card-body">
+                        <p>Water is classified based on its ability to form lather with soap.</p>
+        
+                        <!-- Sub-card for Soft Water -->
+                        <div class="card mt-2">
+                            <div class="card-header bg-secondary text-white">
+                                Soft Water
+                            </div>
+                            <div class="card-body">
+                                <p>Soft water contains very low amounts of dissolved calcium and magnesium salts, allowing soap to form lather easily.</p>
+                                <ul>
+                                    <li>Examples: Rainwater, distilled water.</li>
+                                    <li>Does not cause scaling in boilers or pipes.</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!-- Sub-card for Hard Water -->
+                        <div class="card mt-2">
+                            <div class="card-header bg-danger text-white">
+                                Hard Water
+                            </div>
+                            <div class="card-body">
+                                <p>Hard water contains high levels of **Ca²⁺ and Mg²⁺** ions, preventing soap from lathering properly.</p>
+                                <ul>
+                                    <li>Examples: Groundwater, well water.</li>
+                                    <li>Forms scum with soap and causes scaling in pipes.</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Types of Hardness & Removal Methods
+            </div>
+            <div class="card-body">
+                <p>Hardness of water is caused by the presence of dissolved calcium and magnesium salts. It is classified into two types:</p>
+        
+                <!-- Nested Card for Types of Hardness -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Types of Hardness
+                    </div>
+                    <div class="card-body">
+                        <p><strong>(a) Temporary Hardness:</strong> Caused by dissolved bicarbonates of calcium and magnesium (Ca(HCO₃)₂, Mg(HCO₃)₂). Can be removed by boiling.</p>
+                        <p><strong>(b) Permanent Hardness:</strong> Caused by dissolved chlorides and sulfates of calcium and magnesium (CaCl₂, MgSO₄). Cannot be removed by boiling.</p>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Removal of Hardness -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Removal of Hardness
+                    </div>
+                    <div class="card-body">
+                        <p>Different methods are used to remove **temporary and permanent hardness**:</p>
+        
+                        <!-- Sub-card for Removal of Temporary Hardness -->
+                        <div class="card mt-2">
+                            <div class="card-header bg-secondary text-white">
+                                Removal of Temporary Hardness
+                            </div>
+                            <div class="card-body">
+                                <p><strong>(a) Boiling:</strong> Converts bicarbonates into insoluble carbonates, which can be filtered out.</p>
+                                <p><strong>(b) Clark’s Method:</strong> Addition of slaked lime (Ca(OH)₂) precipitates calcium as calcium carbonate.</p>
+                                <pre>Ca(HCO₃)₂ + Ca(OH)₂ → 2CaCO₃ ↓ + 2H₂O</pre>
+                            </div>
+                        </div>
+        
+                        <!-- Sub-card for Removal of Permanent Hardness -->
+                        <div class="card mt-2">
+                            <div class="card-header bg-danger text-white">
+                                Removal of Permanent Hardness
+                            </div>
+                            <div class="card-body">
+                                <p><strong>(a) Washing Soda Method:</strong> Addition of sodium carbonate (Na₂CO₃) forms insoluble carbonates.</p>
+                                <pre>CaCl₂ + Na₂CO₃ → CaCO₃ ↓ + 2NaCl</pre>
+                                <p><strong>(b) Ion Exchange Method:</strong> Hard water is passed through ion-exchange resins, which replace Ca²⁺ and Mg²⁺ ions with Na⁺ ions.</p>
+                                <p><strong>(c) Calgon Method:</strong> Sodium hexametaphosphate (Na₆P₆O₁₈) binds to calcium and magnesium, preventing their precipitation.</p>
+                                <p><strong>(d) Synthetic Zeolite Process:</strong> Zeolites exchange Na⁺ for Ca²⁺ and Mg²⁺, softening the water.</p>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Hydrogen Peroxide (H₂O₂)
+            </div>
+            <div class="card-body">
+                <p>Hydrogen peroxide (H₂O₂) is a pale blue liquid with strong oxidizing properties, used as a disinfectant, bleaching agent, and in chemical synthesis.</p>
+        
+                <!-- Nested Card for Methods of Preparation -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Methods of Preparation
+                    </div>
+                    <div class="card-body">
+                        <p><strong>(a) Laboratory Method:</strong>  
+                            Hydrogen peroxide is prepared by reacting sodium peroxide (Na₂O₂) with dilute sulfuric acid.</p>
+                        <pre>Na₂O₂ + H₂SO₄ → Na₂SO₄ + H₂O₂</pre>
+        
+                        <p><strong>(b) Industrial Method:</strong>  
+                            Prepared by the auto-oxidation of 2-ethylanthraquinol.</p>
+                        <pre>C₂H₁₀O₄ + O₂ → C₂H₁₀O₆ (H₂O₂)</pre>
+        
+                        <p><strong>(c) Electrolysis of Sulfuric Acid:</strong>  
+                            Electrolysis of 50% H₂SO₄ produces peroxodisulfuric acid, which decomposes to give hydrogen peroxide.</p>
+                        <pre>H₂SO₄ → H₂S₂O₈ → H₂O₂ + H₂SO₄</pre>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Physical Properties -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Physical Properties
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Pale blue, syrupy liquid in pure form.</li>
+                            <li>Soluble in water and forms a weakly acidic solution.</li>
+                            <li>Has a boiling point of 150.2°C (decomposes before boiling).</li>
+                            <li>Shows higher viscosity than water.</li>
+                            <li>Decomposes easily into water and oxygen.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Strength of H₂O₂ -->
+                <div class="card mt-3">
+                    <div class="card-header bg-danger text-white">
+                        3. Strength of Hydrogen Peroxide
+                    </div>
+                    <div class="card-body">
+                        <p>The strength of H₂O₂ is expressed in two ways:</p>
+                        <ul>
+                            <li><strong>Volume Strength:</strong> The volume of oxygen gas (O₂) obtained from 1 mL of H₂O₂ solution upon decomposition.</li>
+                            <li><strong>Percentage Strength:</strong> The mass of H₂O₂ in 100 mL of solution.</li>
+                        </ul>
+                        <p><strong>Formula to Convert Volume Strength to Percentage Strength:</strong></p>
+                        <pre>Percentage Strength = (Volume Strength × 0.34)%</pre>
+                        <p><strong>Common Strengths:</strong></p>
+                        <ul>
+                            <li>10 Volume H₂O₂ → 3% solution (used as an antiseptic).</li>
+                            <li>20 Volume H₂O₂ → 6% solution (used for hair bleaching).</li>
+                            <li>30 Volume H₂O₂ → 9-10% solution (used in chemical industries).</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Hydrogen Peroxide (H₂O₂)
+            </div>
+            <div class="card-body">
+                <p>Hydrogen peroxide (H₂O₂) is a pale blue liquid with strong oxidizing properties, used as a disinfectant, bleaching agent, and in chemical synthesis.</p>
+        
+                <!-- Nested Card for Methods of Preparation -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Methods of Preparation
+                    </div>
+                    <div class="card-body">
+                        <p><strong>(a) Laboratory Method:</strong>  
+                            Hydrogen peroxide is prepared by reacting sodium peroxide (Na₂O₂) with dilute sulfuric acid.</p>
+                        <pre>Na₂O₂ + H₂SO₄ → Na₂SO₄ + H₂O₂</pre>
+        
+                        <p><strong>(b) Industrial Method:</strong>  
+                            Prepared by the auto-oxidation of 2-ethylanthraquinol.</p>
+                        <pre>C₂H₁₀O₄ + O₂ → C₂H₁₀O₆ (H₂O₂)</pre>
+        
+                        <p><strong>(c) Electrolysis of Sulfuric Acid:</strong>  
+                            Electrolysis of 50% H₂SO₄ produces peroxodisulfuric acid, which decomposes to give hydrogen peroxide.</p>
+                        <pre>H₂SO₄ → H₂S₂O₈ → H₂O₂ + H₂SO₄</pre>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Physical Properties -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Physical Properties
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Pale blue, syrupy liquid in pure form.</li>
+                            <li>Soluble in water and forms a weakly acidic solution.</li>
+                            <li>Has a boiling point of 150.2°C (decomposes before boiling).</li>
+                            <li>Shows higher viscosity than water.</li>
+                            <li>Decomposes easily into water and oxygen.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Strength of H₂O₂ -->
+                <div class="card mt-3">
+                    <div class="card-header bg-danger text-white">
+                        3. Strength of Hydrogen Peroxide
+                    </div>
+                    <div class="card-body">
+                        <p>The strength of H₂O₂ is expressed in two ways:</p>
+                        <ul>
+                            <li><strong>Volume Strength:</strong> The volume of oxygen gas (O₂) obtained from 1 mL of H₂O₂ solution upon decomposition.</li>
+                            <li><strong>Percentage Strength:</strong> The mass of H₂O₂ in 100 mL of solution.</li>
+                        </ul>
+                        <p><strong>Formula to Convert Volume Strength to Percentage Strength:</strong></p>
+                        <pre>Percentage Strength = (Volume Strength × 0.34)%</pre>
+                        <p><strong>Common Strengths:</strong></p>
+                        <ul>
+                            <li>10 Volume H₂O₂ → 3% solution (used as an antiseptic).</li>
+                            <li>20 Volume H₂O₂ → 6% solution (used for hair bleaching).</li>
+                            <li>30 Volume H₂O₂ → 9-10% solution (used in chemical industries).</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Hydrogen Peroxide (H₂O₂)
+            </div>
+            <div class="card-body">
+                <p>Hydrogen peroxide (H₂O₂) is a pale blue liquid with strong oxidizing properties, widely used in industrial, medical, and chemical applications.</p>
+        
+                <!-- Nested Card for Structure -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Structure of Hydrogen Peroxide
+                    </div>
+                    <div class="card-body">
+                        <p>H₂O₂ has a **non-planar** and **open book structure** due to repulsion between lone pairs of oxygen atoms.</p>
+                        <ul>
+                            <li>Bond angle: **94.8° in gas phase**, **90.2° in solid phase**</li>
+                            <li>Oxygen atoms are linked by a **single peroxide bond (-O-O-)**.</li>
+                            <li>Exists in different conformations due to **free rotation around the O-O bond**.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Chemical Properties -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Chemical Properties of H₂O₂
+                    </div>
+                    <div class="card-body">
+                        <p>H₂O₂ acts as both **oxidizing and reducing agent** in acidic and basic mediums.</p>
+                        
+                        <p><strong>(a) Oxidizing Nature:</strong></p>
+                        <p>H₂O₂ oxidizes **Fe²⁺ to Fe³⁺** in acidic solution.</p>
+                        <pre>2Fe²⁺ + H₂O₂ + 2H⁺ → 2Fe³⁺ + 2H₂O</pre>
+        
+                        <p><strong>(b) Reducing Nature:</strong></p>
+                        <p>H₂O₂ reduces **KMnO₄ to Mn²⁺** in acidic medium.</p>
+                        <pre>5H₂O₂ + 2KMnO₄ + 3H₂SO₄ → 2MnSO₄ + K₂SO₄ + 8H₂O + 5O₂</pre>
+        
+                        <p><strong>(c) Decomposition:</strong> H₂O₂ decomposes easily into water and oxygen.</p>
+                        <pre>2H₂O₂ → 2H₂O + O₂</pre>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Storage -->
+                <div class="card mt-3">
+                    <div class="card-header bg-warning text-white">
+                        3. Storage of Hydrogen Peroxide
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Stored in **dark, wax-coated, or plastic bottles** to prevent decomposition by light.</li>
+                            <li>Stabilized by adding **small amounts of urea or phosphoric acid**.</li>
+                            <li>Kept in **cool places away from heat and contaminants**.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Uses -->
+                <div class="card mt-3">
+                    <div class="card-header bg-danger text-white">
+                        4. Uses of Hydrogen Peroxide
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Medical:</strong> Used as an **antiseptic and disinfectant**.</li>
+                            <li><strong>Bleaching Agent:</strong> Used for **paper, textiles, and hair bleaching**.</li>
+                            <li><strong>Rocket Fuel:</strong> Used in **propellants** due to oxygen release.</li>
+                            <li><strong>Pollution Control:</strong> Used for **wastewater treatment**.</li>
+                            <li><strong>Laboratory Reagent:</strong> Used in **chemical synthesis and oxidation reactions**.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Heavy Water (D₂O)
+            </div>
+            <div class="card-body">
+                <p>Heavy water (D₂O) is a form of water where **hydrogen atoms (¹H) are replaced with deuterium (²H or D)**, a heavier isotope of hydrogen.</p>
+        
+                <!-- Nested Card for Chemical Properties -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Chemical Properties of Heavy Water
+                    </div>
+                    <div class="card-body">
+                        <p>Heavy water shows similar chemical properties to normal water but reacts at a slower rate due to the heavier isotope.</p>
+        
+                        <p><strong>(a) Electrolysis:</strong> D₂O undergoes electrolysis to form deuterium gas.</p>
+                        <pre>2D₂O → 2D₂ + O₂</pre>
+        
+                        <p><strong>(b) Reaction with Metal Carbides:</strong> Forms deuterated hydrocarbons.</p>
+                        <pre>CaC₂ + 2D₂O → C₂D₂ + Ca(OD)₂</pre>
+        
+                        <p><strong>(c) Reaction with Salts:</strong> Forms deuterated compounds.</p>
+                        <pre>NaCl + D₂O ⇌ NaOD + HCl</pre>
+        
+                        <p><strong>(d) Reaction with Oxides:</strong> Forms deuterated acids.</p>
+                        <pre>P₂O₅ + 3D₂O → 2D₃PO₄</pre>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Uses -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Uses of Heavy Water
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Moderator in Nuclear Reactors:</strong> Used to slow down neutrons in **nuclear power plants**.</li>
+                            <li><strong>Biological & Medical Research:</strong> Used as a **tracer in metabolic studies**.</li>
+                            <li><strong>Production of Deuterium:</strong> Source of deuterium gas (D₂) for industrial and research purposes.</li>
+                            <li><strong>Solvent in NMR Spectroscopy:</strong> Used in **Deuterium NMR studies**.</li>
+                            <li><strong>Study of Reaction Mechanisms:</strong> Used to understand **kinetics and reaction pathways**.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Hydrogen Economy
+            </div>
+            <div class="card-body">
+                <p>The **Hydrogen Economy** refers to the use of **hydrogen as a clean and efficient energy carrier** to replace fossil fuels, reducing carbon emissions and dependency on non-renewable sources.</p>
+        
+                <!-- Nested Card for Key Features -->
+                <div class="card mt-3">
+                    <div class="card-header bg-info text-white">
+                        1. Key Features of Hydrogen Economy
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Hydrogen is used as a **fuel** for transportation, electricity generation, and industrial applications.</li>
+                            <li>Hydrogen is produced through **electrolysis of water** or from **fossil fuels with carbon capture**.</li>
+                            <li>Hydrogen fuel cells generate electricity **with water as the only byproduct**.</li>
+                            <li>Encourages the transition to **renewable energy sources** like solar and wind.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Advantages -->
+                <div class="card mt-3">
+                    <div class="card-header bg-success text-white">
+                        2. Advantages of Hydrogen Economy
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Eco-Friendly:</strong> Zero carbon emissions when used in **fuel cells**.</li>
+                            <li><strong>Energy Security:</strong> Reduces dependence on **fossil fuels**.</li>
+                            <li><strong>High Energy Density:</strong> Hydrogen has a **high energy-to-mass ratio**.</li>
+                            <li><strong>Renewable Production:</strong> Can be produced from **water and renewable energy sources**.</li>
+                            <li><strong>Versatile Applications:</strong> Used in **transport, industry, and power generation**.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Challenges -->
+                <div class="card mt-3">
+                    <div class="card-header bg-danger text-white">
+                        3. Challenges of Hydrogen Economy
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>High Production Cost:</strong> Electrolysis and hydrogen extraction are expensive.</li>
+                            <li><strong>Storage and Transportation Issues:</strong> Hydrogen is **highly flammable** and difficult to store safely.</li>
+                            <li><strong>Infrastructure Development:</strong> Requires new **fuel stations and transportation networks**.</li>
+                            <li><strong>Energy Losses:</strong> Converting electricity to hydrogen and back **loses energy** in the process.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Nested Card for Applications -->
+                <div class="card mt-3">
+                    <div class="card-header bg-warning text-dark">
+                        4. Applications of Hydrogen Economy
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Fuel Cell Vehicles (FCVs):</strong> Cars, buses, and trucks powered by **hydrogen fuel cells**.</li>
+                            <li><strong>Electricity Generation:</strong> Hydrogen-based **power plants** reduce carbon footprint.</li>
+                            <li><strong>Industrial Use:</strong> Used in **steel manufacturing, refineries, and ammonia production**.</li>
+                            <li><strong>Space Exploration:</strong> NASA uses liquid hydrogen as **rocket fuel**.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+
+        
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
