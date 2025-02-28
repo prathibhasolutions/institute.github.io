@@ -359,6 +359,11 @@ nav {
   background-color: #3498db;
   color: white;
 }
+#footer {
+  background-color: rgb(23, 41, 84); /* White background */
+  color: #ffffff; /* Dark blue text color */
+  padding: 10px 0;
+}
 
 
 
