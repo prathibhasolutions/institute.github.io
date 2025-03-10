@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Optics</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="icon" type="image/png" href="../../../logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+            tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+            svg: {fontCache: 'global'}
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body> <section class="header" style="font-family: sans-serif;color: rgb(23, 41, 84);">
+    <nav>
+        <img src="../logo.png" alt="" class="logo">    
+    </nav>   
+  </section>
+  <br><br><br><br><br>
+    <h1 class="text-center ">Wave Optics</h1>
+    <div class="container mt-4">
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Wave Optics</h3>
+            </div>
+            <div class="card-body">
+                <p>Wave optics deals with the wave nature of light and explains various optical phenomena such as interference, diffraction, and polarization.</p>
+                <p><b>Key Topics:</b></p>
+                <ul>
+                    <li>Newton’s Corpuscular Theory</li>
+                    <li>Huygens’ Wave Theory</li>
+                    <li>Interference of Light</li>
+                    <li>Diffraction</li>
+                    <li>Polarization</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Newton's Corpuscular Theory of Light -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Newton's Corpuscular Theory of Light</h3>
+            </div>
+            <div class="card-body">
+                <p>Sir Isaac Newton proposed the corpuscular theory of light, stating that light is composed of tiny particles called <b>corpuscles</b>.</p>
+                <p><b>Key Points:</b></p>
+                <ul>
+                    <li>Light travels in a straight line.</li>
+                    <li>Explains reflection and refraction using the motion of particles.</li>
+                    <li>Fails to explain interference and diffraction.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Huygens' Wave Theory of Light -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Huygens' Wave Theory of Light</h3>
+            </div>
+            <div class="card-body">
+                <p>Christiaan Huygens proposed the wave theory of light, stating that light travels as a wave.</p>
+                <p><b>Key Principles:</b></p>
+                <ul>
+                    <li>Light propagates as a longitudinal wave in a medium called the <b>luminiferous ether</b> (later disproved).</li>
+                    <li>Each point on a wavefront acts as a secondary source, producing new wavelets.</li>
+                    <li>Explains reflection, refraction, diffraction, and interference.</li>
+                </ul>
+            </div>
+        </div>
+         <!-- Wavefront and its Types -->
+         <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Wavefront and its Types</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> A wavefront is a surface over which the light wave has a constant phase.</p>
+                
+                <h5>✅ Types of Wavefronts:</h5>
+                <ul>
+                    <li><b>Spherical Wavefront:</b> Formed by a point source emitting waves uniformly in all directions.</li>
+                    <p class="fw-bold text-center">Equation: \( x^2 + y^2 + z^2 = R^2 \)</p>
+                    <p class="fw-bold text-center">Amplitude: \( A = \frac{A_0}{R} \)</p>
+                    <p class="fw-bold text-center">Intensity: \( I = \frac{I_0}{R^2} \)</p>
+                    
+                    <li><b>Cylindrical Wavefront:</b> Formed when light originates from a line source.</li>
+                    <p class="fw-bold text-center">Equation: \( x^2 + y^2 = R^2 \)</p>
+                    <p class="fw-bold text-center">Amplitude: \( A = \frac{A_0}{\sqrt{R}} \)</p>
+                    <p class="fw-bold text-center">Intensity: \( I = \frac{I_0}{R} \)</p>
+                    
+                    <li><b>Plane Wavefront:</b> Formed when light waves travel over long distances, appearing planar.</li>
+                    <p class="fw-bold text-center">Equation: \( Ax + By + Cz = D \)</p>
+                    <p class="fw-bold text-center">Amplitude: \( A = A_0 \)</p>
+                    <p class="fw-bold text-center">Intensity: \( I = I_0 \)</p>
+                </ul>
+            </div>
+        </div>
+        <!-- Huygens' Principle -->
+<div class="card mb-3">
+    <div class="card-header bg-info text-white">
+        <h3> Huygens' Principle</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Statement:</b> Every point on a wavefront acts as a source of secondary wavelets, which spread out in all directions. The new wavefront is formed by the envelope of these secondary wavelets.</p>
+        <h5>✅ Key Points:</h5>
+        <ul>
+            <li>Explains reflection, refraction, and diffraction of light.</li>
+            <li>Used to derive the laws of wave propagation.</li>
+            <li>Supports the wave nature of light.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Superposition of Waves -->
+<div class="card mb-3">
+    <div class="card-header bg-warning text-white">
+        <h3> Superposition of Waves</h3>
+    </div>
+    <div class="card-body">
+        <p>When two or more waves overlap, their resultant displacement is the algebraic sum of the individual displacements.</p>
+        <h5>✅ Key Points:</h5>
+        <ul>
+            <li>Used to explain interference and diffraction.</li>
+            <li>Can be constructive or destructive.</li>
+        </ul>
+        <p class="fw-bold text-center">Mathematical Expression: \( y = y_1 + y_2 \)</p>
+    </div>
+</div>
+
+<!-- Interference of Light -->
+<div class="card mb-3">
+    <div class="card-header bg-danger text-white">
+        <h3> Interference of Light</h3>
+    </div>
+    <div class="card-body">
+        <p>Interference occurs when two coherent light waves overlap, resulting in alternating bright and dark fringes.</p>
+        <h5>✅ Types of Interference:</h5>
+        <ul>
+            <li><b>Constructive Interference:</b> Occurs when waves are in phase, leading to maximum intensity.</li>
+            <p class="fw-bold text-center">Formula: \( I = I_1 + I_2 + 2\sqrt{I_1 I_2} \cos\theta \)</p>
+            
+            <li><b>Destructive Interference:</b> Occurs when waves are out of phase, leading to minimum intensity.</li>
+            <p class="fw-bold text-center">Formula: \( I = I_1 + I_2 - 2\sqrt{I_1 I_2} \cos\theta \)</p>
+        </ul>
+    </div>
+</div>
+<p><b>Amplitude of Resultant Wave:</b></p>
+<p class="fw-bold text-center">\( A = \sqrt{A_1^2 + A_2^2 + 2A_1 A_2 \cos\theta} \)</p>
+
+<!-- Coherent Sources of Light -->
+<div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+        <h3> Coherent Sources of Light</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Definition:</b> Two light sources are said to be coherent if they emit waves of the same frequency, wavelength, and maintain a constant phase difference.</p>
+        <h5>✅ Conditions for Coherence:</h5>
+        <ul>
+            <li>Same frequency and wavelength.</li>
+            <li>Constant phase difference.</li>
+            <li>Same polarization.</li>
+        </ul>
+        <h5>✅ Examples:</h5>
+        <ul>
+            <li>Two slits in Young’s Double Slit Experiment.</li>
+            <li>Lasers produce highly coherent light.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Young's Double Slit Experiment (YDSE) -->
+<div class="card mb-3">
+    <div class="card-header bg-success text-white">
+        <h3> Young’s Double Slit Experiment (YDSE)</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Experiment:</b> Thomas Young’s experiment demonstrates the wave nature of light by producing an interference pattern from two coherent sources.</p>
+        <h5>✅ Setup:</h5>
+        <ul>
+            <li>Two slits (S1 and S2) are illuminated by a monochromatic light source.</li>
+            <li>Waves from the slits interfere, creating alternating bright and dark fringes on a screen.</li>
+        </ul>
+        <p class="fw-bold text-center">Path Difference: \( \Delta x = d \sin \theta \)</p>
+    </div>
+</div>
+
+<!-- Fringe Width in YDSE -->
+<div class="card mb-3">
+    <div class="card-header bg-danger text-white">
+        <h3> Fringe Width in YDSE</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Fringe width (β):</b> The distance between two consecutive bright or dark fringes.</p>
+        <p class="fw-bold text-center">Formula: \( \beta = \frac{\lambda D}{d} \)</p>
+        <h5>✅ Important Points:</h5>
+        <ul>
+            <li>\( \beta \) increases if the wavelength (\( \lambda \)) increases.</li>
+            <li>\( \beta \) increases if the screen distance (\( D \)) increases.</li>
+            <li>\( \beta \) decreases if slit separation (\( d \)) increases.</li>
+            <li>Fringe width is independent of the order of the fringe.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Angular Width of Fringes -->
+<div class="card mb-3">
+    <div class="card-header bg-warning text-white">
+        <h3> Angular Width of Fringes</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Definition:</b> The angular width of a fringe is the angle subtended by a fringe at the slits.</p>
+        <p class="fw-bold text-center">Formula: \( \theta = \frac{\lambda}{d} \)</p>
+        <h5>✅ Important Points:</h5>
+        <ul>
+            <li>Smaller slit separation (\( d \)) increases angular width.</li>
+            <li>Greater wavelength (\( \lambda \)) increases angular width.</li>
+            <li>Fringes are broader in longer-wavelength light (e.g., red) and narrower in shorter-wavelength light (e.g., blue).</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Intensity of Fringes in YDSE -->
+<div class="card mb-3">
+    <div class="card-header bg-info text-white">
+        <h3> Intensity of Fringes in YDSE</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Formula for Intensity:</b> The intensity of the resultant wave at any point in the interference pattern is given by:</p>
+        <p class="fw-bold text-center">\( I = I_0 \cos^2 \frac{\delta}{2} \)</p>
+        <p>where:</p>
+        <ul>
+            <li>\( I_0 \) = Maximum intensity</li>
+            <li>\( \delta \) = Phase difference</li>
+        </ul>
+        <h5>✅ Key Points:</h5>
+        <ul>
+            <li>At bright fringes (constructive interference), intensity is maximum.</li>
+            <li>At dark fringes (destructive interference), intensity is zero.</li>
+            <li>Intensity distribution follows a sinusoidal pattern.</li>
+        </ul>
+    </div>
+</div>
+<!-- Diffraction of Light -->
+<div class="card mb-3">
+    <div class="card-header bg-danger text-white">
+        <h3> Diffraction of Light</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Definition:</b> Diffraction is the bending of light waves around the edges of an obstacle or aperture.</p>
+        <p class="fw-bold text-center">Condition for Diffraction: \( a \approx \lambda \)</p>
+        <p>where:</p>
+        <ul>
+            <li>\( a \) = width of the slit</li>
+            <li>\( \lambda \) = wavelength of light</li>
+        </ul>
+        <h5>✅ Key Points:</h5>
+        <ul>
+            <li>Occurs when light encounters obstacles comparable in size to its wavelength.</li>
+            <li>Explains why sharp-edged objects cast blurred shadows.</li>
+            <li>Leads to interference patterns due to wave superposition.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Fraunhofer Diffraction at a Single Slit -->
+<div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+        <h3> Fraunhofer Diffraction at a Single Slit</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Definition:</b> Fraunhofer diffraction occurs when light waves pass through a narrow slit and form a pattern due to wave interference.</p>
+        <h5>✅ Conditions:</h5>
+        <ul>
+            <li>Parallel light rays incident on a single slit.</li>
+            <li>The screen is placed far away from the slit.</li>
+        </ul>
+        
+        <h5> Central Maxima:</h5>
+        <p>The central bright fringe is the most intense.</p>
+        <p class="fw-bold text-center">Angular width: \( \theta = \frac{2\lambda}{a} \)</p>
+
+        <h5> Secondary Maxima:</h5>
+        <p>The positions of secondary maxima are given by:</p>
+        <p class="fw-bold text-center">\( a \sin \theta = (n + 1/2) \lambda \), where \( n = \pm 1, \pm 2, \pm 3, ... \)</p>
+
+        <h5> Secondary Minima:</h5>
+        <p>The positions of secondary minima are given by:</p>
+        <p class="fw-bold text-center">\( a \sin \theta = n\lambda \), where \( n = \pm 1, \pm 2, \pm 3, ... \)</p>
+    </div>
+</div>
+
+<!-- Fresnel's Distance -->
+<div class="card mb-3">
+    <div class="card-header bg-success text-white">
+        <h3> Fresnel's Distance</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Definition:</b> Fresnel’s distance is the distance at which the effect of diffraction becomes significant compared to geometric shadow.</p>
+        <p class="fw-bold text-center">Formula: \( Z_f = \frac{a^2}{\lambda} \)</p>
+        <p>where:</p>
+        <ul>
+            <li>\( Z_f \) = Fresnel’s distance</li>
+            <li>\( a \) = size of the aperture</li>
+            <li>\( \lambda \) = wavelength of light</li>
+        </ul>
+        <h5>✅ Key Points:</h5>
+        <ul>
+            <li>For distances **less than** \( Z_f \), light propagation is approximated as **geometrical optics**.</li>
+            <li>For distances **greater than** \( Z_f \), **diffraction effects** become dominant.</li>
+        </ul>
+    </div>
+</div>
+<!-- Polarization of Light -->
+<div class="card mb-3">
+    <div class="card-header bg-warning text-white">
+        <h3> Polarization of Light</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Definition:</b> Polarization is the phenomenon in which light waves vibrate in a single plane perpendicular to the direction of propagation.</p>
+        <h5>✅ Key Points:</h5>
+        <ul>
+            <li>Unpolarized light consists of vibrations in all directions perpendicular to the wave motion.</li>
+            <li>Polarized light has vibrations confined to a single plane.</li>
+            <li>Polarization occurs due to reflection, refraction, or scattering.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Nicol Prism -->
+<div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+        <h3> Nicol Prism</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Definition:</b> A Nicol prism is an optical device used to produce and analyze polarized light.</p>
+        <h5>✅ Construction:</h5>
+        <ul>
+            <li>Made from **calcite crystal** (a birefringent material).</li>
+            <li>Two calcite prisms are joined using **Canada Balsam**.</li>
+        </ul>
+        
+        <h5>✅ Working Principle:</h5>
+        <ul>
+            <li>Light entering the prism splits into two rays: **Ordinary Ray (O-ray)** and **Extraordinary Ray (E-ray).**</li>
+            <li>The O-ray is **totally internally reflected**, while the E-ray emerges as **polarized light**.</li>
+        </ul>
+        <p class="fw-bold text-center"> Nicol Prism acts as a **polarizer** and **analyzer** in optical instruments.</p>
+    </div>
+</div>
+
+<!-- Law of Malus -->
+<div class="card mb-3">
+    <div class="card-header bg-success text-white">
+        <h3> Law of Malus</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Definition:</b> The intensity of polarized light transmitted through an analyzer varies as the square of the cosine of the angle between the transmission axis of the polarizer and the analyzer.</p>
+        <p class="fw-bold text-center">Formula: \( I = I_0 \cos^2\theta \)</p>
+        <p>where:</p>
+        <ul>
+            <li>\( I \) = transmitted intensity</li>
+            <li>\( I_0 \) = initial intensity of polarized light</li>
+            <li>\( \theta \) = angle between the transmission axes</li>
+        </ul>
+        <h5>✅ Applications:</h5>
+        <ul>
+            <li>Used in **polarimeters** to analyze optical rotation.</li>
+            <li>Helps in determining the **concentration of optically active substances.**</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Brewster's Law -->
+<div class="card mb-3">
+    <div class="card-header bg-danger text-white">
+        <h3> Brewster's Law</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Definition:</b> Brewster’s Law states that when unpolarized light is incident at a certain angle (Brewster’s angle) on a transparent surface, the reflected light is completely polarized.</p>
+        <p class="fw-bold text-center">Formula: \( \tan \theta_B = \frac{n_2}{n_1} \)</p>
+        <p>where:</p>
+        <ul>
+            <li>\( \theta_B \) = Brewster’s angle</li>
+            <li>\( n_1 \) = refractive index of medium 1</li>
+            <li>\( n_2 \) = refractive index of medium 2</li>
+        </ul>
+        <h5>✅ Key Points:</h5>
+        <ul>
+            <li>At **Brewster’s angle**, the reflected and refracted rays are **perpendicular** to each other.</li>
+            <li>Used in **polarizing sunglasses, camera filters, and optical instruments.**</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+</div>
+<footer id="footer" class="footer" style="background-color: rgb(23, 41, 84); color: #ffffff; padding: 10px 0;">
+    <div class="container text-center">
+      <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+    </div>
+</footer> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

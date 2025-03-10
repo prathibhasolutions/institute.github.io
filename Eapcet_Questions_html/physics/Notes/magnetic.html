@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Effect of Current </title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="icon" type="image/png" href="../../../logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+            tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+            svg: {fontCache: 'global'}
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <section class="header" style="font-family: sans-serif;color: rgb(23, 41, 84);">
+        <nav>
+            <img src="../logo.png" alt="" class="logo">    
+        </nav>   
+      </section>
+      <br><br><br><br>
+      <h1 class="text-center text-primary">Magnetic Effect of Current </h1>
+    <div class="container mt-4">
+<!-- Oersted's Experiment -->
+<div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+        <h3> Magnetic Effect of Current </h3>
+    </div>
+    <div class="card-body">
+        <p><b>Oersted's Experiment:</b> In 1820, Hans Christian Oersted discovered that a current-carrying conductor produces a magnetic field around it.</p>
+        <h5>✅ Key Observations:</h5>
+        <ul>
+            <li>A deflection in the magnetic needle was observed when current was passed through the wire.</li>
+            <li>Reversing the current direction reversed the deflection.</li>
+            <li>Stronger current produced a stronger deflection.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Magnetic Field -->
+<div class="card mb-3">
+    <div class="card-header bg-secondary text-white">
+        <h3> Magnetic Field</h3>
+    </div>
+    <div class="card-body">
+        <p>The region around a current-carrying conductor where its influence is experienced is called the <b>magnetic field</b>.</p>
+        <p class="fw-bold text-center">Unit: Tesla (T) or Gauss (G)</p>
+    </div>
+</div>
+
+<!-- Rules to Find Direction of Magnetic Field -->
+<div class="card mb-3">
+    <div class="card-header bg-success text-white">
+        <h3> Rules to Find the Direction of Magnetic Field</h3>
+    </div>
+    <div class="card-body">
+        <h5>✅ Important Rules:</h5>
+        <ul>
+            <li><b>Maxwell's Corkscrew Rule:</b> If a right-handed corkscrew is rotated in the direction of current, its tip moves in the direction of the magnetic field.</li>
+            <li><b>Ampere's Swimming Rule:</b> If a person swims in the direction of current with their face towards the conductor, the magnetic field acts in the left-to-right direction.</li>
+            <li><b>Right-Hand Thumb Rule:</b> If the thumb of the right hand points in the direction of current, the curled fingers show the direction of the magnetic field.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Biot-Savart's Law -->
+<div class="card mb-3">
+    <div class="card-header bg-danger text-white">
+        <h3> Biot-Savart's Law</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Statement:</b> The magnetic field \( dB \) at a point due to a small element of current-carrying conductor is given by:</p>
+        <p class="fw-bold text-center">\( dB = \frac{\mu_0}{4\pi} \cdot \frac{I \, dl \, \sin \theta}{r^2} \)</p>
+        <p>Where:</p>
+        <ul>
+            <li>\( dB \) = Magnetic field at a point</li>
+            <li>\( \mu_0 \) = Permeability of free space (\(4\pi \times 10^{-7} \) Tm/A)</li>
+            <li>\( I \) = Current in the conductor</li>
+            <li>\( dl \) = Small length element</li>
+            <li>\( \theta \) = Angle between \( dl \) and line joining the element to the point</li>
+            <li>\( r \) = Distance from the element to the point</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Magnetic Field Due to a Straight Current-Carrying Conductor -->
+<div class="card mb-3">
+    <div class="card-header bg-warning text-white">
+        <h3> Magnetic Field Due to a Straight Current-Carrying Conductor</h3>
+    </div>
+    <div class="card-body">
+        <p>The magnetic field at a distance \( r \) from a long straight conductor carrying current \( I \) is given by:</p>
+        <p class="fw-bold text-center">\( B = \frac{\mu_0 I}{2\pi r} \)</p>
+    </div>
+</div>
+
+<!-- Magnetic Field at the Center of a Circular Current-Carrying Coil -->
+<div class="card mb-3">
+    <div class="card-header bg-info text-white">
+        <h3> Magnetic Field at the Center of a Circular Current-Carrying Coil</h3>
+    </div>
+    <div class="card-body">
+        <p>The magnetic field at the center of a circular loop of radius \( R \) carrying current \( I \) is:</p>
+        <p class="fw-bold text-center">\( B = \frac{\mu_0 I}{2R} \)</p>
+    </div>
+</div>
+
+<!-- Magnetic Field on the Axis of a Current-Carrying Circular Coil -->
+<div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+        <h3> Magnetic Field on the Axis of a Current-Carrying Circular Coil</h3>
+    </div>
+    <div class="card-body">
+        <p>The magnetic field at a point on the axis of a circular loop of radius \( R \), carrying current \( I \), at a distance \( x \) from the center is:</p>
+        <p class="fw-bold text-center">\( B = \frac{\mu_0 I R^2}{2 (R^2 + x^2)^{3/2}} \)</p>
+    </div>
+</div>
+ <!-- Ampere's Circuital Law -->
+ <div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+        <h3>Ampere's Circuital Law</h3>
+    </div>
+    <div class="card-body">
+        <p><b>Statement:</b> The line integral of the magnetic field around a closed path is equal to the product of the permeability of free space and the total current enclosed by the path.</p>
+        <p class="fw-bold text-center">∮ B ⋅ dl = μ₀ I</p>
+    </div>
+</div>
+
+<!-- Magnetic Field Due to a Current-Carrying Long Circular Cylindrical Wire -->
+<div class="card mb-3">
+    <div class="card-header bg-secondary text-white">
+        <h3>Magnetic Field Due to a Current-Carrying Long Circular Cylindrical Wire</h3>
+    </div>
+    <div class="card-body">
+        <p>The magnetic field inside and outside a long current-carrying cylindrical wire depends on the distance from the center:</p>
+        <p>Inside the wire (r ≤ R):</p>
+        <p class="fw-bold text-center">B = (μ₀ I r) / (2π R²)</p>
+        <p>Outside the wire (r ≥ R):</p>
+        <p class="fw-bold text-center">B = (μ₀ I) / (2π r)</p>
+    </div>
+</div>
+
+<!-- Magnetic Field Due to a Solenoid -->
+<div class="card mb-3">
+    <div class="card-header bg-success text-white">
+        <h3>Magnetic Field Due to a Solenoid</h3>
+    </div>
+    <div class="card-body">
+        <p>A solenoid is a long coil of wire wound in a helical shape. The magnetic field inside a long solenoid is given by:</p>
+        <p class="fw-bold text-center">B = μ₀ n I</p>
+        <p>where n is the number of turns per unit length.</p>
+    </div>
+</div>
+
+<!-- Magnetic Field Due to a Toroid -->
+<div class="card mb-3">
+    <div class="card-header bg-danger text-white">
+        <h3>Magnetic Field Due to a Toroid</h3>
+    </div>
+    <div class="card-body">
+        <p>A toroid is a solenoid bent into a circular shape. The magnetic field inside a toroid is:</p>
+        <p class="fw-bold text-center">B = (μ₀ N I) / (2π r)</p>
+        <p>where N is the total number of turns and r is the radius of the toroid.</p>
+    </div>
+</div>
+
+<!-- Force on a Charged Particle in a Uniform Magnetic Field -->
+<div class="card mb-3">
+    <div class="card-header bg-warning text-white">
+        <h3>Force on a Charged Particle in a Uniform Magnetic Field</h3>
+    </div>
+    <div class="card-body">
+        <p>The force on a charged particle moving in a magnetic field is given by:</p>
+        <p class="fw-bold text-center">F = q (v × B)</p>
+        <p>where q is the charge, v is the velocity, and B is the magnetic field.</p>
+    </div>
+</div>
+
+<!-- Fleming's Left Hand Rule -->
+<div class="card mb-3">
+    <div class="card-header bg-info text-white">
+        <h3>Fleming's Left Hand Rule</h3>
+    </div>
+    <div class="card-body">
+        <p>Fleming's Left Hand Rule states that if the thumb, forefinger, and middle finger of the left hand are held perpendicular to each other:</p>
+        <ul>
+            <li>Thumb represents the force (motion) on the conductor.</li>
+            <li>Forefinger represents the direction of the magnetic field.</li>
+            <li>Middle finger represents the direction of current.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Motion of a Charged Particle in a Uniform Magnetic Field -->
+<div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+        <h3>Motion of a Charged Particle in a Uniform Magnetic Field</h3>
+    </div>
+    <div class="card-body">
+        <p>A charged particle moving perpendicular to a uniform magnetic field follows a circular path with radius:</p>
+        <p class="fw-bold text-center">r = (m v) / (q B)</p>
+        <p>The time period of motion is:</p>
+        <p class="fw-bold text-center">T = (2π m) / (q B)</p>
+    </div>
+</div>
+
+<!-- Lorentz Force -->
+<div class="card mb-3">
+    <div class="card-header bg-secondary text-white">
+        <h3>Lorentz Force</h3>
+    </div>
+    <div class="card-body">
+        <p>The total force experienced by a charged particle moving in combined electric and magnetic fields is given by:</p>
+        <p class="fw-bold text-center">F = q (E + v × B)</p>
+    </div>
+</div>
+
+<!-- Cyclotron and Principle of Cyclotron -->
+<div class="card mb-3">
+    <div class="card-header bg-success text-white">
+        <h3>Cyclotron and Principle of Cyclotron</h3>
+    </div>
+    <div class="card-body">
+        <p>A cyclotron is a device used to accelerate charged particles using a perpendicular magnetic field and an alternating electric field.</p>
+        <h5>Principle:</h5>
+        <p>Charged particles are accelerated in a circular path due to the magnetic force, and their velocity increases as they spiral outward.</p>
+        <p>The maximum kinetic energy gained by a particle is given by:</p>
+        <p class="fw-bold text-center">K = (q² B² R²) / (2m)</p>
+    </div>
+</div>
+
+<!-- Limitations of Cyclotron -->
+<div class="card mb-3">
+    <div class="card-header bg-danger text-white">
+        <h3>Limitations of Cyclotron</h3>
+    </div>
+    <div class="card-body">
+        <ul>
+            <li>It cannot accelerate neutral or very heavy particles.</li>
+            <li>Relativistic effects cause deviations at very high speeds.</li>
+            <li>It does not work for electrons due to their small mass.</li>
+        </ul>
+    </div>
+</div>
+ <!-- Force on a Current-Carrying Conductor in a Magnetic Field -->
+ <div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+        <h3>Force on a Current-Carrying Conductor in a Magnetic Field</h3>
+    </div>
+    <div class="card-body">
+        <p>When a current-carrying conductor is placed in a magnetic field, it experiences a force given by:</p>
+        <p class="fw-bold text-center">F = BIL sinθ</p>
+        <p>where B is the magnetic field, I is the current, L is the length of the conductor, and θ is the angle between the conductor and the field.</p>
+    </div>
+</div>
+
+<!-- Force Between Two Infinitely Long Parallel Current-Carrying Conductors -->
+<div class="card mb-3">
+    <div class="card-header bg-secondary text-white">
+        <h3>Force Between Two Infinitely Long Parallel Current-Carrying Conductors</h3>
+    </div>
+    <div class="card-body">
+        <p>The force per unit length between two parallel conductors carrying currents I₁ and I₂ separated by distance d is:</p>
+        <p class="fw-bold text-center">F/L = (μ₀ I₁ I₂) / (2π d)</p>
+        <p>If the currents are in the same direction, the conductors attract; if in opposite directions, they repel.</p>
+    </div>
+</div>
+
+<!-- Definition of Ampere -->
+<div class="card mb-3">
+    <div class="card-header bg-success text-white">
+        <h3>Definition of Ampere</h3>
+    </div>
+    <div class="card-body">
+        <p>Ampere is defined based on the force between two parallel current-carrying conductors:</p>
+        <p class="fw-bold text-center">1 Ampere is the current which, when flowing through two parallel conductors placed 1 meter apart in vacuum, produces a force of 2 × 10⁻⁷ N per meter of length.</p>
+    </div>
+</div>
+
+<!-- Magnetic Force Between Two Moving Charges -->
+<div class="card mb-3">
+    <div class="card-header bg-danger text-white">
+        <h3>Magnetic Force Between Two Moving Charges</h3>
+    </div>
+    <div class="card-body">
+        <p>Two moving charges exert a magnetic force on each other given by:</p>
+        <p class="fw-bold text-center">F = (μ₀ q₁ q₂ v₁ v₂ sinθ) / (4π r²)</p>
+        <p>where q₁ and q₂ are the charges, v₁ and v₂ are their velocities, r is the separation, and θ is the angle between their velocity vectors.</p>
+    </div>
+</div>
+
+<!-- Magnetic Dipole -->
+<div class="card mb-3">
+    <div class="card-header bg-warning text-white">
+        <h3>Magnetic Dipole</h3>
+    </div>
+    <div class="card-body">
+        <p>A magnetic dipole consists of two equal and opposite magnetic poles separated by a distance. The dipole moment is:</p>
+        <p class="fw-bold text-center">M = m × d</p>
+        <p>where m is the pole strength and d is the separation between poles.</p>
+    </div>
+</div>
+
+<!-- Torque on a Current-Carrying Coil in a Uniform Magnetic Field -->
+<div class="card mb-3">
+    <div class="card-header bg-info text-white">
+        <h3>Torque on a Current-Carrying Coil in a Uniform Magnetic Field</h3>
+    </div>
+    <div class="card-body">
+        <p>A rectangular current-carrying coil placed in a uniform magnetic field experiences a torque given by:</p>
+        <p class="fw-bold text-center">τ = N B I A sinθ</p>
+        <p>where N is the number of turns, B is the magnetic field, I is the current, A is the area of the coil, and θ is the angle between the coil and the field.</p>
+    </div>
+</div>
+
+<!-- Moving Coil Galvanometer -->
+<div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+        <h3>Moving Coil Galvanometer</h3>
+    </div>
+    <div class="card-body">
+        <p>A moving coil galvanometer is a device used to detect small electric currents.</p>
+        <p><b>Working Principle:</b> It works on the principle that a current-carrying coil placed in a magnetic field experiences a torque.</p>
+        <p class="fw-bold text-center">τ = N B I A sinθ</p>
+        <p>where N = number of turns, B = magnetic field, I = current, A = area of the coil, and θ = angle between coil and field.</p>
+    </div>
+</div>
+
+<!-- Current Sensitivity -->
+<div class="card mb-3">
+    <div class="card-header bg-secondary text-white">
+        <h3>Current Sensitivity</h3>
+    </div>
+    <div class="card-body">
+        <p>Current sensitivity of a galvanometer is the deflection per unit current.</p>
+        <p class="fw-bold text-center">S<sub>c</sub> = (N B A) / k</p>
+        <p>where k is the torsional constant of the suspension wire.</p>
+    </div>
+</div>
+
+<!-- Voltage Sensitivity -->
+<div class="card mb-3">
+    <div class="card-header bg-success text-white">
+        <h3>Voltage Sensitivity</h3>
+    </div>
+    <div class="card-body">
+        <p>Voltage sensitivity of a galvanometer is the deflection per unit voltage.</p>
+        <p class="fw-bold text-center">S<sub>v</sub> = S<sub>c</sub> / R</p>
+        <p>where R is the resistance of the galvanometer.</p>
+    </div>
+</div>
+
+<!-- Ammeter -->
+<div class="card mb-3">
+    <div class="card-header bg-danger text-white">
+        <h3>Ammeter</h3>
+    </div>
+    <div class="card-body">
+        <p>An ammeter is a device used to measure electric current in a circuit. It is always connected in series.</p>
+        <p><b>Key Properties:</b></p>
+        <ul>
+            <li>It has a low resistance.</li>
+            <li>It does not alter the current significantly.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Conversion of Galvanometer into an Ammeter -->
+<div class="card mb-3">
+    <div class="card-header bg-warning text-white">
+        <h3>Conversion of Galvanometer into an Ammeter</h3>
+    </div>
+    <div class="card-body">
+        <p>A galvanometer is converted into an ammeter by connecting a low resistance called a <b>shunt</b> in parallel with it.</p>
+        <p class="fw-bold text-center">S = (G I<sub>g</sub>) / (I - I<sub>g</sub>)</p>
+        <p>where S = shunt resistance, G = galvanometer resistance, I = total current, and I<sub>g</sub> = current through the galvanometer.</p>
+    </div>
+</div>
+
+<!-- Voltmeter -->
+<div class="card mb-3">
+    <div class="card-header bg-info text-white">
+        <h3>Voltmeter</h3>
+    </div>
+    <div class="card-body">
+        <p>A voltmeter is a device used to measure voltage. It is always connected in parallel across a component.</p>
+        <p><b>Key Properties:</b></p>
+        <ul>
+            <li>It has a high resistance.</li>
+            <li>It does not draw significant current.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Conversion of Galvanometer into a Voltmeter -->
+<div class="card mb-3">
+    <div class="card-header bg-dark text-white">
+        <h3>Conversion of Galvanometer into a Voltmeter</h3>
+    </div>
+    <div class="card-body">
+        <p>A galvanometer is converted into a voltmeter by connecting a high resistance in series with it.</p>
+        <p class="fw-bold text-center">R = (V / I<sub>g</sub>) - G</p>
+        <p>where R = series resistance, V = voltage to be measured, I<sub>g</sub> = maximum current in the galvanometer, and G = galvanometer resistance.</p>
+    </div>
+</div>
+
+
+
+
+
+
+    </div>
+
+
+    <footer id="footer" class="footer" style="background-color: rgb(23, 41, 84); color: #ffffff; padding: 10px 0;">
+        <div class="container text-center">
+          <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div>
+    </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

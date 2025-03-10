@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waves</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="icon" type="image/png" href="../../../logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+            tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+            svg: {fontCache: 'global'}
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <section class="header" style="font-family: sans-serif;color: rgb(23, 41, 84);">
+        <nav>
+            <img src="../logo.png" alt="" class="logo">    
+        </nav>   
+      </section>
+      <br><br><br><br>
+    <div class="container mt-4">
+        <h1 class="text-center text-primary">Waves and Sound </h1>
+        <!-- Introduction to Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Introduction to Waves</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> A wave is a disturbance that propagates energy through a medium or space without the transport of matter.</p>
+            </div>
+        </div>
+
+        <!-- Types of Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Types of Waves</h3>
+            </div>
+            <div class="card-body">
+                <p>Waves can be classified based on the nature of their propagation.</p>
+                
+                <h5>✅ 1. Mechanical Waves:</h5>
+                <ul>
+                    <li>Require a medium (solid, liquid, or gas) to propagate.</li>
+                    <li>Example: Sound waves, water waves, seismic waves.</li>
+                </ul>
+
+                <h5>✅ 2. Electromagnetic Waves:</h5>
+                <ul>
+                    <li>Do not require a medium; can propagate in a vacuum.</li>
+                    <li>Example: Light, X-rays, radio waves, microwaves.</li>
+                </ul>
+
+                <h5>✅ 3. Matter Waves (De Broglie Waves):</h5>
+                <ul>
+                    <li>Associated with moving particles (Quantum Mechanics).</li>
+                    <li>Example: Electrons, protons, and other subatomic particles.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Nature of Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Nature of Waves</h3>
+            </div>
+            <div class="card-body">
+                <h5>✅ 1. Transverse Waves:</h5>
+                <ul>
+                    <li>Particles vibrate <b>perpendicular</b> to the direction of wave propagation.</li>
+                    <li>Example: Light waves, water waves, electromagnetic waves.</li>
+                </ul>
+                
+                <h5>✅ 2. Longitudinal Waves:</h5>
+                <ul>
+                    <li>Particles vibrate <b>parallel</b> to the direction of wave propagation.</li>
+                    <li>Example: Sound waves, seismic P-waves.</li>
+                </ul>
+            </div>
+        </div>
+         <!-- Important Terms Related to Wave Motion -->
+         <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Important Terms Related to Wave Motion</h3>
+            </div>
+            <div class="card-body">
+                <h5>✅ 1. Amplitude (\(A\)):</h5>
+                <p>The maximum displacement of a particle from its mean position.</p>
+                <p class="fw-bold text-center">Formula: \( y = A \sin(\omega t + \phi) \)</p>
+
+                <h5>✅ 2. Wavelength (\(\lambda\)):</h5>
+                <p>The distance between two consecutive crests or troughs in a wave.</p>
+                <p class="fw-bold text-center">Unit: Meter (m)</p>
+
+                <h5>✅ 3. Time Period (\(T\)):</h5>
+                <p>The time taken to complete one full wave cycle.</p>
+                <p class="fw-bold text-center">Formula: \( T = \frac{1}{f} \)</p>
+
+                <h5>✅ 4. Frequency (\(f\)):</h5>
+                <p>The number of wave cycles passing a point per second.</p>
+                <p class="fw-bold text-center">Formula: \( f = \frac{1}{T} \)</p>
+
+                <h5>✅ 5. Wave Velocity (\(v\)):</h5>
+                <p>The speed at which a wave propagates in a medium.</p>
+                <p class="fw-bold text-center">Formula: \( v = f \lambda \)</p>
+            </div>
+        </div>
+
+        <!-- Sound Waves and Their Types -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Sound Waves and Their Types</h3>
+            </div>
+            <div class="card-body">
+                <p>Sound waves are <b>longitudinal mechanical waves</b> that travel through a medium (solid, liquid, or gas).</p>
+
+                <h5>✅ 1. Infrasonic Waves:</h5>
+                <ul>
+                    <li>Frequency <b>less than 20 Hz</b>.</li>
+                    <li>Not audible to humans.</li>
+                    <li>Example: Earthquakes, animal communication (elephants, whales).</li>
+                </ul>
+
+                <h5>✅ 2. Audible Waves:</h5>
+                <ul>
+                    <li>Frequency range <b>20 Hz to 20 kHz</b>.</li>
+                    <li>Can be heard by humans.</li>
+                    <li>Example: Normal human speech, musical instruments.</li>
+                </ul>
+
+                <h5>✅ 3. Ultrasonic Waves:</h5>
+                <ul>
+                    <li>Frequency <b>greater than 20 kHz</b>.</li>
+                    <li>Used in medical imaging, sonar, and cleaning.</li>
+                    <li>Example: Bats, dolphins, ultrasound machines.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Velocity of Longitudinal Sound Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Velocity of Longitudinal Sound Waves</h3>
+            </div>
+            <div class="card-body">
+                <p>Longitudinal sound waves travel through a medium in the form of compressions and rarefactions.</p>
+                <h5>✅ General Formula:</h5>
+                <p class="fw-bold text-center">\( v = \sqrt{\frac{E}{\rho}} \)</p>
+                <p>where,</p>
+                <ul>
+                    <li>\( v \) = Velocity of sound wave</li>
+                    <li>\( E \) = Elasticity of the medium</li>
+                    <li>\( \rho \) = Density of the medium</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Newton's Formula -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Newton's Formula</h3>
+            </div>
+            <div class="card-body">
+                <p>Newton assumed that sound waves propagate <b>isothermally</b> (constant temperature).</p>
+                <p>For gases, the bulk modulus is \( B = P \), so the velocity is:</p>
+                <p class="fw-bold text-center">\( v = \sqrt{\frac{P}{\rho}} \)</p>
+                <p>where, \( P \) = Pressure of the gas, \( \rho \) = Density of gas.</p>
+                <p>❌ <b>Issue:</b> This formula gave incorrect results.</p>
+            </div>
+        </div>
+
+        <!-- Laplace's Correction -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Laplace's Correction</h3>
+            </div>
+            <div class="card-body">
+                <p>Laplace corrected Newton’s formula by considering the propagation as an <b>adiabatic process</b>.</p>
+                <p>The correct formula is:</p>
+                <p class="fw-bold text-center">\( v = \sqrt{\frac{\gamma P}{\rho}} \)</p>
+                <p>where,</p>
+                <ul>
+                    <li>\( \gamma \) = Adiabatic index (\( \frac{C_p}{C_v} \))</li>
+                    <li>\( P \) = Pressure of the gas</li>
+                    <li>\( \rho \) = Density of the gas</li>
+                </ul>
+                <p>✅ This correction matched experimental results.</p>
+            </div>
+        </div>
+
+        <!-- Factors Affecting Velocity of Sound -->
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-dark">
+                <h3> Factors Affecting Velocity of Sound</h3>
+            </div>
+            <div class="card-body">
+                <h5>✅ 1. Effect of Pressure:</h5>
+                <p>For gases, since \( v = \sqrt{\frac{\gamma P}{\rho}} \), at constant temperature, <b>\( P/\rho \) is constant</b>, so velocity is independent of pressure.</p>
+
+                <h5>✅ 2. Effect of Temperature:</h5>
+                <p>Velocity increases with temperature.</p>
+                <p class="fw-bold text-center">\( v_T = v_0 \sqrt{\frac{T}{T_0}} \)</p>
+                <p>where \( v_0 \) is velocity at temperature \( T_0 \).</p>
+
+                <h5>✅ 3. Effect of Density:</h5>
+                <p>Velocity is inversely proportional to the square root of density.</p>
+                <p class="fw-bold text-center">\( v \propto \frac{1}{\sqrt{\rho}} \)</p>
+
+                <h5>✅ 4. Effect of Humidity:</h5>
+                <p>Velocity increases with humidity because <b>water vapor is less dense than air</b>.</p>
+                <p class="fw-bold text-center">\( v_{\text{humid}} > v_{\text{dry}} \)</p>
+            </div>
+        </div>
+        <!-- Speed of Transverse Motion -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Speed of Transverse Motion</h3>
+            </div>
+            <div class="card-body">
+                <p>For a stretched string, the speed of a transverse wave is given by:</p>
+                <p class="fw-bold text-center">\( v = \sqrt{\frac{T}{\mu}} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( T \) = Tension in the string</li>
+                    <li>\( \mu \) = Mass per unit length of the string (\( \mu = \frac{m}{L} \))</li>
+                </ul>
+                <p>✅ The speed increases with higher tension and decreases with higher mass per unit length.</p>
+            </div>
+        </div>
+
+        <!-- Plane Progressive Simple Harmonic Wave -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Plane Progressive Simple Harmonic Wave</h3>
+            </div>
+            <div class="card-body">
+                <p>A progressive wave traveling in the positive x-direction can be represented as:</p>
+                <p class="fw-bold text-center">\( y(x,t) = A \sin(kx - \omega t + \phi) \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( A \) = Amplitude of wave</li>
+                    <li>\( k \) = Angular wave number (\( k = \frac{2\pi}{\lambda} \))</li>
+                    <li>\( \omega \) = Angular frequency (\( \omega = 2\pi f \))</li>
+                    <li>\( \lambda \) = Wavelength</li>
+                    <li>\( f \) = Frequency</li>
+                    <li>\( \phi \) = Initial phase</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Important Relations in Progressive Wave -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Important Relations in Progressive Wave</h3>
+            </div>
+            <div class="card-body">
+                <h5>✅ 1. Wave Velocity:</h5>
+                <p class="fw-bold text-center">\( v = f\lambda \)</p>
+                <p>Velocity depends on <b>wavelength</b> and <b>frequency</b>.</p>
+
+                <h5>✅ 2. Wavelength & Angular Wave Number:</h5>
+                <p class="fw-bold text-center">\( k = \frac{2\pi}{\lambda} \)</p>
+
+                <h5>✅ 3. Time Period & Frequency:</h5>
+                <p class="fw-bold text-center">\( f = \frac{1}{T} \) , \( \omega = 2\pi f \)</p>
+
+                <h5>✅ 4. Particle Velocity:</h5>
+                <p class="fw-bold text-center">\( v_p = \frac{\partial y}{\partial t} = A\omega \cos(kx - \omega t + \phi) \)</p>
+
+                <h5>✅ 5. Phase of Vibration:</h5>
+                <p>The phase of a vibrating particle in a wave is:</p>
+                <p class="fw-bold text-center">\( \theta = kx - \omega t + \phi \)</p>
+            </div>
+        </div>
+        <!-- Energy in a Wave -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Energy in a Wave</h3>
+            </div>
+            <div class="card-body">
+                <p>In wave motion, energy is continuously transferred through the medium without the actual transport of matter.</p>
+            </div>
+        </div>
+
+        <!-- Energy Density -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Energy Density</h3>
+            </div>
+            <div class="card-body">
+                <p>The energy stored per unit volume of the medium is called <b>energy density</b>:</p>
+                <p class="fw-bold text-center">\( u = \frac{1}{2} \rho \omega^2 A^2 \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( \rho \) = Density of the medium</li>
+                    <li>\( \omega \) = Angular frequency</li>
+                    <li>\( A \) = Amplitude of the wave</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Power -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Power of a Wave</h3>
+            </div>
+            <div class="card-body">
+                <p>The <b>rate at which energy is transmitted</b> by a wave is called its <b>power</b>:</p>
+                <p class="fw-bold text-center">\( P = \frac{1}{2} \rho v \omega^2 A^2 \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( v \) = Velocity of the wave</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Intensity -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Intensity of a Wave</h3>
+            </div>
+            <div class="card-body">
+                <p>Intensity is defined as <b>power per unit area</b>:</p>
+                <p class="fw-bold text-center">\( I = \frac{P}{A} = \frac{1}{2} \rho v \omega^2 A^2 \)</p>
+                <p>✅ Intensity is directly proportional to **square of amplitude**.</p>
+            </div>
+        </div>
+
+        <!-- Superposition of Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-dark text-white">
+                <h3> Superposition of Waves</h3>
+            </div>
+            <div class="card-body">
+                <p>When two or more waves travel simultaneously through a medium, their displacements add algebraically. This is known as the **principle of superposition**:</p>
+                <p class="fw-bold text-center">\( y_{\text{resultant}} = y_1 + y_2 \)</p>
+                <h5>✅ Conditions:</h5>
+                <ul>
+                    <li>If the waves are <b>in phase</b>, they interfere <b>constructively</b> (amplitudes add).</li>
+                    <li>If the waves are <b>out of phase</b>, they interfere <b>destructively</b> (amplitudes subtract).</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Interference of Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Interference of Waves</h3>
+            </div>
+            <div class="card-body">
+                <p>When two or more waves of the same frequency and phase (or constant phase difference) overlap, the resultant displacement is given by the **principle of superposition**. This phenomenon is called **interference**.</p>
+            </div>
+        </div>
+
+        <!-- Constructive Interference -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Constructive Interference</h3>
+            </div>
+            <div class="card-body">
+                <p>Occurs when two waves meet <b>in phase</b>, resulting in an increase in amplitude.</p>
+                <h5>✅ Conditions:</h5>
+                <ul>
+                    <li>Path difference: \( \Delta x = n\lambda \) (where \( n = 0, 1, 2, \dots \))</li>
+                    <li>Phase difference: \( \Delta \phi = 2n\pi \) </li>
+                </ul>
+                <p><b>Resultant Amplitude:</b></p>
+                <p class="fw-bold text-center">\( A_{\text{res}} = A_1 + A_2 \)</p>
+                <p><b>Resultant Intensity:</b></p>
+                <p class="fw-bold text-center">\( I_{\text{res}} = I_1 + I_2 + 2\sqrt{I_1 I_2} \)</p>
+            </div>
+        </div>
+
+        <!-- Destructive Interference -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Destructive Interference</h3>
+            </div>
+            <div class="card-body">
+                <p>Occurs when two waves meet <b>out of phase</b>, resulting in a decrease in amplitude.</p>
+                <h5>✅ Conditions:</h5>
+                <ul>
+                    <li>Path difference: \( \Delta x = (2n+1) \frac{\lambda}{2} \) </li>
+                    <li>Phase difference: \( \Delta \phi = (2n+1) \pi \) </li>
+                </ul>
+                <p><b>Resultant Amplitude:</b></p>
+                <p class="fw-bold text-center">\( A_{\text{res}} = |A_1 - A_2| \)</p>
+                <p><b>Resultant Intensity:</b></p>
+                <p class="fw-bold text-center">\( I_{\text{res}} = I_1 + I_2 - 2\sqrt{I_1 I_2} \)</p>
+            </div>
+        </div>
+        <!-- Beats -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Beats</h3>
+            </div>
+            <div class="card-body">
+                <p>Beats occur when two sound waves of slightly different frequencies interfere, producing alternating loud and soft sounds.</p>
+                <h5>✅ Beat Frequency Formula:</h5>
+                <p class="fw-bold text-center">\( f_{\text{beat}} = |f_1 - f_2| \)</p>
+            </div>
+        </div>
+
+        <!-- Reflection of Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Reflection of Waves</h3>
+            </div>
+            <div class="card-body">
+                <p>When a wave hits a surface and bounces back, it undergoes reflection.</p>
+                <h5>✅ Laws of Reflection:</h5>
+                <ul>
+                    <li>The angle of incidence = The angle of reflection.</li>
+                    <li>The incident wave, reflected wave, and normal lie in the same plane.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Echo -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Echo</h3>
+            </div>
+            <div class="card-body">
+                <p>An echo is the reflection of sound that is heard after a delay. It occurs when the reflected sound reaches the listener at least **0.1 seconds** after the original sound.</p>
+                <h5>✅ Formula for Echo:</h5>
+                <p class="fw-bold text-center">\( d = \frac{v \times t}{2} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( d \) = Minimum distance for echo (17.2 m in air)</li>
+                    <li>\( v \) = Speed of sound</li>
+                    <li>\( t \) = Time interval</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Stationary Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Stationary (Standing) Waves</h3>
+            </div>
+            <div class="card-body">
+                <p>Stationary waves are formed when two identical waves traveling in opposite directions interfere.</p>
+                <h5>✅ Equation of a Stationary Wave:</h5>
+                <p class="fw-bold text-center">\( y = 2A \sin(kx) \cos(\omega t) \)</p>
+            </div>
+        </div>
+
+        <!-- Nodes and Antinodes -->
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-white">
+                <h3> Nodes & Antinodes</h3>
+            </div>
+            <div class="card-body">
+                <p>In stationary waves:</p>
+                <ul>
+                    <li><b>Nodes (N):</b> Points where displacement is always zero.</li>
+                    <li><b>Antinodes (A):</b> Points where displacement is maximum.</li>
+                </ul>
+                <h5>✅ Positions of Nodes:</h5>
+                <p class="fw-bold text-center">\( x = n\frac{\lambda}{2} \), where \( n = 0, 1, 2, ... \)</p>
+
+                <h5>✅ Positions of Antinodes:</h5>
+                <p class="fw-bold text-center">\( x = (2n+1) \frac{\lambda}{4} \), where \( n = 0, 1, 2, ... \)</p>
+            </div>
+        </div>
+
+        <!-- Important Points on Stationary Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-info text-white">
+                <h3> Important Points on Stationary Waves</h3>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Formed due to superposition of two waves of equal frequency and amplitude moving in opposite directions.</li>
+                    <li>Energy is not transmitted, unlike progressive waves.</li>
+                    <li>Distance between two consecutive nodes (or antinodes) is \( \lambda/2 \).</li>
+                </ul>
+            </div>
+        </div>
+         <!-- Vibrations in a Stretched String -->
+         <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Vibrations in a Stretched String</h3>
+            </div>
+            <div class="card-body">
+                <p>When a string is plucked or struck, it vibrates and produces sound waves. The wave motion in a stretched string follows the wave equation:</p>
+                <p class="fw-bold text-center">\( v = \sqrt{\frac{T}{\mu}} \)</p>
+                <ul>
+                    <li>\( v \) = Velocity of the wave</li>
+                    <li>\( T \) = Tension in the string</li>
+                    <li>\( \mu \) = Linear mass density of the string (\( \mu = \frac{m}{L} \))</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Vibrations of a String Fixed at One End -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Vibrations of a String Fixed at One End</h3>
+            </div>
+            <div class="card-body">
+                <p>When a string is fixed at one end and free at the other, it produces standing waves with a **node at the fixed end** and an **antinode at the free end**.</p>
+            </div>
+        </div>
+
+        <!-- Standing Waves in a String Fixed at Both Ends -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Standing Waves in a String Fixed at Both Ends</h3>
+            </div>
+            <div class="card-body">
+                <p>A string fixed at both ends produces stationary waves with nodes at both ends and antinodes in between.</p>
+                <h5>✅ Fundamental Frequency:</h5>
+                <p class="fw-bold text-center">\( f_1 = \frac{1}{2L} \sqrt{\frac{T}{\mu}} \)</p>
+                <h5>✅ Overtones:</h5>
+                <p>The higher frequencies that are integer multiples of the fundamental frequency.</p>
+            </div>
+        </div>
+
+        <!-- Organ Pipes -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Organ Pipes</h3>
+            </div>
+            <div class="card-body">
+                <p>Organ pipes are tubes in which sound is produced by vibrating air columns. They are of two types:</p>
+            </div>
+        </div>
+
+        <!-- Open Organ Pipe -->
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-white">
+                <h3> Open Organ Pipe</h3>
+            </div>
+            <div class="card-body">
+                <p>An organ pipe open at both ends forms a standing wave with <b>antinodes at both ends</b>.</p>
+                <h5>✅ Fundamental Frequency:</h5>
+                <p class="fw-bold text-center">\( f_1 = \frac{v}{2L} \)</p>
+            </div>
+        </div>
+
+        <!-- Closed Organ Pipe -->
+        <div class="card mb-3">
+            <div class="card-header bg-info text-white">
+                <h3> Closed Organ Pipe</h3>
+            </div>
+            <div class="card-body">
+                <p>An organ pipe closed at one end has a <b>node at the closed end</b> and an <b>antinode at the open end</b>.</p>
+                <h5>✅ Fundamental Frequency:</h5>
+                <p class="fw-bold text-center">\( f_1 = \frac{v}{4L} \)</p>
+            </div>
+        </div>
+
+        <!-- Related Terms -->
+        <div class="card mb-3">
+            <div class="card-header bg-dark text-white">
+                <h3> Terms Related to Vibrating Air Columns & Strings</h3>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><b>Fundamental Note:</b> The lowest frequency of vibration.</li>
+                    <li><b>Overtones:</b> Higher frequencies above the fundamental frequency.</li>
+                    <li><b>Harmonics:</b> Frequencies that are integer multiples of the fundamental frequency.</li>
+                    <li><b>First Harmonic:</b> The same as the fundamental frequency.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Vibrations in Open Organ Pipe -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Vibrations in Open Organ Pipe</h3>
+            </div>
+            <div class="card-body">
+                <p>An open organ pipe has <b>both ends open</b>, allowing the air column to vibrate with <b>antinodes at both ends<b> and <b>nodes in between</b>.</p>
+                <h5>✅ Fundamental Frequency:</h5>
+                <p class="fw-bold text-center">\( f_1 = \frac{v}{2L} \)</p>
+                <h5>✅ Overtones:</h5>
+                <ul>
+                    <li>2nd Harmonic (First Overtone): \( f_2 = \frac{2v}{2L} \)</li>
+                    <li>3rd Harmonic (Second Overtone): \( f_3 = \frac{3v}{2L} \)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Vibrations in Closed Organ Pipe -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Vibrations in Closed Organ Pipe</h3>
+            </div>
+            <div class="card-body">
+                <p>A closed organ pipe has <b>one end closed and the other open</b>, creating a <b>node at the closed end</b> and an <b>antinode at the open end</b>.</p>
+                <h5>✅ Fundamental Frequency:</h5>
+                <p class="fw-bold text-center">\( f_1 = \frac{v}{4L} \)</p>
+                <h5>✅ Overtones:</h5>
+                <ul>
+                    <li>3rd Harmonic (First Overtone): \( f_2 = \frac{3v}{4L} \)</li>
+                    <li>5th Harmonic (Second Overtone): \( f_3 = \frac{5v}{4L} \)</li>
+                </ul>
+                <p>🔹 Only <b>odd harmonics</b> are present in a closed organ pipe.</p>
+            </div>
+        </div>
+
+        <!-- End Correction -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> End Correction</h3>
+            </div>
+            <div class="card-body">
+                <p>Due to the spreading of sound waves at the open end of a pipe, the effective length of the pipe increases slightly. This additional length is called <b>end correction</b>.</p>
+                <h5>✅ Formula:</h5>
+                <p class="fw-bold text-center">\( e = 0.6d \)</p>
+                <ul>
+                    <li>\( e \) = End correction</li>
+                    <li>\( d \) = Diameter of the pipe</li>
+                </ul>
+                <p>🔹 The effective length of the pipe is given by:</p>
+                <p class="fw-bold text-center">\( L_{\text{eff}} = L + e \) (for one open end)</p>
+                <p class="fw-bold text-center">\( L_{\text{eff}} = L + 2e \) (for both open ends)</p>
+            </div>
+        </div>
+
+        <!-- Factors Affecting Frequency -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Factors Affecting Frequency of a Wave in a Pipe</h3>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><b>Length of the Pipe:</b> Frequency is <b>inversely proportional</b> to the length of the pipe.</li>
+                    <p class="fw-bold text-center">\( f \propto \frac{1}{L} \)</p>
+
+                    <li><b>Velocity of Sound in Air:</b> Frequency increases with the <b>velocity of sound</b>.</li>
+                    <p class="fw-bold text-center">\( f \propto v \)</p>
+
+                    <li><b>Temperature:</b> Higher temperature increases the <b>speed of sound</b>, increasing the frequency.</li>
+
+                    <li><b>Humidity:</b> More humidity increases the <b>speed of sound</b>, thus increasing the frequency.</li>
+
+                    <li><b>Nature of Gas in Pipe:</b> Sound travels faster in lighter gases, affecting the frequency.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Doppler's Effect -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Doppler's Effect</h3>
+            </div>
+            <div class="card-body">
+                <p>The **Doppler Effect** is the change in frequency (or pitch) of a wave due to the relative motion between the source and the observer.</p>
+                <h5>✅ Formula for Apparent Frequency:</h5>
+                <p class="fw-bold text-center">\( f' = f \times \frac{v \pm v_o}{v \mp v_s} \)</p>
+                <ul>
+                    <li>\( f' \) = Apparent frequency</li>
+                    <li>\( f \) = Actual frequency of source</li>
+                    <li>\( v \) = Speed of sound in medium</li>
+                    <li>\( v_o \) = Speed of observer</li>
+                    <li>\( v_s \) = Speed of source</li>
+                    <li>Use <b>+ sign</b> when moving <b>towards</b> and <b>- sign</b> when moving <b>away</b>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Case 1: Source Moving, Observer at Rest -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Case 1: Source Moving, Observer at Rest</h3>
+            </div>
+            <div class="card-body">
+                <p>When the <b>source moves</b> with velocity \( v_s \) and the observer is stationary:</p>
+                <h5>✅ Frequency when source moves towards observer:</h5>
+                <p class="fw-bold text-center">\( f' = f \times \frac{v}{v - v_s} \)</p>
+                <h5>✅ Frequency when source moves away from observer:</h5>
+                <p class="fw-bold text-center">\( f' = f \times \frac{v}{v + v_s} \)</p>
+            </div>
+        </div>
+
+        <!-- Case 2: Source at Rest, Observer Moving -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Case 2: Source at Rest, Observer Moving</h3>
+            </div>
+            <div class="card-body">
+                <p>When the <b>observer moves</b> with velocity \( v_o \) and the source is stationary:</p>
+                <h5>✅ Frequency when observer moves towards source:</h5>
+                <p class="fw-bold text-center">\( f' = f \times \frac{v + v_o}{v} \)</p>
+                <h5>✅ Frequency when observer moves away from source:</h5>
+                <p class="fw-bold text-center">\( f' = f \times \frac{v - v_o}{v} \)</p>
+            </div>
+        </div>
+
+        <!-- Case 3: Both Source and Observer Moving -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Case 3: Both Source and Observer Moving</h3>
+            </div>
+            <div class="card-body">
+                <p>When <b>both the source and the observer</b> are moving:</p>
+                <h5>✅ General Formula:</h5>
+                <p class="fw-bold text-center">\( f' = f \times \frac{v \pm v_o}{v \mp v_s} \)</p>
+                <ul>
+                    <li>Use <b>+ sign</b> in \( v_o \) when the observer moves <b>towards</b> the source.</li>
+                    <li>Use <b>- sign</b> in \( v_o \) when the observer moves <b>away</b> from the source.</li>
+                    <li>Use <b>- sign</b> in \( v_s \) when the source moves <b>towards</b> the observer.</li>
+                    <li>Use <b>+ sign</b> in \( v_s \) when the source moves <b>away</b> from the observer.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer" style="background-color: rgb(23, 41, 84); color: #ffffff; padding: 10px 0;">
+        <div class="container text-center">
+          <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication System</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="icon" type="image/png" href="../../../logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+            tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+            svg: {fontCache: 'global'}
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <section class="header" style="font-family: sans-serif;color: rgb(23, 41, 84);">
+        <nav>
+            <img src="../logo.png" alt="" class="logo">    
+        </nav>   
+      </section>
+      <br><br><br><br>
+      <h1 class="text-center text-primary">Communication System</h1>
+    <div class="container mt-4">
+        <!-- Communication System -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Communication System</h3>
+            </div>
+            <div class="card-body">
+                <p>A **communication system** transmits information from one place to another using electrical signals.</p>
+                <h5>✅ Basic Components:</h5>
+                <ul>
+                    <li><b>Transmitter:</b> Converts message signals into a suitable form for transmission.</li>
+                    <li><b>Communication Channel:</b> Medium through which the signal propagates (e.g., wired, wireless).</li>
+                    <li><b>Receiver:</b> Converts the received signal back into the original message.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Message Signals -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Message Signals</h3>
+            </div>
+            <div class="card-body">
+                <p>Message signals carry information and can be classified into:</p>
+                <h5>✅ Types of Signals:</h5>
+                <ul>
+                    <li><b>Analog Signal:</b> Continuous signals that vary smoothly over time.</li>
+                    <li><b>Digital Signal:</b> Discrete signals with only two values (0 and 1).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Need for Modulation -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Need for Modulation</h3>
+            </div>
+            <div class="card-body">
+                <p>Modulation is the process of varying a carrier signal to transmit information efficiently.</p>
+                <h5>✅ Reasons for Modulation:</h5>
+                <ul>
+                    <li>To prevent **signal mixing** with noise.</li>
+                    <li>To allow **long-distance transmission**.</li>
+                    <li>To reduce **antenna size**.</li>
+                    <li>To enable **multiplexing** (transmitting multiple signals simultaneously).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Types of Modulation -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Types of Modulation</h3>
+            </div>
+            <div class="card-body">
+                <p>Modulation is classified based on how the carrier signal is varied:</p>
+                <h5>✅ 1. Amplitude Modulation (AM)</h5>
+                <ul>
+                    <li>Amplitude of carrier wave is varied in proportion to the message signal.</li>
+                    <li>Equation: \( s(t) = [A + m(t)] \cos(\omega_c t) \)</li>
+                    <li>Used in **AM radio broadcasting**.</li>
+                </ul>
+                
+                <h5>✅ 2. Frequency Modulation (FM)</h5>
+                <ul>
+                    <li>Frequency of carrier wave is varied according to the message signal.</li>
+                    <li>Equation: \( s(t) = A \cos[\omega_c t + k_f \int m(t) dt] \)</li>
+                    <li>Used in **FM radio, TV sound transmission**.</li>
+                </ul>
+            </div>
+        </div>
+         <!-- Demodulation -->
+         <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Demodulation</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Demodulation</b> is the process of extracting the original message signal from a modulated carrier wave.</p>
+                <h5>✅ Importance of Demodulation:</h5>
+                <ul>
+                    <li>Recovers the original transmitted signal.</li>
+                    <li>Eliminates unwanted noise and distortion.</li>
+                    <li>Used in **radios, televisions, and communication systems**.</li>
+                </ul>
+                <h5>✅ Types of Demodulation:</h5>
+                <ul>
+                    <li><b>AM Demodulation:</b> Uses an envelope detector to extract the amplitude variations.</li>
+                    <li><b>FM Demodulation:</b> Uses a frequency discriminator or phase-locked loop (PLL).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bandwidth Table -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Bandwidth Table of Services</h3>
+            </div>
+            <div class="card-body">
+                <p>The **bandwidth** of a signal determines the frequency range it occupies in the spectrum.</p>
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Service</th>
+                            <th>Frequency Band</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AM Radio</td>
+                            <td>530 kHz – 1600 kHz</td>
+                            <td>Long-range, affected by atmospheric conditions</td>
+                        </tr>
+                        <tr>
+                            <td>FM Radio</td>
+                            <td>88 MHz – 108 MHz</td>
+                            <td>Better sound quality, short-range</td>
+                        </tr>
+                        <tr>
+                            <td>Television Broadcast</td>
+                            <td>54 MHz – 806 MHz</td>
+                            <td>VHF and UHF bands</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Communication</td>
+                            <td>800 MHz – 5 GHz</td>
+                            <td>Includes 3G, 4G, and 5G services</td>
+                        </tr>
+                        <tr>
+                            <td>Satellite Communication</td>
+                            <td>1 GHz – 40 GHz</td>
+                            <td>Used for global communication</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Antenna -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Antenna</h3>
+            </div>
+            <div class="card-body">
+                <p>An <b>antenna</b> is a device that transmits and receives electromagnetic waves.</p>
+                <h5>✅ Characteristics of an Antenna:</h5>
+                <ul>
+                    <li><b>Radiation Pattern:</b> Defines how signals are emitted.</li>
+                    <li><b>Gain:</b> Measure of how efficiently an antenna directs energy.</li>
+                    <li><b>Polarization:</b> Orientation of the electromagnetic wave.</li>
+                </ul>
+                <h5>✅ Types of Antennas:</h5>
+                <ul>
+                    <li><b>Dipole Antenna:</b> Used for radio transmission.</li>
+                    <li><b>Parabolic Antenna:</b> Used for satellite communication.</li>
+                    <li><b>Yagi-Uda Antenna:</b> Used in television reception.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Propagation of Electromagnetic Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Propagation of Electromagnetic Waves</h3>
+            </div>
+            <div class="card-body">
+                <p>Electromagnetic waves propagate through different modes based on frequency and medium.</p>
+                <h5>✅ Modes of Propagation:</h5>
+                <ul>
+                    <li><b>Ground Wave Propagation:</b> Used in AM radio, follows Earth's surface.</li>
+                    <li><b>Sky Wave Propagation:</b> Used in shortwave radio, reflects off the ionosphere.</li>
+                    <li><b>Space Wave Propagation:</b> Used in TV, FM radio, and satellite communication.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Earth's Atmosphere -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Earth's Atmosphere</h3>
+            </div>
+            <div class="card-body">
+                <p>The Earth's atmosphere is divided into different layers based on temperature variation.</p>
+                
+                <h5>✅ Layers of Atmosphere:</h5>
+                <ul>
+                    <li><b>Troposphere:</b> 0 - 12 km, weather phenomena occur here.</li>
+                    <li><b>Stratosphere:</b> 12 - 50 km, contains the ozone layer.</li>
+                    <li><b>Mesosphere:</b> 50 - 85 km, meteors burn up here.</li>
+                    <li><b>Ionosphere:</b> 85 - 600 km, contains charged particles, reflects radio waves.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Propagation of Radio Waves -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Propagation of Radio Waves</h3>
+            </div>
+            <div class="card-body">
+                <p>Radio waves propagate through different methods based on frequency and atmospheric conditions.</p>
+
+                <h5>✅ Types of Radio Wave Propagation:</h5>
+                <ul>
+                    <li><b>Ground Wave (Surface Wave) Propagation:</b> 
+                        <ul>
+                            <li>Low-frequency waves travel along Earth's surface.</li>
+                            <li>Used for AM radio transmission.</li>
+                        </ul>
+                    </li>
+                    <li><b>Sky Wave Propagation:</b> 
+                        <ul>
+                            <li>Waves reflect off the ionosphere back to Earth.</li>
+                            <li>Used for long-distance communication.</li>
+                        </ul>
+                    </li>
+                    <li><b>Space Wave Propagation:</b> 
+                        <ul>
+                            <li>Waves travel in a straight line.</li>
+                            <li>Used in FM radio, TV, and satellite communication.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer" style="background-color: rgb(23, 41, 84); color: #ffffff; padding: 10px 0;">
+        <div class="container text-center">
+          <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

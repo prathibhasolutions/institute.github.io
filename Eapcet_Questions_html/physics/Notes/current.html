@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Electricity</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="icon" type="image/png" href="../../../logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- MathJax -->
+    <script>
+        MathJax = {
+            tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+            svg: {fontCache: 'global'}
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <section class="header" style="font-family: sans-serif;color: rgb(23, 41, 84);">
+        <nav>
+            <img src="../logo.png" alt="" class="logo">    
+        </nav>   
+      </section>
+      <br><br><br><br>
+      <h1 class="text-center text-primary">Current Electricity</h1>
+    <div class="container mt-4">
+        <!-- Electric Current -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3>Electric Current</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Electric current is the rate of flow of electric charge through a conductor.</p>
+                <p class="fw-bold text-center">Formula: \( I = \frac{Q}{t} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( I \) = Electric current (in Amperes)</li>
+                    <li>\( Q \) = Charge (in Coulombs)</li>
+                    <li>\( t \) = Time (in seconds)</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Measured in **Amperes (A)**.</li>
+                    <li>Direction of current is opposite to the flow of electrons.</li>
+                    <li>Current is classified into **Direct Current (DC)** and **Alternating Current (AC)**.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Direct Current (DC) -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Direct Current (DC)</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Direct Current (DC) is the type of current that flows in **one constant direction**.</p>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Produced by **batteries, solar cells, and DC generators**.</li>
+                    <li>Voltage remains constant over time.</li>
+                    <li>Used in **electronics, electric vehicles, and low-voltage appliances.**</li>
+                </ul>
+                <p class="fw-bold text-center">Formula: \( V = IR \) (Ohm’s Law)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( V \) = Voltage (in Volts)</li>
+                    <li>\( I \) = Current (in Amperes)</li>
+                    <li>\( R \) = Resistance (in Ohms)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Alternating Current (AC) -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Alternating Current (AC)</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Alternating Current (AC) is the type of current that **changes direction periodically**.</p>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Produced by **power stations and AC generators**.</li>
+                    <li>Voltage and current vary with time in a sinusoidal pattern.</li>
+                    <li>Used in **household electricity, power grids, and industries.**</li>
+                </ul>
+                <p class="fw-bold text-center">AC Voltage Formula: \( V = V_0 \sin(\omega t) \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( V \) = Instantaneous voltage</li>
+                    <li>\( V_0 \) = Peak voltage</li>
+                    <li>\( \omega \) = Angular frequency (\( 2\pi f \))</li>
+                    <li>\( t \) = Time</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Thermal Velocity of Free Electrons -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Thermal Velocity of Free Electrons</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> The random velocity possessed by free electrons in a conductor due to thermal energy.</p>
+                <p class="fw-bold text-center">Formula: \( v_{th} = \sqrt{\frac{3kT}{m}} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( v_{th} \) = Thermal velocity of electrons</li>
+                    <li>\( k \) = Boltzmann constant (\( 1.38 \times 10^{-23} J/K \))</li>
+                    <li>\( T \) = Absolute temperature (in Kelvin)</li>
+                    <li>\( m \) = Mass of an electron (\( 9.11 \times 10^{-31} kg \))</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Electrons move randomly in a conductor with very high speeds (~\( 10^6 \) m/s).</li>
+                    <li>Thermal velocity **does not contribute to electric current** in the absence of an external field.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Relaxation Time -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Relaxation Time</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> The average time interval between two successive collisions of an electron with atoms in a conductor.</p>
+                <p class="fw-bold text-center">Formula: \( \tau = \frac{m}{n e^2 \rho} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( \tau \) = Relaxation time</li>
+                    <li>\( m \) = Mass of an electron</li>
+                    <li>\( n \) = Number of free electrons per unit volume</li>
+                    <li>\( e \) = Charge of an electron (\( 1.6 \times 10^{-19} C \))</li>
+                    <li>\( \rho \) = Resistivity of the material</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>It is typically **very small (~\( 10^{-14} \) seconds).**</li>
+                    <li>Greater relaxation time leads to **higher conductivity.**</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Drift Velocity of Free Electrons -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Drift Velocity of Free Electrons</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> The average velocity acquired by free electrons in a conductor under the influence of an external electric field.</p>
+                <p class="fw-bold text-center">Formula: \( v_d = \frac{eE\tau}{m} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( v_d \) = Drift velocity</li>
+                    <li>\( e \) = Charge of an electron</li>
+                    <li>\( E \) = Applied electric field</li>
+                    <li>\( \tau \) = Relaxation time</li>
+                    <li>\( m \) = Mass of an electron</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Drift velocity is **very small (~\( 10^{-4} \) m/s).**</li>
+                    <li>It is **directly proportional to the applied electric field.**</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Current Density -->
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-white">
+                <h3>Current Density</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> The amount of electric current flowing per unit cross-sectional area of a conductor.</p>
+                <p class="fw-bold text-center">Formula: \( J = \frac{I}{A} \) or \( J = \sigma E \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( J \) = Current density (A/m²)</li>
+                    <li>\( I \) = Current (in Amperes)</li>
+                    <li>\( A \) = Cross-sectional area of the conductor (m²)</li>
+                    <li>\( \sigma \) = Conductivity of the material</li>
+                    <li>\( E \) = Applied electric field</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Measured in **A/m² (Amperes per square meter).**</li>
+                    <li>Directly proportional to the applied electric field.</li>
+                    <li>Higher current density means **more charge flows per unit area.**</li>
+                </ul>
+            </div>
+        </div>
+         <!-- Mobility -->
+         <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Mobility of Charge Carriers</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Mobility (\( \mu \)) is the ability of charge carriers (electrons/holes) to move through a conductor under an applied electric field.</p>
+                <p class="fw-bold text-center">Formula: \( \mu = \frac{v_d}{E} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( \mu \) = Mobility (m²/Vs)</li>
+                    <li>\( v_d \) = Drift velocity (m/s)</li>
+                    <li>\( E \) = Electric field (V/m)</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Higher mobility means **faster charge carrier movement**.</li>
+                    <li>Measured in **m²/Vs (meter squared per volt-second).**</li>
+                    <li>Directly affects **conductivity** of a material.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Ohm's Law -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Ohm's Law</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Ohm’s Law states that the current flowing through a conductor is directly proportional to the applied voltage, provided temperature remains constant.</p>
+                <p class="fw-bold text-center">Formula: \( V = IR \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( V \) = Voltage (V)</li>
+                    <li>\( I \) = Current (A)</li>
+                    <li>\( R \) = Resistance (Ω)</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>**Linear relationship** between \( V \) and \( I \).</li>
+                    <li>Does not apply to materials like **semiconductors and diodes**.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Ohmic Conductors -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Ohmic Conductors</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Conductors that obey Ohm's Law, meaning their \( V \)-\( I \) graph is a straight line.</p>
+                <h5>✅ Examples:</h5>
+                <ul>
+                    <li>Metals like **Copper, Silver, Aluminum**.</li>
+                    <li>Carbon resistors.</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Resistivity remains **constant** with temperature.</li>
+                    <li>Graph of \( V \) vs. \( I \) is a **straight line through the origin**.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Non-Ohmic Conductors -->
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-white">
+                <h3> Non-Ohmic Conductors</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Conductors that do <b>not</b> obey Ohm’s Law, meaning their \( V \)-\( I \) graph is non-linear.</p>
+                <h5>✅ Examples:</h5>
+                <ul>
+                    <li>**Diodes, transistors, thermistors**.</li>
+                    <li>Electrolytes and **gases under discharge**.</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Resistance **changes** with voltage and temperature.</li>
+                    <li>\( V \)-\( I \) graph is **curved** instead of a straight line.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Electrical Resistance -->
+        <div class="card mb-3">
+            <div class="card-header bg-info text-white">
+                <h3> Electrical Resistance</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Electrical resistance (\( R \)) is the opposition offered by a material to the flow of electric current.</p>
+                <p class="fw-bold text-center">Formula: \( R = \frac{\rho L}{A} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( R \) = Resistance (Ω)</li>
+                    <li>\( \rho \) = Resistivity of the material (Ωm)</li>
+                    <li>\( L \) = Length of the conductor (m)</li>
+                    <li>\( A \) = Cross-sectional area (m²)</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Resistance **increases** with length.</li>
+                    <li>Resistance **decreases** with larger cross-section.</li>
+                    <li>Depends on **temperature and material**.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Resistivity -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Resistivity (Specific Resistance)</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Resistivity (\( \rho \)) is the intrinsic property of a material that determines its resistance per unit length and unit cross-sectional area.</p>
+                <p class="fw-bold text-center">Formula: \( \rho = \frac{RA}{L} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( \rho \) = Resistivity (Ωm)</li>
+                    <li>\( R \) = Resistance (Ω)</li>
+                    <li>\( A \) = Cross-sectional area (m²)</li>
+                    <li>\( L \) = Length of the conductor (m)</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Different materials have different resistivities.</li>
+                    <li>Good conductors (e.g., copper, silver) have **low resistivity**.</li>
+                    <li>Insulators (e.g., rubber, glass) have **high resistivity**.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Temperature Dependence of Resistivity -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Temperature Dependence of Resistivity</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> The resistivity of a material varies with temperature.</p>
+                <h5>✅ For Conductors:</h5>
+                <p class="fw-bold text-center">\( \rho_T = \rho_0 [1 + \alpha (T - T_0)] \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( \rho_T \) = Resistivity at temperature \( T \)</li>
+                    <li>\( \rho_0 \) = Resistivity at reference temperature \( T_0 \) (usually 20°C)</li>
+                    <li>\( \alpha \) = Temperature coefficient of resistivity</li>
+                </ul>
+                <h5>✅ For Semiconductors & Insulators:</h5>
+                <p>\( \rho \) decreases as temperature increases.</p>
+                <p class="fw-bold text-center">\( \rho = \rho_0 e^{- \beta T} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( \beta \) = Material-dependent constant.</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>For **metals**, resistivity **increases** with temperature.</li>
+                    <li>For **semiconductors & insulators**, resistivity **decreases** with temperature.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Electrical Conductivity -->
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-white">
+                <h3> Electrical Conductivity</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Electrical conductivity (\( \sigma \)) is the ability of a material to conduct electric current.</p>
+                <p class="fw-bold text-center">Formula: \( \sigma = \frac{1}{\rho} \)</p>
+                <p>where:</p>
+                <ul>
+                    <li>\( \sigma \) = Conductivity (Siemens/m or \( S/m \))</li>
+                    <li>\( \rho \) = Resistivity (Ωm)</li>
+                </ul>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>**High conductivity** → good conductor (e.g., silver, copper).</li>
+                    <li>**Low conductivity** → insulator (e.g., glass, rubber).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Superconductors -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Superconductors</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Superconductors are materials that exhibit **zero electrical resistance** below a certain critical temperature (\( T_c \)).</p>
+                <h5>✅ Properties of Superconductors:</h5>
+                <ul>
+                    <li>Zero resistance (\( R = 0 \)) below \( T_c \).</li>
+                    <li>Expulsion of magnetic fields (Meissner Effect).</li>
+                    <li>Used in **MRI machines, maglev trains, and particle accelerators**.</li>
+                </ul>
+                <h5>✅ Examples of Superconductors:</h5>
+                <ul>
+                    <li>Lead (\( T_c = 7.2K \))</li>
+                    <li>Niobium (\( T_c = 9.2K \))</li>
+                    <li>YBCO (\( T_c \approx 90K \), High \( T_c \) superconductor)</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Color Coding of Carbon Resistors -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Color Coding of Carbon Resistors</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> Carbon resistors use **colored bands** to indicate their resistance value.</p>
+                <h5>✅ Color Code Chart:</h5>
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Color</th>
+                            <th>Digit</th>
+                            <th>Multiplier</th>
+                            <th>Tolerance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Black</td><td>0</td><td>×10⁰</td><td>-</td></tr>
+                        <tr><td>Brown</td><td>1</td><td>×10¹</td><td>±1%</td></tr>
+                        <tr><td>Red</td><td>2</td><td>×10²</td><td>±2%</td></tr>
+                        <tr><td>Orange</td><td>3</td><td>×10³</td><td>-</td></tr>
+                        <tr><td>Yellow</td><td>4</td><td>×10⁴</td><td>-</td></tr>
+                        <tr><td>Green</td><td>5</td><td>×10⁵</td><td>±0.5%</td></tr>
+                        <tr><td>Blue</td><td>6</td><td>×10⁶</td><td>±0.25%</td></tr>
+                        <tr><td>Violet</td><td>7</td><td>×10⁷</td><td>±0.1%</td></tr>
+                        <tr><td>Gray</td><td>8</td><td>×10⁸</td><td>±0.05%</td></tr>
+                        <tr><td>White</td><td>9</td><td>×10⁹</td><td>-</td></tr>
+                        <tr><td>Gold</td><td>-</td><td>×10⁻¹</td><td>±5%</td></tr>
+                        <tr><td>Silver</td><td>-</td><td>×10⁻²</td><td>±10%</td></tr>
+                        <tr><td>None</td><td>-</td><td>-</td><td>±20%</td></tr>
+                    </tbody>
+                </table>
+                <h5>✅ Example Calculation:</h5>
+                <p>For a resistor with bands **Red, Violet, Yellow, Gold**:</p>
+                <ul>
+                    <li>Red = 2, Violet = 7</li>
+                    <li>Yellow Multiplier = \( \times10^4 \)</li>
+                    <li>Gold Tolerance = ±5%</li>
+                </ul>
+                <p class="fw-bold text-center">Resistance = \( 27 \times 10^4 \) Ω ±5% = **270 kΩ ±5%**</p>
+            </div>
+        </div>
+
+        <!-- Combination of Resistors in Series -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Combination of Resistors in Series</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> When resistors are connected **end-to-end**, they form a series circuit.</p>
+                <p class="fw-bold text-center">Formula: \( R_{eq} = R_1 + R_2 + R_3 + \dots \)</p>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Current is the **same** through all resistors.</li>
+                    <li>Equivalent resistance **increases**.</li>
+                    <li>Total voltage is the **sum** of individual voltages.</li>
+                </ul>
+                <h5>✅ Example:</h5>
+                <p>If \( R_1 = 4Ω \), \( R_2 = 6Ω \), and \( R_3 = 10Ω \), then:</p>
+                <p class="fw-bold text-center">\( R_{eq} = 4 + 6 + 10 = 20Ω \)</p>
+            </div>
+        </div>
+
+        <!-- Combination of Resistors in Parallel -->
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-white">
+                <h3> Combination of Resistors in Parallel</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> When resistors are connected across the same two points, they are in **parallel**.</p>
+                <p class="fw-bold text-center">Formula: \( \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots \)</p>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Voltage is the **same** across all resistors.</li>
+                    <li>Equivalent resistance **decreases**.</li>
+                    <li>Total current is the **sum** of branch currents.</li>
+                </ul>
+                <h5>✅ Example:</h5>
+                <p>If \( R_1 = 4Ω \), \( R_2 = 6Ω \), and \( R_3 = 10Ω \), then:</p>
+                <p class="fw-bold text-center">\( \frac{1}{R_{eq}} = \frac{1}{4} + \frac{1}{6} + \frac{1}{10} \)</p>
+                <p class="fw-bold text-center">\( R_{eq} = 1.94Ω \)</p>
+            </div>
+        </div>
+          <!-- Types of Electric Cells -->
+          <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Types of Electric Cells</h3>
+            </div>
+            <div class="card-body">
+                <h5>1️⃣ Primary Cells</h5>
+                <p>Primary cells are **non-rechargeable** cells that produce electrical energy through **chemical reactions**.</p>
+                <h6>✅ Examples:</h6>
+                <ul>
+                    <li><b>Leclanché Cell</b> (Dry Cell) – Used in flashlights, clocks.</li>
+                    <li><b>Mercury Cell</b> – Used in watches, hearing aids.</li>
+                </ul>
+                <p class="fw-bold">Reaction Example (Zinc-Carbon Cell):</p>
+                <p class="text-center">Zn → Zn²⁺ + 2e⁻</p>
+
+                <h5>2️⃣ Secondary Cells</h5>
+                <p>Secondary cells are **rechargeable** cells that can be used multiple times by reversing the chemical reaction.</p>
+                <h6>✅ Examples:</h6>
+                <ul>
+                    <li><b>Lead-Acid Battery</b> – Used in cars.</li>
+                    <li><b>Lithium-Ion Battery</b> – Used in mobile phones, laptops.</li>
+                </ul>
+                <p class="fw-bold">Reaction Example (Lead-Acid Battery):</p>
+                <p class="text-center">Pb + PbO₂ + 2H₂SO₄ → 2PbSO₄ + 2H₂O</p>
+            </div>
+        </div>
+
+        <!-- Electromotive Force (EMF) of a Cell -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Electromotive Force (EMF) of a Cell</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> EMF is the **maximum potential difference** a cell can provide **when no current flows**.</p>
+                <p class="fw-bold text-center">Formula: \( E = V + Ir \)</p>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Measured in **volts (V)**.</li>
+                    <li>Depends on the **chemical reaction** inside the cell.</li>
+                    <li>Higher EMF means **more electrical energy per charge**.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Terminal Potential Difference of a Cell -->
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-white">
+                <h3> Terminal Potential Difference of a Cell</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> The voltage across the terminals of a cell when **current is flowing**.</p>
+                <p class="fw-bold text-center">Formula: \( V = E - Ir \)</p>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Lower than EMF due to **internal resistance**.</li>
+                    <li>When **no current flows**, \( V = E \).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Internal Resistance of a Cell -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Internal Resistance of a Cell</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> The **resistance offered by the electrolyte and electrodes** inside the cell.</p>
+                <p class="fw-bold text-center">Formula: \( r = \frac{E - V}{I} \)</p>
+                <h5>✅ Factors Affecting Internal Resistance:</h5>
+                <ul>
+                    <li>Distance between electrodes (More distance → More resistance).</li>
+                    <li>Nature of electrolyte (Denser → More resistance).</li>
+                    <li>Temperature (Higher temperature → Less resistance).</li>
+                </ul>
+            </div>
+        </div>
+         <!-- Grouping of Cells -->
+         <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Grouping of Cells</h3>
+            </div>
+            <div class="card-body">
+                <h5>1️⃣ Cells in Series</h5>
+                <p>When cells are connected **end to end**, the total EMF increases while the current remains limited by the total internal resistance.</p>
+                <p class="fw-bold text-center">Total EMF: \( E_{\text{total}} = E_1 + E_2 + E_3 + ... \)</p>
+                <p class="fw-bold text-center">Total Resistance: \( R_{\text{total}} = r_1 + r_2 + r_3 + ... \)</p>
+
+                <h5>2️⃣ Cells in Parallel</h5>
+                <p>When all the positive terminals are connected together and all the negative terminals are connected together, the total EMF remains the same as a single cell.</p>
+                <p class="fw-bold text-center">Total EMF: \( E_{\text{total}} = E \) (same as a single cell)</p>
+                <p class="fw-bold text-center">Total Resistance: \( \frac{1}{R_{\text{total}}} = \frac{1}{r_1} + \frac{1}{r_2} + \frac{1}{r_3} + ... \)</p>
+
+                <h5>3️⃣ Mixed Grouping of Cells</h5>
+                <p>A combination of both **series and parallel connections** for efficient current supply.</p>
+                <p class="fw-bold text-center">Effective EMF: \( E_{\text{eq}} = \frac{m}{n} E \)</p>
+                <p class="fw-bold text-center">Effective Resistance: \( R_{\text{eq}} = \frac{nr}{m} \)</p>
+            </div>
+        </div>
+
+        <!-- Kirchhoff's Laws -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Kirchhoff's Laws</h3>
+            </div>
+            <div class="card-body">
+                <h5>1️⃣ Kirchhoff’s Junction Rule (Current Law)</h5>
+                <p><b>Statement:</b> The sum of currents entering a junction is equal to the sum of currents leaving the junction.</p>
+                <p class="fw-bold text-center">Mathematically: \( \sum I_{\text{in}} = \sum I_{\text{out}} \)</p>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Based on the **conservation of charge**.</li>
+                    <li>Used to analyze **complex circuits with multiple branches**.</li>
+                </ul>
+
+                <h5>2️⃣ Kirchhoff’s Loop Rule (Voltage Law)</h5>
+                <p><b>Statement:</b> The algebraic sum of all potential differences around any closed loop in a circuit is zero.</p>
+                <p class="fw-bold text-center">Mathematically: \( \sum V = 0 \)</p>
+                <h5>✅ Key Points:</h5>
+                <ul>
+                    <li>Based on the **conservation of energy**.</li>
+                    <li>Used to calculate **unknown voltages or resistances in circuits**.</li>
+                </ul>
+            </div>
+        </div>
+         <!-- Wheatstone Bridge -->
+         <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h3> Wheatstone Bridge</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Principle:</b> The Wheatstone bridge is used to measure an unknown resistance by balancing two legs of a bridge circuit.</p>
+                <p class="fw-bold text-center">Condition for Balance: \( \frac{R_1}{R_2} = \frac{R_3}{R_x} \)</p>
+                <h5>✅ Applications:</h5>
+                <ul>
+                    <li>Measurement of electrical resistance.</li>
+                    <li>Used in strain gauges and sensors.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Meter Bridge -->
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h3> Meter Bridge</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> A meter bridge is a practical form of the Wheatstone bridge used to measure unknown resistance.</p>
+                <p class="fw-bold text-center">Formula: \( R_x = R \left(\frac{l_1}{l_2}\right) \)</p>
+                <h5>✅ Applications:</h5>
+                <ul>
+                    <li>Determining unknown resistance.</li>
+                    <li>Used in experimental setups in laboratories.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Potentiometer -->
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h3> Potentiometer</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Definition:</b> A potentiometer is an instrument used for measuring voltage and comparing EMFs of two cells.</p>
+                <p class="fw-bold text-center">Formula: \( E_1 / E_2 = l_1 / l_2 \)</p>
+                <h5>✅ Advantages over Voltmeter:</h5>
+                <ul>
+                    <li>It does not draw any current from the circuit.</li>
+                    <li>Highly accurate for measuring EMF.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Comparing EMFs using Potentiometer -->
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-white">
+                <h3> Comparing EMFs of Two Cells using Potentiometer</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Principle:</b> The balancing length of a potentiometer wire is used to determine the ratio of EMFs of two cells.</p>
+                <p class="fw-bold text-center">Formula: \( \frac{E_1}{E_2} = \frac{l_1}{l_2} \)</p>
+            </div>
+        </div>
+
+        <!-- Determination of Internal Resistance of a Cell -->
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h3> Determination of Internal Resistance of a Cell</h3>
+            </div>
+            <div class="card-body">
+                <p><b>Principle:</b> The internal resistance of a cell is determined by measuring the voltage drop across the cell when connected in an open and closed circuit.</p>
+                <p class="fw-bold text-center">Formula: \( r = R \left(\frac{l_1 - l_2}{l_2}\right) \)</p>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer" style="background-color: rgb(23, 41, 84); color: #ffffff; padding: 10px 0;">
+        <div class="container text-center">
+          <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
