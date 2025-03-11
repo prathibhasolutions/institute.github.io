@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mock Test</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="../../../logo.png">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -173,6 +174,11 @@
     formData.append('examfolder', examfolder);
 
     try {
+      // Prompt to confirm before starting the exam
+      if (confirm("Are you sure to start the mock test!")) {
+        // Redirect to exam page
+        window.location.href = "exam.html";
+      }
       const response = await fetch(url, {
         method: 'POST',
         body: formData

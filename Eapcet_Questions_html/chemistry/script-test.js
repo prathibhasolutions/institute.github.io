@@ -59,10 +59,18 @@ window.addEventListener("DOMContentLoaded", () => {
   // Assuming the images are located in a folder called "images"
 
 
-  const storedImages = [];
-  for (let i = 1; i <= correctAnswers.length; i++) {
-    storedImages.push({ data: `${examfolder}/${i}.png` });
+  let storedImages = [];
+  for (let i = 0; i < correctAnswers.length; i++) {
+    storedImages.push({ data: `${examfolder}/${i + 1}.png`, index: i });
   }
+  
+  // If more than 20 questions, pick 20 random ones
+  if (storedImages.length > 15) {
+    storedImages = storedImages.sort(() => 0.5 - Math.random()).slice(0, 15);
+  }
+  
+  localStorage.setItem("selectedQuestions", JSON.stringify(storedImages));
+  
 
   if (!storedImages || storedImages.length === 0) {
     showPopup("No questions found. Please upload images first.", () => {
@@ -166,7 +174,7 @@ window.addEventListener("DOMContentLoaded", () => {
     questionDiv.appendChild(questionNumber);
     questionDiv.appendChild(questionImage);
     questionDiv.appendChild(optionsDiv);
-     //questionDiv.appendChild(numericalDiv);
+    // questionDiv.appendChild(numericalDiv);
 
 
     // Navigation Buttons (Back, Next)
@@ -253,7 +261,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  function submitAnswers(autoSubmit) {
+  async function submitAnswers(autoSubmit) {
     console.log("Submitting answers...");
     const answers = [];
     const attemptedAnswers = [];
@@ -261,63 +269,53 @@ window.addEventListener("DOMContentLoaded", () => {
     let correctAnswersCount = 0;
     let notAnsweredCount = 0;
 
-    storedImages.forEach((_, index) => {
-      const selectedOption = userAnswers[index] || "No answer provided";
-      const correctAnswer = correctAnswers[index] || "No correct answer provided";
+    storedImages.forEach((question, index) => {
+        const originalIndex = parseInt(question.data.match(/(\d+)\.png$/)[1], 10) - 1; 
+        const correctAnswer = correctAnswers[originalIndex] || "No correct answer provided"; 
+        const selectedOption = userAnswers[index] || "No answer provided";
 
-      let result = selectedOption === correctAnswer ? "Correct" : "Incorrect";
-      if (selectedOption === "No answer provided") {
-        result = "Not Answered";
-        notAnsweredCount++;
-      } else if (result === "Correct") {
-        correctAnswersCount++;
-      }
+        let result = selectedOption === correctAnswer ? "Correct" : "Incorrect";
+        if (selectedOption === "No answer provided") {
+            result = "Not Answered";
+            notAnsweredCount++;
+        } else if (result === "Correct") {
+            correctAnswersCount++;
+        }
 
-      // Store answers for Google Sheets
-      attemptedAnswers.push(selectedOption);  // Collect attempted answers
-      correctAnswersList.push(correctAnswer); // Collect correct answers
+        // Store answers for Google Sheets
+        attemptedAnswers.push(selectedOption);  // Collect attempted answers
+        correctAnswersList.push(correctAnswer); // Collect correct answers
 
-      answers.push({
-        Question: `Question ${index + 1}`,
-        YourAnswer: selectedOption,
-        CorrectAnswer: correctAnswer,
-        Result: result
-      });
+        answers.push({
+            Question: `Question ${originalIndex + 1}`, // Keep original numbering
+            YourAnswer: selectedOption,
+            CorrectAnswer: correctAnswer,
+            Result: result
+        });
     });
 
     const incorrectAnswersCount = storedImages.length - correctAnswersCount - notAnsweredCount;
 
     const scoreData = {
-      studentName: localStorage.getItem("studentName"),
-      examName: localStorage.getItem("examName"),
-      totalQuestions: storedImages.length,
-      correctAnswers: correctAnswersCount,
-      incorrectAnswers: incorrectAnswersCount,
-      notAnswered: notAnsweredCount,
-      percentage: ((correctAnswersCount / storedImages.length) * 100).toFixed(2),
-      attemptedAnswers: attemptedAnswers,    // Send attempted answers
-      correctAnswersList: correctAnswersList // Send correct answers
+        studentName: localStorage.getItem("studentName"),
+        examName: localStorage.getItem("examName"),
+        totalQuestions: storedImages.length,
+        correctAnswers: correctAnswersCount,
+        incorrectAnswers: incorrectAnswersCount,
+        notAnswered: notAnsweredCount,
+        percentage: ((correctAnswersCount / storedImages.length) * 100).toFixed(2),
+        attemptedAnswers: attemptedAnswers,
+        correctAnswersList: correctAnswersList
     };
 
     localStorage.setItem("scoreData", JSON.stringify(scoreData));
     localStorage.setItem("userAnswers", JSON.stringify(answers));
+    localStorage.setItem("selectedQuestions", JSON.stringify(storedImages)); 
+    // Redirect to results page after submission
+  window.location.href = "results.html";
 
-    // Send data to Google Sheets
-    fetch("https://script.google.com/macros/s/AKfycbySnpz_-ScSzeC6si7iIpT1555sSFUfwa7blWl6oECRWRVdkL0YsSWYu2ZogB8cdX2iHQ/exec", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(scoreData)
-    })
-      .then(response => response.json())
-      .then(data => console.log("Response:", data))
-      .catch(error => console.error("Error:", error));
+}
 
-
-    // Redirect to results page
-    window.location.href = "results.html";
-  }
 
 
   window.onbeforeunload = () => "Refreshing the page will lose all progress. Are you sure?";

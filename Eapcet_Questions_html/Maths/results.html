@@ -267,8 +267,9 @@
     const examfolder = localStorage.getItem("examfolder");
     const scoreData = JSON.parse(localStorage.getItem("scoreData"));
     const userAnswers = JSON.parse(localStorage.getItem("userAnswers"));
+    const selectedQuestions = JSON.parse(localStorage.getItem("selectedQuestions"));
 
-    if (!scoreData || !userAnswers) {
+    if (!scoreData || !userAnswers || !selectedQuestions) {
       document.querySelector('.container').innerHTML = "<p class='no-data'>No exam data found. Please complete an exam.</p>";
     } else {
       // Set summary values
@@ -283,15 +284,16 @@
         const row = document.createElement("tr");
         let rowClass = answer.Result === "Correct" ? "correct" : answer.Result === "Not Answered" ? "not-answered" : "incorrect";
         
-        // Set the image path based on the answer object or set a default
-        const imagePath = `${examfolder}/${index + 1}.png`; // Path construction here
+        // Get the actual question index from selectedQuestions
+        const questionIndex = selectedQuestions[index].index; 
+        const imagePath = `${examfolder}/${questionIndex + 1}.png`; // Use correct image index
 
         row.innerHTML = `
-          <td>Question ${index + 1}</td>
+          <td>Question ${questionIndex + 1}</td>
           <td>${answer.YourAnswer || "No answer provided"}</td>
           <td>${answer.CorrectAnswer || "No correct answer provided"}</td>
           <td class="${rowClass}">${answer.Result}</td>
-          <td><button class="view-image-btn" onclick="viewImage('${imagePath}', ${index})">View Question</button></td>
+          <td><button class="view-image-btn" onclick="viewImage('${imagePath}', ${questionIndex})">View Question</button></td>
         `;
         resultsTable.appendChild(row);
       });
@@ -339,6 +341,7 @@
 
     // Function to display the question image
     function viewImage(imagePath, questionIndex) {
+      closeImage();
       console.log("Image path: ", imagePath); // Debugging line to check image path
       const imageContainer = document.createElement('div');
       imageContainer.className = 'image-container';
@@ -367,6 +370,44 @@
         document.body.removeChild(imageContainer); // Remove the container from the DOM
       }
     }
-  </script>
+
+    async function senddatatosheets() {
+          // Send data to Google Sheets via Apps Script
+const url = 'https://script.google.com/macros/s/AKfycbxERTkG6-yOWrIDhHncvZtsEasNYOL6pwbELHXSPOCxJ26qQ5rDzX26dw-3lbumIWqfdg/exec'; // Replace with your Google Apps Script URL
+
+const formData = new FormData();
+formData.append('name', studentName);
+formData.append('examName', examName);
+formData.append('examfolder', examfolder);
+formData.append('totalQuestions', scoreData.totalQuestions);
+formData.append('correctAnswers', scoreData.correctAnswers);
+formData.append('incorrectAnswers', scoreData.incorrectAnswers);
+formData.append('notAnswered', scoreData.notAnswered);
+formData.append('percentage', ((scoreData.correctAnswers / scoreData.totalQuestions) * 100).toFixed(2));
+formData.append('submissionTime', new Date().toLocaleString()); // Capture current date-time
+formData.append('selectedQuestions', JSON.stringify(selectedQuestions.map(q => q.index + 1))); // Store actual indices
+formData.append('attemptedAnswers', JSON.stringify(scoreData.attemptedAnswers)); 
+formData.append('correctAnswersList', JSON.stringify(scoreData.correctAnswersList));
+
+try {
+  const response = await fetch(url, {
+    method: 'POST',
+    body: formData
+  });
+  const result = await response.text();
+  console.log(result); // Log the response for debugging
+
+  
+} catch (error) {
+  alert("There was an error saving your data.");
+  console.error(error);
+}
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+    senddatatosheets(); // Call your function here
+});
+   
+</script>
 </body>
 </html>

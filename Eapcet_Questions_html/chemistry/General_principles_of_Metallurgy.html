@@ -13,6 +13,37 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <style>
+    .header {
+ background-color: rgb(23, 41, 84);
+ background-position: center;
+ background-size: cover;
+ position: fixed;
+ top: 0;
+ width: 100%;
+ z-index: 1000; /* Ensure the navbar appears above other content while scrolling down */
+ display: flex;
+ justify-content: center; /* Center content horizontally */
+ align-items: center; /* Center content vertically */
+ padding: 10px 0;
+}
+
+.logo {
+ width: 100px; /* Adjust width as needed */
+ height: 100px; /* Maintains aspect ratio */
+ border-radius: 50%;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+ .header {
+     justify-content: center; /* Ensure the logo stays centered on small devices */
+ }
+}
+#footer {
+ background-color: rgb(23, 41, 84); /* White background */
+ color: #ffffff; /* Dark blue text color */
+ padding: 10px 0;
+}
     #userName {
       animation: blink 1.5s infinite;
     }
@@ -30,11 +61,7 @@
       background-color: #ccc;
       cursor: not-allowed;
     }
-    .footer-container {
-        background-color: rgb(23, 41, 84);
-        color: white;
-        text-align: center;
-    }
+    
   </style>
 </head>
 <body>
@@ -103,11 +130,11 @@
     </div>
   </main>
   <footer id="footer" class="footer">
-    <hr>
-    <div class="footer-container">
-      <h5> Designed by Prathibha Solutions</h5>
-  </div>
-</footer>
+        
+    <div class="container text-center">
+        <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+    </div> 
+  </footer>
   <div id="popup">
     <div id="popupContent">
       <p id="popupMessage"></p>
@@ -120,10 +147,10 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-    const examName = "Eapcet";
-    const examTimer = 25;
+    const examName = "Eapcet-General Principles of Metallurgy";
+    const examTimer = 20;
     const examfolder = "question_images/General Principles of Metallurgy";
-    const numberofquestions = 24;
+    const numberofquestions = 15;
     const positivemark = 1;
     const negativemark = 0;
 
@@ -172,6 +199,11 @@
     formData.append('examfolder', examfolder);
 
     try {
+      // Prompt to confirm before starting the exam
+      if (confirm("Are you sure to start the mock test!")) {
+        // Redirect to exam page
+        window.location.href = "exam.html";
+      }
       const response = await fetch(url, {
         method: 'POST',
         body: formData
@@ -179,11 +211,7 @@
       const result = await response.text();
       console.log(result); // You can log the response to see if it's successful
 
-      // Prompt to confirm before starting the exam
-      if (confirm("Are you sure to start the mock test!")) {
-        // Redirect to exam page
-        window.location.href = "exam.html";
-      }
+      
     } catch (error) {
       alert("There was an error saving your data.");
       console.error(error);
