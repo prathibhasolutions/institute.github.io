@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Interface</title>
+    <link rel="stylesheet" href="../../styles.css">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">     
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .header {
+       background-color: rgb(23, 41, 84);
+       background-position: center;
+       background-size: cover;
+       position: fixed;
+       top: 0;
+       width: 100%;
+       z-index: 1000; /* Ensure the navbar appears above other content while scrolling down */
+       display: flex;
+       justify-content: center; /* Center content horizontally */
+       align-items: center; /* Center content vertically */
+       padding: 10px 0;
+   }
+   
+   .logo {
+       width: 100px; /* Adjust width as needed */
+       height: 100px; /* Maintains aspect ratio */
+       border-radius: 50%;
+   }
+   
+   /* Responsive Design for Small Screens */
+   @media (max-width: 768px) {
+       .header {
+           justify-content: center; /* Ensure the logo stays centered on small devices */
+       }
+   }
+   #footer {
+    background-color: rgb(23, 41, 84); /* White background */
+    color: #ffffff; /* Dark blue text color */
+    padding: 10px 0;
+}
+   </style>
+
+    <script>
+        let timeLeft = 45 * 60; // 30 minutes in seconds
+        function startTimer() {
+            const timer = setInterval(() => {
+                let minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+                document.getElementById("timer").innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                timeLeft--;
+                if (timeLeft < 0) {
+                    clearInterval(timer);
+                    submitExam();
+                }
+            }, 1000);
+        }
+        
+    function submitExam() {
+        let score = 0;
+        let total = 60; // Total questions
+        let correctAnswers = {
+    "q1": "A", "q2": "A", "q3": "A", "q4": "B", "q5": "D",
+    "q6": "A", "q7": "C", "q8": "B", "q9": "D", "q10": "B",
+    "q11": "C", "q12": "B", "q13": "A", "q14": "D", "q15": "A",
+    "q16": "B", "q17": "D", "q18": "B", "q19": "A", "q20": "A",
+    "q21": "C", "q22": "C", "q23": "B", "q24": "B", "q25": "D",
+    "q26": "A", "q27": "D", "q28": "A", "q29": "A", "q30": "B",
+    "q31": "A", "q32": "B", "q33": "B", "q34": "C", "q35": "A",
+    "q36": "B", "q37": "B", "q38": "C", "q39": "B", "q40": "A",
+    "q41": "A", "q42": "A", "q43": "A", "q44": "D", "q45": "C",
+    "q46": "B", "q47": "A", "q48": "C", "q49": "C", "q50": "B",
+    "q51": "B", "q52": "C", "q53": "B", "q54": "C", "q55": "B",
+    "q56": "C", "q57": "A", "q58": "B", "q59": "D", "q60": "B"
+};
+
+
+        let sectionScores = { Maths: 0, Physics: 0, Chemistry: 0 };
+
+        for (let i = 1; i <= total; i++) {
+            let selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected && selected.value === correctAnswers[`q${i}`]) {
+                score++;
+                if (i <= 30) sectionScores.Maths++;
+                else if (i <= 45) sectionScores.Physics++;
+                else sectionScores.Chemistry++;
+            }
+        }
+
+        localStorage.setItem("score", JSON.stringify({ 
+            total: score, 
+            sections: sectionScores, 
+            
+        }));
+
+        window.location.href = "results.html";
+    }
+
+
+        window.onload = startTimer;
+    </script>
+</head>
+
+<body class="container mt-4">
+    <section class="header" style="font-family: sans-serif;color: rgb(23, 41, 84);">
+        <nav>
+            <img src="../../../logo.png" alt="" class="logo">    
+        </nav>   
+      </section>
+      <br><br><br><br><br><br>
+    <h2 class="text-center">Online Exam</h2>
+    <h5 class="text-center text-danger">Time Left: <span id="timer">30:00</span></h5>
+    <form id="examForm">
+        <div class="mb-3">
+            <h4>Mathematics</h4>
+            <div class="card p-3 mb-2"> <b>Q1: Solve \( x^2 - 5x + 6 = 0 \) </b>
+                <div><input type="radio" name="q1" value="A"> (A) 2, 3</div>
+                <div><input type="radio" name="q1" value="B"> (B) 1, 4</div>
+                <div><input type="radio" name="q1" value="C"> (C) 3, 4</div>
+                <div><input type="radio" name="q1" value="D"> (D) 2, 4</div>
+            </div>
+            <!-- Q2 -->
+    <div class="card p-3 mb-2">
+        <b>Q2: If \( f(x) = x^2 - 3x + 2 \), find \( f(2) \).</b>
+        <div><input type="radio" name="q2" value="A"> (A) 0</div>
+        <div><input type="radio" name="q2" value="B"> (B) 1</div>
+        <div><input type="radio" name="q2" value="C"> (C) -1</div>
+        <div><input type="radio" name="q2" value="D"> (D) 2</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q3: The sum of first 10 natural numbers is?</b>
+        <div><input type="radio" name="q3" value="A"> (A) 55</div>
+        <div><input type="radio" name="q3" value="B"> (B) 45</div>
+        <div><input type="radio" name="q3" value="C"> (C) 50</div>
+        <div><input type="radio" name="q3" value="D"> (D) 60</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q4: The equation of a line with slope \( m \) and passing through (x₁, y₁) is?</b>
+        <div><input type="radio" name="q4" value="A"> (A) \( y + y_1 = mx + x_1 \)</div>
+        
+        <div><input type="radio" name="q4" value="B"> (B) \( y - y_1 = m(x - x_1) \)</div>
+        <div><input type="radio" name="q4" value="C"> (C) \( y = mx \)</div>
+        <div><input type="radio" name="q4" value="D"> (D) \( y - x = m \)</div>
+    </div>
+
+    
+    <div class="card p-3 mb-2">
+        <b>Q5: The distance between points (1,2) and (4,6) is?</b>
+        <div><input type="radio" name="q5" value="A"> (A) 7</div>
+        <div><input type="radio" name="q5" value="B"> (B) 6</div>
+        <div><input type="radio" name="q5" value="C"> (C) 4</div>
+        <div><input type="radio" name="q5" value="D"> (D) 5</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q6: The probability of getting a head in a fair coin toss is?</b>
+        <div><input type="radio" name="q6" value="A"> (A) 1/2</div>
+        <div><input type="radio" name="q6" value="B"> (B) 1/3</div>
+        <div><input type="radio" name="q6" value="C"> (C) 1/4</div>
+        <div><input type="radio" name="q6" value="D"> (D) 1</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q7: The sum of angles in a triangle is?</b>
+        <div><input type="radio" name="q7" value="A"> (A) 360°</div>
+        <div><input type="radio" name="q7" value="B"> (B) 90°</div>
+        <div><input type="radio" name="q7" value="C"> (C) 180°</div>
+        <div><input type="radio" name="q7" value="D"> (D) 270°</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q8: The value of \( \log_2 8 \) is?</b>
+        <div><input type="radio" name="q8" value="A"> (A) 2</div>
+        <div><input type="radio" name="q8" value="B"> (B) 3</div>
+        <div><input type="radio" name="q8" value="C"> (C) 4</div>
+        <div><input type="radio" name="q8" value="D"> (D) 1</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q9: The equation of a circle with center (0,0) and radius \( r \) is?</b>
+        <div><input type="radio" name="q9" value="A"> (A) \( x^2 + y^2 =  4r\)</div>
+        <div><input type="radio" name="q9" value="B"> (B) \( x^2 + y^2 = 2r \)</div>
+        <div><input type="radio" name="q9" value="C"> (C) \( x^2 - y^2 = r^2 \)</div>
+        <div><input type="radio" name="q9" value="D"> (D) \( x^2 + y^2 = r^2 \)</div>
+    </div>
+
+    <!-- Q22 -->
+    <div class="card p-3 mb-2">
+        <b>Q10: The limit \( \lim_{x \to 2} \frac{x^2 - 4}{x - 2} \) is?</b>
+        <div><input type="radio" name="q10" value="A"> (A) 2</div>
+        <div><input type="radio" name="q10" value="B"> (B) 4</div>
+        <div><input type="radio" name="q10" value="C"> (C) 5</div>
+        <div><input type="radio" name="q10" value="D"> (D) 3</div>
+    </div>
+
+    <!-- Q32 -->
+    <div class="card p-3 mb-2">
+        <b>Q11: If \( \tan A = 3/4 \), then \( \sin A \) is?</b>
+        <div><input type="radio" name="q11" value="A"> (A) 5/4</div>
+        <div><input type="radio" name="q11" value="B"> (B) 4/5</div>
+        <div><input type="radio" name="q11" value="C"> (C) 3/5</div>
+        <div><input type="radio" name="q11" value="D"> (D) 3/4</div>
+    </div>
+
+     <!-- Q34 -->
+     <div class="card p-3 mb-2">
+        <b>Q12: The general formula for the sum of an arithmetic series is?</b>
+        <div><input type="radio" name="q12" value="A"> (A) \( n(n+1)/2 \)</div>
+        <div><input type="radio" name="q12" value="B"> (B) \( n/2 \times (2a + (n-1)d) \)</div>
+        <div><input type="radio" name="q12" value="C"> (C) \( a + (n-1)d \)</div>
+        <div><input type="radio" name="q12" value="D"> (D) \( a r^n \)</div>
+    </div>
+
+    <!-- Q35 -->
+    <div class="card p-3 mb-2">
+        <b>Q13: The derivative of \( \sin x \) is?</b>
+        <div><input type="radio" name="q13" value="A"> (A) \( \cos x \)</div>
+        <div><input type="radio" name="q13" value="B"> (B) \( -\cos x \)</div>
+        <div><input type="radio" name="q13" value="C"> (C) \( \sin x \)</div>
+        <div><input type="radio" name="q13" value="D"> (D) \( -\sin x \)</div>
+    </div>
+
+      <!-- Vectors -->
+      <div class="card p-3 mb-2"><b>Q14: The cross product of two parallel vectors is?</b>
+        <div><input type="radio" name="q14" value="A"> (A) -1</div>
+        <div><input type="radio" name="q14" value="B"> (B) 1</div>
+        <div><input type="radio" name="q14" value="C"> (C) Undefined</div>
+        <div><input type="radio" name="q14" value="D"> (D) 0 </div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q15: The unit vector along \( \vec{a} = 3\hat{i} - 4\hat{j} \) is?</b>
+        <div><input type="radio" name="q15" value="A"> (A) \( \frac{3}{5} \hat{i} - \frac{4}{5} \hat{j} \)</div>
+        <div><input type="radio" name="q15" value="B"> (B) \( \frac{4}{5} \hat{i} + \frac{3}{5} \hat{j} \)</div>
+        <div><input type="radio" name="q15" value="C"> (C) \( 3\hat{i} + 4\hat{j} \)</div>
+        <div><input type="radio" name="q15" value="D"> (D) None</div>
+    </div>
+
+     <!-- Trigonometry -->
+     <div class="card p-3 mb-2"><b>Q16: The value of \( \sin 225^\circ \) is?</b>
+        <div><input type="radio" name="q16" value="A"> (A) \( \frac{1}{\sqrt{2}} \)</div>
+        <div><input type="radio" name="q16" value="B"> (B) \( -\frac{1}{\sqrt{2}} \)</div>
+        <div><input type="radio" name="q16" value="C"> (C) \( -\frac{1}{2} \)</div>
+        <div><input type="radio" name="q16" value="D"> (D) \( 1 \)</div>
+    </div>
+
+      <!-- Complex Numbers -->
+      <div class="card p-3 mb-2"><b>Q17: The modulus of \( 3 + 4i \) is?</b>
+        <div><input type="radio" name="q17" value="A"> (A) 7</div>
+        <div><input type="radio" name="q17" value="B"> (B) 4</div>
+        <div><input type="radio" name="q17" value="C"> (C) 3</div>
+        <div><input type="radio" name="q17" value="D"> (D) 5</div>
+    </div>
+
+     <!-- Partial Fractions -->
+     <div class="card p-3 mb-2"><b>Q18: Partial fraction of \( \frac{2x}{(x+1)(x+2)} \) is of form?</b>
+        <div><input type="radio" name="q18" value="A"> (A) \( \frac{2}{x+1} + \frac{4}{x+2} \)</div>
+        <div><input type="radio" name="q18" value="B"> (B) \( \frac{4}{x+2} - \frac{2}{x+1} \)</div>
+        <div><input type="radio" name="q18" value="C"> (C) \( -\frac{4}{x+2} + \frac{2}{x+1} \)</div>
+        <div><input type="radio" name="q18" value="D"> (D) None</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q19: The lines \( 3x - 2y = 5 \) and \( x + y = 5 \) intersect at:</b>
+        <div><input type="radio" name="q19" value="A"> (A) \( (3,2) \)</div>
+        <div><input type="radio" name="q19" value="B"> (B) \( (2,3) \)</div>
+        <div><input type="radio" name="q19" value="C"> (C) \( (-1,2) \)</div>
+        <div><input type="radio" name="q19" value="D"> (D) \( (1,3) \)</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q20: Find the product of the matrices:</b>
+        \[
+        A =
+        \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9
+        \end{bmatrix}
+        \]
+        and  
+        \[
+        B =
+        \begin{bmatrix}
+        9 & 8 & 7 \\
+        6 & 5 & 4 \\
+        3 & 2 & 1
+        \end{bmatrix}
+        \]
+    
+        <div><input type="radio" name="q20" value="A">
+            (A) 
+            \[
+            \begin{bmatrix}
+            30 & 24 & 18 \\
+            84 & 69 & 54 \\
+            138 & 114 & 90
+            \end{bmatrix}
+            \]
+        </div>
+    
+        <div><input type="radio" name="q20" value="B">
+            (B) 
+            \[
+            \begin{bmatrix}
+            35 & 28 & 21 \\
+            85 & 70 & 55 \\
+            140 & 115 & 90
+            \end{bmatrix}
+            \]
+        </div>
+    
+        <div><input type="radio" name="q20" value="C">
+            (C) 
+            \[
+            \begin{bmatrix}
+            25 & 20 & 15 \\
+            80 & 65 & 50 \\
+            135 & 110 & 85
+            \end{bmatrix}
+            \]
+        </div>
+    
+        <div><input type="radio" name="q20" value="D">
+            (D) None of these
+        </div>
+    </div>
+
+    
+    <div class="card p-3 mb-2"><b>Q21: What is \( \int \frac{dx}{1+x^2} \) ?</b>
+        <div><input type="radio" name="q21" value="A"> (A) \( e^x + C \) </div>
+        <div><input type="radio" name="q21" value="B"> (B) \( \ln |x| + C \)</div>
+        <div><input type="radio" name="q21" value="C"> (C) \( \tan^{-1} x + C \)</div>
+        <div><input type="radio" name="q21" value="D"> (D) \( x^2 + C \)</div>
+    </div>
+
+
+    <div class="card p-3 mb-2"><b>Q22: The probability of the union of two events \( A \) and \( B \) is given by:</b>
+        <div><input type="radio" name="q22" value="A"> (A) \( P(A) + P(B) \)</div>
+        <div><input type="radio" name="q22" value="B"> (B) \( P(A) P(B) \)</div>
+        <div><input type="radio" name="q22" value="C"> (C) \( P(A) + P(B) - P(A \cap B) \)</div>
+        <div><input type="radio" name="q22" value="D"> (D) \( P(A \cap B) \)</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q23: The variance of a set of data values is given by:</b>
+        <div><input type="radio" name="q23" value="A"> (A) Mean of absolute deviations</div>
+        <div><input type="radio" name="q23" value="B"> (B) Square of the standard deviation</div>
+        <div><input type="radio" name="q23" value="C"> (C) Cube of the standard deviation</div>
+        <div><input type="radio" name="q23" value="D"> (D) None of these</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q24: The mean weight of 6 students is 55 kg. Their weights are: 50, 52, 53, 56, 59, and X. Find the missing weight X.</b>
+        <div><input type="radio" name="q24" value="A"> (A) 57</div>
+        <div><input type="radio" name="q24" value="B"> (B) 60</div>
+        <div><input type="radio" name="q24" value="C"> (C) 62</div>
+        <div><input type="radio" name="q24" value="D"> (D) 55</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q25: Solve \( \frac{3}{8} + \frac{2}{5} \times \left(\frac{4}{7} - \frac{1}{14}\right) \)</b>
+        <div><input type="radio" name="q25" value="A"> (A) \( \frac{17}{35} \)</div>
+        <div><input type="radio" name="q25" value="B"> (B) \( \frac{19}{56} \)</div>
+        <div><input type="radio" name="q25" value="C"> (C) \( \frac{25}{56} \)</div>
+        <div><input type="radio" name="q25" value="D"> (D) \( \frac{23}{40} \)</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q26: Solve \( \frac{7}{9} \times \left(\frac{3}{4} + \frac{1}{6} \right) \)</b>
+        <div><input type="radio" name="q26" value="A"> (A) \( \frac{77}{108} \)</div>
+        <div><input type="radio" name="q26" value="B"> (B) \( \frac{35}{54} \)</div>
+        <div><input type="radio" name="q26" value="C"> (C) \( \frac{29}{72} \)</div>
+        <div><input type="radio" name="q26" value="D"> (D) \( \frac{25}{36} \)</div>
+    </div>
+    
+    <div class="card p-3 mb-2"><b>Q27: If one root of \( x^2 - 3x + k = 0 \) is 4, find k.</b>
+        <div><input type="radio" name="q27" value="A"> (A) 2</div>
+        <div><input type="radio" name="q27" value="B"> (B) -2</div>
+        <div><input type="radio" name="q27" value="C"> (C) 4</div>
+        <div><input type="radio" name="q27" value="D"> (D) -4</div>
+    </div>
+
+
+    <div class="card p-3 mb-2"><b>Q28: Find the equation of the line perpendicular to \( 3x - 4y + 7 = 0 \) and passing through (2,1).</b>
+        <div><input type="radio" name="q28" value="A"> (A) \( 4x + 3y = 11 \)</div>
+        <div><input type="radio" name="q28" value="B"> (B) \( 4x - 3y = 5 \)</div>
+        <div><input type="radio" name="q28" value="C"> (C) \( 3x + 4y = 10 \)</div>
+        <div><input type="radio" name="q28" value="D"> (D) \( 3x - 4y = 7 \)</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q29: If \( \cos A = \frac{4}{5} \), what is \( \sin 2A \)?</b>
+        <div><input type="radio" name="q29" value="A"> (A) \( \frac{24}{25} \)</div>
+        <div><input type="radio" name="q29" value="B"> (B) \( \frac{7}{25} \)</div>
+        <div><input type="radio" name="q29" value="C"> (C) \( \frac{12}{25} \)</div>
+        <div><input type="radio" name="q29" value="D"> (D) \( \frac{16}{25} \)</div>
+    </div>
+
+    <div class="card p-3 mb-2"><b>Q30: In a triangle, if sides are in the ratio 3:4:5, what type of triangle is it?</b>
+        <div><input type="radio" name="q30" value="A"> (A) Acute-angled triangle</div>
+        <div><input type="radio" name="q30" value="B"> (B) Right-angled triangle</div>
+        <div><input type="radio" name="q30" value="C"> (C) Obtuse-angled triangle</div>
+        <div><input type="radio" name="q30" value="D"> (D) Equilateral triangle</div>
+    </div>
+            <!-- Add more questions similarly -->
+        </div>
+        <div class="mb-3">
+            <h4>Physics</h4>
+            <div class="card p-3 mb-2"> <b>Q31: Newton's Second Law?</b>
+                <div><input type="radio" name="q31" value="A"> (A) \( F = ma \)</div>
+                <div><input type="radio" name="q31" value="B"> (B) \( F = mv \)</div>
+                <div><input type="radio" name="q31" value="C"> (C) \( F = \frac{m}{a} \)</div>
+                <div><input type="radio" name="q31" value="D"> (D) \( F = ma^2 \)</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q32: A car accelerates uniformly from 10 m/s to 30 m/s in 5 seconds. What is the acceleration?</b>
+                <div><input type="radio" name="q32" value="A"> (A) 2 m/s²</div>
+                <div><input type="radio" name="q32" value="B"> (B) 4 m/s²</div>
+                <div><input type="radio" name="q32" value="C"> (C) 6 m/s²</div>
+                <div><input type="radio" name="q32" value="D"> (D) 8 m/s²</div>
+            </div>
+            
+            <div class="card p-3 mb-2"><b>Q33: A ball is thrown vertically upwards with a velocity of 20 m/s. How long will it take to reach its highest point? (Take g = 10 m/s²)</b>
+                <div><input type="radio" name="q33" value="A"> (A) 1 s</div>
+                <div><input type="radio" name="q33" value="B"> (B) 2 s</div>
+                <div><input type="radio" name="q2" value="C"> (C) 4 s</div>
+                <div><input type="radio" name="q2" value="D"> (D) 5 s</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q34: The SI unit of Power is:</b>
+                <div><input type="radio" name="q34" value="A"> (A) Joule</div>
+                <div><input type="radio" name="q34" value="B"> (B) Newton</div>
+                <div><input type="radio" name="q34" value="C"> (C) Watt</div>
+                <div><input type="radio" name="q34" value="D"> (D) Pascal</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q35: The refractive index of water is 1.33. This means:</b>
+                <div><input type="radio" name="q35" value="A"> (A) Light slows down in water</div>
+                <div><input type="radio" name="q35" value="B"> (B) Light speeds up in water</div>
+                <div><input type="radio" name="q35" value="C"> (C) Light bends away from the normal</div>
+                <div><input type="radio" name="q35" value="D"> (D) Water is transparent</div>
+            </div>
+            
+            <div class="card p-3 mb-2"><b>Q36: The unit of charge is:</b>
+                <div><input type="radio" name="q36" value="A"> (A) Joule</div>
+                <div><input type="radio" name="q36" value="B"> (B) Coulomb</div>
+                <div><input type="radio" name="q36" value="C"> (C) Ampere</div>
+                <div><input type="radio" name="q36" value="D"> (D) Farad</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q37: The first law of thermodynamics states:</b>
+                <div><input type="radio" name="q37" value="A"> (A) Energy can be created but not destroyed</div>
+                <div><input type="radio" name="q37" value="B"> (B) The total energy of an isolated system is constant</div>
+                <div><input type="radio" name="q37" value="C"> (C) Energy cannot be transferred</div>
+                <div><input type="radio" name="q37" value="D"> (D) Work done is always zero</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q38: The time period of a simple pendulum depends on:</b>
+                <div><input type="radio" name="q38" value="A"> (A) Mass of the bob</div>
+                <div><input type="radio" name="q38" value="B"> (B) Amplitude of oscillation</div>
+                <div><input type="radio" name="q38" value="C"> (C) Length of the pendulum</div>
+                <div><input type="radio" name="q38" value="D"> (D) Both mass and length</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q39: The energy of a photon is given by:</b>
+                <div><input type="radio" name="q39" value="A"> (A) \( E = mc^2 \)</div>
+                <div><input type="radio" name="q39" value="B"> (B) \( E = h\nu \)</div>
+                <div><input type="radio" name="q39" value="C"> (C) \( E = \frac{1}{2}mv^2 \)</div>
+                <div><input type="radio" name="q39" value="D"> (D) \( E = PV \)</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q40: The moment of inertia of a solid sphere of mass \( M \) and radius \( R \) about its diameter is:</b>
+                <div><input type="radio" name="q40" value="A"> (A) \( \frac{2}{5}MR^2 \)</div>
+                <div><input type="radio" name="q40" value="B"> (B) \( \frac{1}{2}MR^2 \)</div>
+                <div><input type="radio" name="q40" value="C"> (C) \( \frac{2}{3}MR^2 \)</div>
+                <div><input type="radio" name="q40" value="D"> (D) \( \frac{3}{5}MR^2 \)</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q41: A wave with frequency 50 Hz has a time period of:</b>
+                <div><input type="radio" name="q41" value="A"> (A) 0.02 s</div>
+                <div><input type="radio" name="q41" value="B"> (B) 50 s</div>
+                <div><input type="radio" name="q41" value="C"> (C) 5 s</div>
+                <div><input type="radio" name="q41" value="D"> (D) 0.002 s</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q42: The de Broglie wavelength of an electron moving with velocity \( v \) is given by:</b>
+                <div><input type="radio" name="q42" value="A"> (A) \( \lambda = \frac{h}{mv} \)</div>
+                <div><input type="radio" name="q42" value="B"> (B) \( \lambda = hmv \)</div>
+                <div><input type="radio" name="q42" value="C"> (C) \( \lambda = \frac{hv}{m} \)</div>
+                <div><input type="radio" name="q42" value="D"> (D) \( \lambda = \frac{m}{hv} \)</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q43: The formula for wave speed is:</b>
+                <div><input type="radio" name="q43" value="A"> (A) \( v = f \cdot \lambda \)</div>
+                <div><input type="radio" name="q43" value="B"> (B) \( v = f / \lambda \)</div>
+                <div><input type="radio" name="q43" value="C"> (C) \( v = \lambda / f \)</div>
+                <div><input type="radio" name="q43" value="D"> (D) \( v = f + \lambda \)</div>
+            </div>
+            
+            <div class="card p-3 mb-2"><b>Q44: The formula for electrical power is:</b>
+                <div><input type="radio" name="q44" value="A"> (A) \( P = I^2V \)</div>
+                <div><input type="radio" name="q44" value="B"> (B) \( P = I/V \)</div>
+                <div><input type="radio" name="q44" value="C"> (C) \( P = V/I \)</div>
+                <div><input type="radio" name="q44" value="D"> (D) \( P = IV \)</div>
+            </div>
+            
+            <div class="card p-3 mb-2"><b>Q45: The potential energy stored in a stretched spring is:</b>
+                <div><input type="radio" name="q45" value="A"> (A) \( PE = \frac{1}{2} mv^2 \)</div>
+                <div><input type="radio" name="q45" value="B"> (B) \( PE = kx \)</div>
+                <div><input type="radio" name="q45" value="C"> (C) \( PE = \frac{1}{2} kx^2 \)</div>
+                <div><input type="radio" name="q45" value="D"> (D) \( PE = mgh \)</div>
+            </div>
+
+        </div>
+        <div class="mb-3">
+            <h4>Chemistry</h4>
+            <div class="card p-3 mb-2"><b>Q46: The formula for pH is:</b>
+                <div><input type="radio" name="q46" value="A"> (A) \( pH = \log [H^+] \)</div>
+                <div><input type="radio" name="q46" value="B"> (B) \( pH = -\log [H^+] \)</div>
+                <div><input type="radio" name="q46" value="C"> (C) \( pH = -\log [OH^-] \)</div>
+                <div><input type="radio" name="q46" value="D"> (D) \( pH = \log [OH^-] \)</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q47: The rate law for a reaction is expressed as:</b>
+                <div><input type="radio" name="q47" value="A"> (A) \( r = k[A]^m[B]^n \)</div>
+                <div><input type="radio" name="q47" value="B"> (B) \( r = k[A][B] \)</div>
+                <div><input type="radio" name="q47" value="C"> (C) \( r = k[A] + k[B] \)</div>
+                <div><input type="radio" name="q47" value="D"> (D) \( r = k[A]/[B] \)</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q48: The number of π-bonds in benzene is:</b>
+                <div><input type="radio" name="q48" value="A"> (A) 9</div>
+                <div><input type="radio" name="q48" value="B"> (B) 6</div>
+                <div><input type="radio" name="q48" value="C"> (C) 3</div>
+                <div><input type="radio" name="q48" value="D"> (D) 12</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q49: The shape of the \( SF_6 \) molecule is:</b>
+                <div><input type="radio" name="q49" value="A"> (A) Square planar</div>
+                <div><input type="radio" name="q49" value="B"> (B) Tetrahedral</div>
+                <div><input type="radio" name="q49" value="C"> (C) Octahedral</div>
+                <div><input type="radio" name="q49" value="D"> (D) Pyramidal</div>
+            </div>
+            
+            <div class="card p-3 mb-2"><b>Q50: The hybridization of carbon in ethene \( C_2H_4 \) is:</b>
+                <div><input type="radio" name="q50" value="A"> (A) \( sp \)</div>
+                <div><input type="radio" name="q50" value="B"> (B) \( sp^2 \)</div>
+                <div><input type="radio" name="q50" value="C"> (C) \( sp^3 \)</div>
+                <div><input type="radio" name="q50" value="D"> (D) \( dsp^2 \)</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q51: The element with the highest electronegativity in the periodic table is:</b>
+                <div><input type="radio" name="q51" value="A"> (A) Oxygen</div>
+                <div><input type="radio" name="q51" value="B"> (B) Fluorine</div>
+                <div><input type="radio" name="q51" value="C"> (C) Chlorine</div>
+                <div><input type="radio" name="q51" value="D"> (D) Nitrogen</div>
+            </div>
+            
+            <div class="card p-3 mb-2"><b>Q52: The element with the largest atomic radius among the following is:</b>
+                <div><input type="radio" name="q52" value="A"> (A) Sodium</div>
+                <div><input type="radio" name="q52" value="B"> (B) Potassium</div>
+                <div><input type="radio" name="q52" value="C"> (C) Cesium</div>
+                <div><input type="radio" name="q52" value="D"> (D) Lithium</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q53: The IUPAC name of CH3CH=CHCH3 is:</b>
+                <div><input type="radio" name="q53" value="A"> (A) 1-Butene</div>
+                <div><input type="radio" name="q53" value="B"> (B) 2-Butene</div>
+                <div><input type="radio" name="q53" value="C"> (C) Butane</div>
+                <div><input type="radio" name="q53" value="D"> (D) 1,2-Butadiene</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q54: Which element has the atomic number 27?</b>
+                <div><input type="radio" name="q54" value="A"> (A) Nickel</div>
+                <div><input type="radio" name="q54" value="B"> (B) Iron</div>
+                <div><input type="radio" name="q54" value="C"> (C) Cobalt</div>
+                <div><input type="radio" name="q54" value="D"> (D) Copper</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q55: Match the functional groups with their general formulas.</b>
+                <p>(A) Alcohol - (1) -CO-</p>
+                <p>(B) Aldehyde - (2) -OH</p>
+                <p>(C) Carboxylic Acid - (3) -CHO</p>
+                <p>(D) Ketone - (4) -COOH</p>
+                <div><input type="radio" name="q55" value="A"> (A) A-1, B-2, C-3, D-4</div>
+                <div><input type="radio" name="q55" value="B"> (B) A-2, B-3, C-4, D-1</div>
+                <div><input type="radio" name="q55" value="C"> (C) A-4, B-3, C-2, D-1</div>
+                <div><input type="radio" name="q55" value="D"> (D) A-3, B-1, C-4, D-2</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q56: Match the elements with their correct period and group.</b>
+                <p>(A) Sodium - (1) Period 3, Group 16</p>
+                <p>(B) Argon - (2) Period 3, Group 13</p>
+                <p>(C) Sulfur - (3) Period 3, Group 1</p>
+                <p>(D) Aluminum - (4) Period 3, Group 18</p>
+                <div><input type="radio" name="q56" value="A"> (A) A-1, B-2, C-3, D-4</div>
+                <div><input type="radio" name="q56" value="B"> (B) A-2, B-3, C-4, D-1</div>
+                <div><input type="radio" name="q56" value="C"> (C) A-3, B-4, C-1, D-2</div>
+                <div><input type="radio" name="q56" value="D"> (D) A-4, B-1, C-2, D-3</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q57: Match the functional groups with their correct class of compounds.</b>
+                <p>(A) -OH  - (1) Alcohol</p>
+                <p>(B) -COOH - (2) Carboxylic Acid</p>
+                <p>(C) -CHO  - (3) Aldehyde</p>
+                <p>(D) -NH₂  - (4) Amine</p>
+                <div><input type="radio" name="q57" value="A"> (A) A-1, B-2, C-3, D-4</div>
+                <div><input type="radio" name="q57" value="B"> (B) A-2, B-3, C-4, D-1</div>
+                <div><input type="radio" name="q57" value="C"> (C) A-3, B-4, C-1, D-2</div>
+                <div><input type="radio" name="q57" value="D"> (D) A-4, B-1, C-2, D-3</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q58: Match the polymer with its monomer.</b>
+                <p>(A) Polyethylene - (1) Vinyl Chloride </p>
+                <p>(B) Nylon-6,6 - (2) Ethene </p>
+                <p>(C) Polystyrene - (3) Hexamethylene Diamine + Adipic Acid</p>
+                <p>(D) Polyvinyl Chloride - (4) Styrene</p>
+                <div><input type="radio" name="q58" value="A"> (A) A-1, B-2, C-3, D-4</div>
+                <div><input type="radio" name="q58" value="B"> (B) A-2, B-3, C-4, D-1</div>
+                <div><input type="radio" name="q58" value="C"> (C) A-3, B-4, C-1, D-2</div>
+                <div><input type="radio" name="q58" value="D"> (D) A-4, B-1, C-2, D-3</div>
+            </div>
+
+            <div class="card p-3 mb-2"><b>Q59: Match the term with its correct definition.</b>
+                <p>(A) Atomic Number - (1) Sum of protons and neutrons</p>
+                <p>(B) Mass Number - (2) Atoms with the same atomic number but different mass numbers</p>
+                <p>(C) Isotopes - (3) An atom that has gained or lost electrons</p>
+                <p>(D) Ion - (4) Number of protons in an atom</p>
+                <div><input type="radio" name="q59" value="A"> (A) A-1, B-2, C-3, D-4</div>
+                <div><input type="radio" name="q59" value="B"> (B) A-2, B-3, C-4, D-1</div>
+                <div><input type="radio" name="q59" value="C"> (C) A-3, B-4, C-1, D-2</div>
+                <div><input type="radio" name="q59" value="D"> (D) A-4, B-1, C-2, D-3</div>
+            </div>
+            
+            <div class="card p-3 mb-2"><b>Q60: Match the types of chemical bonds with their correct characteristics.</b>
+                <p>(A) Ionic Bond - (1) Weak attraction between hydrogen and electronegative elements</p>
+                <p>(B) Covalent Bond - (2) Transfer of electrons</p>
+                <p>(C) Metallic Bond - (3) Sharing of electrons</p>
+                <p>(D) Hydrogen Bond - (4) Sea of delocalized electrons</p>
+                <div><input type="radio" name="q60" value="A"> (A) A-1, B-2, C-3, D-4</div>
+                <div><input type="radio" name="q60" value="B"> (B) A-2, B-3, C-4, D-1</div>
+                <div><input type="radio" name="q60" value="C"> (C) A-3, B-4, C-1, D-2</div>
+                <div><input type="radio" name="q60" value="D"> (D) A-4, B-1, C-2, D-3</div>
+            </div>
+
+            
+        </div>
+        <button type="button" class="btn btn-primary" onclick="submitExam()">Submit</button>
+    </form>
+
+    <br><br>
+    <footer id="footer" class="footer">
+        
+        <div class="container text-center">
+            <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
+        </div> 
+    </footer>  
+</body>
+</html>

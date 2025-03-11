@@ -100,7 +100,9 @@
         .chemistry-card {
             background: linear-gradient(135deg, #ff4b2b, #ff416c);
         }
-
+        .exam-card {
+            background: linear-gradient(135deg, #9b911f, #e8eb29);
+        }
         
 
         /* Subject heading colors */
@@ -114,6 +116,9 @@
 
         .chemistry-heading {
             color: #ff4b2b; /* Red color for Chemistry */
+        }
+        .exam-heading {
+            color: #a59e17; /* Red color for Chemistry */
         }
         .button-container {
     display: flex;
@@ -297,6 +302,8 @@
                     <div class="col-md-3">
                         <button class="btn btn-primary w-100 mb-2" onclick="toggleSubcategories('easy')">Subject-Wise</button>
                     </div>
+
+                    
                     
                     <!-- Content to be shown when button is clicked -->
                     <div id="easy-content" style="display: none; margin-top: 10px;">
@@ -2049,45 +2056,281 @@
                     
                     
 </div>
-                <div id="eapcet-content" >
-                    <div class="card p-3">
-                        
-                        <button class="btn btn-secondary w-100 mb-2" onclick="toggleNested('eapcet_test')">Eapcet Mock Test</button>
-                        <div id="eapcet_test" class="nested-subcategories d-none">
-                            <a href="Eapcet_Questions_html/Eapcet Full Test/Full_Test_1.html" class="btn btn-success mb-2">Full Test 1</a>
-                            <a href="Eapcet_Questions_html/Eapcet Full Test/Full_Test_2.html" class="btn btn-success mb-2">Full Test 2</a>
-                            <a href="Eapcet_Questions_html/Eapcet Full Test/Full_Test_3.html" class="btn btn-success mb-2">Full Test 3</a>
-                            <a href="Eapcet_Questions_html/Eapcet Full Test/mocktest.html" class="btn btn-success mb-2">Mock Test </a>
-                            <a href="Eapcet_Questions_html/Eapcet Full Test/mocktest2.html" class="btn btn-success mb-2">Mock Test 2 </a>
-                        </div>
-                        
-                    </div>
+                
+
+
+            <!-- Full Test shown when button is clicked -->
+            <div id="eapcet-content" style="display: none; margin-top: 10px;">
+                <div class="container-fluid">
+                    <h1 class="text-center mb-4">Full Test </h1>
+            
+                    
+
+<!-- Row to hold the columns -->
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+    <!-- Initial content (Visible by default) -->
+    <div class="col mb-3 ">
+        <div class="card exam-card">
+            <div class="card-body">
+                <h5 class="card-title text-center">Sample Test </h5>
+                
+            </div>
+            <div class="card-footer text-center">
+                
+                
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                    <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Sample_Test.html'">Test</button>
                 </div>
             </div>
-            <!--full-->
-            <script>
-                function toggleSubcategories(id) {
-                    document.querySelectorAll('.subcategories').forEach(div => {
-                        div.classList.add('d-none');
-                    });
-                    document.getElementById(id).classList.toggle('d-none');
-                }
+        </div>
+    </div>
+    <div class="col mb-3 ">
+        
+            <div class="card exam-card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Full Test 1</h5>
+                    
+                </div>
+                <div class="card-footer text-center">
+                   
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                        <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_4.html'">Test 1</button>
+                    </div>
+                    
+                </div>
+            </div>
+        
+    </div>
+    <div class="col mb-3">
+        
+            <div class="card exam-card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Full Test 2 </h5>
+                   
+                </div>
+                <div class="card-footer text-center">
+                 
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                        <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_5.html'">Test 2</button>
+                    </div>
+                    
+                </div>
+            </div>
+       
+    </div>
+    <div class="col mb-3">
+        
+            <div class="card exam-card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Full Test 3</h5>
+                    
+                </div>
+                <div class="card-footer text-center">
+                  
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                        <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_6.html'">Test 3</button>
+                    </div>
+                    
+                </div>
+            </div>
+      
+    </div>
+</div>
+
+
+<!-- Additional content (Initially hidden) -->
+
+<div id="more-exam" style="display: none;">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3" >
+
+<div class="col mb-3">
+
+    <div class="card exam-card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Full Test 4</h5>
+           
+        </div>
+        <div class="card-footer text-center">
+            
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_7.html'">Test 4</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<div class="col mb-3">
+
+<div class="card exam-card">
+    <div class="card-body">
+        <h5 class="card-title text-center">Full Test 5</h5>
+       
+    </div>
+    <div class="card-footer text-center">
+        
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+            <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_8.html'">Test 5</button>
+        </div>
+        
+    </div>
+</div>
+
+</div>
+<div class="col mb-3">
+
+    <div class="card exam-card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Full Test 6</h5>
+           
+        </div>
+        <div class="card-footer text-center">
+           
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_9.html'">Test 6</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+<!-- Add more content if needed -->
+<div class="col mb-3">
+
+    <div class="card exam-card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Full test 7</h5>
+ 
+        </div>
+        <div class="card-footer text-center">
+            
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_10.html'">Test 7</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<div class="col mb-3">
+
+    <div class="card exam-card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Full Test 8</h5>
+           
+        </div>
+        <div class="card-footer text-center">
+           
+           <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+            <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_11.html'">Test 8</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<div class="col mb-3">
+
+    <div class="card exam-card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Full Test 9</h5>
+           
+        </div>
+        <div class="card-footer text-center">
+           
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+               
+                <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_1.html'">Test 9</button>
                 
-                function toggleNested(id) {
-                    document.getElementById(id).classList.toggle('d-none');
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<div class="col mb-3">
+
+    <div class="card exam-card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Full Test 10 </h5>
+           
+        </div>
+        <div class="card-footer text-center">
+            
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                
+                <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_2.html'">Test 10</button>
+                 
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<div class="col mb-3">
+
+    <div class="card exam-card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Full Test 11</h5>
+           
+        </div>
+        <div class="card-footer text-center">
+           
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_4.html'">Test 11</button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+
+
+
+</div></div>
+
+<div class="button-container">
+    <a href="javascript:void(0);" class="btn btn-custom-primary" onclick="showMoreContent('more-exam')">View More Tests</a>
+</div>
+
+
+
+
+
+          
+            <script>
+                function toggleSubcategories(showId) {
+                    var sections = ["eapcet", "easy"]; // List of all sections
+                    sections.forEach(id => {
+                        var content = document.getElementById(id + '-content');
+                        if (content) {
+                            if (id === showId) {
+                                // Toggle visibility for the clicked section
+                                content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+                            } else {
+                                // Hide the other section
+                                content.style.display = "none";
+                            }
+                        }
+                    });
                 }
             </script>
-             <!--easy-->
-        <script>
-            function toggleSubcategories(id) {
-                var content = document.getElementById(id + '-content');
-                if (content.style.display === "none") {
-                    content.style.display = "block";
-                } else {
-                    content.style.display = "none";
-                }
-            }
-        </script>
+            
+            
          <!--view more-->
         <script>
             function showMoreContent(sectionId) {
@@ -2159,9 +2402,9 @@
     
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>    
- <!--Whatsapp-->
- <a href="https://api.whatsapp.com/send?phone=9030941099&text=Hello " class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
-    <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">
+ <!-- WhatsApp -->
+ <a href="https://wa.me/9030941099?text=Hello" target="_blank" style="position: fixed; right: 25px; bottom: 50px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" width="70">
   </a>
 </body>
 </html>    

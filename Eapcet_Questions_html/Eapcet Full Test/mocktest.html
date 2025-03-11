@@ -178,6 +178,12 @@
     formData.append('examfolder', examfolder);
 
     try {
+      // Prompt to confirm before starting the exam
+      if (confirm("Are you sure to start the mock test!")) {
+        // Redirect to exam page
+        window.location.href = "../../exam.html";
+      }
+      
       const response = await fetch(url, {
         method: 'POST',
         body: formData
@@ -185,11 +191,7 @@
       const result = await response.text();
       console.log(result); // You can log the response to see if it's successful
 
-      // Prompt to confirm before starting the exam
-      if (confirm("Are you sure to start the mock test!")) {
-        // Redirect to exam page
-        window.location.href = "../../exam.html";
-      }
+      
     } catch (error) {
       alert("There was an error saving your data.");
       console.error(error);
