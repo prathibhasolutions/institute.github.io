@@ -149,17 +149,17 @@
     document.addEventListener("DOMContentLoaded", () => {
     const examName = "Eapcet";
     const examTimer = 180;
-    const examfolder = "Eapcet_Questions_html/Eapcet Full Test/Full Test 1";
+    const examfolder = "Full Test 8";
     const numberofquestions = 160;
     const positivemark = 1;
     const negativemark = 0;
 
     // Example hardcoded answers (you can replace this with actual answer keys)
     const correctAnswers = [
-      "B", "A", "D", "C", "D", "D", "C", "D", "C","C",
-      "B", "A", "C", "C", "C", "D", "A", "A", "C","D",
-      "C", "B", "A", "B", "C", "B", "C", "D", "D","C",
-      "B", "C", "D", "A", "C","B", "B", "B", "D","C",z
+      "C", "A", "A", "A", "A", "A", "D", "C", "D","C",
+      "D", "A", "C", "C", "B", "C", "C", "A", "B","C",
+      "A", "D", "C","A", "A", "B", "C", "A", "D","C",
+      "A", "A", "A", "D", "D", "B", "A", "D", "D","C",a
       "B", "A", "B", "A", "A", "B", "B", "C", "C","C",
       "B", "B", "C", "B", "C", "A", "D", "D", "D","B",
       "D", "C", "A", "B", "C", "B", "B", "C", "A","C",
@@ -217,7 +217,7 @@
        // Prompt to confirm before starting the exam
        if (confirm("Are you sure to start the mock test!")) {
         // Redirect to exam page
-        window.location.href = "../../exam.html";
+        window.location.href = "exam.html";
       }
       const response = await fetch(url, {
         method: 'POST',
@@ -226,7 +226,7 @@
       const result = await response.text();
       console.log(result); // You can log the response to see if it's successful
 
-     
+      
     } catch (error) {
       alert("There was an error saving your data.");
       console.error(error);

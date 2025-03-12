@@ -149,31 +149,31 @@
     document.addEventListener("DOMContentLoaded", () => {
     const examName = "Eapcet";
     const examTimer = 180;
-    const examfolder = "Eapcet_Questions_html/Eapcet Full Test/Full Test 1";
+    const examfolder = "Full Test 11";
     const numberofquestions = 160;
     const positivemark = 1;
     const negativemark = 0;
 
     // Example hardcoded answers (you can replace this with actual answer keys)
     const correctAnswers = [
-      "C", "A", "A", "A", "A", "A", "D", "C", "D","C",
-      "D", "A", "C", "C", "B", "C", "C", "A", "B","C",
-      "A", "D", "C","A", "A", "B", "C", "A", "D","C",
-      "A", "A", "A", "D", "D", "B", "A", "D", "D","C",A
-      "B", "A", "B", "A", "A", "B", "B", "C", "C","C",
-      "B", "B", "C", "B", "C", "A", "D", "D", "D","B",
-      "D", "C", "A", "B", "C", "B", "B", "C", "A","C",
-      "A", "D", "B", "C", "B","C", "A", "B", "B", "C",
+      "C", "C", "A", "B", "C", "A", "A", "A", "A","D",
+      "D", "C", "B", "D", "B", "D", "B", "A", "C","B",
+      "D", "B", "D", "C", "A", "A", "C", "B", "D","B",
+      "D", "A", "D", "A", "B", "D", "C", "C", "C","A",
+      "B", "B", "C", "C", "C", "B", "D", "A", "D","A",
+      "D", "C", "B", "B", "D", "B", "A", "B", "B","D",
+      "C", "B", "B", "B", "A", "B", "C", "B", "D","C",
+      "C", "D", "A", "D", "B","A", "A", "B", "B", "B",
 
-      "A", "B", "A", "C", "B", "A", "A", "A", "C","A",
-      "B", "A", "A", "D", "B", "D", "B", "B", "C","A",
-      "D", "C", "A", "A", "B", "A", "C", "C", "A","C",
-      "B", "D", "D", "A", "A", "A", "B", "C", "B","C",
+      "D", "B", "B", "A", "A", "A", "C", "A", "B","B",
+      "B", "D", "C", "C", "C", "B", "D", "C", "D","B",
+      "B", "A", "A", "D", "C", "D", "D", "C", "C","A",
+      "C", "D", "A", "B", "A", "A", "A", "A", "B","D",
 
-      "D", "B", "D", "C", "C", "D", "B", "B", "A","C",
-      "A", "C", "A", "D", "C", "A", "B", "A", "A","C",
-      "B", "C", "D", "C", "A", "B", "A", "D", "B","B",
-      "A", "A", "D", "B", "D", "B", "B", "C", "D","A"
+      "A", "D", "A", "B", "A", "B", "D", "B", "D","A",
+      "B", "D", "C", "A", "C", "C", "C", "D", "A","C",
+      "D", "D", "C", "D", "C", "B", "B", "A", "A","A",
+      "B", "D", "A", "C", "D", "D", "D", "B", "C","C"
        ];
      // Dynamically inject exam details into the HTML
   document.getElementById("examTimerItem").innerHTML = `1. The exam duration is <strong>${examTimer} minutes</strong>.`;
@@ -214,10 +214,10 @@
     formData.append('examfolder', examfolder);
 
     try {
-       // Prompt to confirm before starting the exam
-       if (confirm("Are you sure to start the mock test!")) {
+      // Prompt to confirm before starting the exam
+      if (confirm("Are you sure to start the mock test!")) {
         // Redirect to exam page
-        window.location.href = "../../exam.html";
+        window.location.href = "exam.html";
       }
       const response = await fetch(url, {
         method: 'POST',
@@ -226,7 +226,7 @@
       const result = await response.text();
       console.log(result); // You can log the response to see if it's successful
 
-      
+     
     } catch (error) {
       alert("There was an error saving your data.");
       console.error(error);

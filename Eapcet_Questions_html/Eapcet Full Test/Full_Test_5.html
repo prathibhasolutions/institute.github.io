@@ -13,7 +13,7 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <style>
-     .header {
+    .header {
     background-color: rgb(23, 41, 84);
     background-position: center;
     background-size: cover;
@@ -135,7 +135,6 @@
             <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
         </div> 
     </footer>
-
   <div id="popup">
     <div id="popupContent">
       <p id="popupMessage"></p>
@@ -150,17 +149,17 @@
     document.addEventListener("DOMContentLoaded", () => {
     const examName = "Eapcet";
     const examTimer = 180;
-    const examfolder = "Eapcet_Questions_html/Eapcet Full Test/Full Test 1";
+    const examfolder = "Full Test 5";
     const numberofquestions = 160;
     const positivemark = 1;
     const negativemark = 0;
 
     // Example hardcoded answers (you can replace this with actual answer keys)
     const correctAnswers = [
-      "B", "A", "C", "C","D", "D", "C", "B", "B","C",
-      "A", "D", "B", "A", "D", "B", "D", "D", "D","C",
-      "B", "D", "A","B", "D", "C", "C", "D","C","B",
-      "B", "B", "C", "B", "B", "A", "C", "B", "D","D",A
+      "B", "A", "D", "C", "D", "D", "C", "D", "C","C",
+      "B", "A", "C", "C", "C", "D", "A", "A", "C","D",
+      "C", "B", "A", "B", "C", "B", "C", "D", "D","C",
+      "B", "C", "D", "A", "C","B", "B", "B", "D","C",z
       "B", "A", "B", "A", "A", "B", "B", "C", "C","C",
       "B", "B", "C", "B", "C", "A", "D", "D", "D","B",
       "D", "C", "A", "B", "C", "B", "B", "C", "A","C",
@@ -218,7 +217,7 @@
        // Prompt to confirm before starting the exam
        if (confirm("Are you sure to start the mock test!")) {
         // Redirect to exam page
-        window.location.href = "../../exam.html";
+        window.location.href = "exam.html";
       }
       const response = await fetch(url, {
         method: 'POST',
@@ -227,7 +226,7 @@
       const result = await response.text();
       console.log(result); // You can log the response to see if it's successful
 
-      
+     
     } catch (error) {
       alert("There was an error saving your data.");
       console.error(error);

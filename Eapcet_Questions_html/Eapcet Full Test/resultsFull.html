@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Results</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f9;
+      padding: 20px;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #3498db;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .header {
+      font-family: sans-serif;
+      background-color: rgb(23, 41, 84);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px; /* Default height */
+      position: fixed; /* Ensures the header stays at the top */
+      top: 0;
+      left: 0;
+      width: 100%; /* Full width */
+      z-index: 1000; /* Keeps it above other content */
+  }
+  .logo {
+      width: 100px; /* Default width */
+      height: 100px; /* Default height */
+      border-radius: 60%; /* Creates a circular logo */
+  }
+  body {
+      margin: 0;
+      padding-top: 150px; /* Prevents content from being hidden behind the header */
+  }
+
+  /* Responsive adjustments for small screens */
+  @media (max-width: 768px) {
+    .header {
+          height: 120px; /* Further adjust header height */
+      }
+      .logo {
+          width: 90px; /* Smaller logo size for very small screens */
+          height: 90px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .header {
+          height: 120px; /* Further adjust header height */
+      }
+      .logo {
+          width: 90px; /* Smaller logo size for very small screens */
+          height: 90px;
+      }
+  }
+    
+    /* Result Summary Boxes */
+    .result-summary {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .result-box {
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 8px;
+      width: 150px;
+      text-align: center;
+      font-size: 18px;
+    }
+    .result-box h3 {
+      font-size: 24px;
+      margin: 5px 0;
+    }
+    .correct { background-color: #2ecc71; color: white; }
+    .incorrect { background-color: #e74c3c; color: white; }
+    .not-answered { background-color: #f39c12; color: white; }
+
+     /* Charts */
+  .chart-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+  }
+  .chart-box {
+      width: 100%;
+      max-width: 400px;
+  }
+
+  /* Responsive adjustments for small screens */
+  @media (max-width: 768px) {
+      .chart-container {
+          flex-direction: column; /* Stack charts vertically */
+          align-items: center; /* Center the charts */
+          gap: 20px; /* Adjust gap between charts */
+      }
+  }
+
+     /* Table */
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+  }
+  table th, table td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+  }
+  table th {
+      background-color: #3498db;
+      color: white;
+  }
+  table tr:nth-child(even) {
+      background-color: #f9f9f9;
+  }
+  table tr:hover {
+      background-color: #f1f1f1;
+  }
+
+  /* Responsive Table Container */
+  .table-container {
+      width: 100%;
+      overflow-x: auto; /* Enables horizontal scrolling if table is too wide */
+  }
+  .table-container table {
+      min-width: 600px; /* Ensures the table has a minimum width */
+  }
+
+  /* Adjust table font size for smaller screens */
+  @media (max-width: 768px) {
+      table th, table td {
+          font-size: 12px; /* Smaller font size for small screens */
+          padding: 8px; /* Adjust padding for better fit */
+      }
+      
+  }
+
+    /* Button */
+    .btn {
+      padding: 10px 20px;
+      margin-top: 25px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    .image-container {
+      margin-top: 10px;
+      display: none;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .image-container img {
+      max-width: 90%;
+      max-height: 80vh;
+      margin: 0 auto;
+      display: block;
+    }
+    .view-image-btn {
+      padding: 5px 15px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .view-image-btn:hover {
+      background-color: #2980b9;
+    }
+    
+  </style>
+</head>
+<body>
+ 
+  <section class="header">
+    <nav>
+        <img src="logo.png" alt="Logo" class="logo">
+    </nav>
+</section>
+  <div class="container-fluid">
+    <h1>Exam Results</h1>
+
+    <!-- Summary Boxes -->
+    <div class="result-summary">
+      <div class="result-box">
+        <p>Total Questions</p>
+        <h3 id="totalQuestions">0</h3>
+      </div>
+      <div class="result-box correct">
+        <p>Correct</p>
+        <h3 id="correctAnswers">0</h3>
+      </div>
+      <div class="result-box incorrect">
+        <p>Incorrect</p>
+        <h3 id="incorrectAnswers">0</h3>
+      </div>
+      <div class="result-box not-answered">
+        <p>Not Answered</p>
+        <h3 id="notAnswered">0</h3>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="chart-container">
+      <div class="chart-box">
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Results Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Your Answer</th>
+          <th>Correct Answer</th>
+          <th>Result</th>
+          <th>View Question</th>
+        </tr>
+      </thead>
+      <tbody id="resultsTable"></tbody>
+    </table>
+
+    <!-- Back Button -->
+    <button class="btn" onclick="window.location.href = '../../Eapcetexam.html';">Back to Exams Page</button>
+  </div>
+  
+  <script>
+    // Fetching score and user answers from localStorage
+    const studentName = localStorage.getItem("studentName");
+    const examName = localStorage.getItem("examName");
+    const examfolder = localStorage.getItem("examfolder");
+    const scoreData = JSON.parse(localStorage.getItem("scoreData"));
+    const userAnswers = JSON.parse(localStorage.getItem("userAnswers"));
+    const selectedQuestions = JSON.parse(localStorage.getItem("selectedQuestions"));
+
+    if (!scoreData || !userAnswers || !selectedQuestions) {
+      document.querySelector('.container').innerHTML = "<p class='no-data'>No exam data found. Please complete an exam.</p>";
+    } else {
+      // Set summary values
+      document.getElementById("totalQuestions").innerText = scoreData.totalQuestions;
+      document.getElementById("correctAnswers").innerText = scoreData.correctAnswers;
+      document.getElementById("incorrectAnswers").innerText = scoreData.incorrectAnswers;
+      document.getElementById("notAnswered").innerText = scoreData.notAnswered;
+
+      // Populate results table
+      const resultsTable = document.getElementById("resultsTable");
+      userAnswers.forEach((answer, index) => {
+        const row = document.createElement("tr");
+        let rowClass = answer.Result === "Correct" ? "correct" : answer.Result === "Not Answered" ? "not-answered" : "incorrect";
+        
+        // Get the actual question index from selectedQuestions
+        const questionIndex = selectedQuestions[index].index; 
+        const imagePath = `${examfolder}/${questionIndex + 1}.png`; // Use correct image index
+
+        row.innerHTML = `
+          <td>Question ${questionIndex + 1}</td>
+          <td>${answer.YourAnswer || "No answer provided"}</td>
+          <td>${answer.CorrectAnswer || "No correct answer provided"}</td>
+          <td class="${rowClass}">${answer.Result}</td>
+          <td><button class="view-image-btn" onclick="viewImage('${imagePath}', ${questionIndex})">View Question</button></td>
+        `;
+        resultsTable.appendChild(row);
+      });
+
+      // Generate Pie Chart
+      const ctxPie = document.getElementById('pieChart').getContext('2d');
+      new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+          labels: ['Correct', 'Incorrect', 'Not Answered'],
+          datasets: [{
+            data: [scoreData.correctAnswers, scoreData.incorrectAnswers, scoreData.notAnswered],
+            backgroundColor: ['#2ecc71', '#e74c3c', '#f39c12']
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false
+        }
+      });
+
+      // Generate Bar Chart
+      const ctxBar = document.getElementById('barChart').getContext('2d');
+      new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+          labels: ['Correct', 'Incorrect', 'Not Answered'],
+          datasets: [{
+            label: 'Number of Answers',
+            data: [scoreData.correctAnswers, scoreData.incorrectAnswers, scoreData.notAnswered],
+            backgroundColor: ['#2ecc71', '#e74c3c', '#f39c12']
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    // Function to display the question image
+    function viewImage(imagePath, questionIndex) {
+      closeImage();
+      console.log("Image path: ", imagePath); // Debugging line to check image path
+      const imageContainer = document.createElement('div');
+      imageContainer.className = 'image-container';
+      
+      // Create image element and display it
+      const img = document.createElement('img');
+      img.src = imagePath;
+      img.onerror = () => {
+        img.src = 'default_image.png'; // Provide a default image if there's an error loading
+      };
+
+      img.alt = "Question Image";
+      img.className = "img-fluid";
+      
+      imageContainer.appendChild(img);
+      imageContainer.innerHTML += `<button class="btn" onclick="closeImage()">Close</button>`;
+      document.body.appendChild(imageContainer);
+      imageContainer.style.display = 'block';
+    }
+
+    // Function to close the image
+    function closeImage() {
+      const imageContainer = document.querySelector('.image-container');
+      if (imageContainer) {
+        imageContainer.style.display = 'none';
+        document.body.removeChild(imageContainer); // Remove the container from the DOM
+      }
+    }
+
+    async function senddatatosheets() {
+          // Send data to Google Sheets via Apps Script
+const url = 'https://script.google.com/macros/s/AKfycbxERTkG6-yOWrIDhHncvZtsEasNYOL6pwbELHXSPOCxJ26qQ5rDzX26dw-3lbumIWqfdg/exec'; // Replace with your Google Apps Script URL
+
+const formData = new FormData();
+formData.append('name', studentName);
+formData.append('examName', examName);
+formData.append('examfolder', examfolder);
+formData.append('totalQuestions', scoreData.totalQuestions);
+formData.append('correctAnswers', scoreData.correctAnswers);
+formData.append('incorrectAnswers', scoreData.incorrectAnswers);
+formData.append('notAnswered', scoreData.notAnswered);
+formData.append('percentage', ((scoreData.correctAnswers / scoreData.totalQuestions) * 100).toFixed(2));
+formData.append('submissionTime', new Date().toLocaleString()); // Capture current date-time
+formData.append('selectedQuestions', JSON.stringify(selectedQuestions.map(q => q.index + 1))); // Store actual indices
+formData.append('attemptedAnswers', JSON.stringify(scoreData.attemptedAnswers)); 
+formData.append('correctAnswersList', JSON.stringify(scoreData.correctAnswersList));
+
+try {
+  const response = await fetch(url, {
+    method: 'POST',
+    body: formData
+  });
+  const result = await response.text();
+  console.log(result); // Log the response for debugging
+
+  
+} catch (error) {
+  alert("There was an error saving your data.");
+  console.error(error);
+}
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+    senddatatosheets(); // Call your function here
+});
+   
+</script>
+</body>
+</html>

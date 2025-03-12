@@ -149,17 +149,17 @@
     document.addEventListener("DOMContentLoaded", () => {
     const examName = "Eapcet";
     const examTimer = 180;
-    const examfolder = "Eapcet_Questions_html/Eapcet Full Test/Full Test 1";
+    const examfolder = "Full Test 9";
     const numberofquestions = 160;
     const positivemark = 1;
     const negativemark = 0;
 
     // Example hardcoded answers (you can replace this with actual answer keys)
     const correctAnswers = [
-      "D", "B", "B", "C", "B", "D", "D","D", "D","C",
-      "A", "C", "B", "D", "A", "B", "A", "B", "B","C",
-      "A", "D", "B", "C", "C", "D", "A", "A", "C","B",
-      "A","C", "C", "C", "D","A", "C", "C", "A","C",A
+      "D", "A", "B", "B", "C", "B", "C", "C", "D","C",
+      "C", "C", "A", "C", "A", "B", "A", "C", "A","C",
+      "B", "A", "D", "B", "B", "C", "C", "C", "A","A",
+      "B", "A", "D", "A", "D", "D", "A", "C", "C","B",
       "B", "A", "B", "A", "A", "B", "B", "C", "C","C",
       "B", "B", "C", "B", "C", "A", "D", "D", "D","B",
       "D", "C", "A", "B", "C", "B", "B", "C", "A","C",
@@ -214,10 +214,10 @@
     formData.append('examfolder', examfolder);
 
     try {
-       // Prompt to confirm before starting the exam
-       if (confirm("Are you sure to start the mock test!")) {
+      // Prompt to confirm before starting the exam
+      if (confirm("Are you sure to start the mock test!")) {
         // Redirect to exam page
-        window.location.href = "../../exam.html";
+        window.location.href = "exam.html";
       }
       const response = await fetch(url, {
         method: 'POST',
