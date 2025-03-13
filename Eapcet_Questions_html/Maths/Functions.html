@@ -169,6 +169,9 @@
 
   const generateBtn = document.getElementById("generateBtn");
   const agreeCheckbox = document.getElementById("agreeCheckbox");
+  
+  
+
 
   // Event listener for the checkbox change
   agreeCheckbox.addEventListener("change", () => {
@@ -185,6 +188,15 @@
       return;
     }
 
+    let students = ["sravan", "shashank"];
+    
+    if(!students.includes(studentName)){
+      alert("Please register your name.");
+      return;
+    }
+
+
+    
     // Store all data in localStorage
     localStorage.setItem("studentName", studentName);
     localStorage.setItem("examName", examName);
