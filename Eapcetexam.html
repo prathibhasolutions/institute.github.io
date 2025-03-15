@@ -98,10 +98,10 @@
         }
 
         .chemistry-card {
-            background: linear-gradient(135deg, #ef5237, #ff416c);
+            background: linear-gradient(135deg, #ed8225, #e78e28);
         }
         .exam-card {
-            background: linear-gradient(135deg, #9b911f, #e8eb29);
+            background: linear-gradient(135deg, #d3c527, #e8eb29);
         }
         
 
@@ -120,6 +120,15 @@
         .exam-heading {
             color: #a59e17; /* Red color for Chemistry */
         }
+    
+                .custom-free-btn {
+                    width: 50px; /* Set fixed width */
+                    height: 35px; /* Set fixed height */
+                    font-size: 12px; /* Reduce font size */
+                    padding: 2px 5px; /* Adjust padding */
+                }
+        
+            
         .button-container {
     display: flex;
     justify-content: center; /* Centers horizontally */
@@ -316,24 +325,26 @@
 <!-- Row to hold the columns -->
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
             <!-- Initial content (Visible by default) -->
-            <div class="col mb-3 ">
+            <div class="col mb-3">
                 <div class="card math-card">
                     <div class="card-body">
                         <h5 class="card-title">Applications of Derivatives</h5>
-                        
+                        <button class="btn btn-danger btn-sm mt-2 custom-free-btn">Free</button>
                     </div>
                     <div class="card-footer text-center">
                         <p class="mb-2">Weightage:<br>EAPCET - 4 marks</p>
                         <div class="d-flex justify-content-center gap-3 flex-wrap">
-
                             <!--<button class="custom-btn learn-more" onclick="window.location.href='learn-more.html'">Notes</button>-->
                             <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Maths/question_images/DerivativesP.html'">Practice</button>
-                             <button class="custom-btn test" onclick="window.location.href='Eapcet_Questions_html/Maths/Applications_of_Derivatives.html'">Test</button>
+                            <button class="custom-btn test" onclick="window.location.href='Eapcet_Questions_html/Maths/Applications_of_Derivatives.html'">Test</button>
                         </div>
-                        
                     </div>
                 </div>
             </div>
+            
+            
+            
+            
             <div class="col mb-3 ">
                 
                     <div class="card math-card">
@@ -913,7 +924,7 @@
         </div></div>
 
         <div class="button-container">
-            <a href="javascript:void(0);" class="btn btn-custom-primary" onclick="showMoreContent('more-maths')">View More Chapters</a>
+            <a href="javascript:void(0);" class="btn btn-custom-primary" id="toggleButton" onclick="toggleContent('more-maths')">View More Chapters</a>
         </div>
     
   
@@ -930,8 +941,9 @@
             <div class="col mb-3 ">
                 <div class="card physics-card">
                     <div class="card-body">
-                        <h5 class="card-title">Alternating Current</h5>
                         
+                        <h5 class="card-title">Alternating Current</h5>
+                        <button class="btn btn-danger btn-sm mt-2 custom-free-btn">Free</button>
                     </div>
                     <div class="card-footer text-center">
                         <p class="mb-2">Weightage:<br>EAPCET - 1 mark</p>
@@ -1504,8 +1516,9 @@
         </div></div>
 
         <div class="button-container">
-            <a href="javascript:void(0);" class="btn btn-custom-primary" onclick="showMoreContent('more-physics')">View More Chapters</a>
+            <a href="javascript:void(0);" class="btn btn-custom-primary" id="toggleButton" onclick="toggleContent('more-physics')">View More Chapters</a>
         </div>
+    
     
     
     
@@ -1519,8 +1532,8 @@
         
             <div class="card chemistry-card">
                 <div class="card-body">
-                    <h5 class="card-title">Alcohols,Phenols and Ethers</h5>
-                   
+                    <h5 class="card-title">Alcohols,Phenols & Ethers</h5>
+                    <button class="btn btn-danger btn-sm mt-2 custom-free-btn">Free</button>
                 </div>
                 <div class="card-footer text-center">
                     <p class="mb-2">Weightage:<br>EAPCET - 1 mark</p>
@@ -2032,7 +2045,7 @@
                        
                     </div>
                     <div class="card-footer text-center">
-                        <p class="mb-2">Weightage:<br>EAPCET - 2 marks</p>
+                        <p class="mb-2">Weightage:<br>EAPCET - 1 mark</p>
                         <div class="d-flex justify-content-center gap-3 flex-wrap">
 
                             <!--<button class="custom-btn learn-more" onclick="window.location.href='learn-more.html'">Notes</button>-->
@@ -2048,9 +2061,10 @@
     </div>
 </div>    
       <!-- View More button for Physics -->
-<div class="button-container">
-<a href="javascript:void(0);" class="btn btn-custom-primary" onclick="showMoreContent('more-chemistry')">View More Chapters</a>
-</div>    
+      <div class="button-container">
+        <a href="javascript:void(0);" class="btn btn-custom-primary" id="toggleButton" onclick="toggleContent('more-chemistry')">View More Chapters</a>
+    </div>
+    
 <!-- More content can be added as needed -->
 </div>
                     
@@ -2070,24 +2084,20 @@
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
     <!-- Initial content (Visible by default) -->
     
-    <div class="col mb-3 ">
-        
-            <div class="card exam-card">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Full Test 1</h5>
-                    
-                </div>
-                <div class="card-footer text-center">
-                   
-                    <div class="d-flex justify-content-center gap-3 flex-wrap">
-
-                        <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_1.html'">Take Test </button>
-                    </div>
-                    
+    <div class="col mb-3">
+        <div class="card exam-card">
+            <div class="card-body position-relative">
+                <button class="btn btn-danger position-absolute top-0 start-0 m-2">Free</button>
+                <h5 class="card-title text-center">Full Test 1</h5>
+            </div>
+            <div class="card-footer text-center">
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <button class="custom-btn practice" onclick="window.location.href='Eapcet_Questions_html/Eapcet Full Test/Full_Test_1.html'">Take Test</button>
                 </div>
             </div>
-        
+        </div>
     </div>
+    
     <div class="col mb-3">
         
             <div class="card exam-card">
@@ -2287,7 +2297,7 @@
 <div class="card exam-card">
     <div class="card-body">
         <h5 class="card-title text-center">Entrance Test </h5>
-        
+        <button class="btn btn-danger position-absolute top-0 start-0 m-2">Free</button>
     </div>
     <div class="card-footer text-center">
         
@@ -2304,8 +2314,9 @@
 </div></div>
 
 <div class="button-container">
-    <a href="javascript:void(0);" class="btn btn-custom-primary" onclick="showMoreContent('more-exam')">View More Tests</a>
+    <a href="javascript:void(0);" class="btn btn-custom-primary" id="toggleButton" onclick="toggleContent('more-exam')">More Tests</a>
 </div>
+
 
 
 
@@ -2399,7 +2410,20 @@
             <p>&copy; 2024 Prathibha Institute. All rights reserved.</p>
         </div> 
     </footer>
-    
+    <script>
+       function toggleContent(sectionId) {
+    var content = document.getElementById(sectionId);
+    var button = document.querySelector(`a[onclick="toggleContent('${sectionId}')"]`); // Select the correct button
+
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block"; // Show content
+        button.textContent = "View Less"; // Change button text
+    } else {
+        content.style.display = "none"; // Hide content
+        button.textContent = "View More Chapters"; // Change button text back
+    }
+}
+        </script>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>    
  <!-- WhatsApp -->
