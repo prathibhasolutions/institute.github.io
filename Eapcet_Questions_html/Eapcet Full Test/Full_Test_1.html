@@ -144,7 +144,7 @@
   
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
+  <script src="names.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
     const examName = "Eapcet";
@@ -153,7 +153,7 @@
     const numberofquestions = 160;
     const positivemark = 1;
     const negativemark = 0;
-
+    const students = localStorage.getItem("students");
     // Example hardcoded answers (you can replace this with actual answer keys)
     const correctAnswers = [
       "B", "C", "B", "B", "A", "B", "D", "D", "B","B",
@@ -195,6 +195,11 @@
 
     if (!studentName) {
       alert("Please enter your name.");
+      return;
+    }
+    let lowerCaseName = studentName.toLowerCase();
+    if(!students.includes(lowerCaseName)){
+      window.location.href = "../../payment.html";
       return;
     }
 
