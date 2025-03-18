@@ -144,7 +144,7 @@
   
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
+  <script src="../names.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
     const examName = "Eapcet-S&P Block";
@@ -153,7 +153,7 @@
     const numberofquestions = 15;
     const positivemark = 1;
     const negativemark = 0;
-
+    const students = JSON.parse(localStorage.getItem("students"));
     // Example hardcoded answers (you can replace this with actual answer keys)
     const correctAnswers = [
       "C", "C", "D", "C", "B", "A", "A", "A", "C","A",
@@ -189,7 +189,19 @@
       alert("Please enter your name.");
       return;
     }
+    let found = false;
 
+    for (let i =0; i < students.length; i++){
+      if(students[i].toLowerCase() === studentName.toLowerCase()){
+        found = true;
+        break;
+      }
+    }
+
+    if(!found){
+      window.location.href = "../../payment.html";
+      return;
+    }
     // Store all data in localStorage
     localStorage.setItem("studentName", studentName);
     localStorage.setItem("examName", examName);

@@ -35,6 +35,12 @@
 .carousel-caption {
   color: black !important; /* Forces the text color to be black */
 }
+.carousel-inner img {
+  height: auto;
+  max-height: 200px; /* Adjust based on your preference */
+  object-fit: cover;
+}
+
   </style>
 </head>
 <body>
@@ -61,19 +67,13 @@
   <div id="examCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="images/eamcet.png" class="d-block w-100" alt="EAPCET 2025">
-        <div class="carousel-caption d-none d-md-block">
-          
-        </div>
+        <img src="images/EAPCET.png" class="img-fluid d-block w-100" alt="EAPCET 2025">
       </div>
       <div class="carousel-item">
-        <img src="images/mains.png" class="d-block w-100" alt="JEE Mains">
-        <div class="carousel-caption d-none d-md-block">
-          
-        </div>
+        <img src="images/jeemains.png" class="img-fluid d-block w-100" alt="JEE Mains">
       </div>
-      
     </div>
+  
     <button class="carousel-control-prev" type="button" data-bs-target="#examCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -83,6 +83,7 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  
 
   <!-- Exam Cards Section -->
   <div class="container mt-5">
