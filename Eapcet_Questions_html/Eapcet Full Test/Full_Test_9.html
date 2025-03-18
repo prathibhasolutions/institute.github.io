@@ -153,7 +153,7 @@
     const numberofquestions = 160;
     const positivemark = 1;
     const negativemark = 0;
-    const students = localStorage.getItem("students");
+    const students = JSON.parse(localStorage.getItem("students"));
     // Example hardcoded answers (you can replace this with actual answer keys)
     const correctAnswers = [
       "D", "A", "B", "B", "C", "B", "C", "C", "D","C",
@@ -197,11 +197,19 @@
       alert("Please enter your name.");
       return;
     }
-    let lowerCaseName = studentName.toLowerCase();
-    if(!students.includes(lowerCaseName)){
-      window.location.href = "../../payment.html";
-      return;
-    }
+    let found = false;
+
+for (let i =0; i < students.length; i++){
+  if(students[i].toLowerCase() === studentName.toLowerCase()){
+    found = true;
+    break;
+  }
+}
+
+if(!found){
+  window.location.href = "../../payment.html";
+  return;
+}
     // Store all data in localStorage
     localStorage.setItem("studentName", studentName);
     localStorage.setItem("examName", examName);
