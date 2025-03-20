@@ -90,7 +90,7 @@
     .then(response => response.json())
     .then(responseData => {
         if (responseData.status === "success") {
-            alert("Details submitted successfully!");
+            alert("Details submitted successfully! Your username will be active in 10 mins.");
             document.getElementById("paymentForm").reset();
         } else {
             alert("Submission failed: " + responseData.message);
